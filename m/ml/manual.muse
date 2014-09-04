@@ -143,6 +143,12 @@ Example:
 There is no =<literal>= tag as in the original Muse markup, because it’s
 not a private tool and will be exposed to the internet.
 
+**Please note** that the output will keep the lines
+untouched. This means that it's very likely that you
+will get overflowing lines. To avoid this, a safe value
+for a line length could be 60 characters. Use longer
+lines at your perils.
+
 *** Line breaks
 
 
