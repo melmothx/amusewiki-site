@@ -1,2 +1,10 @@
-<p>This is the homepage for the *A&middot;Muse&middot;Wiki* engine.</p>
+#title A·Muse·Wiki
+#lang en
+#pubdate 2014-09-04T13:44:54
+
+
+
+This is the homepage for the *A·Muse·Wiki* engine.
+
+
 
