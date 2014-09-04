@@ -26,7 +26,7 @@ simple as possible so that you can focus on document creation, rather
 than formatting.
 
 This document describes Muse, which was written by John
-Wiegley, then maintained by Michael Olson and edited for this
+Wiegley, then maintained by Michael Olson and heavily edited and partially rewritten for this
 implementation by Marco Pessotto.
 
 ** Paragraphs
