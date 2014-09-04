@@ -2,9 +2,11 @@
 #lang en
 #pubdate 2014-09-04T13:44:54
 
+This is the homepage for the *A·Muse·Wiki* engine. Here you will find documentation and updates about this project.
+
+The site is under construction.
 
 
-This is the homepage for the *A·Muse·Wiki* engine.
 
 
 
