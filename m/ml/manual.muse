@@ -1,5 +1,6 @@
 #title The Text::Amuse markup manual
 #lang en
+#topics doc, howto
 #subtitle The writer's guide
 #date 2012
 
@@ -849,7 +850,7 @@ Normal text.
 ** Generation of data tables
 
 
-Only very simple tables are supported.  The syntax is as follows (just keep the indentation consistent and separate each cell by one or more textbars.
+Only very simple tables are supported.  The syntax is as follows (just keep the indentation consistent and separate each cell by one or more textbars).
 
 <example>
      Triple bars ||| Separate footer fields
