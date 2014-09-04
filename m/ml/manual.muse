@@ -74,18 +74,22 @@ This is a quotation:
 **** Source
 
 <example>
-A line that begins with six or more columns of whitespace
-(but less than 20) indicates a centered paragraph.
 
-Alternatively, you can use the =<center>= tag to surround regions that
-are to be published as centered paragraphs.
+A line that begins with six or more columns of
+whitespace (but less than 20) indicates a centered
+paragraph.
+
+Alternatively, you can use the =<center>= tag to
+surround regions that are to be published as centered
+paragraphs.
 
            Like this
 
-But if the line begins with more than 20 spaces, you’ll have a right
-aligned paragraph. This is handy for signatures.
+But if the line begins with more than 20 spaces, you’ll
+have a right aligned paragraph. This is handy for
+signatures.
 
-                                     Like this right-aligned one.
+                              Like this right-aligned one.
 
 The same result is done with the =right= tag.
 
@@ -101,10 +105,12 @@ And this is right
 
 This is a quotation:
 
-  But if a line begins with whitespace (at least 2 spaces), though
-  less than six columns, it indicates a quoted paragraph.
-  Alternatively, you can use the =<quote>= tag to surround regions that
-  are to be published as quoted paragraphs.
+  But if a line begins with whitespace (at least 2
+  spaces), though less than six columns, it indicates a
+  quoted paragraph. Alternatively, you can use the
+  =<quote>= tag to surround regions that are to be
+  published as quoted paragraphs.
+
 </example>
 
 
@@ -127,9 +133,10 @@ Example:
 
 <example>
  <example>
- The =<example>= tag is used for examples, where whitespace
- should be preserved, the text rendered in monospace, and any
- characters special to the output style escaped.
+ The =<example>= tag is used for examples, where
+ whitespace should be preserved, the text rendered in
+ monospace, and any characters special to the output
+ style escaped.
  </example>
 </example>
 
@@ -366,8 +373,8 @@ there is also a =<del>= tag for overstriking.
 
 <example>
 This is the <sup>superscript</sup> and this is a
-<sub>subscript</sub>, and this is <del>something deleted and
-overstriked</del>
+<sub>subscript</sub>, and this is <del>something
+deleted and overstriked</del>
 </example>
 
 This is the <sup>superscript</sup> and this is a
@@ -388,11 +395,14 @@ Here the text continues.
 [1] This footnote
     spans more lines in the source
 
- [2] But this is not, because of the initial whitespace.
+ [2] But this is not, because of the initial
+     whitespace.
 
-[3] Footnotes which don’t have a referrer will disappear on the PDF
-    output and preserverd in the HTML. But will lead to incorrect
-    code, as it will point to a non-existent anchor
+[3] Footnotes which don’t have a referrer will
+    disappear on the PDF output and preserverd in the
+    HTML. But will lead to incorrect code, as it will
+    point to a non-existent anchor
+
 </example>
 
 This is the result:
@@ -685,84 +695,85 @@ So you’ll have to do:
 <example>
 Normal text.
 
- - Level 1, bullet item one, this is the first paragraph. I can break
-   the line, keeping the same amount of indentation
+ - Level 1, bullet item one, this is the first
+   paragraph. I can break the line, keeping the same
+   amount of indentation
 
-   Here I have the same amount of indentation, and it continues the
-   item above.
+   Here I have the same amount of indentation, and it
+   continues the item above.
 
-   1. Level 2, enum item one. i can break the line, keeping the same
-      amount of indentation
+   1. Level 2, enum item one. i can break the line,
+      keeping the same amount of indentation
 
-      Here I have the same amount of indentation, and it continues the
-      item above.
+      Here I have the same amount of indentation, and
+      it continues the item above.
 
    2. Level 2, enum item two
       which continues
 
-      Here I have the same amount of indentation, and it continues the
-      item above.
+      Here I have the same amount of indentation, and
+      it continues the item above.
 
  - Level 1, bullet item two
    which continues
 
-   Here I have the same amount of indentation, and it continues the
-   item above.
+   Here I have the same amount of indentation, and it
+   continues the item above.
 
    1. Level 2, enum item one
       which continues
 
-      Here I have the same amount of indentation, and it continues the
-      item above.
+      Here I have the same amount of indentation, and
+      it continues the item above.
 
    2. Level 2, enum item two
       which continues
 
-      Here I have the same amount of indentation, and it continues the
-      item above.
+      Here I have the same amount of indentation, and
+      it continues the item above.
 
       i.  Level 3, enum item i
 
-          Here I have the same amount of indentation, and it continues
-          the item above.
+          Here I have the same amount of indentation,
+          and it continues the item above.
 
       ii. Level 3, enum item ii
 
-          Here I have the same amount of indentation, and it continues
-          the item above.
+          Here I have the same amount of indentation,
+          and it continues the item above.
 
    3. Level 2, enum item three
       which continues
 
-      Here I have the same amount of indentation, and it continues the
-      item above.
+      Here I have the same amount of indentation, and
+      it continues the item above.
 
  - Back to Level 1, third bullet
 
-   Here I have the same amount of indentation, and it continues the
-   item above.
+   Here I have the same amount of indentation, and it
+   continues the item above.
 
    a. Level 2, enum item “a”
       which continues
 
-      Here I have the same amount of indentation, and it continues the
-      item above.
+      Here I have the same amount of indentation, and
+      it continues the item above.
 
    b. Level 2, enum item “b”
       which continues
 
-      Here I have the same amount of indentation, and it continues the
-      item above.
+      Here I have the same amount of indentation, and
+      it continues the item above.
 
          I. Level 3, enum item “I”
 
-            Here I have the same amount of indentation, and it continues the
-            item above.
+            Here I have the same amount of indentation,
+            and it continues the item above.
 
  - Back to the bullets
 
-   Here I have the same amount of indentation, and it continues the
-   item above.
+   Here I have the same amount of indentation, and it
+   continues the item above.
 
 </example>
 
@@ -900,15 +911,15 @@ descriptions.  The syntax is as follows.
      [[link target without description]]
 
 So, the home of this project is
-[[http://theanarchistlibrary.org][The Anarchist Library]],
-which can be found at [[http://theanarchistlibrary.org]]
-Bare links will not get the hyperlinking.
-So http://thisisspam.org won’t get the hyperlinking.
-</example>
+[[http://amusewiki.org][AMuseWiki]],
+which can be found at
+[[http://amusewiki.org]] Bare links will not
+get the hyperlinking. So http://thisisspam.org won’t
+get the hyperlinking. </example>
 
 So, the home of this project is
-[[http://theanarchistlibrary.org][The Anarchist Library]],
-which can be found at [[http://theanarchistlibrary.org]]
+[[http://amusewiki.org][AMuseWiki]],
+which can be found at [[http://amusewiki.org]]
 Bare links will not get the hyperlinking.
 So http://thisisspam.org won’t get the hyperlinking.
 
@@ -1063,7 +1074,7 @@ Van spent all his free time in research work for me.
 
 Four or more dashes indicate a horizontal rule.  Be sure to put blank
 lines around it, or it will be considered part of the proceeding or
-following paragraph, like this: ---------.
+following paragraph, like this: =---------=.
 
 Example
 
@@ -1113,7 +1124,7 @@ all in a <biblio> tag.
 <example>
 <biblio>
 The author, *Title*, published on
-[[http://theanarchistlibrary.org][The Anarchist Library]], with a
+[[http://amusewiki.org][AMuseWiki]], with a
 very, very, very, very, very, very, very, very, very, very, very,
 very, long description
 
@@ -1125,7 +1136,7 @@ very, long description
 
 <biblio>
 The author, *Title*, published on
-[[http://theanarchistlibrary.org][The Anarchist Library]], with a
+[[http://amusewiki.org][AMuseWiki]], with a
 very, very, very, very, very, very, very, very, very, very, very,
 very, long description
 
