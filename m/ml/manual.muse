@@ -1,6 +1,7 @@
 #title The Text::Amuse markup manual
 #lang en
 #topics doc, howto
+#authors Marco Pessotto, Michael Olson, John Wiegley
 #subtitle The writer’s guide
 #date 2012
 
