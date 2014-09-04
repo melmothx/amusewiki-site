@@ -1,0 +1,2 @@
+<p>This is the homepage for the *A&middot;Muse&middot;Wiki* engine.</p>
+
