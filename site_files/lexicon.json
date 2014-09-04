@@ -1,0 +1,10 @@
+{
+    "doc" : {
+        "en" : "Documentation",
+        "it" : "Documentazione"
+    },
+    "howto" : {
+        "en" : "How-To",
+        "it" : "How-To"
+    }
+}
