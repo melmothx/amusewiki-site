@@ -1123,14 +1123,16 @@ all in a <biblio> tag.
 
 <example>
 <biblio>
+
 The author, *Title*, published on
-[[http://amusewiki.org][AMuseWiki]], with a
-very, very, very, very, very, very, very, very, very, very, very,
+[[http://amusewiki.org][AMuseWiki]], with a very, very,
+very, very, very, very, very, very, very, very, very,
 very, long description
 
-Another author, *Another title*, published in the real world. with a
-very, very, very, very, very, very, very, very, very, very, very,
-very, long description
+Another author, *Another title*, published in the real
+world. with a very, very, very, very, very, very, very,
+very, very, very, very, very, long description
+
 </biblio>
 </example>
 
