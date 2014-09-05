@@ -17,11 +17,17 @@ archiving of texts.
 ***** Features
 
  - User-friendly markup borrowed from [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]]
- - Plenty of output formats, including high-quality PDF (via LaTeX) and EPUB
- - Collection creation and PDF reformatting, with plenty of layout options
- - Texts are stored under revision control with Git
+ - Can **import HTML** documents into the markup preserving most of the logical markup
+ - Plenty of output formats, including high-quality **PDF** (via LaTeX) and **EPUB**
+ - Automatic generation of PDF for **printing** 
+ - **Collection** creation and PDF reformatting, with plenty of layout options
+ - Texts are stored under revision control with **Git**
  - Offline editing via Git
- - Fast full-text search
+ - Fast and accurate **full-text search** (with many available options)
+ - Mail notifications
+ - RSS feed
+ - Fully localized via gettext (to various degrees)
+ - Multilanguage is supported
 
 ***** Missing features (so far)
 
@@ -29,5 +35,8 @@ archiving of texts.
  - no “recent changes” page (but planned, at some point)
  - no refined access control (only basic)
 
-This site is still under construction.
+This site is still under construction and runs on amusewiki itself.
+
+Every wiki has a sandbox, so [[http://sandbox.amusewiki.org][here it
+is]].
 
