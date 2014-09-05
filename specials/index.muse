@@ -4,9 +4,30 @@
 
 This is the homepage for the *A·Muse·Wiki* engine. Here you will find documentation and updates about this project.
 
-The site is under construction.
+***** Why another wiki engine?
 
+Reinventing the wheel to make it rounder, maybe.
 
+This engine can work as a read-only site, as a moderated wiki, or as a
+fully open wiki.
 
+It strives to be simple and yet powerful enough for long-term
+archiving of texts.
 
+***** Features
+
+ - User-friendly markup borrowed from [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]]
+ - Plenty of output formats, including high-quality PDF (via LaTeX) and EPUB
+ - Collection creation and PDF reformatting, with plenty of layout options
+ - Texts are stored under revision control with Git
+ - Offline editing via Git
+ - Fast full-text search
+
+***** Missing features (so far)
+
+ - no talks, comments, etc.
+ - no “recent changes” page (but planned, at some point)
+ - no refined access control (only basic)
+
+This site is still under construction.
 
