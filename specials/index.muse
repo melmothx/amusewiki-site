@@ -40,4 +40,8 @@ This site is still under construction and runs on amusewiki itself.
 
 Every wiki has a sandbox, so [[http://sandbox.amusewiki.org][here it is]].
 
+The code is written in Perl and is freely available (under the same
+terms as Perl itself) on
+[[https://github.com/melmothx/amusewiki/releases][github]] and
+[[https://gitorious.org/amusewikifarm][gitorious]].
 
