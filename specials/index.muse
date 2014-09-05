@@ -24,6 +24,7 @@ archiving of texts.
  - Texts are stored under revision control with **Git**
  - Offline editing via Git
  - Fast and accurate **full-text search** (with many available options)
+ - **Multisite** engine: on one instance you can run as many sites you want
  - Mail notifications
  - RSS feed
  - Fully localized via gettext (to various degrees)
@@ -37,6 +38,6 @@ archiving of texts.
 
 This site is still under construction and runs on amusewiki itself.
 
-Every wiki has a sandbox, so [[http://sandbox.amusewiki.org][here it
-is]].
+Every wiki has a sandbox, so [[http://sandbox.amusewiki.org][here it is]].
+
 
