@@ -4,7 +4,7 @@
 
 This is the homepage for the *A·Muse·Wiki* engine. Here you will find documentation and updates about this project.
 
-***** Why another wiki engine?
+*** Why another wiki engine?
 
 Reinventing the wheel to make it rounder, maybe.
 
@@ -14,7 +14,7 @@ fully open wiki.
 It strives to be simple and yet powerful enough for long-term
 archiving of texts.
 
-***** Features
+*** Features
 
  - User-friendly markup borrowed from [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]]
  - **Importing of HTML** documents preserving most of the logical markup
@@ -30,7 +30,7 @@ archiving of texts.
  - Localization via gettext (depending on the language, the coverage varies from complete to zero, but it's easy to add).
  - Multilanguage on the same site is supported
 
-***** Missing features (so far)
+*** Missing features (so far)
 
  - no talks, comments, etc.
  - no refined access control (only basic)
@@ -43,4 +43,10 @@ The code is written in Perl and is freely available (under the same
 terms as Perl itself) on
 [[https://github.com/melmothx/amusewiki/releases][github]] and
 [[https://gitorious.org/amusewikifarm][gitorious]].
+
+*** Support via IRC
+
+Server: =chat.freenode.net=
+
+Channel: =#amusewiki=
 
