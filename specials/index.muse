@@ -17,8 +17,8 @@ archiving of texts.
 ***** Features
 
  - User-friendly markup borrowed from [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]]
- - Can **import HTML** documents into the markup preserving most of the logical markup
- - Plenty of output formats, including high-quality **PDF** (via LaTeX) and **EPUB**
+ - **Importing of HTML** documents preserving most of the logical markup
+ - Wide range of output formats, including high-quality **PDF** (via LaTeX) and **EPUB**
  - Automatic generation of PDF for **printing** 
  - **Collection** creation and PDF reformatting, with plenty of layout options
  - Texts are stored under revision control with **Git**
@@ -27,13 +27,12 @@ archiving of texts.
  - **Multisite** engine: on one instance you can run as many sites you want
  - Mail notifications
  - RSS feed
- - Fully localized via gettext (to various degrees)
- - Multilanguage is supported
+ - Localization via gettext (depending on the language, the coverage varies from complete to zero, but it's easy to add).
+ - Multilanguage on the same site is supported
 
 ***** Missing features (so far)
 
  - no talks, comments, etc.
- - no “recent changes” page (but planned, at some point)
  - no refined access control (only basic)
 
 This site is still under construction and runs on amusewiki itself.
