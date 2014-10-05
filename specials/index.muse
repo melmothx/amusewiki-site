@@ -4,10 +4,6 @@
 
 This is the homepage for the *A·Muse·Wiki* engine. Here you will find documentation and updates about this project.
 
-*** Why another wiki engine?
-
-Reinventing the wheel to make it rounder, maybe.
-
 This engine can work as a read-only site, as a moderated wiki, or as a
 fully open wiki.
 
