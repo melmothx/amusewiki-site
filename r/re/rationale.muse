@@ -1,8 +1,75 @@
 #title Rationale
-#subtitle Why another wiki engine
+#author Marco Pessotto
+#subtitle Why another wiki engine?
 #cat doc howto
 #lang en
 #pubdate 2014-11-10T23:00:00
+#DELETED work in progress
+
+Apparently, the world is full of wiki engines, some of them good or
+very good. So the question if this particular engine was really
+needed.
+
+The problem AmuseWiki wants to address is, anyway, very pratical. I
+needed and wanted a decent range of output format. Not just a PDF
+output (wikimedia does that as well, for example), but a nice, good,
+readable PDF. Now, given that the procedure needs to be completely
+automated, the perfection is hardly reached, but we can do better than
+simply render an HTML page and stuff the option in a PDF container.
+TeX has been around more than 30 years by now. So the idea was of
+course to use that.
+
+Then I needed a markup, possibly an existing one. [[http://daringfireball.net/projects/markdown/syntax][Markdown]] was
+considered, of course, but then discarded, because the original
+specification didn't support footnotes, explicitly permitted random
+inlined HTML, and some other questionable (in my very humble opinion)
+design choices. Creating another markdown dialect would have bring me
+to square zero.
+
+Given that I'm a Emacs user, I encountered [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]] some years ago,
+and I truly liked the syntax. By now the project is more or less
+stalled, but the program still work, is distributed in Debian, had a
+nice manual, and provided a first reference implementation for the
+output.
+
+The other alternative would have been the [[http://orgmode.org][org-mode]] markup, but, beside
+to be very large and complicated by lots of plugins that people would
+expect to work, have some (again) questionable markup elements for
+things often used as quotations.
+
+All considered, the muse markup was small, compact and expressive
+enough for my needs. The bottom line is: every lightweight markup
+needs something like a couple of minutes to be learned, so better
+choose one I like, not the one everyone uses, and have a [[http://www.amusewiki.org/library/manual][manual]] for
+that.
+
+Even this could be, of course, a questionable design choice, but
+that's the upside of being the author of some software: you write it
+your way.
+
+The markup implementation was developed in Perl and is available on
+[[https://metacpan.org/pod/Text::Amuse][CPAN]] as Text::Amuse. I added the "A" prefix because the markup is not
+1:1 compatible with the original one.
+
+Once the markup was able to produce HTML and TeX code, I needed
+something to create the imposed versions of the PDF, i.e., a PDF file
+which can be printed, folded and clipped to create booklets. During
+the past years, I tried a lot of solutions, which worked, but weren't
+really satisfying. This resulted in [[https://metacpan.org/release/PDF-Imposition][PDF::Imposition]], which so far
+appears to work well.
+
+I truly hate to read on screen. For the same reason, an EPUB output
+would have been nice as well, and given that the HTML was already
+there, a couple of CPAN modules were put together (notably Template
+Toolkit and EBook::EPUB), and a module to wrap the pieces together on
+the command line was created: [[https://metacpan.org/release/Text-Amuse-Compile][Text::Amuse::Compile]]. This code provides
+also a command line utility to generate the formats on the command
+line.
+
+
+
+
+
 
 
 
