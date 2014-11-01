@@ -1,1 +1,8 @@
+#title Rationale
+#subtitle Why another wiki engine
+#cat doc howto
+#lang en
+#pubdate 2014-11-10T23:00:00
+
+
 
