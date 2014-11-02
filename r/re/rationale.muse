@@ -3,8 +3,7 @@
 #subtitle Why another wiki engine?
 #cat doc howto
 #lang en
-#pubdate 2014-11-10T23:00:00
-#DELETED work in progress
+#pubdate 2014-11-03T00:00
 
 *** Markup and formats
 
