@@ -101,7 +101,9 @@ they're coupling the texts with the application.
 
 For Amusewiki, being that it's archive- and library-oriented, I wanted
 the texts stored in a directory tree under revision control. Given
-that Git now is ubiquitous, choosing it was the easy part.
+that Git now is ubiquitous, choosing it was the easy part. Also, the
+revision history and the possibility to have the archive distributed
+and decentralized was just too good to be ignored.
 
 To sum-up: the markup is decoupled by everything and can work
 stand-alone on a single file or a whole tree. The archive is decoupled
@@ -117,7 +119,7 @@ as text archives that it's so bad).
 DBIx::Class was handy to provide another layer of abstraction between
 the web application itself and the archive, so the code could be
 shared among the Catalyst part, and the back-end part (which compiles
-the texts, update the database and the git archive).
+the texts, updates the database and the git archive).
 
 For the layout, which I admit was kind of hacked together by a
 programmer (myself), not a designer, I went straight for bootstrap and
