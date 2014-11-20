@@ -3,5 +3,45 @@
 #lang en
 #pubdate 2014-11-20T19:35:16
 
+*** Adding a new language (developer-only)
+
+Go to =lib/AmuseWikiFarm/I18N= and run (for example to add swedish)
+
+<example>
+msginit --input=messages.pot --output=sv.po --locale=sv
+</example>
+
+Add the language code and the language string to the =known_langs=
+method.
+
+Add the language code to the =script/upgrade_i18n= script.
+
+*** Enabling the language
+
+Go to =/admin/sites=, edit, set the Locale and/or add the code to the
+Multilanguage setting.
+
+*** Translating (for translators)
+
+ 1. Install [[http://poedit.net/][Poedit]].
+
+ 2. Go to [[https://github.com/melmothx/amusewiki/releases]] and download
+    the **latest**. Unpack the archive and find the .po file with your
+    language code in the =lib/AmuseWikiFarm/I18N= directory.
+
+ 3. Open the .po file with Poedit. Add the translations. Please
+    preserve the %1, %2, in the message. They are placeholders for
+    dinamyc content. Save (of course). Send the .po file to
+    <code>melmothx (at) gmail (dot) com</code>.
+
+Done.
+
+When a new release comes out, repeat from point 2 (unless you
+uninstalled Poedit in the meanwhile).
+
+
+
+
+
 
 
