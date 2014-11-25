@@ -1,7 +1,7 @@
 #title Rationale
 #author Marco Pessotto
 #subtitle Why another wiki engine?
-#cat doc howto
+#cat doc
 #lang en
 #pubdate 2014-11-03T00:00
 
