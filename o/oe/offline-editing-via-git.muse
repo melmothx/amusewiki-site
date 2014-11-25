@@ -2,6 +2,86 @@
 #cat doc howto
 #lang en
 #pubdate 2014-11-25T10:06:29
-#DELETED wip
+
+Amusewiki fully support offline editing. This document describes how
+you can do it. It assumes you have some knowledge about how Git works.
+The internet is full of tutorials and documentation on this matter.
+
+This assumes that the site's archive is public and accessible. The
+place to find the git clone URL is usually the CGIT interface,
+accessible from each text via the recent changes features, and
+navigating to the root of the repository, e.g.
+[[http://www.amusewiki.org/git/amw/]], where you can find a “Clone” URL.
+
+Locally on your machine, clone it.
+
+<example>
+git clone git://git.amusewiki.org/git/amw.git
+</example>
+
+The repo is read-only, so now you have to create now where you can
+push. It can be anywhere (on the same server of the site or on
+another, on github, gitorious, etc.), as long the site can pull from
+there. Push the local tree there and set it to the new origin, keeping
+the read-only on a branch.
+
+<example>
+# on the server, e.g.
+mkdir -p /var/cache/git/marco
+cd /var/cache/git/marco
+git init --bare amw.git
+
+# on your machine
+git remote rename origin upstream
+git remote add origin ssh://git.amusewiki.org/var/cache/git/marco/sv.git
+git push -u origin master
+# track the upstream on your machine in a branch
+git checkout -b upstream -t upstream/master 
+</example>
+
+The site will refuse to accept changes which don't result in a
+fast-forward, so you have to keep the upstream in a branch (as per
+last command).
+
+This way, if the site refuses the changes, you have to do:
+
+<example>
+git checkout upstream
+git pull
+git checkout master
+git merge upstream
+git push
+</example>
+
+It's recommended to do so each time you start editing locally.
+
+Finally, setup the site's repo adding this new remote.
+
+<example>
+# on the server, in the application directory:
+cd amusewiki/repo/amw
+git remote add marco /var/cache/git/marco/amw.git
+</example>
+
+Visiting =/console/git= you should now find your personal repository
+listed. The pushing normally would fail, unless the site can write
+there.
+
+With the “Fetch” button you will pull your changes.
+
+After the setup, the workflow strips down to:
+
+<example>
+# locally
+git checkout upstream
+git pull
+git checkout master
+git merge upstream
+# edit, add, commit, hack, etc.
+git push
+</example>
+
+Visiting =/console/git= and fetching from your repo. Merge the upstream
+again if the fetching fails.
 
 
