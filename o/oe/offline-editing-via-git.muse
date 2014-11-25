@@ -1,1 +1,7 @@
+#title Offline editing via git
+#cat doc howto
+#lang en
+#pubdate 2014-11-25T10:06:29
+
+
 
