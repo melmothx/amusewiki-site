@@ -33,7 +33,8 @@ git init --bare amw.git
 
 # on your machine
 git remote rename origin upstream
-git remote add origin ssh://git.amusewiki.org/var/cache/git/marco/sv.git
+git remote add origin \
+    ssh://git.amusewiki.org/var/cache/git/marco/amw.git
 git push -u origin master
 # track the upstream on your machine in a branch
 git checkout -b upstream -t upstream/master 
