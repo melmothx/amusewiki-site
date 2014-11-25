@@ -36,7 +36,7 @@ You *have to* specify a reason, otherwise the line will have no effect.
 The ordering of the header’s lines (where there is =#title=, =#lang=,
 etc.) is irrelevant.
 
-The approve the change as it would be a normal publishing.
+Then approve the change as it would be a normal publishing.
 
 *** How do I purge a text?
 
