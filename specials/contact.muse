@@ -1,0 +1,10 @@
+#title Contact and support
+#lang en
+
+The preferred way to get help and support is via IRC:
+
+ - Server: =chat.freenode.net=
+ - Channel: =#amusewiki=
+
+You can also contact me via mail (=melmothx at gmail dot com=).
+

@@ -1,48 +1,34 @@
-#title A·Muse·Wiki
+#title News
 #lang en
 #pubdate 2014-09-04T13:44:54
 
-This is the homepage for the *A·Muse·Wiki* engine. Here you will find documentation and updates about this project.
+This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-This engine can work as a read-only site, as a moderated wiki, or as a
-fully open wiki.
+The latest version is 1.02 and can be downloaded at [[https://github.com/melmothx/amusewiki/archive/v_1.02.tar.gz][github]].
 
-It strives to be simple and yet powerful enough for long-term
-archiving of texts.
+*** Version 1.02 (2014-11-26)
 
-*** Features
+ - Added swedish translations
+ - Added sans fonts to the bookbuilder
+ - Improved language setting (html header and new texts) for multilanguage
+ - Added option to set the number of RSS and on the latest entry menu
+ - Added toggler for cover upload's options on the bookbuilder
 
- - User-friendly markup borrowed from [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]]
- - **Importing of HTML** documents preserving most of the logical markup
- - Wide range of output formats, including high-quality **PDF** (via LaTeX) and **EPUB**
- - Automatic generation of PDF for **printing** 
- - **Collection** creation and PDF reformatting, with plenty of layout options
- - Texts are stored under revision control with **Git**
- - Offline editing via Git
- - Fast and accurate **full-text search** (with many available options)
- - **Multisite** engine: on one instance you can run as many sites you want
- - Mail notifications
- - RSS feed
- - Localization via gettext (depending on the language, the coverage varies from complete to zero, but it's easy to add).
- - Multilanguage on the same site is supported
+*** Version 1.01 (2014-11-20)
 
-*** Missing features (so far)
+This version bumps up the prerequisites =Text::Amuse= and
+=Text::Amuse::Preprocessor=, which have to be upgraded.
 
- - no talks, comments, etc.
- - no refined access control (only basic)
+ - Added swedish support
+ - Fixed js diff script
+ - Fixed bug with URIs overflowing because of multichar replacements
+ - Require (client-side only) a username for anonymous commits
+ - Updated schema images
+ - Added a command-line fetcher to keep different sites synced
 
-This site is still under construction and runs on amusewiki itself.
+*** Version 1.00 2014-10-22
 
-Every wiki has a sandbox, so [[http://sandbox.amusewiki.org][here it is]].
+First stable (or kind of stable) release.
 
-The code is written in Perl and is freely available (under the same
-terms as Perl itself) on
-[[https://github.com/melmothx/amusewiki/releases][github]] and
-[[https://gitorious.org/amusewikifarm][gitorious]].
 
-*** Support via IRC
-
-Server: =chat.freenode.net=
-
-Channel: =#amusewiki=
 

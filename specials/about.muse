@@ -1,0 +1,52 @@
+#title About
+#lang en
+#pubdate 2014-11-29T08:00
+
+*A·Muse·Wiki* (also spelled Amusewiki or amusewiki) is a
+library-oriented wiki engine. It can work as a read-only site, as a
+moderated wiki, or as a fully open wiki.
+
+It strives to be simple and yet powerful enough for long-term
+archiving of texts.
+
+*** Features
+
+ - User-friendly markup borrowed from [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]]
+ - **Importing of HTML** documents preserving most of the logical markup
+ - Wide range of output formats, including high-quality **PDF** (via LaTeX) and **EPUB**
+ - Automatic generation of PDF for **printing** 
+ - **Collection** creation and PDF reformatting, with plenty of layout options
+ - Texts are stored under revision control with **Git**
+ - Offline editing via Git
+ - Fast and accurate **full-text search** (with many available options)
+ - **Multisite** engine: on one instance you can run as many sites you want
+ - Mail notifications
+ - RSS feed
+ - Localization via gettext (depending on the language, the coverage varies from complete to zero, but it's easy to add).
+ - Multilanguage on the same site is supported
+
+*** Missing features (so far)
+
+ - no talks, comments, etc.
+ - no refined access control (only basic)
+
+Every wiki has a sandbox, so [[http://sandbox.amusewiki.org][here it is]].
+
+The code is written in Perl and is freely available (under the same
+terms as Perl itself) on [[https://github.com/melmothx/amusewiki/releases][github]] and [[https://gitorious.org/amusewikifarm][gitorious]].
+
+*** Codebase
+
+Beside the wiki engine itself, some perl modules were developed for
+this project and are available on CPAN.
+
+ - [[https://metacpan.org/pod/PDF::Imposition][PDF::Imposition]
+ - [[https://metacpan.org/pod/Text::Amuse][Text::Amuse]]
+ - [[https://metacpan.org/pod/Text::Amuse::Compile][Text::Amuse::Compile]]
+ - [[https://metacpan.org/pod/Text::Amuse::Preprocessor][Text::Amuse::Preprocessor]]
+
+*** Developer
+
+The code is developed by Marco Pessotto (=melmothx at gmail dot com=).
+
+
