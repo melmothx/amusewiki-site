@@ -1,4 +1,4 @@
-#title About
+#title About A·Muse·Wiki
 #lang en
 #pubdate 2014-11-29T08:00
 
