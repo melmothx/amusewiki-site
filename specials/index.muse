@@ -26,7 +26,7 @@ This version bumps up the prerequisites =Text::Amuse= and
  - Updated schema images
  - Added a command-line fetcher to keep different sites synced
 
-*** Version 1.00 2014-10-22
+*** Version 1.00 (2014-10-22)
 
 First stable (or kind of stable) release.
 
