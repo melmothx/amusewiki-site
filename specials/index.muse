@@ -1,10 +1,21 @@
 #title News
 #lang en
-#pubdate 2014-09-04T13:44:54
+#pubdate 2014-12-07 13:29
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-The latest version is 1.02 and can be downloaded at [[https://github.com/melmothx/amusewiki/archive/v_1.02.tar.gz][github]].
+The latest version is 1.03 and can be downloaded at [[https://github.com/melmothx/amusewiki/archive/v_1.03.tar.gz][github]].
+
+This page lists the visible changes. For upgrade instructions, please
+consult the =Changes= file in the root of the distribution.
+
+*** Version 1.03 (2014-12-07)
+
+ - Added 4UP imposition schema to the bookbuilder.
+ - Added 9pt to the bookbuilder options.
+ - Display the current cover image in the bookbuilder, if uploaded.
+ - Fixed a crash which happened in some corner case.
+ - Added sorting to topics and authors pages.
 
 *** Version 1.02 (2014-11-26)
 
@@ -12,7 +23,7 @@ The latest version is 1.02 and can be downloaded at [[https://github.com/melmoth
  - Added sans fonts to the bookbuilder
  - Improved language setting (html header and new texts) for multilanguage
  - Added option to set the number of RSS and on the latest entry menu
- - Added toggler for cover upload's options on the bookbuilder
+ - Added toggler for cover upload’s options on the bookbuilder
 
 *** Version 1.01 (2014-11-20)
 
