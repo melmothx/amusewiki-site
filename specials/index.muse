@@ -1,6 +1,6 @@
 #title News
 #lang en
-#pubdate 2014-12-07 13:29
+#pubdate 2014-12-07
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
