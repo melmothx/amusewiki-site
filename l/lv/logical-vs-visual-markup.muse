@@ -26,7 +26,7 @@ space between paragraphs. Or mark section titles using a =strong= tag.
 These are just errors.
 
 For example, a section title is something more that a bold string. It
-should happen at the bottom of the page. It should write an entry in
+shouldn't happen at the bottom of the page. It should write an entry in
 the table of contents. It should have some consistent space around. A
 bold string is just an ordinary line in a bold character, an important
 line for sure, but nothing more.
