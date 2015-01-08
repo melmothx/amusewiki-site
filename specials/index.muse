@@ -4,10 +4,16 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-The latest version is 1.03 and can be downloaded at [[https://github.com/melmothx/amusewiki/archive/v_1.03.tar.gz][github]].
+The latest version is 1.04 and can be downloaded at [[https://github.com/melmothx/amusewiki/archive/v_1.04.tar.gz][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the =Changes= file in the root of the distribution.
+
+*** Version 1.04 (2015-01-08)
+
+ - Updated translations: ru, mk
+ - Job page will show the queue, if any
+ - Fixed bug with category's names being stuck on the first-come
 
 *** Version 1.03 (2014-12-07)
 
