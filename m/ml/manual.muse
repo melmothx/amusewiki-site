@@ -322,7 +322,27 @@ with this bunlde there is support for the following directives:
    original, original contribution, etc.). The preferred format is 
    “Retrieved on March 8, 2012 from [[http://url.org][the url]]”
 
+*** Correcting the hyphenation in the PDF output
 
+Sometimes you may notice some words with incorrect hyphenation in your
+document. You can fix this adding the breakpoint in the
+<code>#hyphenation</code> directive.
+
+E.g.
+
+<example>
+#title Test
+#lang it
+#hyphenation al-be-rel-lo que-sto
+
+Questo alberello...
+</example>
+
+You can as many words with breakpoints as you wish, separated by
+spaces, but you can’t insert numbers or special characters (accents
+and diacritics are fine, though). You specify a breakpoint with the
+hyphen character “-”. Using a word without any hyphen will prevent the
+hyphenation for that word.
 
 ** Bold, italicized and emphatized text
 
