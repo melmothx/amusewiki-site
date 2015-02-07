@@ -4,16 +4,32 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-The latest version is 1.04 and can be downloaded at [[https://github.com/melmothx/amusewiki/archive/v_1.04.tar.gz][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.05.tar.gz][latest version is 1.05]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
-consult the =Changes= file in the root of the distribution.
+consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+
+*** Version 1.05 (2015-02-07)
+
+ - Added “opening” option to the site and bookbuilder options. It
+   controls the page the chapters should start (right page or any
+   page).
+ - Updated translations: it, hr.
+ - Safe old revision (published) and job (completed) purging.
+   Revisions and jobs older than 1 month will get be purged from the
+   database and the associated files removed. Of course, this doesn’t
+   mean that the texts themselves are removed, just the revision.
+
+This version also uses the latest
+[[https://metacpan.org/pod/Text::Amuse::Compile][Text::Amuse]] stack,
+which introduces support for the #hyphenation header tag, so bad hyphenations can be corrected from within the document.
+
 
 *** Version 1.04 (2015-01-08)
 
  - Updated translations: ru, mk
  - Job page will show the queue, if any
- - Fixed bug with category's names being stuck on the first-come
+ - Fixed bug with category’s names being stuck on the first-come
 
 *** Version 1.03 (2014-12-07)
 
