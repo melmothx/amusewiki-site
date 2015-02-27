@@ -3,10 +3,18 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.06.tar.gz][latest version is 1.06]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.07.tar.gz][latest version is 1.07]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+
+*** Version 1.07 (2015-02-27)
+
+ - Fixed leaked template in the static indexes
+
+This version only correct this bug. This caused the embedded CSS of
+the static indexes (which are used only for static mirroring or
+archive bundles) to break.
 
 *** Version 1.06 (2015-02-21)
 
