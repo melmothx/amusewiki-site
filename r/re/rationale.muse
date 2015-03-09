@@ -11,7 +11,7 @@ Apparently, the world is full of wiki engines, some of them good or
 very good. So the question if this particular engine was really
 needed.
 
-The problem AmuseWiki wants to address is, anyway, very pratical. I
+The problem AmuseWiki wants to address is, anyway, very practical. I
 needed and wanted a decent range of output format. Not just a PDF
 output (wikimedia does that as well, for example), but a nice, good,
 readable PDF. Now, given that the procedure needs to be completely
