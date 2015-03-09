@@ -8,7 +8,7 @@
 *** Markup and formats
 
 Apparently, the world is full of wiki engines, some of them good or
-very good. So the question if this particular engine was really
+very good. So the question is if this particular engine was really
 needed.
 
 The problem AmuseWiki wants to address is, anyway, very practical. I
