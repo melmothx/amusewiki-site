@@ -889,7 +889,12 @@ Normal text.
 ** Generation of data tables
 
 
-Only very simple tables are supported.  The syntax is as follows (just keep the indentation consistent and separate each cell by one or more textbars).
+Only very simple tables are supported. The syntax is as follows (just
+keep the indentation consistent and separate each cell by one or more
+textbars).
+
+Indentation (one or more leading spaces) is required to trigger the
+table rendering.
 
 <example>
      Triple bars ||| Separate footer fields
@@ -908,10 +913,8 @@ Only very simple tables are supported.  The syntax is as follows (just keep the 
 The ordering of the footer, header and table body blocks is irrelevant
 for the output (HTML requires you put first the header, then the
 footer, then the body). Ordering of the single rows is of course
-preserved. From this we come to the conclusion that you can’t normally
-typeset the pipe symbol without triggering a list. In =<example>= you
-can type it freely. Inside the cells you can do pretty much what you
-want (beside headers and lists): mark them up freely.
+preserved. Inside the cells you can do pretty much what you want
+(beside headers and lists): mark them up freely.
 
 *** Floating tables
 
