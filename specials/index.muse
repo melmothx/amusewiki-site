@@ -8,7 +8,7 @@ The [[https://github.com/melmothx/amusewiki/archive/v_1.08.tar.gz][latest versio
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
 
-*** Version 1.08 2015-03-22
+*** Version 1.08 (2015-03-22)
 
  - Added private site type, where only users have access.
  - Fixed crash on Xapian stemmer where site language is italian
