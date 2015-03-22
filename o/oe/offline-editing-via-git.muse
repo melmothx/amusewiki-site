@@ -34,12 +34,12 @@ cd /var/cache/git/marco
 git init --bare amw.git
 
 # on your machine
-git remote rename origin upstream
+git remote rename origin web
 git remote add origin \
     ssh://git.amusewiki.org/var/cache/git/marco/amw.git
 git push -u origin master
 # track the upstream on your machine in a branch
-git checkout -b upstream -t upstream/master 
+git checkout -b upstream -t web/master 
 </example>
 
 The site will refuse to accept changes which don't result in a
