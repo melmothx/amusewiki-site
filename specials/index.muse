@@ -3,10 +3,18 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.07.tar.gz][latest version is 1.07]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.08.tar.gz][latest version is 1.08]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+
+*** Version 1.08 2015-03-22
+
+ - Added private site type, where only users have access.
+ - Fixed crash on Xapian stemmer where site language is italian
+ - Fixed crash when the supplied lexicon.json is invalid
+ - Integrated lexicon.json in the localization plugin
+ - Adjusted text’s preamble
 
 *** Version 1.07 (2015-02-27)
 
