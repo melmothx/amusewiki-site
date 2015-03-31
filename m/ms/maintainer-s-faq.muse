@@ -48,3 +48,20 @@ change, it will appear under =/console/unpublished=. There is a big red
 button for each deleted text, and you can proceed with the purging.
 
 
+*** How I redirect to another page?
+
+Changing urls is a poor practice. Anyway, if you know what you’re
+doing, you can delete an existing text and point to another adding a
+=#DELETED= directive in the text header with a special syntax:
+
+<example>
+#DELETED Redirect: new-example-uri
+</example>
+
+Please note: without any prefix nor protocol, just the bare page name.
+So if the full URL of the new text is
+http://amusewiki.org/library/new-example-uri, you have just to put
+=new-example-uri= in the header (as per the example above).
+
+
+
