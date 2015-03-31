@@ -48,7 +48,7 @@ change, it will appear under =/console/unpublished=. There is a big red
 button for each deleted text, and you can proceed with the purging.
 
 
-*** How I redirect to another page?
+*** How do I redirect to another page?
 
 Changing urls is a poor practice. Anyway, if you know what you’re
 doing, you can delete an existing text and point to another adding a
