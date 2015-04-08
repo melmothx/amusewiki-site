@@ -3,10 +3,16 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.08.tar.gz][latest version is 1.08]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.09.tar.gz][latest version is 1.09]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+
+*** Version 1.09 (2015-04-08)
+
+ - Prerequisite upgrade to fix some corner-case rendering errors
+   [[https://metacpan.org/pod/Text::Amuse::Compile][Text::Amuse]]
+ - Documentation
 
 *** Version 1.08 (2015-03-22)
 
