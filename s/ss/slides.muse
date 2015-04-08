@@ -8,7 +8,7 @@
  - Long term storage (not fire and forget), control revision
  - Quality output required (read: LaTeX output)
  - Imposing of PDF for home-printing
- - EPUB output
+ - EPUB output for mobile devices
 
 *** Ready-made alternatives
 
@@ -33,6 +33,7 @@
  - Markdown seems to be the winner, but there are dialects as well
  - Emacs Muse was chosen mostly because compact and expressive, is
    documented and it has a reference implementation.
+   https://www.gnu.org/software/emacs-muse/
  - Some incompatibilities have been introduced, but they are
    documented (to address corner cases where the syntax can be
    confusing).
@@ -153,7 +154,7 @@
    privileges. With git, in case of abuse, recovering is easy.
  - Various modes: private site, blog-like site (only users can make
    modifications), moderated wiki (anonymous users can make
-   modifications, but needs approval from librarians), and open wiki
+   modifications, but need approval from librarians), and open wiki
    (everyone can edit/publish/delete).
  - The open wiki is undertested, though (no live instance so far).
 
@@ -164,11 +165,11 @@
  - Font selection
  - Paper size selection
  - Imposition schema selection
- - A basic question to keep robots away (probably will not scale, but
-   so far works well)
  - Cover images upload
  - Custom files are compiled by the backend, even if the users sees
    the live logs and the process is pretty fast.
  - EPUB output if required, with embedded fonts.
+ - A basic question to keep robots away (probably will not scale, but
+   so far works well)
 
 
