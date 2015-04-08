@@ -1,11 +1,12 @@
 #title Logical vs. visual markup
 #cat doc
 #pubdate 2014-12-02
+#lang en
 
 The markup used to store the text is a *logical* markup. This mean that
 every convention used is aimed to represent the logical structure of
 the document, not the way it is rendered on a PDF or on an HTML page.
-If the output looks broken, it's a problem which must be fixed on the
+If the output looks broken, it’s a problem which must be fixed on the
 software side, not on the text side.
 
 As a matter of fact, in the default configuration, the PDF and the
@@ -18,7 +19,7 @@ For the PDF the default layout of the KOMA-script class is used, with
 some minor adjustments (like always using serif fonts, instead of the
 default sans for the chapter and section titles).
 
-It's a quite common mistake to try to use the markup the way one would
+It’s a quite common mistake to try to use the markup the way one would
 use a word-processor like Word, OpenOffice and similar programs, or
 trying to mimic the layout of the original document even when there is
 no need for that. Example: inserting everywhere a =br= tag to force a
@@ -26,7 +27,7 @@ space between paragraphs. Or mark section titles using a =strong= tag.
 These are just errors.
 
 For example, a section title is something more that a bold string. It
-shouldn't happen at the bottom of the page. It should write an entry in
+shouldn’t happen at the bottom of the page. It should write an entry in
 the table of contents. It should have some consistent space around. A
 bold string is just an ordinary line in a bold character, an important
 line for sure, but nothing more.
@@ -59,8 +60,8 @@ at the present moment in a specific format.
 
 The =br= tag, to make another example, should be the exception, not the
 rule, and used only where needed by the logic of the document to force
-a break line, not abused to do something like "let's make this line a
-bit shorter because the PDF is not rendering perfectly". Because in
+a break line, not abused to do something like “let’s make this line a
+bit shorter because the PDF is not rendering perfectly”. Because in
 this case, when the layout change (it happens from time to time), you
 will just have an inexplicably broken line which makes no sense. 
 
