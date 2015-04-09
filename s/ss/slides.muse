@@ -42,7 +42,8 @@
    HTML pages
  - The javascript HTML editor =CKEditor= has a "paste from Word" feature
    [[http://ckeditor.com/]]
- - Need to translate the HTML (to some extend) to Muse
+ - Need to convert the HTML to Muse, preserving as much as possible
+   the logical structure of the document (and discarding the noise).
  - Need some common search-and-replace patterns (like typographical
    quotes, text cleaning).
  - [[https://metacpan.org/pod/Text::Amuse::Preprocessor][=Text::Amuse::Preprocessor=]]
