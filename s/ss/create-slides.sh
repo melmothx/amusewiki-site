@@ -15,3 +15,4 @@ xelatex slides.tex
 xelatex slides.tex
 xelatex slides.tex
 
+rm slides.{aux,nav,out,snm,toc}
