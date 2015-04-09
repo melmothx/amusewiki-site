@@ -1,4 +1,4 @@
-\documentclass[10pt,compress]{beamer}
+\documentclass[compress]{beamer}
 \usetheme[usetitleprogressbar]{m}
 \usepackage{alltt}
 \usepackage{verbatim}
