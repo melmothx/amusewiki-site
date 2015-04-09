@@ -1,0 +1,52 @@
+\documentclass[10pt,compress]{beamer}
+\usetheme[usetitleprogressbar]{m}
+\usepackage{alltt}
+\usepackage{verbatim}
+
+% avoid breakage on multiple <br><br> and avoid the next [] to be eaten
+\newcommand*{\forcelinebreak}{\strut\\*{}}
+
+\newcommand*{\hairline}{%
+  \bigskip%
+  \noindent \hrulefill%
+  \bigskip%
+}
+
+% reverse indentation for biblio and play
+
+\newenvironment*{amusebiblio}{
+  \leftskip=\parindent
+  \parindent=-\parindent
+  \smallskip
+  \indent
+}{\smallskip}
+
+\newenvironment*{amuseplay}{
+  \leftskip=\parindent
+  \parindent=-\parindent
+  \smallskip
+  \indent
+}{\smallskip}
+
+\newcommand*{\Slash}{\slash\hspace{0pt}}
+
+\title{[% doc.header_as_latex.title %]}
+\date{[% doc.header_as_latex.date %]}
+\author{[% doc.header_as_latex.author %]}
+\subtitle{[% doc.header_as_latex.subtitle %]}
+
+\begin{document}
+[% IF doc.hyphenation %]
+\hyphenation{ [% doc.hyphenation %] }
+[% END %]
+
+  \begin{frame}
+    \maketitle
+
+[% doc.as_latex %]
+
+  \end{frame}
+\plain{Questions?}
+
+\end{document}
+
