@@ -1,166 +1,124 @@
-#title AmuseWiki: a library oriented wiki engine (slides)
+#title AmuseWiki: a library oriented wiki engine (talk)
 #lang en
 #author Marco Pessotto (melmothX)
 
 *** Scenario
 
- - Digital library with more than 1000 texts, including full-length books
- - Long term storage (not fire and forget), control revision
+ - Digital library with more than 2000 texts, including full-length books
+ - Long term archiving (not fire and forget texts), control revision
  - Quality output required (read: LaTeX output)
  - Imposing of PDF for home-printing
  - EPUB output for mobile devices
-
-*** Ready-made alternatives
-
- - Preference for a flat file storage (ikiwiki or MoinMoin)
- - Feature wise: mediawiki (for the collection builder, but output is
-   just rendered HTML).
- - ??? couldn't find anything which addressed the problems
-
-*** The past
-
- - Drupal + filtered HTML, texts kept in sync on a local git repo with
-   scripts. Obviously it wasn't a brilliant idea, to be generous.
- - Same filtered HTML inherited from Drupal, plus home-brewed CGI
-   scripts. It kind of worked.
- - Dancer application and Emacs Muse markup, no database. Worked, but
-   didn't scale with multisite.
+ - Preference for a flat file storage (like ikiwiki or MoinMoin)
+ - Creation of collections (like on mediawiki)
+ - One-man project
 
 *** The lightweight markup
 
- - There are a lot of them out there, everyone with its own dialects.
-   There is no standard.
- - Markdown seems to be the winner, but there are dialects as well
- - Emacs Muse was chosen mostly because compact and expressive, is
-   documented and it has a reference implementation.
-   https://www.gnu.org/software/emacs-muse/
+ - No standard, even if Markdown seems to be the winner (but with dialects)
+ - Emacs Muse: project kind of dead, but the markup is compact and
+   expressive, documented, and has a reference implementation.
+   [[https://www.gnu.org/software/emacs-muse/]]
  - Some incompatibilities have been introduced, but they are
    documented (to address corner cases where the syntax can be
    confusing).
  - Bottom line: all these markups are easy to use and it takes 5
-   minutes to learn one of them, as long as it is well documented.
- - Manual: http://www.amusewiki.org/library/manual
- - Module: https://metacpan.org/pod/Text::Amuse (produces LaTeX and HTML)
+   minutes to learn one of them, as long as it is documented.
+
+*** Our own dialect of Emacs Muse
+ - Manual: [[http://www.amusewiki.org/library/manual]]
+ - Module: [[https://metacpan.org/pod/Text::Amuse][=Text::Amuse=]] (produces LaTeX and HTML)
  - Ill-suited for technical papers, though. No math support, no syntax
    highlight, but well-suited for general prose and even poetry.
  - It has every feature one could expect from a lightweight markup:
    images, sectioning, footnotes, simple tables, bold, italics,
-   subscript, superscript, lists (via some tormented code), verbatim,
-   quotations.
+   subscript, superscript, lists, verbatim, quotations.
  - So far proved itself good and expressive.
 
 *** Importing
 
  - Legacy library had the texts in filtered HTML
- - People usually have the texts in .doc or paste from the web
- - JS HTML editor ckeditor has a "paste from word" feature 
- - Need for an importer HTML to Muse
- - Need to offer some common search-and-replace patterns (like
-   typographical quotes)
- - https://metacpan.org/pod/Text::Amuse::Preprocessor
-
-*** The storage (the easy part)
-
- - The texts are just published once, but constantly edited and corrected.
- - There was the need to keep track of the changes
- - Better if the archive could be cloned at will with the history attached
- - Does it sound familiar?
- - Git!
- - cgit for the web interface
- - Example: http://www.amusewiki.org/git/amw/
+ - People usually have the texts in Word format or copy and paste from
+   HTML pages
+ - The javascript HTML editor =CKEditor= has a "paste from Word" feature
+   [[http://ckeditor.com/]]
+ - Need to translate the HTML (to some extend) to Muse
+ - Need some common search-and-replace patterns (like typographical
+   quotes, text cleaning).
+ - [[https://metacpan.org/pod/Text::Amuse::Preprocessor][=Text::Amuse::Preprocessor=]]
 
 *** Compiling
 
- - PDF generation via LaTeX is slow, even with fast machines
- - Creation of imposed PDF, HTML rendering and EPUB (which is
-   basically a packed splat HTML)
- - For imposition, I wrote (and still writing, adding more schemas)
-   PDF::Imposition. This is a general purpose module and it's totally
-   agnostic how the PDF is generated. It just does the imposing,
-   putting more logical pages into a physical page according to a
-   schema.
- - For compiling: **Text::Amuse::Compile**
- - PDF are generated with XeLaTeX (which is Unicode aware and uses
-   system fonts)
- - **Text::Amuse** produces the LaTeX code, inserted in a template (with
-   Template::Tiny). Then a system call to =xelatex=, and finally the
-   imposition step.
- - For the EPUB output: **Text::Amuse** produces splat HTML cut at
-   sections, and the EPUB itself is assembled with **EBook::EPUB** (which
-   unfortunately pulls in the whole Moose as dependency, but otherwise
-   works very well).
- - =muse-compile.pl= script is shipped with **Text::Amuse::Compile**, so you
-   can generate the formats from the command line, no need for a whole
-   web application.
+ - Templating for output: [[https://metacpan.org/pod/Template::Tiny][=Template::Tiny=]]
+ - PDF generation: =XeLaTeX=  (Unicode aware, system fonts)
+ - [[https://metacpan.org/pod/EBook::EPUB][=EBook::EPUB=]] using =Text::Amuse='s splat HTML output
+ - [[https://metacpan.org/pod/PDF::Imposition][=PDF::Imposition=]] (written for this project but it's a general
+   purpose module): put logical pages into a physical page according
+   to a schema (for booklets and home printing)
+ - All the above glued together by [[https://metacpan.org/pod/Text::Amuse::Compile][=Text::Amuse::Compile=]]
+ - =muse-compile.pl= script is shipped with =Text::Amuse::Compile=, so you
+   can generate the formats from the command line.
 
 *** Data storage
 
- - Texts are stored in a git archive, which can be cloned.
  - Texts themselves are self-contained. All the information describing
-   the text (author, title, categories, language, additional notes) is
-   stored in the header of the text.
- - 1 text 1 page rule (this is handier even for people on slow
-   connections, so they just download and there is no need to browse
-   online).
- - Database was not used in previous versions. AmuseWiki does use it,
-   but it's not the ultimate source of data (which is the git
-   archive). It's just a way to index and relate data.
- - In case of disaster, the git archive is sufficient to rebuild the
-   database with the text information.
+   the text (like author, title, categories) is stored in the header
+   of the text. 1 text (even a whole book), 1 file.
+ - Texts are stored in a Git archive
+ - Git integration on the site with =cgit=:
+   [[http://www.amusewiki.org/git/amw/]]
  - Full text search: Xapian (light, fast, fairly simple to setup, well
-   integrated in Perl with **Search::Xapian**).
- - Database integration: **DBIx::Class** (unsurprisingly).
+   integrated in Perl with [[https://metacpan.org/pod/Search::Xapian][=Search::Xapian=]]).
+ - Database integration: [[https://metacpan.org/pod/DBIx::Class][=DBIx::Class=]]
 
 *** Web backend
 
  - A daemon takes care of all the operations which are slow or somehow
    delicate where concurrent access could be a problem (text
-   compilation, indexing, git interaction).
+   compilation, publication, indexing, Git interaction).
+ - Formats are pregenerated, including the HTML. The frontend just
+   serves them.
+ - The backend and the frontend communicate via a job queue in the
+   database.
  - Some message queue systems were examined, but resorted to use the
    database because it was the most straightforward and other
    solutions looked like over-engineering.
- - The backend and the frontend communicate via a job queue in the
-   database.
+
 
 *** Web Frontend
 
- - Catalyst application (its predecessor was a Dancer application):
-   chaining, method-to-uri mapping, encouraging best practices. Long
-   lived, actively developed, great community, back-compatibility
-   approach.
+ - Catalyst application: chaining, method-to-uri mapping, actively
+   developed, great community, back-compatibility approach.
  - Plack-able application (currently deployed via nginx + FCGI)
- - Template: **TemplateToolkit 2**.
- - Localization via **Catalyst::Plugin::I18N** (plus local overriding)
+ - Template: [[https://metacpan.org/pod/Template][Template Toolkit]]
+ - Localization via [[https://metacpan.org/pod/Catalyst::Plugin::I18N][=Catalyst::Plugin::I18N=]] (plus local overriding
+   via local JSON file).
  - Localized for English, Italian, Croatian, Macedonian, Russian,
    Finnish, Swedish, German.
  - Multisite: on one instance you can run as many sites as you want
-   (this was the most compelling argument to write the current version
-   of AmuseWiki).
- - Selection of the target site via the virtual host (looked up from
-   the database), and the site row object is kind of the god object
-   from which texts, categories, users are looked up with the
-   relationships. Each site has its own git repository.
- - Good test coverage for all the components from the markup parser to
-   the web fronted.
+   (this was the most compelling argument to write AmuseWiki).
 
 *** User management
 
- - Kept at minimum. **Catalyst::Plugin::Authentication**
-   **Catalyst::Plugin::Authorization::Roles** (straight from the Catalyst
-   tutorial, so I can blame someone else).
- - Passwords are encrypted **DBIx::Class::PassphraseColumn**
+ - Kept at minimum reusing existing solutions.
+   [[https://metacpan.org/pod/Catalyst::Plugin::Authentication][=Catalyst::Plugin::Authentication=]]
+   [[https://metacpan.org/pod/Catalyst::Plugin::Authorization::Roles][=Catalyst::Plugin::Authorization::Roles=]]
+   [[https://metacpan.org/pod/DBIx::Class::PassphraseColumn][=DBIx::Class::PassphraseColumn=]]
  - No hierarchical structure: each librarian can create other peer
    librarians (plus root for site management) with the same level of
-   privileges. With git, in case of abuse, recovering is easy.
- - Various modes: private site, blog-like site (only users can make
-   modifications), moderated wiki (anonymous users can make
-   modifications, but need approval from librarians), and open wiki
-   (everyone can edit/publish/delete).
- - The open wiki is undertested, though (no live instance so far).
+   privileges.
+
+ - Modes:
+    - private site
+    - blog site (only logged-in can edit)
+    - moderated wiki (approval required)
+    - open wiki (undertested)
 
 *** The Bookbuilder
 
- - The basic idea is like the Wikimedia's book creator, but with goodies
+The basic idea is like the Wikimedia's book creator, but with goodies.
+Features:
+
  - LaTeX output
  - Font selection
  - Paper size selection
@@ -173,3 +131,22 @@
    so far works well)
 
 
+*** Some time left?
+
+If we have some more time and no questions...
+
+*** The past
+
+ - Drupal + filtered HTML, texts kept in sync on a local Git repo with
+   scripts. Obviously it wasn't a brilliant idea, to be generous.
+ - Same filtered HTML inherited from Drupal, plus home-brewed CGI
+   scripts. It kind of worked.
+ - Dancer application and Emacs Muse markup, no database. Worked, but
+   didn't scale with multisite.
+
+*** The future
+
+ - A better installer
+ - Category descriptions
+ - Teasers
+ - Decorative images
