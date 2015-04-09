@@ -37,8 +37,8 @@
   PAUSE id: \texttt{MELMOTHX}\forcelinebreak
   IRC (irc.perl.org and Freenode): \texttt{melmothX}\forcelinebreak
   mail: \texttt{melmothx@gmail.com}\forcelinebreak
-  homepage: \url{http://amusewiki.org}\forcelinebreak
-  IRC channel: \url{irc://chat.freenode.net/\#amusewiki}
+  homepage: \texttt{http://amusewiki.org}\forcelinebreak
+  IRC channel: \texttt{irc://chat.freenode.net/\#amusewiki}
 }
 \begin{document}
 [% IF doc.hyphenation %]
