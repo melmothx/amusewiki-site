@@ -3,10 +3,24 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.09.tar.gz][latest version is 1.09]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.11.tar.gz][latest version is 1.11]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+
+*** 1.11 (2015-04-19)
+
+ - Added new option to trigger the paginator in /archive and /archive/<lang>
+ - Adjust the paginator according to the locale collation (diacritics, etc.)
+ - Show the number of text in /archive and /archive/<lang>
+
+*** 1.10 (2015-04-12)
+
+ - Fixed multilang bug when the uri got the language prefix appended
+   at each request on /new, so uri already taken generated something
+   like uri-it-it-it.
+ - Fixed missing category text count update on text deletion.
+ - Fixed autocompletion api to return only used categories.
 
 *** Version 1.09 (2015-04-08)
 
