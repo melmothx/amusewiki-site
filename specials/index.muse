@@ -8,6 +8,10 @@ The [[https://github.com/melmothx/amusewiki/archive/v_1.11.tar.gz][latest versio
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
 
+<br>
+
+AmuseWiki is going to be presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe]] in Granada. See you there :-)
+
 *** Version 1.11 (2015-04-19)
 
  - Added new option to trigger the paginator in /archive and /archive/<lang>
