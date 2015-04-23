@@ -3,11 +3,7 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-<br>
-
 AmuseWiki is going to be presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe]] in Granada. See you there :-)
-
-<br>
 
 The [[https://github.com/melmothx/amusewiki/archive/v_1.12.tar.gz][latest version is 1.12]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
