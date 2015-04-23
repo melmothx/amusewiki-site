@@ -3,14 +3,22 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.11.tar.gz][latest version is 1.11]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+<br>
+
+AmuseWiki is going to be presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe]] in Granada. See you there :-)
+
+<br>
+
+The [[https://github.com/melmothx/amusewiki/archive/v_1.12.tar.gz][latest version is 1.12]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
 
-<br>
+*** Version 1.12 (2015-04-23)
 
-AmuseWiki is going to be presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe]] in Granada. See you there :-)
+ - Added utils/import path to import chunks of HTML
+ - Updated po files and italian translation
+
 
 *** Version 1.11 (2015-04-19)
 
