@@ -5,10 +5,17 @@ This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki 
 
 AmuseWiki is going to be presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe]] in Granada. See you there :-)
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.14.tar.gz][latest version is 1.14]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.20.tar.gz][latest version is 1.20]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+
+*** Version 1.20 (2015-05-14)
+
+ - Changed /topics and /authors to /category/topic/ and /category/author and left
+   permanent redirections behind
+
+ - Added category description with editor (using muse markup, of course)
 
 *** Version 1.14 (2015-04-30)
 
