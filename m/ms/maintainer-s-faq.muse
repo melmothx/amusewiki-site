@@ -63,5 +63,7 @@ So if the full URL of the new text is
 http://amusewiki.org/library/new-example-uri, you have just to put
 =new-example-uri= in the header (as per the example above).
 
+*** How do I create an introductory text for a topic or an author?
 
-
+Visit the topic page and append =/edit= to the URL. Only logged in
+librarian are able to do this.
