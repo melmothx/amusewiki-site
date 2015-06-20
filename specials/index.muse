@@ -5,10 +5,19 @@ This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki 
 
 AmuseWiki is going to be presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe]] in Granada. See you there :-)
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.23.tar.gz][latest version is 1.23]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.24.tar.gz][latest version is 1.24]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+
+*** 1.24 2015-06-20
+
+ - Added polish language support (no translation in for now). For this
+   an upgrade of Text::Amuse is required.
+
+ - Before returning a 404 in a catchall route, look at the first
+   fragment of the path and lookup texts, categories and aliases for
+   the uri, redirecting there if found
 
 *** Version 1.23 (2015-06-07)
 
