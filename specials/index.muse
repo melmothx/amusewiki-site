@@ -10,7 +10,7 @@ The [[https://github.com/melmothx/amusewiki/archive/v_1.24.tar.gz][latest versio
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
 
-*** 1.24 2015-06-20
+*** Version 1.24 (2015-06-20)
 
  - Added polish language support (no translation in for now). For this
    an upgrade of Text::Amuse is required.
