@@ -11,10 +11,12 @@ Go to =lib/AmuseWikiFarm/I18N= and run (for example to add swedish)
 msginit --input=messages.pot --output=sv.po --locale=sv
 </example>
 
-Add the language code and the language string to the =known_langs=
+Add the language code and the language string to the =AmuseWikiFarm::Schema::Result::Site::known_langs=
 method.
 
 Add the language code to the =script/upgrade_i18n= script.
+
+Add the babel name to =Text::Amuse::_language_mapping= if missing.
 
 *** Enabling the language
 
