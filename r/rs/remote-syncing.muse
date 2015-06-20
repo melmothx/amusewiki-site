@@ -1,0 +1,18 @@
+#title Remote syncing of archives
+#lang en
+#cat doc howto
+
+It is possible to mirror other instances of a site, as backup,
+assuming that you will just pull from them and that they will be kept
+read-only denying the access from the webserver (read: no not add a
+virtual host for them, to avoid conflicts on editing).
+
+The purpose here is just backup.
+
+ - create a site on the mirroring instance.
+ - go into repo/<newid>, e.g. repo/backup
+ - remove it (it's empty anyway)
+ - clone via git the mirrored site keeping the same name. E.g. git clone git://mainsite.org/git/archive.git backup
+ - add a cronjob which executes: script/sync-remote-archive.pl <newid> <remote-name>, e.g. script/sync-remote-archive.pl backup origin
+
+
