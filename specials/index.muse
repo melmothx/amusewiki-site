@@ -10,6 +10,14 @@ The [[https://github.com/melmothx/amusewiki/archive/v_1.24.tar.gz][latest versio
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
 
+*** Version 1.25 (2015-06-27)
+
+ - Layout fix release. No code changes.
+ - Upgraded to Bootstrap 3.3.5 (latest), including CSS, JS, Glyphicons
+ - Leveraged the glyphicons for the ToC toggler and navbar items
+ - Improved navbar responsiveness
+
+
 *** Version 1.24 (2015-06-20)
 
  - Added polish language support (no translation in for now). For this
