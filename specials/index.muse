@@ -5,10 +5,20 @@ This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki 
 
 AmuseWiki is going to be presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe]] in Granada. See you there :-)
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.25.tar.gz][latest version is 1.25]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.30.tar.gz][latest version is 1.30]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+
+*** Version 1.30 (2015-07-24)
+
+ - Integrated cgit into the layout.
+ - Optional upgrade to cgit latest release (0.11.2)
+ - Unified the installation scripts install-cgit.sh and generate-cgit-repolist.pl
+ - Fixed bug in site creation hostname validation
+
+This upgrade requires to reconfigure cgit and the webserver. See the
+Changes file for the upgrade instructions.
 
 *** Version 1.25 (2015-06-27)
 
