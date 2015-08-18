@@ -2,6 +2,10 @@
 #lang en
 #author Marco Pessotto (melmothX)
 
+*** How does it look like?
+
+[[s-s-screenshot.png 70]]
+
 *** Scenario
 
  - Digital library with more than 2000 texts, including full-length books
