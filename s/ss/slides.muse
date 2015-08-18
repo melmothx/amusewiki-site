@@ -148,6 +148,5 @@ If we have some more time and no questions...
 *** The future
 
  - A better installer
- - Category descriptions
  - Teasers
  - Decorative images
