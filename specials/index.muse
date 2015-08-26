@@ -5,10 +5,22 @@ This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki 
 
 AmuseWiki is going to be presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe]] in Granada. See you there :-)
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.30.tar.gz][latest version is 1.30]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.32.tar.gz][latest version is 1.32]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+
+*** Version 1.31 (2015-07-24) and 1.32 (2015-08-26)
+
+ - Refactored nginx configuration generator.
+ - Fix to mime type of text static files.
+ - Updated translations: de.
+ - Moved ckeditor configuration into a controller.
+ - Use the CDN if ckeditor is not installed locally.
+ - New script clone-site.pl, for import and export of site
+   configurations across instances
+
+Version 1.31 shouldn't be installed, it's a transitional one.
 
 *** Version 1.30 (2015-07-24)
 
