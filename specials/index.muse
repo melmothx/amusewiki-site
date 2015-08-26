@@ -5,10 +5,15 @@ This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki 
 
 AmuseWiki is going to be presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe]] in Granada. See you there :-)
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.32.tar.gz][latest version is 1.32]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.33.tar.gz][latest version is 1.33]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 This page lists the visible changes. For upgrade instructions, please
 consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+
+*** Version 1.33 (2015-08-26)
+
+ - Bump up dependency to use EBook::EPUB::Lite
+ - Suggest to use quote_names in the db connection settings
 
 *** Version 1.31 (2015-07-24) and 1.32 (2015-08-26)
 
