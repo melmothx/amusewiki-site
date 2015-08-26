@@ -7,8 +7,13 @@ AmuseWiki is going to be presented to the Perl community at [[http://act.yapc.eu
 
 The [[https://github.com/melmothx/amusewiki/archive/v_1.33.tar.gz][latest version is 1.33]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
-This page lists the visible changes. For upgrade instructions, please
-consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution.
+This page lists the last visible changes. For upgrade instructions,
+please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
+which also contains the full history.
+
+*** Version 1.34 (2015-08-26)
+
+ - Documentation fixes
 
 *** Version 1.33 (2015-08-26)
 
@@ -37,151 +42,6 @@ Version 1.31 shouldn't be installed, it's a transitional one.
 This upgrade requires to reconfigure cgit and the webserver. See the
 Changes file for the upgrade instructions.
 
-*** Version 1.25 (2015-06-27)
-
- - Layout fix release. No code changes.
- - Upgraded to Bootstrap 3.3.5 (latest), including CSS, JS, Glyphicons
- - Leveraged the glyphicons for the ToC toggler and navbar items
- - Improved navbar responsiveness
-
-
-*** Version 1.24 (2015-06-20)
-
- - Added polish language support (no translation in for now). For this
-   an upgrade of Text::Amuse is required.
-
- - Before returning a 404 in a catchall route, look at the first
-   fragment of the path and lookup texts, categories and aliases for
-   the uri, redirecting there if found
-
-*** Version 1.23 (2015-06-07)
-
- - Fixed crash introduced by buggy 1.22 (when special pages are
-   present). This case was not caught by the test suite. (Now it is).
-
-*** Version 1.22 (2015-06-06)
-
- - Make possible to librarians to list and display deferred texts
- - Updated translations: it
-
-
-*** Version 1.21 (2015-05-15)
-
- - Added LuaLaTeX option (slow and experimental)
-
-*** Version 1.20 (2015-05-14)
-
- - Changed /topics and /authors to /category/topic/ and /category/author and left
-   permanent redirections behind
-
- - Added category description with editor (using muse markup, of course)
-
-*** Version 1.14 (2015-04-30)
-
- - New option to add a HTML snippet to special pages
- - New option to add arbitrary links in the “More” bar
-
-*** Version 1.12 (2015-04-23)
-
- - Added utils/import path to import chunks of HTML
- - Updated po files and italian translation
-
-
-*** Version 1.11 (2015-04-19)
-
- - Added new option to trigger the paginator in /archive and /archive/<lang>
- - Adjust the paginator according to the locale collation (diacritics, etc.)
- - Show the number of text in /archive and /archive/<lang>
-
-*** Version 1.10 (2015-04-12)
-
- - Fixed multilang bug when the uri got the language prefix appended
-   at each request on /new, so uri already taken generated something
-   like uri-it-it-it.
- - Fixed missing category text count update on text deletion.
- - Fixed autocompletion api to return only used categories.
-
-*** Version 1.09 (2015-04-08)
-
- - Prerequisite upgrade to fix some corner-case rendering errors
-   [[https://metacpan.org/pod/Text::Amuse::Compile][Text::Amuse]]
- - Documentation
-
-*** Version 1.08 (2015-03-22)
-
- - Added private site type, where only users have access.
- - Fixed crash on Xapian stemmer where site language is italian
- - Fixed crash when the supplied lexicon.json is invalid
- - Integrated lexicon.json in the localization plugin
- - Adjusted text’s preamble
-
-*** Version 1.07 (2015-02-27)
-
- - Fixed leaked template in the static indexes
-
-This version only correct this bug. This caused the embedded CSS of
-the static indexes (which are used only for static mirroring or
-archive bundles) to break.
-
-*** Version 1.06 (2015-02-21)
-
- - Added EPUB output to Bookbuilder
- - Added font embedding option to Bookbuilder’s EPUBs
- - Added user administration (only for root users)
-
-*** Version 1.05 (2015-02-07)
-
- - Added “opening” option to the site and bookbuilder options. It
-   controls the page the chapters should start (right page or any
-   page).
- - Updated translations: it, hr.
- - Safe old revision (published) and job (completed) purging.
-   Revisions and jobs older than 1 month will get be purged from the
-   database and the associated files removed. Of course, this doesn’t
-   mean that the texts themselves are removed, just the revision.
-
-This version also uses the latest
-[[https://metacpan.org/pod/Text::Amuse::Compile][Text::Amuse]] stack,
-which introduces support for the #hyphenation header tag, so bad hyphenations can be corrected from within the document.
-
-
-*** Version 1.04 (2015-01-08)
-
- - Updated translations: ru, mk
- - Job page will show the queue, if any
- - Fixed bug with category’s names being stuck on the first-come
-
-*** Version 1.03 (2014-12-07)
-
- - Added 4UP imposition schema to the bookbuilder.
- - Added 9pt to the bookbuilder options.
- - Display the current cover image in the bookbuilder, if uploaded.
- - Fixed a crash which happened in some corner case.
- - Added sorting to topics and authors pages.
-
-*** Version 1.02 (2014-11-26)
-
- - Added swedish translations
- - Added sans fonts to the bookbuilder
- - Improved language setting (html header and new texts) for multilanguage
- - Added option to set the number of RSS and on the latest entry menu
- - Added toggler for cover upload’s options on the bookbuilder
-
-*** Version 1.01 (2014-11-20)
-
-This version bumps up the prerequisites =Text::Amuse= and
-=Text::Amuse::Preprocessor=, which have to be upgraded.
-
- - Added swedish support
- - Fixed js diff script
- - Fixed bug with URIs overflowing because of multichar replacements
- - Require (client-side only) a username for anonymous commits
- - Updated schema images
- - Added a command-line fetcher to keep different sites synced
-
-*** Version 1.00 (2014-10-22)
-
-First stable (or kind of stable) release.
 
 
 
