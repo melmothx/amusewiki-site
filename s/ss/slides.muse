@@ -44,7 +44,7 @@
  - Legacy library had the texts in filtered HTML
  - People usually have the texts in Word format or copy and paste from
    HTML pages
- - The javascript HTML editor =CKEditor= has a "paste from Word" feature
+ - The javascript HTML editor =CKEditor= has a “paste from Word” feature
    [[http://ckeditor.com/]]
  - Need to convert the HTML to Muse, preserving as much as possible
    the logical structure of the document (and discarding the noise).
@@ -56,8 +56,8 @@
 
  - Templating for output: [[https://metacpan.org/pod/Template::Tiny][=Template::Tiny=]]
  - PDF generation: =XeLaTeX=  (Unicode aware, system fonts)
- - [[https://metacpan.org/pod/EBook::EPUB][=EBook::EPUB=]] using =Text::Amuse='s splat HTML output
- - [[https://metacpan.org/pod/PDF::Imposition][=PDF::Imposition=]] (written for this project but it's a general
+ - [[https://metacpan.org/pod/EBook::EPUB][=EBook::EPUB=]] using =Text::Amuse=’s splat HTML output
+ - [[https://metacpan.org/pod/PDF::Imposition][=PDF::Imposition=]] (written for this project but it’s a general
    purpose module): put logical pages into a physical page according
    to a schema (for booklets and home printing)
  - All the above glued together by [[https://metacpan.org/pod/Text::Amuse::Compile][=Text::Amuse::Compile=]]
@@ -121,7 +121,7 @@
 
 *** The Bookbuilder
 
-The basic idea is like the Wikimedia's book creator, but with goodies.
+The basic idea is like the Wikimedia’s book creator, but with goodies.
 Features:
 
  - LaTeX output
@@ -143,11 +143,11 @@ If we have some more time and no questions...
 *** The past
 
  - Drupal + filtered HTML, texts kept in sync on a local Git repo with
-   scripts. Obviously it wasn't a brilliant idea, to be generous.
+   scripts. Obviously it wasn’t a brilliant idea, to be generous.
  - Same filtered HTML inherited from Drupal, plus home-brewed CGI
    scripts. It kind of worked.
  - Dancer application and Emacs Muse markup, no database. Worked, but
-   didn't scale with multisite.
+   didn’t scale with multisite.
 
 *** The future
 
