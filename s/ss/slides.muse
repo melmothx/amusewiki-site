@@ -1,5 +1,6 @@
 #title AmuseWiki: a library oriented wiki engine (talk)
 #lang en
+#SORTauthors Marco Pessotto
 #author Marco Pessotto (melmothX)
 #date September 3, 2015, Granada
 
