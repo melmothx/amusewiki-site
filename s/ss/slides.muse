@@ -108,9 +108,10 @@
 *** User management
 
  - Kept at minimum reusing existing solutions.
-   [[https://metacpan.org/pod/Catalyst::Plugin::Authentication][=Catalyst::Plugin::Authentication=]]
-   [[https://metacpan.org/pod/Catalyst::Plugin::Authorization::Roles][=Catalyst::Plugin::Authorization::Roles=]]
-   [[https://metacpan.org/pod/DBIx::Class::PassphraseColumn][=DBIx::Class::PassphraseColumn=]]
+    - [[https://metacpan.org/pod/Catalyst::Plugin::Authentication][=Catalyst::Plugin::Authentication=]]
+    - [[https://metacpan.org/pod/Catalyst::Plugin::Authorization::Roles][=Catalyst::Plugin::Authorization::Roles=]]
+    - [[https://metacpan.org/pod/DBIx::Class::PassphraseColumn][=DBIx::Class::PassphraseColumn=]]
+
  - No hierarchical structure: each librarian can create other peer
    librarians (plus root for site management) with the same level of
    privileges.
