@@ -47,15 +47,15 @@ The format is as follows (plain JSON):
 
 <example>
   {
-     “term” : {
-        “hr” : “Term in croatian”,
-        “en” : “Term in english”,
-        “it” : “Term in italian”
+     "term" : {
+        "hr" : "Term in croatian",
+        "en" : "Term in english",
+        "it" : "Term in italian"
      },
-     “another term [_1]” : {
-        “hr” : “Another term in croatian with an argument [_1]”,
-        “en” : “Another term in english with an argument [_1]”,
-        “it” : “Another term in italian with an argumetn [_1]”
+     "another term [_1]" : {
+        "hr" : "Another term in croatian with an argument [_1]",
+        "en" : "Another term in english with an argument [_1]",
+        "it" : "Another term in italian with an argumetn [_1]"
      }
   }
 </example>
@@ -72,9 +72,9 @@ longish) one-liner:
 
 <example>
 perl -MJSON -MData::Dumper \
-     -e ‘open (my $fh, “<:encoding(UTF-8)”, “site_files/lexicon.json”);
+     -e 'open (my $fh, "<:encoding(UTF-8)", "site_files/lexicon.json");
          $/ = undef; my $json = <$fh>;
-            print Data::Dumper::Dumper(JSON::from_json($json));’
+            print Data::Dumper::Dumper(JSON::from_json($json));'
 </example>
 
 If you see the dump of the data structures (an hashref of hashrefs),
