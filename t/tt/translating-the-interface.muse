@@ -91,7 +91,7 @@ you’re good. Otherwise fix the json and retry.
 
  3. Open the .po file with Poedit. Add the translations. Please
     preserve the %1, %2, in the message. They are placeholders for
-    dinamyc content. Save (of course). Send the .po file to
+    dynamic content. Save (of course). Send the .po file to
     <code>melmothx (at) gmail (dot) com</code>.
 
 Done.
