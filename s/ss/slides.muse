@@ -57,8 +57,9 @@
 *** Compiling
 
  - Templating for output: [[https://metacpan.org/pod/Template::Tiny][=Template::Tiny=]]
- - PDF generation: =XeLaTeX=  (Unicode aware, system fonts)
- - [[https://metacpan.org/pod/EBook::EPUB][=EBook::EPUB=]] using =Text::Amuse=’s splat HTML output
+ - PDF generation: =XeTeX= or =LuaTeX= (Unicode aware, system fonts)
+ - [[https://metacpan.org/pod/EBook::EPUB::Lite][=EBook::EPUB::Lite=]] (this is a port of [[https://metacpan.org/pod/EBook::EPUB][=EBook::EPUB=]] withou XS
+   dependencies) using =Text::Amuse=’s splat HTML output
  - [[https://metacpan.org/pod/PDF::Imposition][=PDF::Imposition=]] (written for this project but it’s a general
    purpose module): put logical pages into a physical page according
    to a schema (for booklets and home printing)
@@ -101,7 +102,7 @@
  - Localization via [[https://metacpan.org/pod/Catalyst::Plugin::I18N][=Catalyst::Plugin::I18N=]] (plus local overriding
    via local JSON file).
  - Localized for English, Italian, Croatian, Macedonian, Russian,
-   Finnish, Swedish, German.
+   Finnish, Swedish, German, Spanish.
  - Multisite: on one instance you can run as many sites as you want
    (this was the most compelling argument to write AmuseWiki).
 
@@ -154,6 +155,7 @@ If we have some more time and no questions...
 
 *** The future
 
+ - Slides (upcoming release)
  - A better installer
  - Teasers
  - Decorative images
