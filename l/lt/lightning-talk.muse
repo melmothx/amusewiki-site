@@ -1,0 +1,73 @@
+#title AmuseWiki, yet another wiki engine
+#subtitle Vienna, Perl Dancer 2015
+#author Marco Pessotto (melmothX)
+#date October 22, 2015
+#slides on
+
+*** Yet another wiki engine
+
+ - Flat file storage, one text ⇒ one file with all the metadata
+ - High-quality output: LaTeX
+ - PDF imposing for printing
+ - EPUB for e-reader and mobile
+ - Git backend
+ - Bookbuilder to customize the output and create collections
+ - HTML importer
+ - Upcoming: slides and POD importer
+
+*** Source (Emacs Muse markup)
+
+<example>
+#title My title
+#subtitle Another boring essay
+#author John Doe
+#topics boring things, another topic
+#date October 22, 2015
+#notes This was just a test
+
+** Chapter one
+
+And **here** the *text* starts
+
+</example>
+
+*** Our modules
+
+ [[https://metacpan.org/pod/Text::Amuse][=Text::Amuse=]] :: the parser
+ [[https://metacpan.org/pod/EBook::EPUB::Lite][=EBook::EPUB::Lite=]] ::
+   port to Moo of [[https://metacpan.org/pod/EBook::EPUB][=EBook::EPUB=]]
+ [[https://metacpan.org/pod/Text::Amuse::Preprocessor][=Text::Amuse::Preprocessor=]] :: the cleaner
+ [[https://metacpan.org/pod/PDF::Imposition][=PDF::Imposition=]] :: prepare PDF for printing
+ [[https://metacpan.org/pod/Text::Amuse::Compile][=Text::Amuse::Compile=]] :: glue all together (CLI script provided)
+
+*** Web
+
+ - Catalyst powered (sorry...)
+ - Mobile friendly layout (Bootstrap)
+ - Background daemon for compilation and git operations.
+ - Localization: English, Italian, Croatian, Macedonian, Russian,
+   Finnish, Swedish, German, Spanish.
+ - User management: peer-based.
+ - Modes
+     - private
+     - blog
+     - moderated wiki
+     - open wiki
+ - Multisite: on one instance you can run as many sites you want.
+
+*** Text view
+
+[[l-t-text.png 60f]]
+
+
+*** Bookbuilder
+
+[[l-t-bookbuilder.png 60f]]
+
+*** Imposed PDF
+
+[[l-t-pdf.png 50f]]
+
+*** Questions?
+
+             ***
