@@ -14,6 +14,10 @@
   GitHub :: [[https://github.com/melmothx]]
   Background :: Humanities (history and translations)
  
+*** One man project
+
+[[l-t-one-man-band.png 50f]]
+
 *** Yet another wiki engine
 
  - Flat file storage, one text ⇒ one file with all the metadata
@@ -67,10 +71,11 @@ And **here** the *text* starts
 
  - powered by Catalyst
  - mobile friendly layout (Bootstrap)
+ - Multisite: on one instance you can run as many sites you want.
  - Localization: English, Italian, Croatian, Macedonian, Russian,
    Finnish, Swedish, German, Spanish.
  - User management: peer-based.
- - Multisite: on one instance you can run as many sites you want.
+
 
 *** Git for the win
 
