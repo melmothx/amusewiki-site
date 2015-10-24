@@ -3,9 +3,11 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine.
 
-AmuseWiki was presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe 2015]] in Granada. Thanks to everyone attending!
+AmuseWiki was presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe 2015]] in
+Granada and at [[https://www.perl.dance/talks/32-amusewiki%2C-a-library-oriented-wiki][Perl Dancer 2015]] in Vienna. Thanks to everyone
+attending!
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.35.tar.gz][latest version is 1.35]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.40.tar.gz][latest version is 1.40]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
@@ -14,17 +16,31 @@ This page lists the last visible changes. For upgrade instructions,
 please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
 which also contains the full history.
 
+*** Version 1.40 (2015-10-24)
+
+  - Handle DB upgrades automatically (with DeploymentHandler)
+  - Check installation on js on startup
+  - Documentation fixes  ([[https://github.com/melmothx/amusewiki/issues/8][GH #8]])
+  - Improved admin revision display ([[https://github.com/melmothx/amusewiki/issues/9][GH #9]])
+  - Fixed translitteration ([[https://github.com/melmothx/amusewiki/issues/10][GH #10]])
+  - Fixed footer ([[https://github.com/melmothx/amusewiki/issues/12][GH #12]])
+  - List attachments in the revision descriptions ([[https://github.com/melmothx/amusewiki/issues/13][GH #13]])
+  - Fixed bug with author-related fields ([[https://github.com/melmothx/amusewiki/issues/15][GH #15]])
+
+Please read carefully the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file if you are upgrading from a
+version prior 1.20 and [[/special/contact][please ask]] if in doubt.
+
 *** Version 1.35 (2015-10-15)
 
  - Updated i18n: spanish
- - Do not validate the commit message on preview (GH #2)
+ - Do not validate the commit message on preview ([[https://github.com/melmothx/amusewiki/issues/2][GH #2]])
  - New option to trigger the validation on commit message
-   (default: enforce, can be set in the admin) (GH #2)
+   (default: enforce, can be set in the admin) ([[https://github.com/melmothx/amusewiki/issues/2][GH #2]])
  - Removed from the repo jquery validation, use CDN if not installed
  - Localized the jquery validation messages
  - Fixed script install-cgit.pl
- - Fixed missing translitteration of ñ (GH #10)
- - Fixed trailing space in footer (GH #12)
+ - Fixed missing translitteration of ñ ([[https://github.com/melmothx/amusewiki/issues/10][GH #10]])
+ - Fixed trailing space in footer ([[https://github.com/melmothx/amusewiki/issues/12][GH #12]])
 
 Please see the Changes file for detailed upgrade instructions.
 
