@@ -22,8 +22,6 @@ which also contains the full history.
   - Check installation on js on startup
   - Documentation fixes  ([[https://github.com/melmothx/amusewiki/issues/8][GH #8]])
   - Improved admin revision display ([[https://github.com/melmothx/amusewiki/issues/9][GH #9]])
-  - Fixed translitteration ([[https://github.com/melmothx/amusewiki/issues/10][GH #10]])
-  - Fixed footer ([[https://github.com/melmothx/amusewiki/issues/12][GH #12]])
   - List attachments in the revision descriptions ([[https://github.com/melmothx/amusewiki/issues/13][GH #13]])
   - Fixed bug with author-related fields ([[https://github.com/melmothx/amusewiki/issues/15][GH #15]])
 
