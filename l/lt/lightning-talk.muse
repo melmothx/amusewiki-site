@@ -18,13 +18,19 @@
 
 [[l-t-one-man-band.png 50f]]
 
+*** Why?
+
+ - Long term storage of texts in a clean form
+ - Publishing texts providing the best possible reading experience.
+
+
 *** Yet another wiki engine
 
  - Flat file storage, one text ⇒ one file with all the metadata
+ - Git backend
  - High-quality output: LaTeX
  - PDF imposing for printing
  - EPUB for e-reader and mobile
- - Git backend
  - Bookbuilder to customize the output and create collections
  - HTML importer (supporting copy and paste from Word via =ckeditor=)
  - Upcoming: slides and POD importer
@@ -67,14 +73,17 @@ And **here** the *text* starts
  [[https://metacpan.org/pod/PDF::Imposition][=PDF::Imposition=]] :: prepare PDF for printing
  [[https://metacpan.org/pod/Text::Amuse::Compile][=Text::Amuse::Compile=]] :: glues all together (CLI script provided)
 
-*** Web
+*** Web Frontend
 
- - powered by Catalyst
- - mobile friendly layout (Bootstrap)
- - Multisite: on one instance you can run as many sites you want.
- - Localization: English, Italian, Croatian, Macedonian, Russian,
+ Framework :: Catalyst
+ Layout :: Bootstrap
+ Multisite ::  on one instance you can run as many sites you want
+ Database :: DBIx::Class
+ Search :: Xapian
+ Templating :: Template Toolkit
+ Localization :: English, Italian, Croatian, Macedonian, Russian,
    Finnish, Swedish, German, Spanish.
- - User management: peer-based.
+ Users :: peer-based.
 
 
 *** Git for the win
