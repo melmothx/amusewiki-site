@@ -123,21 +123,3 @@ Result: PASS
 
 
 
-*** XSendfile
-
-<example>
-melmoth@cosmo /tmp % curl -o /dev/null -D - -s \
-   https://amusewiki.org/library/manual
-HTTP/1.1 200 OK
-Server: nginx/1.2.1
-X-Catalyst: 5.90093
-ETag: ebc1397ef446cf9fd10f902cb2ea5874820f0a22
-
-melmoth@cosmo /tmp % curl -o /dev/null -D - -s \
-  https://amusewiki.org/library/manual.pdf
-HTTP/1.1 200 OK
-Server: nginx/1.2.1
-Last-Modified: Wed, 08 Apr 2015 12:28:38 GMT
-Accept-Ranges: bytes
-</example>
-
