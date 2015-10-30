@@ -2,7 +2,7 @@
 #subtitle Vienna, Perl Dancer 2015
 #author Marco Pessotto (melmothX)
 #date October 22, 2015
-#slides on
+#slides ON
 
 *** About me: Marco Pessotto
 
