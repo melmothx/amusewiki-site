@@ -63,7 +63,7 @@ And **here** the *text* starts
 
 *** Imposed PDF
 
-[[l-t-pdf.png 70]]
+[[l-t-imposition.png 50]]
 
 *** Home-brewed modules (available on CPAN)
 
