@@ -1,5 +1,5 @@
 #title AmuseWiki: a library oriented wiki engine (talk)
-#slides on
+#slides ON
 #lang en
 #SORTauthors Marco Pessotto
 #author Marco Pessotto (melmothX)
