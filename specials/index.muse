@@ -7,7 +7,7 @@ AmuseWiki was presented to the Perl community at [[http://act.yapc.eu/ye2015/tal
 Granada and at [[https://www.perl.dance/talks/32-amusewiki%2C-a-library-oriented-wiki][Perl Dancer 2015]] in Vienna. Thanks to everyone
 attending!
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.41.tar.gz][latest version is 1.41]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.51.tar.gz][latest version is 1.51]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
@@ -15,6 +15,16 @@ You are welcome to report old and new bugs and feature requests on
 This page lists the last visible changes. For upgrade instructions,
 please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
 which also contains the full history.
+
+*** Version 1.51 (2015-10-30)
+
+ - Introduced description lists via new [[https://metacpan.org/pod/Text::Amuse][Text::Amuse]]
+ - Introduced production of slides via new [[https://metacpan.org/pod/Text::Amuse::Compile][Text::Amuse::Compile]]
+ - Slides are supported in the bookbuilder as well (single file)
+ - Improved commit versions and crediting in the archive git history
+ - Selection of slides themes and colors in the admin
+ - Selection of mono and sans fonts in the admin
+
 
 *** Version 1.41 (2015-10-26)
 
