@@ -27,7 +27,7 @@
 
 *** Yet another wiki engine
 
- - Flat file storage, one text ⇒ one file with all the metadata
+ - Flat file storage, one text maps to one file with all the metadata
  - Git backend
  - High-quality output: LaTeX
  - PDF imposing for printing
