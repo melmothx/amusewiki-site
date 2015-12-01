@@ -7,7 +7,7 @@ AmuseWiki was presented to the Perl community at [[http://act.yapc.eu/ye2015/tal
 Granada and at [[https://www.perl.dance/talks/32-amusewiki%2C-a-library-oriented-wiki][Perl Dancer 2015]] in Vienna. Thanks to everyone
 attending!
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.52.tar.gz][latest version is 1.52]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.54.tar.gz][latest version is 1.54]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
@@ -15,6 +15,20 @@ You are welcome to report old and new bugs and feature requests on
 This page lists the last visible changes. For upgrade instructions,
 please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
 which also contains the full history.
+
+*** Version 1.54 (2015-12-01)
+
+ - Moved the files produced by the bookbuilder into a private directory ([[https://github.com/melmothx/amusewiki/issues/27][#27]])
+ - Added UI to add remotes to the repo ([[https://github.com/melmothx/amusewiki/issues/18][#18]])
+
+*** Version 1.53 (2015-11-23)
+
+ - Added option to upload an HTML file instead of pasting the body ([[https://github.com/melmothx/amusewiki/issues/22][#22]])
+ - Doc fixes ([[https://github.com/melmothx/amusewiki/issues/22][#22]])
+ - Hide the filters by default ([[https://github.com/melmothx/amusewiki/issues/23][#23]])
+ - Log user agent and referrer on 404 ([[https://github.com/melmothx/amusewiki/issues/24][#24]])
+ - Try not to hit the session without a reason ([[https://github.com/melmothx/amusewiki/issues/25][#25]])
+
 
 *** Version 1.52 (2015-10-30)
 
