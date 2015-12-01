@@ -23,7 +23,7 @@ which also contains the full history.
 
 *** Version 1.53 (2015-11-23)
 
- - Added option to upload an HTML file instead of pasting the body ([[https://github.com/melmothx/amusewiki/issues/22][#22]])
+ - Added option to upload an HTML file instead of pasting the body ([[https://github.com/melmothx/amusewiki/issues/16][#16]])
  - Doc fixes ([[https://github.com/melmothx/amusewiki/issues/22][#22]])
  - Hide the filters by default ([[https://github.com/melmothx/amusewiki/issues/23][#23]])
  - Log user agent and referrer on 404 ([[https://github.com/melmothx/amusewiki/issues/24][#24]])
