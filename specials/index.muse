@@ -7,7 +7,7 @@ This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki 
 
 You should consider amusewiki if:
 
- - You want **high-quality output** (PDF with LaTeX quality).
+ - You want **high-quality output** (EPUB and PDF with LaTeX quality).
  - You want a site with a flat-file and **Git** backend for long-term archiving.
  - You want to be able to reformat the PDFs, merging texts into **collections**.
  - You don't want or need fine-grained user permissions.
