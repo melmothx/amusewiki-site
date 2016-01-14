@@ -33,7 +33,7 @@ archiving of texts.
 Every wiki has a sandbox, so [[http://sandbox.amusewiki.org][here it is]].
 
 The code is written in Perl and is freely available (under the same
-terms as Perl itself) on [[https://github.com/melmothx/amusewiki/releases][github]] and [[https://gitorious.org/amusewikifarm][gitorious]].
+terms as Perl itself) on [[https://github.com/melmothx/amusewiki/releases][github]].
 
 *** Codebase
 
@@ -41,6 +41,7 @@ Beside the wiki engine itself, some perl modules were developed for
 this project and are available on CPAN.
 
  - [[https://metacpan.org/pod/PDF::Imposition][PDF::Imposition]]
+ - [[https://metacpan.org/pod/PDF::Cropmarks][PDF::Cropmarks]]
  - [[https://metacpan.org/pod/Text::Amuse][Text::Amuse]]
  - [[https://metacpan.org/pod/Text::Amuse::Compile][Text::Amuse::Compile]]
  - [[https://metacpan.org/pod/Text::Amuse::Preprocessor][Text::Amuse::Preprocessor]]
