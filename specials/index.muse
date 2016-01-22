@@ -18,6 +18,9 @@ You should consider amusewiki if:
 
 ** News
 
+Experimental debian packages are available at
+[[http://packages.amusewiki.org]]!
+
 AmuseWiki was presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe 2015]] in
 Granada and at [[https://www.perl.dance/talks/32-amusewiki%2C-a-library-oriented-wiki][Perl Dancer 2015]] in Vienna. Thanks to everyone
 attending!
@@ -30,6 +33,27 @@ You are welcome to report old and new bugs and feature requests on
 This page lists the last visible changes. For upgrade instructions,
 please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
 which also contains the full history.
+
+*** Version 1.60 (2016-01-22)
+
+Due to scripts renaming, please stop the application **before**
+upgrading. Now the end-user scripts have an "amusewiki-" prefix.
+
+  - Bookbuilder new feature: partial texts ([[https://github.com/melmothx/amusewiki/issues/14][#14]])
+  - Automated installer ([[https://github.com/melmothx/amusewiki/issues/29][#29]])
+  - Added javascript code highlighter ([[https://github.com/melmothx/amusewiki/issues/1][#1]])
+  - Moved cgit refreshing to module and trigger it on conf changes
+  - Fixed BB crash when reusing setup with a cover ([[https://github.com/melmothx/amusewiki/issues/30][#30]])
+  - Fixed missing Xapian purging on deletion by git removal ([[https://github.com/melmothx/amusewiki/issues/31][#31]])
+  - Added delete button and code for category descriptions ([[https://github.com/melmothx/amusewiki/issues/32][#32]])
+  - Hold the webserver configuration in a model
+  - Added let's encrypt support via simp_le
+  - Bookbuilder new feature: running headers
+  - Bookbuilder new feature: crop marks
+  - Bookbuilder new feature: custom paper size
+  - New imposition schemas in the Bookbuilder
+  - Daemon optimization with fork to keep the memory low
+  - Prepared sources for debian packaging
 
 *** Version 1.56 (2015-12-02)
 
