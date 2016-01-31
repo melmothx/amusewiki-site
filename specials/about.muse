@@ -3,19 +3,23 @@
 #pubdate 2014-11-29T08:00
 
 *A·Muse·Wiki* (also spelled Amusewiki or amusewiki) is a
-library-oriented wiki engine. It can work as a read-only site, as a
-moderated wiki, or as a fully open wiki.
+library-oriented wiki engine and publishing platform. It can work as a
+read-only site, as a moderated wiki, or as a fully open wiki.
 
 It strives to be simple and yet powerful enough for long-term
 archiving of texts.
+
+Full support for high-quality printing of the texts is one of the core
+features.
 
 *** Features
 
  - User-friendly markup borrowed from [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]]
  - **Importing of HTML** documents preserving most of the logical markup
  - Wide range of output formats, including high-quality **PDF** (via LaTeX) and **EPUB**
- - Automatic generation of PDF for **printing** 
+ - Automatic generation of PDF for **printing**, including **imposition** and **crop marks**
  - **Collection** creation and PDF reformatting, with plenty of layout options
+ - Production of **slides**
  - Texts are stored under revision control with **Git**
  - Offline editing via Git
  - Fast and accurate **full-text search** (with many available options)
@@ -24,6 +28,9 @@ archiving of texts.
  - RSS feed
  - Localization via gettext (depending on the language, the coverage varies from complete to zero, but it's easy to add).
  - Multilanguage on the same site is supported
+ - Syntax highlight via [[https://highlightjs.org/][highlight.js]]
+ - Automatic db upgrades
+ - [[http://packages.amusewiki.org][Packaged for debian]] with batteries included
 
 *** Missing features (so far)
 
