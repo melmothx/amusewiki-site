@@ -1173,7 +1173,7 @@ very, long description
 </biblio>
 
 The list is wrapped in a =<div>= with class set to biblio, while the TeX
-source get wrapped in =\startawikibiblio= and =\stopawikibiblio=. You are
+source get wrapped in the =amusebiblio= environment. You are
 free to change class and definition. A reversed indentation is
 suggested.
 
