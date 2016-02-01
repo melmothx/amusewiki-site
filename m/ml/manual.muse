@@ -227,16 +227,15 @@ The forth level goes down further.
 
 **** Forth level, a “subsection”
 
-The fifth level is very, very low. It’s handy to create description
-lists, too. It’s not dumped on the Table of Contents.
+The fifth level is very, very low and does not create a Table of Contents entry.
 
-***** item 1
+***** Fifth level 1
 
-A description
+Some text.
 
-***** item 2
+***** Fifth level 2
 
-Another description
+Some other text.
 
 **** The example of levels
 
@@ -526,6 +525,9 @@ Lists are given using special characters at the beginning of a line.
 Whitespace must occur before bullets or numbered items, to distinguish
 from the possibility of those characters occurring in a real sentence.
 
+Description lists are marked by some initial whitespace, the term, a
+double colon surrounded by whitespace, and the description body.
+
 <example>
 Normal text.
 
@@ -560,6 +562,12 @@ A list with lower letters
  a. first
  b. second
  c. third
+
+A description list
+
+ First term :: definition and description
+ Second term :: definition and description
+
 </example>
 
 Please note the consistent indentation, **expecially** for roman numbering.
@@ -598,10 +606,10 @@ A list with lower letters
  b. second
  c. third
 
-While the original Emacs Muse had the description lists, this
-implementation has not. You should use the fifth level of headings for
-those. The outcome is mostly the same (yes, you can’t nest them in
-lists, but crazy nesting is beyond the scope of this markup).
+A description list
+
+ First term :: definition and description
+ Second term :: definition and description
 
 *** Nested lists
 
@@ -624,6 +632,8 @@ Normal text.
    a. Level 2, enum item “a”
    b. Level 2, enum item “b”
       I. Level 3, enum item “I”
+         One term :: description
+         Another term :: description
  - Back to the bullets
 </example>
 
@@ -642,6 +652,8 @@ Normal text.
    a. Level 2, enum item “a”
    b. Level 2, enum item “b”
       I. Level 3, enum item “I”
+         One term :: description
+         Another term :: description
  - Back to the bullets
 
 *** Breaking list items
@@ -680,43 +692,6 @@ or
  a. first
  a. second
  a. third
-
-If you need to switch type while the list is running, put a =br= tag
-between them, or some invisible material like a non-breaking space.
-
-<example>
-This won’t get you what you expect:
-
- 1. first
- a. first item
-
-So you’ll have to do:
-
- 1. first
-
-<br>
-
- a. first item
-</example>
-
-Which yields:
-
-----
-
-This won’t get you what you expect:
-
- 1. first
- a. first item
-
-So you’ll have to do:
-
- 1. first
-
-<br>
-
- a. first item
-
-----
 
 *** Complete example
 
@@ -797,6 +772,15 @@ Normal text.
 
             Here I have the same amount of indentation,
             and it continues the item above.
+
+                 And inside this item :: a description
+
+                                         Which continues here.
+
+                 Another term :: a description
+
+                                 Which continues here.
+
 
  - Back to the bullets
 
@@ -880,6 +864,15 @@ Normal text.
 
             Here I have the same amount of indentation, and it continues the
             item above.
+
+
+                 And inside this item :: a description
+
+                                         Which continues here.
+
+                 Another term :: a description
+
+                                 Which continues here.
 
  - Back to the bullets
 
