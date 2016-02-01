@@ -1172,10 +1172,10 @@ very, very, very, very, very, very, very, very, very, very, very,
 very, long description
 </biblio>
 
-The list is wrapped in a =<div>= with class set to biblio, while the TeX
-source get wrapped in the =amusebiblio= environment. You are
-free to change class and definition. A reversed indentation is
-suggested.
+The list is wrapped in a =<div>= with class set to biblio, while the
+TeX source get wrapped in the =amusebiblio= environment. You are free
+to change class and environment definition if you need to. A reversed
+indentation is suggested.
 
 
 The same goes with the =<play>= environment, which is supposed to wrap
