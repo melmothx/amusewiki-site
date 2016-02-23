@@ -51,6 +51,12 @@ Clicking on the plus button will add the text to the Bookbuilder.
 You can continue browsing the site or visit the [[/bookbuilder]] page now,
 clicking the link in the navigation menu or the confirmation message.
 
+Normally your selections are kept until you close the browser, and
+sometimes even longer (depending on the traffic on the site, if you
+clean the cookies, etc.). But let's assume they are kept while you
+don't close the browser, so you can browse the site freely, add more
+text, and finally come back to build your files.
+
 ** The Bookbuilder interface
 
 
@@ -317,5 +323,87 @@ that with the “paper thickness” dropdown menu.
 Be aware that the file needs some more time to be produced when you
 activate the crop marks.
 
-[[b-t-bb15.png][Please note the crop marks near the margins]
+[[b-t-bb15.png][Please note the crop marks near the margins]]
+
+*** EPUB
+
+Now that we got our first PDF, we can go back to the [[/bookbuilder]] page
+and instead of choosing PDF, we can choose EPUB. Please note that the
+PDF settings will not be forgotten.
+
+
+[[b-t-bb16.png]]
+
+
+When choosing the EPUB output, most of the options will disappear,
+leaving only the cover image options (same logic as the PDF) and an
+EPUB-specific option, which permits to embed fonts into it.
+
+Please note that not all the devices and software which read EPUB
+support the font embedding, and the size of the EPUB with embedded
+fonts is going be much larger.
+
+Anyway, if you want to create a nice EPUB with fonts of your choice,
+you have the chance to do so.
+
+Again, refer to [[/bookbuilder/fonts]] for a preview.
+
+To create the file, hit the “Build it” button as we did for the EPUB.
+
+** Collections
+
+Amusewiki has the ability to merge texts together. You just have to
+add another text to the bookbuilder, with exactly the same procedure
+as before (the plus button on each page).
+
+[[b-t-bb17.png]]
+
+However, when building a collection, you are asked for some details.
+The only mandatory one is the title of the collection, but you can
+also specify author, subtitle, date (for the front page), source and
+notes (for the back page).
+
+This gives you full control of what to put on those pages of the
+resulting file (both EPUB and PDF).
+
+
+*** Partial selections
+
+You can also choose to add only some sections of a text.
+
+You can do so visiting the text and in the menu, and clicking instead
+of the plus button, the plus button with a list, which brings you to a
+new page where the text structure is shown and you can pick the pieces
+you are interested in.
+
+[[b-t-bb18.png]]
+
+
+[[b-t-bb19.png]]
+
+
+Beware that when you have a complex structure, if you select only an
+higher level (in the example here, “The Muse markup”) without the
+lower levels, you are going to get only its title and the text until
+the first subsection. Anyway, the interface is going to select the
+subsections for you when you select an higher level. You are free to
+deselect them if you are not interested in those parts.
+
+Clicking on the “Add the selected parts to the bookbuilder” will bring
+us back to the text, with a notice that we have added it.
+
+[[b-t-bb20.png]]
+
+If you now visit the [[/bookbuilder]] page, will see a link in the
+“Partial selection” column (with a “Yes”). If you visit it, it will
+bring you back to the text structure view, where you can edit and
+resubmit the selections.
+
+Please note that doing so will add the text again (yes, you can have
+duplicates), so you have the remove the previous copy with the
+“Delete” button. New additions are naturally added at the bottom.
+
+The rest of the interface works transparently as you were building a
+single text.
+
 
