@@ -27,6 +27,8 @@ Instead, you should consider amusewiki if:
 
 ** News
 
+An in-depth explanation of the bookbuilder is available [[/library/bookbuilder-tutorial][here]].
+
 Experimental debian packages are available at
 [[http://packages.amusewiki.org]]!
 
