@@ -5,7 +5,16 @@ This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki 
 
 *** Why would I want this engine and not MediaWiki / Drupal / WordPress / whatever?
 
-You should consider amusewiki if:
+Amusewiki is **not** a clone of existing CMS. It was created to manage
+large amounts of texts (books and articles) with a special focus on
+quality, printing and first rate reading experience.
+
+The PDF and EPUB generation is not a nice addon, it's the core
+feature.
+
+If you only need a CMS for a fancy site, amusewiki is not for you.
+
+Instead, you should consider amusewiki if:
 
  - You want **high-quality output** ([[/special/index.epub][**EPUB**]] and [[/special/index.pdf][**PDF with LaTeX quality**]]).
  - You want a site with a flat-file and [[/git][**Git** backend]] for long-term archiving.
@@ -25,7 +34,7 @@ AmuseWiki was presented to the Perl community at [[http://act.yapc.eu/ye2015/tal
 Granada and at [[https://www.perl.dance/talks/32-amusewiki%2C-a-library-oriented-wiki][Perl Dancer 2015]] in Vienna. Thanks to everyone
 attending!
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.605.tar.gz][latest version is 1.605]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.606.tar.gz][latest version is 1.606]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
@@ -33,6 +42,13 @@ You are welcome to report old and new bugs and feature requests on
 This page lists the last visible changes. For upgrade instructions,
 please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
 which also contains the full history.
+
+*** Version 1.606 (2016-02-22)
+
+ - Completed HR translation. ES, IT and HR are now completed.
+ - Minor fixes (GH [[https://github.com/melmothx/amusewiki/issues/39][#39]], [[https://github.com/melmothx/amusewiki/issues/40][#40]], [[https://github.com/melmothx/amusewiki/issues/41][#41]])
+ - Adjusted js to work around bootstrap fixed topbar positioning
+ - Fixed BB bug with partials and quotas (GH [[https://github.com/melmothx/amusewiki/issues/38][#38]])
 
 *** Version 1.605 (2016-02-09)
 
