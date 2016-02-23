@@ -1,0 +1,235 @@
+#title The bookbuilder: a tutorial
+#author Marco Pessotto
+#SORTauthors Marco Pessotto
+#date 2016
+#lang en
+
+*** Introduction
+
+With the Bookbuilder you can customize the the PDF and the EPUB of the
+texts distributed on an amusewiki instance. You can change fonts,
+dimension, etc. This article will cover the Bookbuilder feature in
+great detail. Anyway, the web interface should already give you an
+idea of what you can do.
+
+** Getting the texts into the bookbuilder
+
+The prerequisite is that your browser has javascript and cookies
+enabled (otherwise the application can't store your selections).
+
+To start using the Bookbuilder you first need to add one or more texts.
+
+We will start covering the topic of a single text and all its options.
+
+The Bookbuilder can be found on the navigation menu, with a book icon.
+
+[[b-t-bb00.png]]
+
+However, following the link will tell you that no texts has been added
+yet.
+
+[[b-t-bb01.png]]
+
+If you haven't already done so, you will have to pass the antispam
+question before proceeding.
+
+So, find a text ([[/random]] could do for the purpose of this tutorial)
+and look at the download buttons. The last two buttons with a big plus
+sign are the Bookbuilder buttons.
+
+[[b-t-bb02.png]]
+
+
+The first one is to add a whole text, the second one (with a list
+icon) is for selecting individual parts (this topic will be covered
+later).
+
+Clicking on the plus button will add the text to the Bookbuilder.
+
+[[b-t-bb03.png]]
+
+You can continue browsing the site or visit the [[/bookbuilder]] page now,
+clicking the link in the navigation menu or the confirmation message.
+
+** The Bookbuilder interface
+
+
+[[b-t-bb04.png]]
+
+
+The upper part of the page consists of a table which lists the texts
+added so far. You may want to browse the site and and more texts if
+you wish so, but for now let's stop here and see what the Bookbuilder
+has to offer.
+
+Given that so far we have only one text, the “Move up” and “Move down”
+buttons have no use. Deleting a text will remove it from the
+Bookbuilder. “Clear the book list” will remove all of them, while
+“Reset all” will clear the list and restore the factory settings.
+
+The first choice to do is the output format, which usually is PDF or
+EPUB.
+
+*** PDF options
+
+Feel free to experiment with the options. After you have built a text,
+the options are not lost, you can go back to the Bookbuilder page and
+rebuild the PDF changing some other options until you achieve the
+desired result.
+
+**** Fonts
+
+[[b-t-bb05.png]]
+
+First of all, you may want to change the fonts used in the PDF. There
+is a link to the font preview page, [[/bookbuilder/fonts]], with the title
+“Please select the desired fonts”, where you can take a look and see
+how they look likes and if the character coverage is enough for your
+text (which should be enough for latin characters, but it's a more
+delicate matter for, e.g., Russian).
+
+The main font is what matters, while the mono font is relevant only
+for code listings.
+
+Finally you can choose the font size, in the standard 9, 10, 11 and 12
+points. Usually 10 or 11 is a good choice.
+
+**** Page dimensions
+
+The paper format choice is, of course, an important one and determines
+the page dimensions, *before any other processing like imposition*.
+
+[[b-t-bb06.png]]
+
+The menu consists of a dropdown menu with predefined dimensions
+(mostly standard) but also offers a way to set custom ones. Please
+note that to use the custom dimensions you need to set both the width
+and the height, otherwise the dimensions set in the dropdown menu
+takes precedence. When both width and height are selected, the
+dropdown will disappear, and will reappear resetting the dimensions to
+“Standard”.
+
+[[b-t-bb07.png]]
+
+
+**** The division factor and the binding correction
+
+The options presented here is probably cryptic, but it has a sane
+default. This is the way the text block is built:
+
+[[b-t-bb08.png]]
+
+The grid presented here shows a page built with a division factor of
+9. The width and the height are divided in 9 equal parts, and 3 parts
+are used for the margins. Increasing the division factor leads to
+narrower margins, because it will always use 3 parts for the margins,
+while the text block would grow. More details can be found in the
+documentation of the backend used, [[http://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguien.pdf][KOMA-Script]].
+
+The menu offers division factors from 9 (wide margins) to 15 (narrow
+margins).
+
+In the picture you will notice the binding correction gap. That is the
+amount of space eaten by the binding. If you are clipping a booklet,
+you may want to set it to 0, while if you're binding it, you have to
+take account of the paper that gets used by the binding, which is not
+visible at all and in the worst case scenario could make you book
+unreadable because the binding would eat the text as well (and then
+you can throw everything away...).
+
+**** Table of contents options
+
+Under normal circumstances, a text with sections or chapters generates
+a table of contents. However, you may want to disable it (to save
+paper or because you feel it's not needed): you can do so checking the
+“Never generate a table of content” checkbox.
+
+If, instead, the text does not have sectioning, by default the text
+will start on the next page after the cover. Checking the “For texts
+without a table of contents, start the text on the very first page”
+checkbox would make the body starting at page 1.
+
+
+**** Two side layout
+
+[[b-t-bb09.png]]
+
+This apparently innocent checkbox means a great deal.
+
+If not checked, the text block would be centered, with equal left and
+right margins, and centered page numbering.
+
+If checked, the layout will take account of left and right page, the
+inner margin being half of the outer margin, and page numbers on the
+outer margin. Also, a dropdown will appear, asking where to start a
+chapter, if on any page, or on a right-hand page only.
+
+If you are going to produce a PDF for reading on screen, you want to
+choose reduced page dimension (A5 max), disable the two side layout
+and set the binding correction to 0.
+
+If you are going to do a booklet or a book, you want to activate the
+two side option.
+
+**** Running headings
+
+The running headings, also known as headers, are the lines with
+usually author or title or section name which can be found on the top
+of a page.
+
+Now, deciding what to put there can be tricky, because a random text
+doesn't have a fixed structure with sections and chapters, or the
+subtitle is missing, or the author is missing, so the dropdown menu
+prompts to some choices, also stating what happens if you do not have
+a two-sides layout (because usually you don't want the same text on
+the left header and on the right header).
+
+Choose the safest option which works for your text.
+
+**** The cover image
+
+A word of warning: usually it's best to let the Bookbuilder take care
+of the inner of the book or booklet, and create the cover on a
+different file, because usually you want to print it on a different
+kind of paper, add some texts on the backside, etc.
+
+Anyway, if you are going to produce a file to distribute on the
+internet for reading on screen, and you want some graphics on it, you
+have the chance to do so adding a cover image.
+
+[[b-t-bb10.png]]
+
+You can get a preview of the file by selecting the file from your
+computer, scrolling down the page and hitting “Update”, which will
+save your settings.
+
+Once you have uploaded it, you have the chance to replace it selecting
+another one or remove it checking the appropriate checkbox and
+updating again.
+
+Another warning: the image by default will expand its width to the
+text-block width (i.e., will have margins). Now, if the width/height
+ratio is not suitable, it's possible that some undesired results will
+follow, like the image going on the next page and so.
+
+To control the image size you can set the width in percent. So, if the
+image is too high, reduce the width to a suitable size to make all the
+cover material fit nicely in the page. You will probably have to
+rebuild a couple of times.
+
+Again, probably you want to create a cover yourself on a separate
+file.
+
+At this point, if you are not going to print the file or if you are
+just printing on a plain A4, all you have to do is to press the “Build
+it” button on the bottom of the page.
+
+[[b-t-bb11.png]]
+
+
+The link under ”Your file is ready” is the file for you, but you can
+also grab the LaTeX sources and attached files with the “Sources”
+link.
+
+
+
