@@ -231,5 +231,91 @@ The link under ”Your file is ready” is the file for you, but you can
 also grab the LaTeX sources and attached files with the “Sources”
 link.
 
+*** Imposition
 
+If you don't know what imposition means, you can read about it on [[https://en.wikipedia.org/wiki/Imposition][wikipedia]].
+
+You can activate the imposition clicking on the “I want an imposed
+(ready to print) PDF” checkbox, and you will be presented with a wide
+range of schemas. Every schema is accompaigned by an image which
+should make the output clear.
+
+Be aware that the page dimensions you set before are altered. If in
+your schema on every sheet fit two pages, the width will double. So,
+if you set the page dimensions to A5, if you impose with the 2up
+schema, you will get a final physical size of A4.
+
+
+[[b-t-bb12.png]]
+
+The contextual help should be clear enough. If not so, please report
+it as an amusewiki bug.
+
+If you are going to print a pamphlet, you want the **2up** schema, which
+also prompt for the signature size, defaulting to imposing the whole
+book on a single signature, meaning that the last page will be
+together with the first page on the first physical sheet. All you have
+to do is to clip in the middle, fold once and you have your booklet.
+
+Anyway, you can also set the signature size, i.e. imposing the text in
+more booklets which then you have to bind together.
+
+While most of the schemas have fixed signatures, the **2up** and **4up**
+schemas can have different signature sizes.
+
+As we said, the default is to impose everything on a single signature.
+However, for larger books, this is not always desirable. You can set
+it to a fixed number of pages you decided, or let the system to
+compute the best signature size (i.e., the one which will generate
+less blank pages to fill the last signature). This is the "optimized
+signature" option. All the signatures will have the same size, but
+this size is not known in advance, and will be ranging from 40 to 80.
+
+Again, feel free to experiment.
+
+[[b-t-bb13.png]]
+
+Also take a look at the checkbox at the bottom of the page: “Fill with
+blank pages before the last page if the signature is not full”. Say
+your book is going to have 10 pages, and you impose on a signature of
+16 pages, this means you are going to have the 6 pages blank. If
+this checkbox is not checked, the blank pages will fall at the end. If
+you fold it, the last page is going to be empty.
+
+However, given that amusewiki produces PDFs with a kind of back cover,
+it's nice to have it placed at the very end. So, in our example, pages
+1-9 with the text, then pages 10-15 with blank pages, and finally
+page 16 with the original last page (which was p. 10, but now is
+shifted at the end). And this is what that option does.
+
+*** Crop marks
+
+Checking the “Add crop marks to the PDF” will reveal some other
+options.
+
+[[b-t-bb14.png]]
+
+Crop marks are the marks placed at the corners of a form to indicate
+where the page is to be trimmed.
+
+If you are not going to trim the paper, you don't need it.
+
+When using this option, please note that you are now setting the size
+of the logical page, not the physical paper dimensions. So the same
+logic as before, when we were setting the page dimensions apply.
+
+Say you want to print a booklet with dimension 13x20cm, using the **2up**
+schema. You have to set the 130mm and 20mm when you choose the page
+dimension, while here you should set A5 (so it leaves some margins to
+cut), and will result in an A4 PDF.
+
+Activating the crop marks also cause the cutting correction to be
+applied, so outer pages in the signature will have some inner space to
+compensate the paper thickness after the folding. You can fine-tune
+that with the “paper thickness” dropdown menu.
+
+Be aware that the file needs some more time to be produced when you
+activate the crop marks.
+
+[[b-t-bb15.png][Please note the crop marks near the margins]
 
