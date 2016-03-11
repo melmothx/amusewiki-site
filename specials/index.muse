@@ -19,6 +19,7 @@ Instead, you should consider amusewiki if:
  - You want **high-quality output** ([[/special/index.epub][**EPUB**]] and [[/special/index.pdf][**PDF with LaTeX quality**]]).
  - You want a site with a flat-file and [[/git][**Git** backend]] for long-term archiving.
  - You want to be able to reformat the PDFs, merging texts into **collections**. Add a text and [[/bookbuilder][take a look at the **bookbuilder**]]
+ - You want an [[/opds][OPDS server]] for mobile users to deliver the texts straight into the apps
  - You don't want or need fine-grained user permissions.
  - You don't want or need talks, comments, forums, social, etc
    embedded into the site.
@@ -27,23 +28,62 @@ Instead, you should consider amusewiki if:
 
 ** News
 
+*** OPDS
+
+Starting from version 1.700, amusewiki comes with an embedded [[http://opds-spec.org/][OPDS]]
+server. Users on phones with applications for reading epubs should be
+able to browse, search and download the texts from inside the
+application. Tested applications: FBreader, Aldiko, Moon+ Reader.
+Apparently, desktop users can't really do anything useful with the
+OPDS, though.
+
+*** Bookbuilder tutorial
+
 An in-depth explanation of the bookbuilder is available [[/library/bookbuilder-tutorial][here]].
+
+*** Debian packages
 
 Experimental debian packages are available at
 [[http://packages.amusewiki.org]]!
+
+*** Conferences
 
 AmuseWiki was presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe 2015]] in
 Granada and at [[https://www.perl.dance/talks/32-amusewiki%2C-a-library-oriented-wiki][Perl Dancer 2015]] in Vienna. Thanks to everyone
 attending!
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.606.tar.gz][latest version is 1.606]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+** Download and bug reports
+
+The [[https://github.com/melmothx/amusewiki/archive/v_1.703.tar.gz][latest version is 1.703]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
 
-This page lists the last visible changes. For upgrade instructions,
+** Versions (short summary)
+
+Here we list the last visible changes. For upgrade instructions,
 please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
 which also contains the full history.
+
+
+*** Version 1.703 (2016-03-11)
+
+ - Added /opds/search
+ - Added /opds/crawlable
+ - Fixed footer layout
+
+*** Version 1.702 (2016-03-08)
+
+ - Added /latest controller
+ - Added opensearch description
+
+*** Version 1.701 (2016-03-06)
+
+ - Fixed footer (OPDS was hidden)
+
+*** Version 1.700 2016-03-06
+
+ - Added OPDS server under /opds
 
 *** Version 1.606 (2016-02-22)
 

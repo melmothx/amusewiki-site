@@ -24,6 +24,7 @@ features.
  - Offline editing via Git
  - Fast and accurate **full-text search** (with many available options)
  - **Multisite** engine: on one instance you can run as many sites you want
+ - Embedded [[/opds][OPDS server]]
  - Mail notifications
  - RSS feed
  - Localization via gettext (depending on the language, the coverage varies from complete to zero, but it's easy to add).
