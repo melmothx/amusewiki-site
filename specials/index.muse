@@ -54,7 +54,7 @@ attending!
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.703.tar.gz][latest version is 1.703]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.704.tar.gz][latest version is 1.704]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
@@ -65,6 +65,10 @@ Here we list the last visible changes. For upgrade instructions,
 please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
 which also contains the full history.
 
+*** Version 1.704 (2016-03-11)
+
+ - Added dynamic robots.txt
+ - Added sitemap.txt (which was missing for some unknown reason)
 
 *** Version 1.703 (2016-03-11)
 
