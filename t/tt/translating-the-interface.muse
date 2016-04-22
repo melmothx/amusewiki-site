@@ -11,7 +11,7 @@ Multilanguage setting.
 ** Technical details (for developers)
 
 See
-[https://github.com/melmothx/amusewiki/blob/master/LOCALIZATION.txt][=LOCALIZATION.txt=]]
+[[https://github.com/melmothx/amusewiki/blob/master/LOCALIZATION.txt][=LOCALIZATION.txt=]]
 in the root of the distribution.
 
 This document also contains the procedure if you want to override the
