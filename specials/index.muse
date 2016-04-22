@@ -54,7 +54,7 @@ attending!
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.800.tar.gz][latest version is 1.800]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.801.tar.gz][latest version is 1.801]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
@@ -64,6 +64,10 @@ You are welcome to report old and new bugs and feature requests on
 Here we list the last visible changes. For upgrade instructions,
 please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
 which also contains the full history.
+
+*** Version 1.801 (2016-04-22)
+
+ - Added help page for OPDS
 
 *** Version 1.800 (2016-04-22)
 
