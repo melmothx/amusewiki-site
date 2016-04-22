@@ -133,14 +133,14 @@ to the output style escaped.
 
 Example:
 
+{{{
 <example>
- <example>
- The =<example>= tag is used for examples, where
- whitespace should be preserved, the text rendered in
- monospace, and any characters special to the output
- style escaped.
- </example>
+The =<example>= tag is used for examples, where
+whitespace should be preserved, the text rendered in
+monospace, and any characters special to the output
+style escaped.
 </example>
+}}}
 
 There is no =<literal>= tag as in the original Muse markup, because it’s
 not a private tool and will be exposed to the internet.
@@ -150,6 +150,15 @@ untouched. This means that it's very likely that you
 will get overflowing lines. To avoid this, a safe value
 for a line length could be 60 characters. Use longer
 lines at your perils.
+
+An alternate syntax for the =<example>= tag is ={{{= =}}}=:
+
+<example>
+{{{
+This is verbatim as well
+}}}
+</example>
+
 
 *** Line breaks
 
