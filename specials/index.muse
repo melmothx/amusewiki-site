@@ -69,7 +69,8 @@ which also contains the full history.
 
  - Decoupled mail sending from the application [INTERNAL]
  - Optimized /opds/crawlable
- - Removed simp_le from the stack and use Protocol::ACME instead (see README)
+ - Removed simp_le from the stack and use Protocol::ACME instead (see
+   the Let's Encrypt section of the [[https://github.com/melmothx/amusewiki/blob/master/README][=README=]])
  - Updated localization
 
 If you are the simp_le cronjobs in place, please remove them, as the
