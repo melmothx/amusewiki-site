@@ -83,7 +83,7 @@ certificate renewal is already taken care of by the amusewiki daemon.
 
  - Decoupled the localization framework from the application
  - Completed translations: fr and mk.
- - Updated depencencies Text::Amuse and Text::Amuse::Preprocessor
+ - Updated dependencies Text::Amuse and Text::Amuse::Preprocessor
 
 The upgrade should be transparent, but please see LOCALIZATION.txt for
 details if you are using the =lexicon.json= file to override
