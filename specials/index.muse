@@ -54,7 +54,7 @@ attending!
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.811.tar.gz][latest version is 1.811]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.821.tar.gz][latest version is 1.821]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
@@ -64,6 +64,16 @@ You are welcome to report old and new bugs and feature requests on
 Here we list the last visible changes. For upgrade instructions,
 please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
 which also contains the full history.
+
+*** Version 1.821 (2016-05-10)
+
+ - Added reset password by mail ([[https://github.com/melmothx/amusewiki/issues/48][#48]])
+ - Added admin role which is able to set most of the site settings ([[https://github.com/melmothx/amusewiki/issues/49][#49]])
+ - Added experimental popular sorting ([[https://github.com/melmothx/amusewiki/issues/44][#44]])
+ - Add HTTP auth for robots on private sites ([[https://github.com/melmothx/amusewiki/issues/50][#50]])
+ - UI improvements (number of texts pending on the bookbuilder)
+ - Updated translations: fr, it, hr
+ - Updated documentation
 
 *** Version 1.811 (2016-05-01)
 
