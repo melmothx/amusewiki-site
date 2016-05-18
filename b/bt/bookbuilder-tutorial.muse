@@ -6,7 +6,7 @@
 
 *** Introduction
 
-With the Bookbuilder you can customize the the PDF and the EPUB of the
+With the Bookbuilder you can customize the PDF and the EPUB of the
 texts distributed on an amusewiki instance. You can change fonts,
 dimension, etc. This article will cover the Bookbuilder feature in
 great detail. Anyway, the web interface should already give you an
@@ -55,7 +55,7 @@ Normally your selections are kept until you close the browser, and
 sometimes even longer (depending on the traffic on the site, if you
 clean the cookies, etc.). But let's assume they are kept while you
 don't close the browser, so you can browse the site freely, add more
-text, and finally come back to build your files.
+texts, and finally come back to build your files.
 
 ** The Bookbuilder interface
 
@@ -167,7 +167,7 @@ right margins, and centered page numbering.
 
 If checked, the layout will take account of left and right page, the
 inner margin being half of the outer margin, and page numbers on the
-outer margin. Also, a dropdown will appear, asking where to start a
+outer margin. Also, a dropdown menu will appear, asking where to start a
 chapter, if on any page, or on a right-hand page only.
 
 If you are going to produce a PDF for reading on screen, you want to
@@ -348,7 +348,7 @@ you have the chance to do so.
 
 Again, refer to [[/bookbuilder/fonts]] for a preview.
 
-To create the file, hit the “Build it” button as we did for the EPUB.
+To create the file, hit the “Build it” button as we did for the PDF.
 
 ** Collections
 
