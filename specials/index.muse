@@ -73,7 +73,7 @@ which also contains the full history.
  - Documentation fixes
  - Improved notifications on the upload process
  - Added documentation for 0-downtime upgrades
- - Debian packages now come with the 0-downtime upgrade features built-in
+ - Debian packages now come with the 0-downtime upgrade feature built-in
 
 *** Version 1.821 (2016-05-10)
 
