@@ -21,7 +21,7 @@ Instead, you should consider amusewiki if:
  - You want **high-quality output** ([[/special/index.epub][**EPUB**]] and [[/special/index.pdf][**PDF with LaTeX quality**]]).
  - You want a site with a flat-file and [[/git][**Git** backend]] for long-term archiving.
  - You want to be able to reformat the PDFs, merging texts into **collections**. Add a text and [[/bookbuilder][take a look at the **bookbuilder**]]
- - You want an [[/opds][OPDS server]] for mobile users to deliver the texts straight into the apps
+ - You want an [[/help/opds][OPDS server]] for mobile users to deliver the texts straight into the apps
  - You don't want or need fine-grained user permissions.
  - You don't want or need talks, comments, forums, social, etc
    embedded into the site.
