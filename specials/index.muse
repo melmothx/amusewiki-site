@@ -3,6 +3,8 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine. Amusewiki is more than just a wiki engine, it's also a powerful authoring, archiving and publishing platform.
 
+Needless to say, amusewiki is written (mostly) in Perl and is 100% free software.
+
 *** Why would I want this engine and not MediaWiki / Drupal / WordPress / whatever?
 
 Amusewiki is **not** a clone of existing CMS. It was created to manage
@@ -54,7 +56,7 @@ attending!
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_1.821.tar.gz][latest version is 1.821]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_1.826.tar.gz][latest version is 1.826]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
@@ -64,6 +66,14 @@ You are welcome to report old and new bugs and feature requests on
 Here we list the last visible changes. For upgrade instructions,
 please consult the [[https://github.com/melmothx/amusewiki/blob/master/Changes][=Changes=]] file in the root of the distribution,
 which also contains the full history.
+
+*** Version 1.826 (2016-06-12)
+
+ - Adjusted the statistics under =/stats/popular=
+ - Documentation fixes
+ - Improved notifications on the upload process
+ - Added documentation for 0-downtime upgrades
+ - Debian packages now come with the 0-downtime upgrade features built-in
 
 *** Version 1.821 (2016-05-10)
 
