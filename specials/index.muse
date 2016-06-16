@@ -5,6 +5,8 @@ This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki 
 
 Needless to say, amusewiki is written (mostly) in Perl and is 100% free software.
 
+A talk about amusewiki is going to take place at [[http://act.yapc.eu/ye2016/talk/6737][YAPC::EU 2016]].
+
 *** Why would I want this engine and not MediaWiki / Drupal / WordPress / whatever?
 
 Amusewiki is **not** a clone of existing CMS. It was created to manage
@@ -45,14 +47,9 @@ An in-depth explanation of the bookbuilder is available [[/library/bookbuilder-t
 
 *** Debian packages
 
-Experimental debian packages are available at
-[[http://packages.amusewiki.org]]!
-
-*** Conferences
-
-AmuseWiki was presented to the Perl community at [[http://act.yapc.eu/ye2015/talk/6056][YAPC::Europe 2015]] in
-Granada and at [[https://www.perl.dance/talks/32-amusewiki%2C-a-library-oriented-wiki][Perl Dancer 2015]] in Vienna. Thanks to everyone
-attending!
+Debian packages are available at [[http://packages.amusewiki.org]]! This
+is the fastest and recommended way to install amusewiki with no pain
+at all.
 
 ** Download and bug reports
 
