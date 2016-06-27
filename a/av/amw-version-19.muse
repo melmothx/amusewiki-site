@@ -1,0 +1,27 @@
+#title Version 1.9
+#pubdate 2016-06-27
+#date 2016-06-27
+#teaser This release series comes with a new “blog-style” feature, which should make it suitable for a general purpose blog.
+
+1.901 2016-06-27
+
+ - Paginate the listing of texts under categories and add breadcrumbs there
+ - Added next/prev links in the head when paginating the results (SEO)
+ - Hide pubdates from category items when not in blog style mode
+
+1.900 2016-06-25
+
+ - New blog mode, which can be activated in the admin console, per
+   site. The blog mode changes the behaviour of the site giving it a
+   time-centric display of texts.
+ - Flexible tag cloud which can be embedded via ajax
+ - Free form HTML layout elements (top, bottom, left, right)
+ - Support for teasers and decorative images
+ - Monthly archives which can be embedded via ajax
+ - Legacy links support
+ - Revamped and reorganized admin console
+ - Attached images preview in the edit screen
+ - Selectable CSS themes
+ - Wordpress import script
+ - Minor layout adjustments
+
