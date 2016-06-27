@@ -1,0 +1,48 @@
+#title Version 1.8
+#pubdate 2016-06-12
+#date 2016-06-12
+#cat releases
+#teaser Let's Encrypt built-in, =/stats/popular=, localization changes.
+
+*** Version 1.826 (2016-06-12)
+
+ - Adjusted the statistics under =/stats/popular=
+ - Documentation fixes
+ - Improved notifications on the upload process
+ - Added documentation for 0-downtime upgrades
+ - Debian packages now come with the 0-downtime upgrade feature built-in
+
+*** Version 1.821 (2016-05-10)
+
+ - Added reset password by mail ([[https://github.com/melmothx/amusewiki/issues/48][#48]])
+ - Added admin role which is able to set most of the site settings ([[https://github.com/melmothx/amusewiki/issues/49][#49]])
+ - Added experimental popular sorting ([[https://github.com/melmothx/amusewiki/issues/44][#44]])
+ - Add HTTP auth for robots on private sites ([[https://github.com/melmothx/amusewiki/issues/50][#50]])
+ - UI improvements (number of texts pending on the bookbuilder)
+ - Updated translations: fr, it, hr
+ - Updated documentation
+
+*** Version 1.811 (2016-05-01)
+
+ - Decoupled mail sending from the application [INTERNAL]
+ - Optimized /opds/crawlable
+ - Removed simp_le from the stack and use Protocol::ACME instead (see
+   the Let's Encrypt section of the [[https://github.com/melmothx/amusewiki/blob/master/README][=README=]])
+ - Updated localization
+
+If you are the simp_le cronjobs in place, please remove them, as the
+certificate renewal is already taken care of by the amusewiki daemon.
+
+*** Version 1.801 (2016-04-22)
+
+ - Added help page for OPDS
+
+*** Version 1.800 (2016-04-22)
+
+ - Decoupled the localization framework from the application
+ - Completed translations: fr and mk.
+ - Updated dependencies Text::Amuse and Text::Amuse::Preprocessor
+
+The upgrade should be transparent, but please see LOCALIZATION.txt for
+details if you are using the =lexicon.json= file to override
+localization. Otherwise there is no action to take.

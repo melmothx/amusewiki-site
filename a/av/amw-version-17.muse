@@ -1,0 +1,31 @@
+#title Version 1.7
+#pubdate 2016-03-11
+#date 2016-03
+#cat releases
+#teaser This version introduced the OPDS feature.
+
+
+*** Version 1.704 (2016-03-11)
+
+ - Added dynamic robots.txt
+ - Added sitemap.txt (which was missing for some unknown reason)
+
+*** Version 1.703 (2016-03-11)
+
+ - Added /opds/search
+ - Added /opds/crawlable
+ - Fixed footer layout
+
+*** Version 1.702 (2016-03-08)
+
+ - Added /latest controller
+ - Added opensearch description
+
+*** Version 1.701 (2016-03-06)
+
+ - Fixed footer (OPDS was hidden)
+
+*** Version 1.700 2016-03-06
+
+ - Added OPDS server under /opds
+
