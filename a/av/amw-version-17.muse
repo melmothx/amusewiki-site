@@ -2,8 +2,14 @@
 #pubdate 2016-03-11
 #date 2016-03-11
 #cat releases
-#teaser This version introduced the OPDS feature.
 #lang en
+#teaser Starting from version 1.700, amusewiki comes with an embedded [[http://opds-spec.org/][OPDS]]
+server. Users on phones with applications for reading epubs should be
+able to browse, search and download the texts from inside the
+application. Tested applications: FBreader, Aldiko, Moon+ Reader.
+Apparently, desktop users can't really do anything useful with the
+OPDS, though.
+
 
 
 *** Version 1.704 (2016-03-11)

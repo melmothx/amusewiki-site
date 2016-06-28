@@ -3,7 +3,7 @@
 #date 2016-02-22
 #cat releases
 #lang en
-#teaser Bookbuilder partial texts and new options, code highlight, experimental Let's Encrypt support, installer
+#teaser Bookbuilder partial texts and new options, code highlight, experimental Let's Encrypt support, installer and debian packages.
 
 *** 1.606 2016-02-22
 

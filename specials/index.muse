@@ -9,12 +9,10 @@ A talk about amusewiki is going to take place at [[http://act.yapc.eu/ye2016/tal
 
 *** Why would I want this engine and not MediaWiki / Drupal / WordPress / whatever?
 
-Amusewiki is **not** a clone of existing CMS. It was created to manage
-large amounts of texts (books and articles) with a special focus on
-quality, printing and first rate reading experience.
-
-The PDF and EPUB generation is not a nice addon, it's the core
-feature.
+Amusewiki is **not** a clone of existing CMS. It was created to manage and
+edit large amounts of texts (books and articles) with a special focus
+on quality, printing and first rate reading experience. See
+[[/library/rationale]] to understand its architecture.
 
 If you only need a CMS for a fancy site, amusewiki is not for you.
 
@@ -31,15 +29,6 @@ Instead, you should consider amusewiki if:
 [[/special/about][See the feature list for more details.]]
 
 ** News
-
-*** OPDS
-
-Starting from version 1.700, amusewiki comes with an embedded [[http://opds-spec.org/][OPDS]]
-server. Users on phones with applications for reading epubs should be
-able to browse, search and download the texts from inside the
-application. Tested applications: FBreader, Aldiko, Moon+ Reader.
-Apparently, desktop users can't really do anything useful with the
-OPDS, though.
 
 *** Bookbuilder tutorial
 
