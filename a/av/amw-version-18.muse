@@ -3,6 +3,7 @@
 #date 2016-06-12
 #cat releases
 #teaser Let's Encrypt built-in, =/stats/popular=, localization changes.
+#lang en
 
 *** Version 1.826 (2016-06-12)
 

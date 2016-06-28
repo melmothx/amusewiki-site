@@ -1,8 +1,9 @@
 #title Version 1.7
 #pubdate 2016-03-11
-#date 2016-03
+#date 2016-03-11
 #cat releases
 #teaser This version introduced the OPDS feature.
+#lang en
 
 
 *** Version 1.704 (2016-03-11)

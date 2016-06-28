@@ -1,0 +1,44 @@
+#title Version 1.5
+#pubdate 2015-12-02
+#date 2015-12-02
+#cat releases
+#lang en
+#teaser Slide generations and options in the bookbuilder
+
+*** 1.56 2015-12-02
+
+ - Handle long author names (via bumped up Text::Amuse::Compile)
+ - Added headings option to the bookbuilder (buggy, probably impossible to
+   fix)
+ - Updated i18n files
+
+*** 1.55 2015-12-01
+
+ - Fixed git command for older gits
+
+*** 1.54 2015-12-01
+
+ - Moved the files produced by the bookbuilder into a private directory (#27)
+ - Added UI to add remotes to the repo (#18)
+
+*** 1.53 2015-11-23
+
+ - Added option to upload an HTML file instead of pasting the body (#22)
+ - Doc fixes (#22)
+ - Hide the filters by default (#23)
+ - Log user agent and referrer on 404 (#24)
+ - Try not to hit the session without a reason (#25)
+
+*** 1.52 2015-10-30
+
+ - Fixed bug due to bad file extension parsing, which was excluding
+   some files after a pulling.
+
+*** 1.51 2015-10-30
+
+ - Introduced description lists via new Text::Amuse
+ - Introduced production of slides via new Text::Amuse::Compile
+ - Slides are supported in the bookbuilder as well (single file)
+ - Improved commit versions and crediting in the archive git history
+ - Selection of slides themes and colors in the admin
+ - Selection of mono and sans fonts in the admin

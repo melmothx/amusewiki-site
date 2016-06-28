@@ -3,6 +3,7 @@
 #date 2016-06-27
 #teaser This release series comes with a new “blog-style” feature, which should make it suitable for a general purpose blog.
 #cat releases
+#lang en
 
 *** Version 1.901 2016-06-27
 
