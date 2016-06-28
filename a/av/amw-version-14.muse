@@ -1,0 +1,20 @@
+#title Version 1.4
+#pubdate 2015-10-26
+#date 2015-10-24
+#cat releases
+#lang en
+#teaser Automatical DB upgrades and improved logging system
+
+*** 1.41 2015-10-26
+
+ - New logging system: Log::Contextual + Log:Log4perl
+ - Avoid useless question on revision selection screen
+
+*** 1.40 2015-10-24
+
+  - Handle DB upgrades automatically (with DeploymentHandler)
+  - Check installation on js on startup
+  - Documentation fixes  (GH #8)
+  - Improved admin revision display (GH #9)
+  - List attachments in the revision descriptions (GH #13)
+  - Fixed bug with author-related fields (GH #15)
