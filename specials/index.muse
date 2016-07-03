@@ -34,11 +34,12 @@ Instead, you should consider amusewiki if:
 
 An in-depth explanation of the bookbuilder is available [[/library/bookbuilder-tutorial][here]].
 
-*** Debian packages
+*** Debian and Ubuntu packages
 
-Debian packages are available at [[http://packages.amusewiki.org]]! This
-is the fastest and recommended way to install amusewiki with no pain
-at all.
+Debian packages are available at [[http://packages.amusewiki.org]]!
+This is the fastest and recommended way to install amusewiki with no
+pain at all. Ubuntu 16.04 LTS is supported and the procedure and the
+packages are exactly the same.
 
 ** Download and bug reports
 
