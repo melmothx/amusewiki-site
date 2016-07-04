@@ -1,9 +1,14 @@
 #title Version 1.9
-#pubdate 2016-07-01
-#date 2016-07-01
-#teaser This release series comes with a new “blog-style” feature, which should make it suitable for a general purpose blog.
+#pubdate 2016-07-04
+#date 2016-07-04
+#teaser This release series comes with a new “blog-style” feature, which should make it suitable for a general purpose blog. Added documentation for FreeBSD setup.
 #cat releases
 #lang en
+
+*** Version 1.904 2016-07-04
+
+ - Added documentation for FreeBSD (and tested on this OS)
+ - Fixed some portability issues in the helper scrip
 
 *** Version 1.903 (2016-07-01)
 
