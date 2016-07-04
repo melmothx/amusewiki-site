@@ -8,7 +8,7 @@
 *** Version 1.904 2016-07-04
 
  - Added documentation for FreeBSD (and tested on this OS)
- - Fixed some portability issues in the helper scrip
+ - Fixed some portability issues in the helper scripts
 
 *** Version 1.903 (2016-07-01)
 
