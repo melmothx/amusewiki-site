@@ -1127,7 +1127,9 @@ using "#anchor" as the target in a Muse link. Please note that the
 anchor must be on a line by itself.
 
 You are marking paragraphs, so if you're pointing to a section, you
-have to put the anchor above its first paragraph.
+have to put the anchor above its first paragraph (beware that header
+titles, like everything else, may span over multiple lines, so you
+have to separate it from the the header with a blank line).
 
 You can't have an anchor at the beginning of the text, because it's
 merged into the header, so, if you really have to, put a =br= tag before
@@ -1154,6 +1156,8 @@ Here we have our text.
 More text.
 
 *** Next section
+#ThisIsNotAnAnchor
+(it's part of the title, which can be over multiple lines)
 
 And here we can link to [[#anchor][our anchor]] and to the [[#begin][begin]].
 }}}
