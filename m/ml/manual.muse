@@ -1103,9 +1103,6 @@ Van spent all his free time in research work for me.
 
 ** Inserting a horizontal line
 
-*** Horizontal Rules
-
-
 Four or more dashes indicate a horizontal rule.  Be sure to put blank
 lines around it, or it will be considered part of the proceeding or
 following paragraph, like this: =---------=.
