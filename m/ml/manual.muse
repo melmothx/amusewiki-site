@@ -1130,7 +1130,7 @@ using "#anchor" as the target in a Muse link. Please note that the
 anchor must be on a line by itself.
 
 You are marking paragraphs, so if you're pointing to a section, you
-have to put the anchor above the first paragraph of it.
+have to put the anchor above its first paragraph.
 
 You can't have an anchor at the beginning of the text, because it's
 merged into the header, so, if you really have to, put a =br= tag before
@@ -1176,7 +1176,7 @@ Bad example:
 See [[#anchor][here]]
 }}}
 
-The poor sould printing it and reading it on paper will see just "See
+The poor soul printing it and reading it on paper will see just "See
 here". Here where?
 
 Good example:
