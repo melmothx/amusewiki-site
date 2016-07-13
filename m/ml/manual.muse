@@ -1101,7 +1101,7 @@ Van spent all his free time in research work for me.
 
 
 
-** Inserting a horizontal line or anchor
+** Inserting a horizontal line
 
 *** Horizontal Rules
 
@@ -1119,6 +1119,48 @@ Example
 Results:
 
 ----
+
+** Named anchors
+
+If you start a paragraph (but even a list element or a quotation) with
+"#anchor" – where "anchor" can be any (ascii) word that starts with a
+letter and contains only ascii letters and digits – it defines an
+anchor at that point into the document. This point can be referenced
+using "#anchor" as the target in a Muse link. Please note that the
+anchor must be on a line by itself.
+
+The support for this feature was introduced in Text::Amuse version 0.70.
+
+{{{
+#anchor
+Here we have our text
+
+And here we can link to [[#anchor][our anchor]].
+}}}
+
+Please note that the name in the HTML output is not kept verbatim.
+Instead a =text-amuse-label= prefix is added (if you need to link it
+externally).
+
+Also note that the link is lost when producing imposed PDFs (and
+implicitely lost when printing any PDF), so it's recommended to keep
+this in mind when writing the document, as the text of the link should
+work even if the link is not present.
+
+Bad example:
+
+{{{
+See [[#anchor][here]]
+}}}
+
+The poor sould printing it and reading it on paper will see just "See
+here". Here where?
+
+Good example:
+
+{{{
+See [[#anchor][the previous chapter]] for more informations.
+}}}
 
 ** Lines to omit from published output
 
