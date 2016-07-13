@@ -1129,13 +1129,36 @@ anchor at that point into the document. This point can be referenced
 using "#anchor" as the target in a Muse link. Please note that the
 anchor must be on a line by itself.
 
+You are marking paragraphs, so if you're pointing to a section, you
+have to put the anchor above the first paragraph of it.
+
+You can't have an anchor at the beginning of the text, because it's
+merged into the header, so, if you really have to, put a =br= tag before
+it.
+
 The support for this feature was introduced in Text::Amuse version 0.70.
 
 {{{
-#anchor
-Here we have our text
+#title My text
 
-And here we can link to [[#anchor][our anchor]].
+#badanchor
+This is not an anchor, it's part of the header with a dummy name.
+
+<br>
+
+#begin
+This will work.
+
+*** Section
+
+#anchor
+Here we have our text.
+
+More text.
+
+*** Next section
+
+And here we can link to [[#anchor][our anchor]] and to the [[#begin][begin]].
 }}}
 
 Please note that the name in the HTML output is not kept verbatim.
