@@ -1,6 +1,7 @@
 #title Include remote files
 #topics howto
 #lang en
+#teaser How to update texts from remote content
 
 It was asked if it would be possible to include (possibly remote)
 files at markup level, something like:
