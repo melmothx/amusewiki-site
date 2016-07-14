@@ -58,17 +58,8 @@ git push
 
 It's recommended to do so each time you start editing locally.
 
-Finally, setup the site's repo adding this new remote.
-
-<example>
-# on the server, in the application directory:
-cd amusewiki/repo/amw
-git remote add marco /var/cache/git/marco/amw.git
-</example>
-
-Visiting =/console/git= you should now find your personal repository
-listed. The pushing normally would fail, unless the site can write
-there.
+Visit =/console/git= to add your personal repository (in this case
+=/var/cache/git/marco/amw.git=, literally).
 
 With the “Fetch” button you will pull your changes.
 
