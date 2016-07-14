@@ -1,0 +1,49 @@
+#title Include remote files
+#topics howto
+#lang en
+
+It was asked if it would be possible to include (possibly remote)
+files at markup level, something like:
+
+{{{
+[[include file.txt]]
+}}}
+
+This idea of external resources embedded at markup level is bad
+because it just goes against the whole amusewiki architecture, which
+tries and keep the archive as a whole and the texts as self-contained
+units.
+
+However, the problem is fixable in another way, which looks saner and
+more secure (because of course, this feature would open up a whole set
+of vulnerabilities: think e.g. about an URL as
+=http://localhost/path/which/is/supposed/to/be/served/only/to/localhost=
+which could be possibly get embedded on a public wiki).
+
+Instead, you could have a script which does the following:
+
+ 1. Read a user provided file with an identifier and an URL. Which at
+    this point could be very well file:///etc/passwd as it's under the
+    user control and out of the app.
+
+ 2. In the muse file, leave some comments, like =; START INCLUDE file= and
+    =; STOP INCLUDE= (which are invisible in the generated formats)
+
+ 3. Fetch the application git and do forced update to keep it in sync
+    using the freshest version.
+
+ 4. Scan the archive and replace with the content between the comments
+    with the LWP->decoded_content stuff the script pulls from the
+    identifiers, and commit the changes, if any. Bonus point: you
+    actually keep track of the changes not just display the content
+    at some random time. I see this as feature, of course.
+
+ 5. Add a cronjob to the application which pulls this cloned git every
+    hour or so. The applications will refuse to pull non-fast-forward
+    anyway, so it's safe.
+
+See =script/sync-remote-archive.pl= for an example of a script which
+automatically pulls the content from a remote archive.
+
+
+
