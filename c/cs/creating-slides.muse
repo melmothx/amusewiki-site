@@ -1,0 +1,133 @@
+#title Creating slides
+#author Marco Pessotto
+#topics howto
+#teaser Amusewiki can be used as a system to create slides
+#date 2016
+#lang en
+#slides ON
+
+Amusewiki, beside the usual output formats (HTML, EPUB, LaTeX, HTML),
+is able to create slides in PDF via the Beamer package with LaTeX.
+
+The slides feature is off by default, but you can easily activate it
+in the admin console with the checkbox under “Formats”.
+
+Now, given that you generally don't want slides for *all* your texts,
+you have to flag it accordingly. You can do so with the provided
+checkbox in the text creation page, or simply adding the header
+
+{{{
+#slides yes
+}}}
+
+in the editing screen (i.e., in the =.muse= file).
+
+It's important to note that the slide material must be placed inside a
+section, no matter how deep.
+
+Material at the beginning of the text, not belonging to any section,
+is just ignored.
+
+You can sections of the documents by placing a comment cooking in the
+excluded ones. This is useful if you want to create slides and handout
+from the same source (as you should).
+
+When writing slides, you probably want to leverage the list syntax, e.g:
+
+{{{
+
+ - first item
+
+ 1. numbered items
+
+ 2. second item
+
+ another :: item
+
+}}}
+
+Which outputs:
+
+ - first item
+
+ 1. numbered items
+
+ 2. second item
+
+ another :: item
+
+Finally, when you have the document ready, you can change the theme,
+the colors and the fonts adding it to the bookbuilder (using the
+button in the text's infobox) and asking for slides.
+
+[[c-s-rebuild-1.png f]]
+
+** Full example
+
+; no slides
+
+{{{
+
+** Activate
+
+ - Amusewiki can produce slides
+ - Activate it in the admin to enable them
+ - Flag the text accordingly with =#slides yes=
+
+*** Explanation
+
+; no slides
+
+See above, I won't repeat it here
+
+** Syntax
+
+ - material must belong to a section
+ - keep the section short
+ - exclude sections with a <code>; no slides</code> comment cookie
+
+*** Explanation
+
+; no slides
+
+Again, Here we can write something which doesn't end up in the slides.
+See the produced formats.
+
+** Bookbuilder
+
+ - Selection of theme, color and fonts
+ - slides rebuilding are available if you compile just one text
+
+}}}
+
+Produces this output:
+
+** Activate
+
+ - Amusewiki can produce slides
+ - Activate it in the admin to enable them
+ - Flag the text accordingly with =#slides yes=
+
+*** Explanation
+
+; no slides
+
+See above, I won't repeat it here
+
+** Syntax
+
+ - material must belong to a section
+ - keep the section short
+ - exclude sections with a <code>; no slides</code> comment cookie
+
+*** Explanation
+
+; no slides
+
+Again, Here we can write something which doesn't end up in the slides.
+See the produced formats.
+
+
+
+
+
