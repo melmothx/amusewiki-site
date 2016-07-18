@@ -28,39 +28,47 @@ section, no matter how deep.
 Material at the beginning of the text, not belonging to any section,
 is just ignored.
 
-You can sections of the documents by placing a comment cooking in the
-excluded ones. This is useful if you want to create slides and handout
-from the same source (as you should).
-
-When writing slides, you probably want to leverage the list syntax, e.g:
+You can exclude sections of the documents from the slides by placing a
+comment cookie in the excluded sections.
 
 {{{
+*** this section will be excluded
 
- - first item
+; no slides
 
- 1. numbered items
-
- 2. second item
-
- another :: item
-
+Here goes the lengthy explanation...
 }}}
 
-Which outputs:
-
- - first item
-
- 1. numbered items
-
- 2. second item
-
- another :: item
+This is useful if you want to create slides and handout from the same
+source (as you should).
 
 Finally, when you have the document ready, you can change the theme,
 the colors and the fonts adding it to the bookbuilder (using the
 button in the text's infobox) and asking for slides.
 
 [[c-s-rebuild-1.png f]]
+
+When writing slides, you probably want to leverage the list syntax, e.g:
+
+{{{
+
+*** Slide title
+
+ - first item
+
+ 1. numbered items
+
+ 2. second item
+
+ another :: item
+
+**** Explanation
+
+; no slides
+
+Here goes the lengthy explanation...
+
+}}}
 
 ** Full example
 
