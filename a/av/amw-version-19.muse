@@ -1,9 +1,27 @@
 #title Version 1.9
-#pubdate 2016-07-04
-#date 2016-07-04
-#teaser This release series comes with a new “blog-style” feature, which should make it suitable for a general purpose blog. Added documentation for FreeBSD setup.
+#pubdate 2016-07-18
+#date 2016-07-18
+#teaser New “blog-style” feature, which should make amusewiki suitable for a general purpose blog, new bookbuilder profiles and plenty of doc.
 #cat releases
 #lang en
+
+*** Version 1.910 2016-07-18
+
+ - Fixed pagination sorting with same date
+ - Enlarged fields in the creation page
+ - Added localized /help/faq from documentation
+ - Added /help/irc with livechat for users which can edit the pages
+   (by default, points to #amusewiki on freenode).
+ - I18N update: es, it, hr
+ - Make the pagination configurable ([[https://github.com/melmothx/amusewiki/issues/62][GH #62]])
+ - Move the infobox to the bottom only if configured so for blog-styled
+ - Editing page: various layout fixes (uses ajax for speedup) ([[https://github.com/melmothx/amusewiki/issues/60][GH #60]])
+ - Handle the unicode exceptions grafully (it was spamming errors on bad requests) ([[https://github.com/melmothx/amusewiki/issues/65][GH #65]])
+ - Added meta description to categories and texts ([[https://github.com/melmothx/amusewiki/issues/58][GH #58]])
+ - Added option to turn links to images into actual images ([[https://github.com/melmothx/amusewiki/issues/53][GH #53]])
+ - Tested and adjusted custom template support ([[https://github.com/melmothx/amusewiki/issues/64][GH #64]])
+ - Added profiles for BB ([[https://github.com/melmothx/amusewiki/issues/61][GH #61]]) (experimental, but working, probably
+   will need some adjustments)
 
 *** Version 1.904 2016-07-04
 
