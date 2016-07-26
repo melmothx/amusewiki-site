@@ -1,9 +1,15 @@
 #title Version 1.9
-#pubdate 2016-07-18
-#date 2016-07-22
+#pubdate 2016-07-26
+#date 2016-07-26
 #teaser New “blog-style” feature, which should make amusewiki suitable for a general purpose blog, new bookbuilder profiles and plenty of doc.
 #cat releases
 #lang en
+
+*** Version 1.914 2016-07-26
+
+ - Internal minor refactoring for JSON serializer
+ - Fixed crash (pretty nasty) when the admin set the locale to sr
+ - Fixed crash if xapian is out of sync with the db
 
 *** Version 1.912 2016-07-22
 
