@@ -140,7 +140,7 @@ Minimum requirement: Debian Jessie and Ubuntu 16.04 LTS.
  - Much smaller installation footprint (mostly because the texlive
    installation is optimized and shared)
  - Improved security
-    - code is installed by root and the application can't write there
+    - code is installed and owned by root, not by the user running the application
     - debian is taking care of the security updates of the
       dependencies (not only the perl dependencies, but also the
       libraries used by LaTeX, cgit and other utilities)
