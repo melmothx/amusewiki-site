@@ -1,0 +1,153 @@
+#title Amusewiki: a year of development
+#author Marco Pessotto (melmothX)
+#SORTauthors Marco Pessotto
+#slides on
+#lang en
+#date August 24-26, 2016, Cluj-Napoca
+#pubdate 2016-08-27
+
+*** About me: Marco Pessotto
+
+  PAUSE id :: =MELMOTHX=
+  IRC :: =melmothX= on Freenode and =irc.perl.org=
+  E-mail :: =melmothx@gmail.com=
+  Homepage and documentation :: [[https://amusewiki.org]]
+  IRC channel :: =irc://chat.freenode.net/#amusewiki=
+  GitHub :: [[https://github.com/melmothx]]
+  Background :: Humanities (history and translations)
+
+*** Why would you want to use Amusewiki
+
+ - built around texts, which are fully decoupled from the web application
+ - support for typesetting whole books (off-line editing and expressive markup)
+ - high-quality output (PDF with LaTeX quality and EPUB)
+ - flat file storage with Git
+ - create collections and reformat the PDF files for printing
+ - OPDS server for mobile users to deliver the texts straight into the apps 
+ - Localized for English, German, Spanish, Finnish, French, Croatian,
+   Italian, Macedonian, Russian, Albanian, Swedish
+ - production ready and comes with an extensive test suite
+
+*** Appearance
+
+[[s-y-text.png]]
+
+*** Source file (Emacs Muse markup)
+
+{{{
+#title Amusewiki: a year of development
+#author Marco Pessotto (melmothX)
+#slides on
+#lang en
+#date August 24-26, 2016, Cluj-Napoca
+#pubdate 2016-08-27
+
+Here the *the text* **start**.
+
+*** About me: Marco Pessotto
+
+  PAUSE id :: =MELMOTHX=
+  IRC :: =melmothX= on Freenode and =irc.perl.org=
+
+}}}
+
+*** Architecture
+
+ - Muse parser: [[https://metacpan.org/pod/Text::Amuse][=Text::Amuse=]]
+ - HTML import and cleanup: [[https://metacpan.org/pod/Text::Amuse::Preprocessor][=Text::Amuse::Preprocessor=]] (with CLI)
+ - Compiler: [[https://metacpan.org/pod/Text::Amuse::Compile][=Text::Amuse::Compile=]] (with CLI)
+ - PDF cropmarks: [[https://metacpan.org/pod/PDF::Cropmarks][=PDF::Cropmarks=]]
+ - PDF imposition: [[https://metacpan.org/pod/PDF::Imposition][=PDF::Imposition=]] 
+ - =DBIx::Class= and Xapian for archive indexing
+ - Background daemon for indexing and compilation
+ - Catalyst application on the frontend
+
+*** Bookbuilder partial selection
+
+[[s-y-partial.png]]
+
+*** Prepare books for printing with the bookbuilder
+
+[[s-y-cropmarks.png]]
+
+*** Slides and theme selections
+
+[[s-y-slides-themes.png]]
+
+*** OPDS
+
+ - Open Publication Distribution System [[http://opds-spec.org/]]
+ - Atom feed with navigation and acquisition entries
+ - Supported by most EPUB Android readers (FBreader, Aldiko, Moon+ reader)
+ - Deliver the texts straight into the applications
+ - Module [[https://metacpan.org/pod/XML::OPDS][=XML::OPDS=]]
+ - Example and help: [[https://amusewiki.org/help/opds]]
+ - Transparent pagination to save bandwidth
+ - HTTP authorization supported for private sites
+ - Full text-search supported
+
+*** OPDS example
+
+[[s-y-opds.png]]
+
+*** Blog mode
+
+ - Optional feature which can be activated in the admin console
+ - time-based sorting
+ - teasers
+ - decorative images
+ - tag cloud (accessible via ajax)
+ - monthly archives (accessible via ajax)
+ - form free layout elements (gives a chance to the admin to fully
+   customize the site, in addition to local JS and CSS)
+ - bootswatch theme selection [[https://bootswatch.com/]]
+
+*** Blog example
+
+[[s-y-blog-mode.png]]
+
+*** Other notable improvements
+
+ - SSL made free and automatic with Let's Encrypt and [[https://metacpan.org/pod/Protocol::ACME][Protocol::ACME]]
+ - Code highlight with [[https://highlightjs.org/][highlight.js]]
+ - Automatic DB upgrades with [[https://metacpan.org/pod/DBIx::Class::DeploymentHandler][DBIx::Class::DeploymentHandler]]
+ - Fine tune logging with [[https://metacpan.org/pod/Log::Log4perl][Log::Log4perl]] and [[https://metacpan.org/pod/Log::Contextual][Log::Contextual]]
+ - Documentation on [[https://amusewiki.org]]
+
+*** Debian packages
+
+Instead of running the app from the git tree on a dedicated home, with
+a =local::lib= tree or with a perl installed in the home, now you can
+visit [[http://packages.amusewiki.org/]] and follow the instructions
+there (import the key, add the repository, and install the package).
+
+Minimum requirement: Debian Jessie and Ubuntu 16.04 LTS.
+
+[[https://github.com/melmothx/amusewiki-debian-packages]]
+
+*** Debian packages cons
+
+ - More burden on the developer
+ - Trivial changes require a package rebuild
+ - Needs to ship about 25 new packages (fonts and perl modules)
+ - Can't use fresh code from the module used (e.g., newer Catalyst) without being too invasive.
+ - Debian people usually don't like private repositories
+
+*** Debian packages pros
+
+ - Installation is straightforward
+ - Maintenance for the administrator is integrated in the regular apt-get routine   
+ - Much smaller installation footprint (mostly because the texlive
+   installation is optimized and shared)
+ - Improved security
+    - code is installed by root and the application can't write there
+    - debian is taking care of the security updates of the
+      dependencies (not only the perl dependencies, but also the
+      libraries used by LaTeX, cgit and other utilities)
+ - 0 downtime upgrades out of the box
+ - Predictability of locations and module versions (so gets more live testing)
+
+*** Questions?
+
+
+                 Thanks!
