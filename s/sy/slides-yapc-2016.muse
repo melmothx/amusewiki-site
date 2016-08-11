@@ -6,7 +6,7 @@
 #date August 24-26, 2016, Cluj-Napoca
 #pubdate 2016-08-27
 
-*** About me: Marco Pessotto
+** About me: Marco Pessotto
 
   PAUSE id :: =MELMOTHX=
   IRC :: =melmothX= on Freenode and =irc.perl.org=
@@ -16,7 +16,7 @@
   GitHub :: [[https://github.com/melmothx]]
   Background :: Humanities (history and translations)
 
-*** Why would you want to use Amusewiki
+** Why would you want to use Amusewiki
 
  - built around texts, which are fully decoupled from the web application
  - support for typesetting whole books (off-line editing and expressive markup)
@@ -28,11 +28,11 @@
    Italian, Macedonian, Russian, Albanian, Swedish
  - production ready and comes with an extensive test suite
 
-*** Appearance
+** Appearance
 
 [[s-y-text.png]]
 
-*** Source file (Emacs Muse markup)
+** Source file (Emacs Muse markup)
 
 {{{
 #title Amusewiki: a year of development
@@ -44,14 +44,14 @@
 
 Here the *the text* **start**.
 
-*** About me: Marco Pessotto
+** About me: Marco Pessotto
 
   PAUSE id :: =MELMOTHX=
   IRC :: =melmothX= on Freenode and =irc.perl.org=
 
 }}}
 
-*** Architecture
+** Architecture
 
  - Muse parser: [[https://metacpan.org/pod/Text::Amuse][=Text::Amuse=]]
  - HTML import and cleanup: [[https://metacpan.org/pod/Text::Amuse::Preprocessor][=Text::Amuse::Preprocessor=]] (with CLI)
@@ -62,19 +62,19 @@ Here the *the text* **start**.
  - Background daemon for indexing and compilation
  - Catalyst application on the frontend
 
-*** Bookbuilder partial selection
+** Bookbuilder partial selection
 
 [[s-y-partial.png]]
 
-*** Prepare books for printing with the bookbuilder
+** Prepare books for printing with the bookbuilder
 
 [[s-y-cropmarks.png]]
 
-*** Slides and theme selections
+** Slides and theme selections
 
 [[s-y-slides-themes.png]]
 
-*** OPDS
+** OPDS
 
  - Open Publication Distribution System [[http://opds-spec.org/]]
  - Atom feed with navigation and acquisition entries
@@ -86,11 +86,11 @@ Here the *the text* **start**.
  - HTTP authorization supported for private sites
  - Full text-search supported
 
-*** OPDS example
+** OPDS example
 
 [[s-y-opds.png]]
 
-*** Blog mode
+** Blog mode
 
  - Optional feature which can be activated in the admin console
  - time-based sorting
@@ -102,11 +102,11 @@ Here the *the text* **start**.
    customize the site, in addition to local JS and CSS)
  - bootswatch theme selection [[https://bootswatch.com/]]
 
-*** Blog example
+** Blog example
 
 [[s-y-blog-mode.png]]
 
-*** Other notable improvements
+** Other notable improvements
 
  - SSL made free and automatic with Let's Encrypt and [[https://metacpan.org/pod/Protocol::ACME][Protocol::ACME]]
  - Code highlight with [[https://highlightjs.org/][highlight.js]]
@@ -114,7 +114,7 @@ Here the *the text* **start**.
  - Fine tune logging with [[https://metacpan.org/pod/Log::Log4perl][Log::Log4perl]] and [[https://metacpan.org/pod/Log::Contextual][Log::Contextual]]
  - Documentation on [[https://amusewiki.org]]
 
-*** Debian packages
+** Debian packages
 
 Instead of running the app from the git tree on a dedicated home, with
 a =local::lib= tree or with a perl installed in the home, now you can
@@ -125,7 +125,7 @@ Minimum requirement: Debian Jessie and Ubuntu 16.04 LTS.
 
 [[https://github.com/melmothx/amusewiki-debian-packages]]
 
-*** Debian packages cons
+** Debian packages cons
 
  - More burden on the developer
  - Trivial changes require a package rebuild
@@ -133,7 +133,7 @@ Minimum requirement: Debian Jessie and Ubuntu 16.04 LTS.
  - Can't use fresh code from the module used (e.g., newer Catalyst) without being too invasive.
  - Debian people usually don't like private repositories
 
-*** Debian packages pros
+** Debian packages pros
 
  - Installation is straightforward
  - Maintenance for the administrator is integrated in the regular apt-get routine   
@@ -147,7 +147,7 @@ Minimum requirement: Debian Jessie and Ubuntu 16.04 LTS.
  - 0 downtime upgrades out of the box
  - Predictability of locations and module versions (so gets more live testing)
 
-*** Questions?
+** Questions?
 
 
                  Thanks!
