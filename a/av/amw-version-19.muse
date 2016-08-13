@@ -5,6 +5,10 @@
 #cat releases
 #lang en
 
+*** Version 1.916 2016-08-13
+
+ - Updated translations
+
 *** Version 1.914 2016-07-26
 
  - Internal minor refactoring for JSON serializer
