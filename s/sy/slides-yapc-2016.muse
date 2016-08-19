@@ -16,6 +16,10 @@
   GitHub :: [[https://github.com/melmothx]]
   Background :: Humanities (history and translations)
 
+** Appearance
+
+[[s-y-text.png]]
+
 ** Why would you want to use Amusewiki
 
  - built around texts, which are fully decoupled from the web application
@@ -27,10 +31,6 @@
  - Localized for English, German, Spanish, Finnish, French, Croatian,
    Italian, Macedonian, Russian, Albanian, Swedish
  - production ready and comes with an extensive test suite
-
-** Appearance
-
-[[s-y-text.png]]
 
 ** Source file (Emacs Muse markup)
 
