@@ -56,8 +56,8 @@ Here the *the text* **start**.
  - Muse parser: [[https://metacpan.org/pod/Text::Amuse][=Text::Amuse=]]
  - HTML import and cleanup: [[https://metacpan.org/pod/Text::Amuse::Preprocessor][=Text::Amuse::Preprocessor=]] (with CLI)
  - Compiler: [[https://metacpan.org/pod/Text::Amuse::Compile][=Text::Amuse::Compile=]] (with CLI)
- - PDF cropmarks: [[https://metacpan.org/pod/PDF::Cropmarks][=PDF::Cropmarks=]]
- - PDF imposition: [[https://metacpan.org/pod/PDF::Imposition][=PDF::Imposition=]] 
+ - PDF cropmarks: [[https://metacpan.org/pod/PDF::Cropmarks][=PDF::Cropmarks=]] (with CLI)
+ - PDF imposition: [[https://metacpan.org/pod/PDF::Imposition][=PDF::Imposition=]] (with CLI)
  - =DBIx::Class= and Xapian for archive indexing
  - Background daemon for indexing and compilation
  - Catalyst application on the frontend
