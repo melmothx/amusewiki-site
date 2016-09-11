@@ -5,6 +5,14 @@
 #cat releases
 #lang en
 
+*** Version 1.920 2016-09-11
+
+ - Index each text twice, once with and once without diacritics (xapian)
+ - Prevent the maintainer's scripts to run as root
+ - Debian package provides a wrapper for root, called amusewiki
+ - Save the bookbuilder sessions in the database
+ - Implement bookbuilder session resuming by token
+
 *** Version 1.916 2016-08-13
 
  - Updated translations
