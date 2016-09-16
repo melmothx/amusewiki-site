@@ -14,7 +14,7 @@ features.
 
 *** Features
 
- - User-friendly markup borrowed from [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]]
+ - User-friendly markup borrowed from [[https://www.gnu.org/software/emacs-muse/index.html][Emacs Muse]]
  - **Importing of HTML** documents preserving most of the logical markup
  - Wide range of output formats, including high-quality **PDF** (via LaTeX) and **EPUB**
  - Automatic generation of PDF for **printing**, including **imposition** and **crop marks**
