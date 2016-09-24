@@ -1,9 +1,14 @@
 #title Version 1.9
-#pubdate 2016-07-26
+#pubdate 2016-09-24
 #date 2016-07-26
 #teaser New “blog-style” feature, which should make amusewiki suitable for a general purpose blog, new bookbuilder profiles and plenty of doc.
 #cat releases
 #lang en
+
+*** Version 1.921 2016-09-24
+
+ - Fixed headers for cache control
+ - Added fine-grained pagination options
 
 *** Version 1.920 2016-09-11
 
