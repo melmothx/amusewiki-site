@@ -8,6 +8,10 @@
 The 2.0 series does not bring any incompatibily or upgrade issues from
 the 1.x series. I just run out of numbers.
 
+*** Version 1.990 (2016-11-02)
+
+ - Upgraded I18N files (it and hr)
+
 *** Version 1.990 (2016-11-01)
 
  - Implement authorization without redirect [[https://github.com/melmothx/amusewiki/issues/67][#67]]
