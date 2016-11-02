@@ -1,0 +1,22 @@
+#title Version 2.0
+#pubdate 2016-11-02
+#date 2016-11-02
+#teaser New font subsystem, edit screen customization, font-awesome
+#cat releases
+#lang en
+
+The 2.0 series does not bring any incompatibily or upgrade issues from
+the 1.x series. I just run out of numbers.
+
+*** Version 1.990 (2016-11-01)
+
+ - Implement authorization without redirect [[https://github.com/melmothx/amusewiki/issues/67][#67]]
+ - Permit customization of fonts (globally and per site) [[https://github.com/melmothx/amusewiki/issues/57][#57]]
+ - Replaced font-awesome with glyphicons
+ - Added customization for edit screen
+
+The "webfonts" directory is now obsoleted and can be removed. It's
+been replaced by the fontspec.json file which should have been created
+automatically on restart.
+
+This release is a public beta (but production ready) for AmuseWiki 2.0.
