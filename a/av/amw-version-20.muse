@@ -1,12 +1,21 @@
 #title Version 2.0
 #pubdate 2016-11-02
 #date 2016-11-05
-#teaser New font subsystem, edit screen customization, font-awesome, **security fix**.
+#teaser New font subsystem, edit screen customization, font-awesome, **security fix**, mass rebuilding, PDF metadata
 #cat releases
 #lang en
 
 The 2.0 series does not bring any incompatibily or upgrade issues from
 the 1.x series.
+
+*** Version 1.993 (2016-11-14)
+
+ - Add a rebuild action, both for a single text or the whole site ([[https://github.com/melmothx/amusewiki/issues/87][#87]])
+ - Add metadata to PDF [[https://github.com/melmothx/amusewiki/issues/86][#86]]
+
+Newly generated PDF will have the metadata included in the file. If
+you want to rebuild all the existing, you can do so logging in as
+administrator and visiting /tasks/rebuild.
 
 *** Version 1.992 (2016-11-05)
 
