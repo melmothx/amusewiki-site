@@ -3,9 +3,11 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine. Amusewiki is more than just a wiki engine, it's also a powerful authoring, archiving and publishing platform.
 
-Needless to say, amusewiki is written (mostly) in Perl and is 100% free software.
-
-A talk about amusewiki is going to take place at [[http://act.yapc.eu/ye2016/talk/6737][YAPC::EU 2016]].
+Amusewiki is 100% free software. You can download it at
+[[https://github.com/melmothx/amusewiki/releases][github]] or save
+time, energy and troubles and install it on Debian/Ubuntu with the
+packages provided at
+[[http://packages.amusewiki.org][packages.amusewiki.org]].
 
 *** Why would I want this engine and not MediaWiki / Drupal / WordPress / whatever?
 
