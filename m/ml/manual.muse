@@ -121,8 +121,9 @@ to keep the lines short** and break them inserting a new line. Long
 lines (using the rule 1 line, 1 paragraph) are perfectly fine. The
 rule of paragraphs separated by blank lines still apply, though.
 
-Also, =<tags>= which start and stop blocks, **must be placed on a line by
-themselves**.
+Also, =<tags>= which start and stop blocks, **must be placed on a line
+by themselves and don't mix with environments marked by leading
+spaces, notably lists and tables.**
 
 *** Literal paragraphs
 
