@@ -1,5 +1,5 @@
 #title Version 2.0
-#pubdate 2016-11-02
+#pubdate 2016-12-21
 #date 2016-11-05
 #teaser New font subsystem, edit screen customization, font-awesome, **security fix**, mass rebuilding, PDF metadata
 #cat releases
@@ -7,6 +7,12 @@
 
 The 2.0 series does not bring any incompatibily or upgrade issues from
 the 1.x series.
+
+*** Version 2.000 (2016-12-19)
+
+ - No code changes, promoted to version 2.0
+ - Translations update
+ - Documentation improvement ([[https://github.com/melmothx/amusewiki/issues/91][#91]])
 
 *** Version 1.995 (2016-11-25)
 
