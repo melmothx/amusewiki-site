@@ -8,6 +8,11 @@
 The 2.0 series does not bring any incompatibily or upgrade issues from
 the 1.x series.
 
+*** Version 2.001 (2017-01-20)
+
+ - Fixed pagination problems when there are lots of texts with the
+   same pubdate.
+
 *** Version 2.000 (2016-12-19)
 
  - No code changes, promoted to version 2.0
