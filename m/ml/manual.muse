@@ -1297,6 +1297,22 @@ Oh heauie burthen!
 
 </play>
 
+** Preventing the markup to be interpreted
+
+Sometimes you want to write something like <verbatim>[1]</verbatim>
+without meaning a footnote reference, or asterisks without meaning an
+emphasis, e.g. <verbatim>*this*</verbatim>.
+
+You can do so wrapping the words with the <verbatim><verbatim></verbatim> tag.
+
+Example:
+
+{{{
+Sometimes you want to write something like <verbatim>[1]</verbatim>
+without meaning a footnote reference, or asterisks without meaning an
+emphasis, e.g. <verbatim>*this*</verbatim>.
+}}}
+
 * GNU Free Documentation License
 
 
