@@ -353,7 +353,7 @@ and diacritics are fine, though). You specify a breakpoint with the
 hyphen character “-”. Using a word without any hyphen will prevent the
 hyphenation for that word.
 
-** Bold, italicized and emphatized text
+** Bold, italicized and monospace text
 
   
 To emphasize text, surround it with certain specially recognized
@@ -404,7 +404,6 @@ an handwritten substitute for the italics. You simply don’t need it.
 Also, small caps are missing, mainly because on the HTML they look
 awful and a very few fonts have decent small caps.
 
-  
 Other tags are =<sub>= and =<sup>= for subscript and superscript. And
 there is also a =<del>= tag for overstriking.
 
@@ -417,6 +416,18 @@ deleted and overstriked</del>
 This is the <sup>superscript</sup> and this is a
 <sub>subscript</sub>, and this is <del>something deleted and
 overstriked</del>
+
+If you nest the same tag (e.g. <code><verbatim><em>this <em>and
+this</em></em></verbatim></code>, you are going to get weird results
+(and doesn't make any sense), so don't do it. <code>=</code> and
+<code>*</code> when surronding words have the same meaning of the
+respective tags:
+
+{{{
+*this* is the same as <em>this</em>
+
+=this= is the same as <code>this</code>
+}}}
 
 *** Making notes to be shown at the end
 
