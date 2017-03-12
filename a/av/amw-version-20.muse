@@ -8,6 +8,17 @@
 The 2.0 series does not bring any incompatibily or upgrade issues from
 the 1.x series.
 
+*** 2.011 2017-03-12
+
+ - Improved handling of git pull jobs, which is now a bulk job and
+   will not block the jobber longer than the time needed to compile a
+   single text.
+
+ - Support for <verbatim><verbatim></verbatim> tag to avoid the markup to be interpreted.
+
+ - Reduce the cropmark offset to 1mm (using new PDF::Imposition
+   release)
+
 *** Version 2.010 (2017-02-04)
 
  - Show the git history to logged in even if hidden for anon ([[https://github.com/melmothx/amusewiki/issues/94][#94]])
