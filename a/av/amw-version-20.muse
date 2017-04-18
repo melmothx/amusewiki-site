@@ -8,6 +8,19 @@
 The 2.0 series does not bring any incompatibily or upgrade issues from
 the 1.x series.
 
+*** 2.014 2017-04-18
+
+ - Add a flag icon when there is an internal anchor
+ - Support for hidden toc #notoc
+
+*** 2.012 2017-03-26
+
+ - Use thumbnails for listing (#102)
+ - Add option to insert the image at the end of the body (#101)
+ - Embed PDFs by splitting them in images (#101)
+ - Improved PDF attachment layout (#100)
+
+
 *** 2.011 2017-03-12
 
  - Improved handling of git pull jobs, which is now a bulk job and
