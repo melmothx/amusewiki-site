@@ -4,10 +4,15 @@
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine. Amusewiki is more than just a wiki engine, it's also a powerful authoring, archiving and publishing platform.
 
 Amusewiki is 100% free software. You can download it at
-[[https://github.com/melmothx/amusewiki/releases][github]] or save
-time, energy and troubles and install it on Debian/Ubuntu with the
-packages provided at
+[[https://github.com/melmothx/amusewiki/releases][github]] (make sure to follow
+the [[https://github.com/melmothx/amusewiki/blob/master/INSTALL.txt][installation instructions]])
+or save time, energy and troubles and install it on Debian/Ubuntu with
+the packages provided at
 [[http://packages.amusewiki.org][packages.amusewiki.org]].
+
+This site runs on amusewiki itself. If you want to try out the editing
+and publishing process, you can use the
+[[https://sandbox.amusewiki.org][sandbox]]
 
 *** Why would I want this engine and not MediaWiki / Drupal / WordPress / whatever?
 
