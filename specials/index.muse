@@ -10,6 +10,9 @@ or save time, energy and troubles and install it on Debian/Ubuntu with
 the packages provided at
 [[http://packages.amusewiki.org][packages.amusewiki.org]].
 
+If you need help, you're welcome to drop to the
+[[https://amusewiki.org/help/irc][IRC channel]].
+
 This site runs on amusewiki itself. If you want to try out the editing
 and publishing process, you can use the
 [[https://sandbox.amusewiki.org][sandbox]]
