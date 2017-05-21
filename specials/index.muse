@@ -7,8 +7,8 @@ Amusewiki is 100% free software. You can download it at
 [[https://github.com/melmothx/amusewiki/releases][github]] (make sure to follow
 the [[https://github.com/melmothx/amusewiki/blob/master/INSTALL.txt][installation instructions]])
 or save time, energy and troubles and install it on Debian/Ubuntu with
-the packages provided at
-[[http://packages.amusewiki.org][packages.amusewiki.org]].
+the (unofficial) packages provided at
+[[http://packages.amusewiki.org][packages.amusewiki.org]], which are regularly updated at each release.
 
 If you need help, you're welcome to drop to the
 [[https://amusewiki.org/help/irc][IRC channel]].
