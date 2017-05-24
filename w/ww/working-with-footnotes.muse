@@ -92,5 +92,12 @@ This way only the order matters, and the engine takes care of the
 This way you can move paragraphs and chapters around without caring
 about numbering, as long as you carry the footnotes with you.
 
+If you work locally, you may want to use the muse-preprocessor.pl
+script:
 
+{{{
+$ muse-preprocessor.pl --footnotes --inplace file.muse
+}}}
+
+which does the same thing as the web interface.
 
