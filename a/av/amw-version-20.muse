@@ -8,6 +8,11 @@
 The 2.0 series does not bring any incompatibily or upgrade issues from
 the 1.x series.
 
+*** 2.022 2017-05-23
+
+ - Do not show deferred titles without a teaser if the option for that
+   feature is enabled.
+
 *** 2.021 2017-05-21
 
  - Add full screen editor to editing page
