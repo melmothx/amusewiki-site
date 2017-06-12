@@ -323,6 +323,9 @@ Take note of the credentials, and follow the instructions.
 
 ** CentOS 7
 
+Most of these instructions will apply to other GNU/Linux systems with
+systemd and selinux.
+
 Texlive is obsolete, so we will install it from CTAN. The same goes
 with perl.
 
