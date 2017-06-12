@@ -1,6 +1,8 @@
 #title How to install AmuseWiki
 #author Marco Pessotto
 #pubdate 2017-06-12
+#lang en
+#topics doc, howto
 
 The recommended way to install amusewiki is via
 [[http://packages.amusewiki.org]], where a debian repository with the
