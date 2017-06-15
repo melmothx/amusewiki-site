@@ -8,17 +8,23 @@
 The 2.0 series does not bring any incompatibily or upgrade issues from
 the 1.x series.
 
-*** 2.022 2017-05-23
+*** Version 2.023 (2017-06-15)
+
+ - Add documentation for installation on CentOS
+ - Fixes to installation scripts
+ - Add nofinalpage option to BB and custom formats ([[https://github.com/melmothx/amusewiki/issues/117][#117]])
+
+*** Version 2.022 (2017-05-23)
 
  - Do not show deferred titles without a teaser if the option for that
    feature is enabled.
 
-*** 2.021 2017-05-21
+*** Version 2.021 (2017-05-21)
 
  - Add full screen editor to editing page
  - Add an opt-in ordering by sku in the category pages
 
-*** 2.020 2017-05-17
+*** Version 2.020 (2017-05-17)
 
  - **[SECURITY FIX]** Fix potential HTML injection when external images
    are enabled. This is a real security issue if it's an openwiki and
@@ -36,12 +42,12 @@ the 1.x series.
  - Improved category text listing with widget for sorting/page size
 
 
-*** 2.014 2017-04-18
+*** Version 2.014 (2017-04-18)
 
  - Add a flag icon when there is an internal anchor
  - Support for hidden toc #notoc
 
-*** 2.012 2017-03-26
+*** Version 2.012 (2017-03-26)
 
  - Use thumbnails for listing (#102)
  - Add option to insert the image at the end of the body (#101)
@@ -49,7 +55,7 @@ the 1.x series.
  - Improved PDF attachment layout (#100)
 
 
-*** 2.011 2017-03-12
+*** Version 2.011 (2017-03-12)
 
  - Improved handling of git pull jobs, which is now a bulk job and
    will not block the jobber longer than the time needed to compile a
