@@ -1,6 +1,6 @@
 #title Version 2.0
-#pubdate 2017-05-24
-#date 2017-05-24
+#pubdate 2017-06-15
+#date 2017-06-15
 #teaser New font subsystem, edit screen customization, font-awesome, **security fix**, mass rebuilding, PDF metadata, custom formats
 #cat releases
 #lang en
