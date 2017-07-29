@@ -1,12 +1,19 @@
 #title Version 2.0
-#pubdate 2017-06-15
-#date 2017-06-15
+#date 2017-07-29
 #teaser New font subsystem, edit screen customization, font-awesome, **security fix**, mass rebuilding, PDF metadata, custom formats
 #cat releases
 #lang en
 
 The 2.0 series does not bring any incompatibily or upgrade issues from
 the 1.x series.
+
+*** Version 2.024 (2017-07-29)
+
+ - Add backlinks feature ([[https://github.com/melmothx/amusewiki/issues/118][#118]])
+ - Improve error handling for the new text form ([[https://github.com/melmothx/amusewiki/issues/119][#119]])
+ - Add option to turn links without description to vimeo/youtube/gmaps
+   into widgets
+ - Fix conditional nocoverpage feature brokens since 2.014 ([[https://github.com/melmothx/amusewiki/issues/121][#121]])
 
 *** Version 2.023 (2017-06-15)
 
