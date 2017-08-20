@@ -7,6 +7,12 @@
 The 2.0 series does not bring any incompatibily or upgrade issues from
 the 1.x series.
 
+*** Version 2.025 (2017-08-20)
+
+ - Add Cormorant Garamond fonts as dependency (packaged)
+ - Bumped Text::Amuse::Compile dependency with improved CSS
+ - Remove font-size option from EPUB definition
+
 *** Version 2.024 (2017-07-29)
 
  - Add backlinks feature ([[https://github.com/melmothx/amusewiki/issues/118][#118]])
