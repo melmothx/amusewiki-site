@@ -233,9 +233,9 @@ The second level is a “chapter”. It starts a new page on the PDF output.
 The third level is undoubtely the most used. It usually separate a
 section of an article. For example the “Literal paragraph” above.
 
-The forth level goes down further.
+The fourth level goes down further.
 
-**** Forth level, a “subsection”
+**** Fourth level, a “subsection”
 
 The fifth level is very, very low and does not create a Table of Contents entry.
 
