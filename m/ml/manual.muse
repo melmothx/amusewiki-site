@@ -636,6 +636,48 @@ A description list
  First term :: definition and description
  Second term :: definition and description
 
+*** Breaking lists
+
+If for some reason you want to break the list without starting a
+regular paragraph, you can do so by inserting a
+<verbatim><br></verbatim> tag (which adds some white space between
+them) or a comment (invisible). E.g.
+
+{{{
+List:
+
+   a. bullet item one
+   a. bullet item two, and will break
+
+; a comment
+
+   a. bullet item one
+   a. bullet item two, and break
+
+<br>
+
+   a. bullet item one
+   a. bullet item two, and end
+}}}
+
+Resulting in:
+
+List:
+
+   a. bullet item one
+   a. bullet item two, and will break
+
+; a comment
+
+   a. bullet item one
+   a. bullet item two, and break
+
+<br>
+
+   a. bullet item one
+   a. bullet item two, and end
+
+
 *** Nested lists
 
 It is possible to nest lists of the same or different kinds.  The
