@@ -331,6 +331,10 @@ with this bunlde there is support for the following directives:
    original, original contribution, etc.). The preferred format is 
    “Retrieved on March 8, 2012 from [[http://url.org][the url]]”
 
+ - =#hyphenation=
+
+   See above.
+
 *** Correcting the hyphenation in the PDF output
 
 Sometimes you may notice some words with incorrect hyphenation in your
