@@ -210,7 +210,7 @@ This code will break the page.
 
        * * * * * 
 
-Anyway, using three of them is just a decorator and it’s not threated specially.
+Anyway, using three of them is just a decorator and it’s not treated specially.
 
        * * * 
 
@@ -221,7 +221,7 @@ It’s just a centered paragraph with 3 “*”.
   
 A heading becomes a chapter or section in printed output — depending on
 the style.  To indicate a heading, start a new paragraph with one or
-more asterices, followed by a space and the heading title.  Then begin
+more asterisks, followed by a space and the heading title.  Then begin
 another paragraph to enter the text for that section.
 
 All levels of headings will be published. There is support for 5 levels.
@@ -230,7 +230,7 @@ The first level is a “part”, and should be used only for larger texts. In th
 
 The second level is a “chapter”. It starts a new page on the PDF output.
 
-The third level is undoubtely the most used. It usually separate a
+The third level is undoubtedly the most used. It usually separate a
 section of an article. For example the “Literal paragraph” above.
 
 The fourth level goes down further.
@@ -274,7 +274,7 @@ You can use any combination of uppercase and lowercase letters for
 directives, even if the directive is not in the list below. The
 directives are completely arbitrary. You can put there whatever you
 want. It’s the template job to pick them up. In the templates shipped
-with this bunlde there is support for the following directives:
+with this bundle there is support for the following directives:
 
    The following is a list of directives that Muse uses.
 
@@ -323,7 +323,7 @@ with this bunlde there is support for the following directives:
  - =#notes= 
 
    This directive is used for additional information here (original
-   title, translators, credits, etc).
+   title, translators, credits, etc.).
 
  - =#source= 
    
@@ -384,7 +384,7 @@ You can also use the =<code>= tag to indicate code and monospace
 text. This is handy for regions that have an “=” in them.
 
 If the “*” confuse you or the preview is screwed up, you can use
-inline tag =<em>= and =<strong>=, which are guarantee to work in any case.
+inline tag =<em>= and =<strong>=, which are guaranteed to work in any case.
 
 The above example rewritten with tags:
 
@@ -424,7 +424,7 @@ overstriked</del>
 If you nest the same tag (e.g. <code><verbatim><em>this <em>and
 this</em></em></verbatim></code>, you are going to get weird results
 (and doesn't make any sense), so don't do it. <code>=</code> and
-<code>*</code> when surronding words have the same meaning of the
+<code>*</code> when surrounding words have the same meaning of the
 respective tags:
 
 {{{
@@ -451,7 +451,7 @@ Here the text continues.
      whitespace.
 
 [3] Footnotes which don’t have a referrer will
-    disappear on the PDF output and preserverd in the
+    disappear on the PDF output and preserved in the
     HTML. But will lead to incorrect code, as it will
     point to a non-existent anchor
 
@@ -476,7 +476,7 @@ Here the text continues.
 
 ----
 
-You can break the footnotes lines (even if it’s not reccomended), but keep the indentation consistent, as shown above
+You can break the footnotes lines (even if it’s not recommended), but keep the indentation consistent, as shown above
 
 *** Indicating poetic stanzas
 
@@ -595,7 +595,7 @@ A description list
 
 </example>
 
-Please note the consistent indentation, **expecially** for roman numbering.
+Please note the consistent indentation, **especially** for roman numbering.
 
 Normal text.
 
@@ -772,7 +772,7 @@ Normal text.
    Here I have the same amount of indentation, and it
    continues the item above.
 
-   1. Level 2, enum item one. i can break the line,
+   1. Level 2, enum item one. I can break the line,
       keeping the same amount of indentation
 
       Here I have the same amount of indentation, and
@@ -1177,8 +1177,8 @@ Results:
 
 ** Named anchors
 
-If you start a line with "#anchor" – where "anchor" can be any (ascii)
-word that starts with a letter and contains only ascii letters and
+If you start a line with "#anchor" – where "anchor" can be any (ASCII)
+word that starts with a letter and contains only ASCII letters and
 digits – it defines an anchor at that point into the document. This
 point can be referenced using "#anchor" as the target in a Muse link.
 Please note that the anchor must be on a line by itself.
@@ -1221,7 +1221,7 @@ Instead a =text-amuse-label= prefix is added (if you need to link it
 externally).
 
 Also note that the link is lost when producing imposed PDFs (and
-implicitely lost when printing any PDF), so it's recommended to keep
+implicitly lost when printing any PDF), so it's recommended to keep
 this in mind when writing the document, as the text of the link should
 work even if the link is not present.
 
@@ -1254,7 +1254,7 @@ literal space, will cause that line to be treated as a comment and
 
 You can alternatively surround the region with the =<comment>= tag. In
 this case the HTML output will be wrapped in a =<div>= with the
-=display:none= property, so it can be turned visibile changing the
+=display:none= property, so it can be turned visible changing the
 CSS.
 
 <example>
@@ -1308,7 +1308,7 @@ indentation is suggested.
 
 
 The same goes with the =<play>= environment, which is supposed to wrap
-theathrical plays, when you want a reverse indentation and more
+theatrical plays, when you want a reverse indentation and more
 spacing between the paragraph (without resorting to =<verse>= and
 hardcoding the spaces.
 
