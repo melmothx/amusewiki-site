@@ -963,15 +963,14 @@ use your custom numbering**. Any other solution will be confusing and
 you can expect undefined behaviour.
 
 {{{
-
  b. This list with start with b
  d. This will be "d" as well
      3. This starts at 3
      2. This is 2 as well.
         iv. Roman iv.
         i. Roman v. as i. acts as automatic numbering
- a. This will be c. because it's index 1 and continues the list
- a. This will be d.
+ a. This will be e. because it's index 1 and continues the list (interrupted at d.)
+ a. This will be f. because it's incrementing the previous item.
      1. Normal numeric
      1. Normal numeric 2.
      1. Normal numeric 3.
