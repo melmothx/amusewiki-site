@@ -1399,7 +1399,7 @@ Oh heauie burthen!
 
 </play>
 
-** Preventing the markup to be interpreted
+** Preventing the markup to be interpreted (verbatim)
 
 Sometimes you want to write something like <verbatim>[1]</verbatim>
 without meaning a footnote reference, or asterisks without meaning an
