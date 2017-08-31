@@ -433,7 +433,7 @@ respective tags:
 =this= is the same as <code>this</code>
 }}}
 
-*** Making notes to be shown at the end
+** Footnotes
 
 A footnote reference is simply a number in square brackets.  To define
 the footnote, place this definition starting the line with a digit in
@@ -446,6 +446,9 @@ Here the text continues.
 
 [1] This footnote
     spans more lines in the source
+
+    You can continue the footnote on another paragraph, as long as it
+    has the same amount of indentation of the previous item.
 
  [2] But this is not, because of the initial
      whitespace.
@@ -468,6 +471,9 @@ Here the text continues.
 [1] This footnote
     spans more lines in the source
 
+    You can continue the footnote on another paragraph, as long as it
+    has the same amount of indentation of the previous item.
+
  [2] But this is not, because of the initial whitespace.
 
 [3] Footnotes which don’t have a referrer will disappear on the PDF
@@ -478,7 +484,7 @@ Here the text continues.
 
 You can break the footnotes lines (even if it’s not recommended), but keep the indentation consistent, as shown above
 
-*** Indicating poetic stanzas
+** Poetic stanzas
 
 
 Poetry requires that whitespace be preserved, but without resorting to
