@@ -122,7 +122,7 @@ lines (using the rule 1 line, 1 paragraph) are perfectly fine. The
 rule of paragraphs separated by blank lines still apply, though.
 
 Also, =<tags>= which start and stop blocks, **must be placed on a line
-by themselves and don't mix with environments marked by leading
+by themselves and don’t mix with environments marked by leading
 spaces, notably lists and tables.**
 
 *** Literal paragraphs
@@ -147,7 +147,7 @@ There is no =<literal>= tag as in the original Muse markup, because it’s
 not a private tool and will be exposed to the internet.
 
 **Please note** that the output will keep the lines
-untouched. This means that it's very likely that you
+untouched. This means that it’s very likely that you
 will get overflowing lines. To avoid this, a safe value
 for a line length could be 60 characters. Use longer
 lines at your perils.
@@ -423,7 +423,7 @@ overstriked</del>
 
 If you nest the same tag (e.g. <code><verbatim><em>this <em>and
 this</em></em></verbatim></code>, you are going to get weird results
-(and doesn't make any sense), so don't do it. <code>=</code> and
+(and doesn’t make any sense), so don’t do it. <code>=</code> and
 <code>*</code> when surrounding words have the same meaning of the
 respective tags:
 
@@ -964,13 +964,13 @@ you can expect undefined behaviour.
 
 {{{
  b. This list with start with b
- d. This will be "d" as well
+ d. This will be “d” as well
      3. This starts at 3
      2. This is 2 as well.
         iv. Roman iv.
         i. Roman v. as i. acts as automatic numbering
- a. This will be e. because it's index 1 and continues the list (interrupted at d.)
- a. This will be f. because it's incrementing the previous item.
+ a. This will be e. because it’s index 1 and continues the list (interrupted at d.)
+ a. This will be f. because it’s incrementing the previous item.
      1. Normal numeric
      1. Normal numeric 2.
      1. Normal numeric 3.
@@ -981,13 +981,13 @@ you can expect undefined behaviour.
 And results in:
 
  b. This list with start with b
- d. This will be "d" as well
+ d. This will be “d” as well
      3. This starts at 3
      2. This is 2 as well.
         iv. Roman iv.
         i. Roman v. as i. acts as automatic numbering
- a. This will be e. because it's index 1 and continues the list (interrupted at d.)
- a. This will be f. because it's incrementing the previous item.
+ a. This will be e. because it’s index 1 and continues the list (interrupted at d.)
+ a. This will be f. because it’s incrementing the previous item.
      1. Normal numeric
      1. Normal numeric 2.
      1. Normal numeric 3.
@@ -1225,13 +1225,13 @@ Results:
 
 ** Named anchors
 
-If you start a line with "#anchor" – where "anchor" can be any (ASCII)
+If you start a line with “#anchor” – where “anchor” can be any (ASCII)
 word that starts with a letter and contains only ASCII letters and
 digits – it defines an anchor at that point into the document. This
-point can be referenced using "#anchor" as the target in a Muse link.
+point can be referenced using “#anchor” as the target in a Muse link.
 Please note that the anchor must be on a line by itself.
 
-You can't have an anchor at the very beginning of the text, because it's
+You can’t have an anchor at the very beginning of the text, because it’s
 merged into the header, so, if you really have to, put a =br= tag before
 it.
 
@@ -1269,7 +1269,7 @@ Instead a =text-amuse-label= prefix is added (if you need to link it
 externally).
 
 Also note that the link is lost when producing imposed PDFs (and
-implicitly lost when printing any PDF), so it's recommended to keep
+implicitly lost when printing any PDF), so it’s recommended to keep
 this in mind when writing the document, as the text of the link should
 work even if the link is not present.
 
@@ -1279,8 +1279,8 @@ Bad example:
 See [[#anchor][here]]
 }}}
 
-The poor soul printing it and reading it on paper will see just "See
-here". Here where?
+The poor soul printing it and reading it on paper will see just “See
+here”. Here where?
 
 Good example:
 
