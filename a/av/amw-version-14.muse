@@ -3,7 +3,7 @@
 #date 2015-10-24
 #cat releases
 #lang en
-#teaser Automatical DB upgrades and improved logging system
+#teaser Automatic DB upgrades and improved logging system
 
 *** 1.41 2015-10-26
 

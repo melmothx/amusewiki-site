@@ -23,7 +23,7 @@ course to use that.
 Then I needed a markup, possibly an existing one. [[http://daringfireball.net/projects/markdown/syntax][Markdown]] was
 considered, of course, but then discarded, because the original
 specification didn't support footnotes, explicitly permitted random
-inlined HTML, and some other questionable (in my very humble opinion)
+inline HTML, and some other questionable (in my very humble opinion)
 design choices. Creating another markdown dialect would have bring me
 to square zero.
 
