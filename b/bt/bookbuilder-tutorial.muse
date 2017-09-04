@@ -92,7 +92,7 @@ First of all, you may want to change the fonts used in the PDF. There
 is a link to the font preview page, [[/bookbuilder/fonts]], with the title
 “Please select the desired fonts”, where you can take a look and see
 how they look likes and if the character coverage is enough for your
-text (which should be enough for latin characters, but it's a more
+text (which should be enough for Latin characters, but it's a more
 delicate matter for, e.g., Russian).
 
 The main font is what matters, while the mono font is relevant only
@@ -244,7 +244,7 @@ If you don't know what imposition means, you can read about it on [[https://en.w
 
 You can activate the imposition clicking on the “I want an imposed
 (ready to print) PDF” checkbox, and you will be presented with a wide
-range of schemas. Every schema is accompaigned by an image which
+range of schemas. Every schema is accompanied by an image which
 should make the output clear.
 
 Be aware that the page dimensions you set before are altered. If in

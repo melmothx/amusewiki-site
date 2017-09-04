@@ -30,7 +30,7 @@
 
 *** Version 1.912 2016-07-22
 
- - Code support (but empty localization so far) for albanian language
+ - Code support (but empty localization so far) for Albanian language
  - Added js to show the footnotes in the text
  - New fonts dimensions in the bookbuilder: 13 and 14pt
  - New bookbuilder option: unbranded PDF
