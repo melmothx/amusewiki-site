@@ -10,7 +10,7 @@ The upgrade procedure depends on the way you installed amusewiki.
 
 The recommended way is to install the application from the debian
 packages. That way the upgrade is automatically managed by the
-package, with zero time download.
+package, with zero downtime.
 
 Please note that if you are using mysql or postgresql, and the
 database is currently being restarted by the upgrade procedure, you
