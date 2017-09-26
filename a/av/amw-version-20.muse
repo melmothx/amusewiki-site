@@ -16,7 +16,7 @@ the 1.x series.
  - I18N: added ru strings (thanks @labdsf)
  - Improved site exporting
  - Improved static generation (which now is localized and styled and
-   comes with some buttons for sorting.
+   comes with some buttons for sorting).
 
 
 *** Version 2.025 (2017-08-20)
