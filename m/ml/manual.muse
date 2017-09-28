@@ -1286,7 +1286,7 @@ here”. Here where?
 Good example:
 
 {{{
-See [[#anchor][the previous chapter]] for more informations.
+See [[#anchor][the previous chapter]] for more information.
 }}}
 
 ** Lines to omit from published output
