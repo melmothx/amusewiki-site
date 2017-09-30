@@ -1,11 +1,23 @@
 #title Version 2.0
-#date 2017-07-29
+#date 2017-09-30
 #teaser New font subsystem, edit screen customization, font-awesome, **security fix**, mass rebuilding, PDF metadata, custom formats
 #cat releases
 #lang en
 
 The 2.0 series does not bring any incompatibility or upgrade issues from
 the 1.x series.
+
+*** Version 2.028 (2017-09-30)
+
+ - Fix sticky teaser field in the db on line removal (minor bugfix)
+ - Defer the generation of the static indexes to a low priority job ([[https://github.com/melmothx/amusewiki/issues/134][#134]])
+ - At startup, check if the fontspec.json files are good ([[https://github.com/melmothx/amusewiki/issues/133][#133]])
+
+*** Version 2.027 (2017-09-29)
+
+ - Added option to create automatic teasers (opt-in)
+ - Optimize all PNG images (thanks @labdsf)
+
 
 *** Version 2.026 (2017-09-26)
 
