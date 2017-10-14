@@ -7,6 +7,17 @@
 The 2.0 series does not bring any incompatibility or upgrade issues from
 the 1.x series.
 
+*** Version 2.031 (2017-10-14)
+
+ - Provide /mirror, suitable for wget -m. Please note that the route
+   is accessible if /git is enable as well (as both expose the repo
+   tree). Of course private sites don't expose them to anonymous
+   users. ([[https://github.com/melmothx/amusewiki/issues/144][#144]])
+ - Provide /listing, replacement for /library as title listing and
+   use it in the navbars, providing sorting and pagination. ([[https://github.com/melmothx/amusewiki/issues/142][#142]])
+ - Add text details to search result ([[https://github.com/melmothx/amusewiki/issues/142][#142]])
+
+
 *** Version 2.030 (2017-10-08)
 
  - Updated and corrected I18N strings
