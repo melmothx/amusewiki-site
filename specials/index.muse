@@ -19,7 +19,7 @@ and publishing process, you can use the
 
 *** Why would I want this engine and not MediaWiki / Drupal / WordPress / whatever?
 
-Amusewiki is **not** a clone of existing CMS. It was created to manage and
+Amusewiki is **not** a clone of an existing CMS. It was created to manage and
 edit large amounts of texts (books and articles) with a special focus
 on quality, printing and first rate reading experience. See
 [[/library/rationale]] to understand its architecture.
