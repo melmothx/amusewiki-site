@@ -1,0 +1,103 @@
+#title Integration with external sites
+#lang en
+#teaser Embedding existing texts and creating new texts via API
+
+*** Embedding an existing text
+
+Say the URL of the text you want to embed is
+[[https://amusewiki.org/library/bookbuilder-tutorial]], you can add an
+iframe with
+[[https://amusewiki.org/library/bookbuilder-tutorial/embed]] to have
+the infobox with the downloads.
+
+Example:
+
+{{{
+<iframe src="https://amusewiki.org/library/bookbuilder-tutorial/embed"
+        width="700px"
+        height="200px">
+</iframe>
+}}}
+
+*** Non-interactive creation of texts
+
+This procedure lacks any human interaction and it relies completely on
+the HTML conversion to be good enough. Worst case scenario, you are
+going to get a text which needs fixing.
+
+You need an existing user on the site.
+
+The API endpoint is =/remote/create=, e.g.
+=https://sandbox.amusewiki.org/remote/create=.
+
+You need to do a =POST= request with some mandatory and some optional parameters
+
+Request:
+
+{{{
+$ curl -F __auth_pass=XXXXX \
+       -F __auth_user=tester \
+       -F title=prova \
+       -F textbody='Hello <em>hello</em>' \
+       https://sandbox.amusewiki.org/remote/create
+}}}
+
+Response is a JSON string, which holds the URL of the text which is
+going to be created and the job URL with the publishing.
+
+{{{
+{
+  "url":"https://sandbox.amusewiki.org/library/prova",
+  "job":"https://sandbox.amusewiki.org/tasks/status/17097"
+}
+}}}
+
+If you are missing some mandatory parameters you get an error:
+
+{{{
+curl -F __auth_pass=XXXX \
+     -F __auth_user=tester \
+     -F textbody='Hello <em>hello</em>' \
+     https://sandbox.amusewiki.org/remote/create
+}}}
+
+Response:
+
+{{{
+{"error":"Missing mandatory title and textbody parameters"}
+}}}
+
+
+If you miss the the authentication parameters, you get a 401 response.
+
+**** Parameters
+
+***** Mandatory
+
+ =__auth_user= :: The username
+ =__auth_pass= :: The password
+ =title= :: The text title
+ =textbody= :: The HTML body
+
+***** Optional
+
+They are the very same parameters you can fin in the
+=/action/text/new= form.
+
+ =subtitle=    :: Text subtitle
+ =author=      :: Text author
+ =notes=       :: HTML string with the notes
+ =teaser=      :: HTML string with the teaser
+ =LISTtitle=   :: Text for indexing
+ =SORTauthors= :: List of authors, comma or semicolon separated list
+ =SORTtopics=  :: List of topics, comma or semicolon separated list
+ =date=        :: Date of the text
+ =uid=         :: Unique identifier (for multilanguage support)
+ =cat=         :: Fixed category list (separated by space)
+ =slides=      :: Boolean if slides are required (if the site sets that)
+ =source=      :: String with the source notes
+ =lang=        :: ISO code language (e.g. =en=)
+ =pubdate=     :: Publication date
+
+
+
