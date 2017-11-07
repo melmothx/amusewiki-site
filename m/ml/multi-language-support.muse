@@ -1,0 +1,38 @@
+#title Multi-language support
+#lang en
+#teaser Hosting texts with different languages on an amusewiki instance
+#topics doc
+
+*** Enable the multilanguage
+
+Go to the administrative console and under “General configuration” you
+will find “Multilanguage: list of whitespace separated language
+codes”. The list of supported languages is above the input field
+
+[[import m-l-languages.png]]
+
+*** Set an UID
+
+On text creation, there is an optional UID field.
+
+[[m-l-uid.png]]
+
+You can also add the line to the header of any existing text:
+
+{{{
+#uid mytextid
+}}}
+
+The UID is an arbitrary word which let amusewiki knows that two texts
+are the same with different language.
+
+So, if you have two (or more) texts with the same UID, in the footer
+of the text page you will find the list of related texts.
+
+The translations’ list can be found at =/console/translations=
+
+
+
+
+
+

@@ -1,6 +1,7 @@
 #title Integration with external sites
 #lang en
 #teaser Embedding existing texts and creating new texts via API
+#topics doc
 
 *** Embedding an existing text
 
