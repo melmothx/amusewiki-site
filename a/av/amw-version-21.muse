@@ -7,27 +7,27 @@
 The 2.1 series does not bring any incompatibility or upgrade issues
 from the 2.0 series. User visible changes are minimal.
 
-2.094 2017-11-06
+*** 2.094 2017-11-06
 
  - Adjust the jobber behaviour to be more aggressive but not too much ([[https://github.com/melmothx/amusewiki/issues/162][#162]])
  - Documentation fixes
  - Tentative fix for debian-specific amusewiki script on restart
 
-2.093 2017-11-04
+*** 2.093 2017-11-04
 
  - SEO improvements: noindex on generated files, sitelink searchbox,
    allow /search access to robots.
 
-2.092 2017-11-04
+*** 2.092 2017-11-04
 
  - Fix jobber startup in thumbnail population, preventing thumbnails
    to be fully populated.
 
-2.091 2017-11-04
+*** 2.091 2017-11-04
 
  - Add /remote/create API route ([[https://github.com/melmothx/amusewiki/issues/158][#158]])
 
-2.090 2017-11-03
+*** 2.090 2017-11-03
 
  - Improve OpenGraph support ([[https://github.com/melmothx/amusewiki/issues/145][#145]], [[https://github.com/melmothx/amusewiki/issues/150][#150]])
  - Add /library/*/embed route suitable for external iframes ([[https://github.com/melmothx/amusewiki/issues/154][#154]])
