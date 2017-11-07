@@ -5,7 +5,7 @@
 #lang en
 
 The 2.1 series does not bring any incompatibility or upgrade issues
-from the 2.0 series.
+from the 2.0 series. User visible changes are minimal.
 
 2.094 2017-11-06
 
