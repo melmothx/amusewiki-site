@@ -1,5 +1,5 @@
 #title Version 2.0
-#date 2017-10-08
+#date 2017-10-27
 #teaser New font subsystem, edit screen customization, font-awesome, **security fix**, mass rebuilding, PDF metadata, custom formats
 #cat releases
 #lang en
@@ -7,9 +7,16 @@
 The 2.0 series does not bring any incompatibility or upgrade issues from
 the 1.x series.
 
+*** Version 2.032 (2017-10-27)
+
+ - Add opengraph support ([[https://github.com/melmothx/amusewiki/issues/150][#150]])
+ - Prevent chrome to complain for XSS when we supposedly know what we
+   are doing ([[https://github.com/melmothx/amusewiki/issues/151][#151]])
+
+
 *** Version 2.031 (2017-10-14)
 
- - Provide /mirror, suitable for wget -m. Please note that the route
+ - Provides =/mirror=, suitable for wget -m. Please note that the route
    is accessible if /git is enable as well (as both expose the repo
    tree). Of course private sites don't expose them to anonymous
    users. ([[https://github.com/melmothx/amusewiki/issues/144][#144]])
