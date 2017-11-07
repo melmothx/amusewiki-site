@@ -9,7 +9,7 @@ Go to the administrative console and under “General configuration” you
 will find “Multilanguage: list of whitespace separated language
 codes”. The list of supported languages is above the input field
 
-[[import m-l-languages.png]]
+[[m-l-languages.png]]
 
 *** Set an UID
 
