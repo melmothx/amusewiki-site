@@ -40,6 +40,10 @@ Instead, you should consider amusewiki if:
 
 ** News
 
+*** Pandoc supports muse format!
+
+[[https://pandoc.org/releases.html][pandoc 2.0 (released 29 Oct 2017)]] supports muse format (both as reader and as a writer). This is simply awesome! Thanks to Alexander Krotov for that.
+
 *** Bookbuilder tutorial
 
 An in-depth explanation of the bookbuilder is available [[/library/bookbuilder-tutorial][here]].
