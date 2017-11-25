@@ -5,7 +5,16 @@
 #lang en
 
 The 2.1 series does not bring any incompatibility or upgrade issues
-from the 2.0 series. User visible changes are minimal.
+from the 2.0 series.
+
+*** 2.095 2017-11-25
+
+ - Adjusted mailing localization and wording ([[https://github.com/melmothx/amusewiki/issues/163][#163]] [[https://github.com/melmothx/amusewiki/issues/155][#155]]). Thanks to
+   racke to point that out.
+ - Opt-out for teaser and cover in the listings ([[https://github.com/melmothx/amusewiki/issues/170][#170]])
+ - Minor fix to the layout for search results ([[https://github.com/melmothx/amusewiki/issues/168][#168]])
+ - Give access to the site's jobs console to admins ([[https://github.com/melmothx/amusewiki/issues/169][#169]])
+ - Improve customization of navbar links ([[https://github.com/melmothx/amusewiki/issues/167][#167]])
 
 *** 2.094 2017-11-06
 
