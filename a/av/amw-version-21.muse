@@ -1,5 +1,5 @@
 #title Version 2.1
-#date 2017-11-07
+#date 2017-11-26
 #teaser Fine tuning of produced downloads, search engines optimization, parallel PDF compilation
 #cat releases
 #lang en
@@ -15,6 +15,27 @@ from the 2.0 series.
  - Minor fix to the layout for search results ([[https://github.com/melmothx/amusewiki/issues/168][#168]])
  - Give access to the site's jobs console to admins ([[https://github.com/melmothx/amusewiki/issues/169][#169]])
  - Improve customization of navbar links ([[https://github.com/melmothx/amusewiki/issues/167][#167]])
+
+**Incompatible change:** if you used the configuration file to set the
+SMTP parameters, you need to upgrade the setup.
+
+You need to set the desired parameter as environment variable (in the
+systemd unit file or in the user starting the application). See
+[[https://metacpan.org/pod/Email::Sender::Manual::QuickStart]] and
+[[https://metacpan.org/pod/Email::Sender::Transport::SMTP]] for details.
+
+If you use systemd (or the application was installed via debian
+package), you need to tweak the local unit files to set the
+environment variables.
+
+Example:
+
+{{{
+$ export EMAIL_SENDER_TRANSPORT=SMTP
+$ export EMAIL_SENDER_TRANSPORT_host=smtp.example.com
+$ export EMAIL_SENDER_TRANSPORT_port=2525
+./init-all.sh restart
+}}}
 
 *** 2.094 2017-11-06
 
