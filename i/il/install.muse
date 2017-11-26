@@ -491,3 +491,39 @@ Example with the defaults:
       fcgi_socket /var/lib/amusewiki/amusewiki.socket
   </Model::Webserver>
 }}}
+
+** Mail with SMTP
+
+You need to set the desired parameter as environment variable (in the
+systemd unit file or in the user starting the application). See
+[[https://metacpan.org/pod/Email::Sender::Manual::QuickStart]] and
+[[https://metacpan.org/pod/Email::Sender::Transport::SMTP]] for details.
+
+Previously we used the application config file, but that's sloppy
+because it prevents the jobber to send mails properly.
+
+Example:
+
+{{{
+$ export EMAIL_SENDER_TRANSPORT=SMTP
+$ export EMAIL_SENDER_TRANSPORT_host=smtp.example.com
+$ export EMAIL_SENDER_TRANSPORT_port=2525
+./init-all.sh restart
+}}}
+
+If you use systemd unit files to start/stop/restart the application,
+you need to override them and set the environment variables instead.
+
+{{{
+cp /lib/systemd/system/amusewiki-web.service \
+   /lib/systemd/system/amusewiki-jobber.service \
+   /etc/systemd/system
+}}}
+
+Add in the =[Service]= stanza the needed variables, like this
+
+{{{
+Environment="EMAIL_SENDER_TRANSPORT=SMTP"
+Environment="EMAIL_SENDER_TRANSPORT_host=smtp.example.com"
+Environment="EMAIL_SENDER_TRANSPORT_port=2525"
+}}}
