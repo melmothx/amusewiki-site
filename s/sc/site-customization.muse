@@ -1,0 +1,41 @@
+#title Site customization
+#lang en
+#topics doc, howto
+#teaser Which files to add to the site repository to customize it
+
+Each site is configurable by root and admin users in the console
+(=/user/site= or =admin/sites=).
+
+However, part of the configuration should be done adding some files to
+the =site_files= directory in the =repo/SITE_ID/= directory, which is
+the git repository of the site. See [[offline-editing-via-git]] for
+the workflow's details.
+
+ =favicon.ico= :: If present, this will be used as favicon.
+
+ =local.css= :: Additional CSS rules.
+
+ =local.js= :: Local JS file. Here you can do whatever you want
+               without tampering with the code. Open an issue on
+               [[https://github.com/melmothx/amusewiki/issues][GitHub]]
+               if you think you miss IDs in the HTML to hook on.
+
+ =navlogo.png= :: If present, it will be placed on the navigation bar
+                  as logo. Height is enforced to 50px.
+
+ =widebanner.png= :: If present, it's used to place a banner below the
+                     navbar (which is fixed). It should have a width
+                     of 1170px for optimal results.
+
+ =pagelogo.png= :: If present, it will be placed before the latest
+                   entries on the special pages. The assigned ids are
+                   "special-pages-logo" for the container and
+                   "special-pages-logo-img" for the image itself.
+
+ =opengraph.png= :: If present, it will be used for the [[http://ogp.me/][opengraph protocol]]
+                    (used on social networks when sharing a
+                    link). The image opengraph.png should have
+                    dimension 300x300 for better effect. If not
+                    present, pagelogo.png will be used, otherwise
+                    navlogo.png will be used, with often odd results.
+
