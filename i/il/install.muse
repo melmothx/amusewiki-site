@@ -6,8 +6,14 @@
 
 The recommended way to install amusewiki is via
 [[http://packages.amusewiki.org]], where a debian repository with the
-packages is provided. If you want to install manually, read on,
-otherwise skip this document.
+packages is provided. If you want to install manually, read on. If you
+need to do some post-installation tweaking for ports and webserver
+logging, jump to [[#configuration][the final section]]. Otherwise feel
+free to skip this document interely.
+
+Windows is not supported in any way.
+
+** General installation
 
 The installation of amusewiki takes time (depending on speed of the
 machine and of the network) and requires about 5Gb of disk space
@@ -55,10 +61,12 @@ If you have a system wide perl, to install modules in your home you
 should install local::lib (liblocal-lib-perl on Debian) and add to
 .profile (or equivalent):
 
+{{{
  eval `perl -Mlocal::lib`
+}}}
 
 If you installed Tex live from the installer, tweak the shell rc file
-to include the binaries in the PATH.
+to include the binaries in the =PATH=.
 
 Logout and login again.
 
@@ -151,8 +159,8 @@ single instance you can have as many sites as you want.
 
 The interaction between nginx and the application, including cgit, is
 controlled by the Webserver model. You can configure it creating a
-file in the application root named amusewikifarm_local.conf with this
-content (here listed with the defaults).
+file in the application root named =amusewikifarm_local.conf= with
+this content (here listed with the defaults).
 
 {{{
 <Model::Webserver>
@@ -455,4 +463,31 @@ you configured (say, amw.localdomain, you may want to add the entry
 You probably want to head to the admin panel under /admin/sites to
 create a new site.
 
+** Configuration file
+#configuration
 
+Normally, you don't need to change anything. However, may need to do
+some tweaking to the webserver configuration. This is done via the
+configuration file.
+
+If amusewiki was installed with a debian package, the location is
+=/etc/amusewiki.conf= otherwise you should create a file called
+=amusewikifarm_local.conf= in the application directory, which will
+override the existing settings in =amusewikifarm.conf=
+
+Example with the defaults:
+
+{{{
+  <Model::Webserver>
+      ## cgit port
+      cgit_port 9015
+      ## nginx log format
+      log_format combined
+      ## nginx root
+      nginx_root /etc/nginx
+      ## string to identify this installation
+      instance_name amusewikidebian
+      webserver_root /usr/share/perl5/AmuseWikiFarm/root
+      fcgi_socket /var/lib/amusewiki/amusewiki.socket
+  </Model::Webserver>
+}}}
