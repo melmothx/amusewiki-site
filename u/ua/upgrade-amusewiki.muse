@@ -1,6 +1,5 @@
 #title Upgrading
 #author Marco Pessotto
-#pubdate 2017-06-15
 #lang en
 #topics doc, howto
 #teaser How to upgrade Amusewiki without downtime
