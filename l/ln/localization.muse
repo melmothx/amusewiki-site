@@ -4,22 +4,19 @@
 #lang en
 #topics doc, howto
 
-
-* Localization
-
 If you need to update the translations in the UI, you have two ways to
 do that, globally or locally for a single site.
 
-** Global
+*** Global
 
 GNU gettext message catalogues (.po files) are located at
-lib/AmuseWikiFarm/I18N/xx.po, where xx is the language code. Changes
+=lib/AmuseWikiFarm/I18N/xx.po=, where xx is the language code. Changes
 done here shouldn't be site specific and if you improve the
 translations, please send the updated .po file to me
 (melmothx@gmail.com) or fork the amusewiki repo and do a pull request,
 making sure you're aligned to the latest master branch.
 
-** Local =PO= files
+*** Local =PO= files
 
 You can override the UI translations and provide them for the
 categories as well (if your site is multilingual or if you use codes
@@ -27,7 +24,7 @@ instead of strings) storing the relevant po files into the
 =site_files/locales= directory in the site repository (e.g.
 =repo/amw/site_files/locales/hr.po=).
 
-** =lexicon.json=
+*** =lexicon.json=
 
 Before version 1.8, the only way to override the translation was using
 a JSON file in the =site_files/lexicon.json= file.
@@ -96,8 +93,6 @@ script/amusewiki-upgrade-lexicon repo/*
 Which will parse the lexicon.json files and dump the po files, merging
 them if already existing. No git operation is performed.
 
-** Hacking
-
 *** Adding a new language (developer-only)
 
 Go to lib/AmuseWikiFarm/I18N and run (for example to add swedish)
@@ -107,11 +102,11 @@ msginit --input=messages.pot --output=sv.po --locale=sv
 }}}
 
 Add the language code and the language string to the
-AmuseWikiFarm::Schema::Result::Site::known_langs method.
+=AmuseWikiFarm::Schema::Result::Site::known_langs= method.
 
-Add the language code to the script/upgrade_i18n script.
+Add the language code to the =script/upgrade_i18n= script.
 
-Add the babel name to Text::Amuse::_language_mapping if missing.
+Add the babel name to =Text::Amuse::_language_mapping= if missing.
 
 Tests which have a plan depending on the number of supported languages:
 
