@@ -4,55 +4,55 @@
 #topics doc, howto
 #teaser Installation and post-installation configuration
 
-The recommended way to install amusewiki is via
-[[http://packages.amusewiki.org]], where a debian repository with the
+The recommended way to install Amusewiki is via
+[[http://packages.amusewiki.org]], where a Debian repository with the
 packages is provided. If you want to install manually, read on. If you
 need to do some post-installation tweaking for ports and webserver
 logging, jump to [[#configuration][the final section]]. Otherwise feel
-free to skip this document interely.
+free to skip this document entirely.
 
 Windows is not supported in any way.
 
 ** General installation
 
-The installation of amusewiki takes time (depending on speed of the
+The installation of Amusewiki takes time (depending on speed of the
 machine and of the network) and requires about 5Gb of disk space
-because of the full installation of TeXlive. If you're short on disk
+because of the full installation of TeX Live. If you're short on disk
 space, don't even start to install (the app will create files at full
 speed anyway, so consider 10Gb for a reasonable start).
 
 On a slow server, it takes 2 hours (mostly spent on installing and
 testing Perl modules, and 20 minutes to download and install the full
-TeXlive 2015), but the procedure is fully automated, so start it,
+TeX Live 2015), but the procedure is fully automated, so start it,
 check if it bails out at the beginning, forget about it for an hour or
 two (run it under screen), then come back later and finish it up to
 complete it for the operations which require root privileges (notably
 the webserver configuration).
 
 You can speed up the process installing the available modules and
-texlive from the OS repositories, which is the suggested approach
+TeX Live from the OS repositories, which is the suggested approach
 because this way the security fixes are delegated to the standard
 tools.
 
 The supported and recommended setup is nginx + FCGI. The FCGI setup
 should work with Apache as well, but it's not currently actively
-supported, even if  [[https://metacpan.org/pod/distribution/Catalyst-Manual/lib/Catalyst/Manual/Deployment/Apache/FastCGI.pod][perldoc Catalyst::Manual::Deployment::Apache::FastCGI]]
+supported, even if [[https://metacpan.org/pod/distribution/Catalyst-Manual/lib/Catalyst/Manual/Deployment/Apache/FastCGI.pod][perldoc Catalyst::Manual::Deployment::Apache::FastCGI]]
 should help.
 
 Prerequisites:
 
- - a database (mysql, pg, sqlite are supported)
- - a working perl (i.e., you can install modules with cpanm without
-   warnings). Usually this means you have to install liblocal-lib-perl
-   and cpanminus in Debian (or you install perl in your home).
- - fontconfig (install it before installing texlive)
- - graphicsmagick (for thumbnails) and imagemagick (for preview generation)
- - a mime-info database: shared-mime-info on debian
+ - a database (MySQL, PostgreSQL, SQLite are supported)
+ - a working Perl (i.e., you can install modules with cpanm without
+   warnings). Usually this means you have to install =liblocal-lib-perl=
+   and =cpanminus= in Debian (or you install Perl in your home).
+ - fontconfig (install it before installing TeX Live)
+ - GraphicsMagick (for thumbnails) and ImageMagick (for preview generation)
+ - a mime-info database: =shared-mime-info= on Debian
  - a dedicated system user (with a clean home) which is going to run the site
- - SSL binaries and development libraries (openssl and libssl-dev)
- - Xapian libraries and development files (xapian-tools libxapian-dev)
- - commonly used utilities: unzip, wget, git, rsync
- - TeXlive full > 2012, either from system repo (recommended) or from
+ - SSL binaries and development libraries (=openssl= and =libssl-dev=)
+ - Xapian libraries and development files (=xapian-tools= =libxapian-dev=)
+ - commonly used utilities: =unzip=, =wget=, =git=, =rsync=
+ - TeX Live full > 2012, either from system repo (recommended) or from
    https://www.tug.org/texlive/
 
 Log in as the user you want to run the site.
@@ -65,7 +65,7 @@ should install local::lib (liblocal-lib-perl on Debian) and add to
  eval `perl -Mlocal::lib`
 }}}
 
-If you installed Tex live from the installer, tweak the shell rc file
+If you installed TeX Live from the installer, tweak the shell rc file
 to include the binaries in the =PATH=.
 
 Logout and login again.
@@ -82,14 +82,14 @@ Complete the installation with:
 
 ** Configure the initial site
 
-Create a database for the application. E.g., for mysql:
+Create a database for the application. E.g., for MySQL:
 
 {{{
   mysql> create database amuse DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
   mysql> grant all privileges on amuse.* to amuse@localhost identified by XXX
 }}}
 
-Or, for postgres:
+Or, for PostgreSQL:
 
 Login as root.
 
@@ -100,12 +100,12 @@ Login as root.
  create database amuse owner amuse;
 }}}
 
-For sqlite no setup is required.
+For SQLite no setup is required.
 
-Copy dbic.yaml.<dbtype>.example to dbic.yaml and adjust the
-credentials, and chmod it to 600. (For sqlite is good as it is).
+Copy =dbic.yaml.<dbtype>.example= to =dbic.yaml= and adjust the
+credentials, and =chmod= it to =0600=. (For SQLite is good as it is).
 
-If you have multiple amusewiki instance (please note, multiple sites
+If you have multiple Amusewiki instance (please note, multiple sites
 are just fine on a single instance) on the same machine, see below
 before proceeding (you probably want to tweak the configuration)
 
@@ -117,7 +117,7 @@ Configure the initial site with:
 
 Please note that the installation procedure will create a mirror of
 amusewiki.org under the subdomain amusewiki.<your domain>, where <your
-domain> is the output of `hostname -d`. Nothing you can't change later
+domain> is the output of =hostname -d=. Nothing you can't change later
 from the admin console, but you need to access it. You can pass the
 desired hostname as first argument to the configure script.
 
@@ -133,9 +133,9 @@ AMW_WORKERS (defaults to 3).
 To start/stop/restart the application:
 
 {{{
-  ./init-all start
-  ./init-all stop
-  ./init-all restart
+  ./init-all.sh start
+  ./init-all.sh stop
+  ./init-all.sh restart
 }}}
 
 This is not needed if you use systemd.
@@ -285,7 +285,7 @@ Add another user? (yes/no): no
 Goodbye!
 }}}
 
-Add to rc.conf
+Add to =/etc/rc.conf=
 
 {{{
 nginx_enable=YES
@@ -334,10 +334,10 @@ Take note of the credentials, and follow the instructions.
 ** CentOS 7
 
 Most of these instructions will apply to other GNU/Linux systems with
-systemd and selinux.
+systemd and SELinux.
 
-Texlive is obsolete, so we will install it from CTAN. The same goes
-with perl.
+TeX Live is obsolete, so we will install it from CTAN. The same goes
+with Perl.
 
 From a fresh install:
 
@@ -350,7 +350,7 @@ From a fresh install:
 # yum groupinstall 'Development Tools'
 }}}
 
-Tweak nginx configuration to conform to debian standard
+Tweak nginx configuration to conform to Debian standard
 
 {{{
 # mkdir /etc/nginx/sites-enabled
@@ -383,7 +383,7 @@ Open the firewall
 # firewall-cmd --reload
 }}}
 
-Prepare the installation directory for your user (say amusewiki, but
+Prepare the installation directory for your user (say =amusewiki=, but
 any other will do).
 
 Please note that we install it under =/var/www/= to avoid problems
@@ -394,7 +394,7 @@ with SELinux.
 # chown amusewiki:amusewiki /var/www/amusewiki
 }}}
 
-As the user which is going to run amusewiki, install a fresh perl.
+As the user which is going to run Amusewiki, install a fresh Perl.
 This way we simplify and make our install independent from the base
 system, which is lacking way too many modules.
 
@@ -426,11 +426,11 @@ $ cd /var/www/amusewiki/amusewiki/
 $ ./script/install.sh
 }}}
 
-Decide the initial server name to serve amusewiki (to get access to
+Decide the initial server name to serve Amusewiki (to get access to
 the admin), e.g. amw.localdomain.
 
-See above if you want a mysql or postgresql database. The following
-command will create a sample site with the current amusewiki
+See above if you want a MySQL or PostgreSQL database. The following
+command will create a sample site with the current Amusewiki
 documentation.
 
 {{{
@@ -447,7 +447,7 @@ $ ./script/amusewiki-generate-nginx-conf
 
 Read the output and install the fresh nginx configuration.
 
-Finally, open the permission for selinux. As root:
+Finally, open the permission for SELinux. As root:
 
 {{{
 cd /var/www/amusewiki/amusewiki/doc/centos/
@@ -457,10 +457,10 @@ semodule -i amusewiki.pp
 }}}
 
 Reboot to be sure everything is ok, open with a browser the location
-you configured (say, amw.localdomain, you may want to add the entry
-/etc/hosts to access it) and login.
+you configured (say, =amw.localdomain=, you may want to add the entry
+=/etc/hosts= to access it) and login.
 
-You probably want to head to the admin panel under /admin/sites to
+You probably want to head to the admin panel under =/admin/sites= to
 create a new site.
 
 ** Configuration file
