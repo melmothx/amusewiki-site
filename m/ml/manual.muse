@@ -381,11 +381,11 @@ The following example will produce:
 Each of these forms may span
 multiple lines, but not multiple paragraphs.
 
-You can also use the =<code>= tag to indicate code and monospace
+You can also use the <code><verbatim><code></verbatim></code> tag to indicate code and monospace
 text. This is handy for regions that have an “=” in them.
 
 If the “*” confuse you or the preview is screwed up, you can use
-inline tag =<em>= and =<strong>=, which are guaranteed to work in any case.
+inline tag <code><verbatim><em></verbatim></code> and <code><verbatim><strong></verbatim></code>, which are guaranteed to work in any case.
 
 The above example rewritten with tags:
 
