@@ -1298,11 +1298,12 @@ See [[#anchor][the previous chapter]] for more information.
 ; this will disappear completely
 
 That is, only a semi-colon at the beginning of a line, followed by a
-literal space, will cause that line to be treated as a comment and
-**totally removed from the output.** 
+literal space, will cause that line to be treated as a comment an
+hidden from the visible output.
 
-You can alternatively surround the region with the =<comment>= tag. In
-this case the HTML output will be wrapped in a =<div>= with the
+You can alternatively surround the region with the =<comment>= tag.
+
+The HTML output will be wrapped in a =<div>= with the
 =display:none= property, so it can be turned visible changing the
 CSS.
 
