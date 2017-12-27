@@ -1,11 +1,24 @@
 #title Version 2.1
-#date 2017-11-26
-#teaser Fine tuning of produced downloads, search engines optimization, parallel PDF compilation
+#date 2017-12-27
+#teaser Fine tuning of produced downloads, search engines optimization, parallel PDF compilation, secondary footnotes
 #cat releases
 #lang en
 
 The 2.1 series does not bring any incompatibility or upgrade issues
 from the 2.0 series.
+
+*** 2.096 2017-12-27
+
+ - Localization updates: fr, ru, de
+
+ - Upgraded the =Text::Amuse= stack, bringing secondary footnotes, <verbatim>~~</verbatim> as
+   visible no-break space in the muse document
+
+ - New editing option: show_nbsp (turning the =a0= character into <verbatim>~~</verbatim>)
+
+ - New CF/BB options: prevent the use of bold fonts in PDFs and
+   alternate secondary footnote style (per-page and alpha)
+ 
 
 *** 2.095 2017-11-25
 
