@@ -5,8 +5,8 @@
 #teaser How to permit comments on Amusewiki
 
 Amusewiki's primary concern is the text management and publishing.
-However there are solutions to outsource the comments, permitting
-people needing them for a reason or another.
+However, the commenting can be easily and efficiently outsourced to
+another application.
 
 The suggested solution is [[https://posativ.org/isso/][Isso]].
 
