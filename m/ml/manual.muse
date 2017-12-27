@@ -409,8 +409,9 @@ an handwritten substitute for the italics. You simply don’t need it.
 Also, small caps are missing, mainly because on the HTML they look
 awful and a very few fonts have decent small caps.
 
-Other tags are =<sub>= and =<sup>= for subscript and superscript. And
-there is also a =<del>= tag for overstriking.
+Other tags are <code><verbatim><sub></verbatim></code> and
+<code><verbatim><sup></verbatim></code> for subscript and superscript. And
+there is also a <code><verbatim><del></verbatim></code> tag for overstriking.
 
 <example>
 This is the <sup>superscript</sup> and this is a
@@ -483,7 +484,43 @@ Here the text continues.
 
 ----
 
-You can break the footnotes lines (even if it’s not recommended), but keep the indentation consistent, as shown above
+You can break the footnotes lines (even if it’s not recommended), but
+keep the indentation consistent, as shown above.
+
+*** Secondary footnotes (support added in Text::Amuse 0.91, 2017-12-10)
+
+Rarely needed, but supported, are the secondary footnotes, i.e. an
+additional apparatus. They obey the same rules as the regular
+footnotes, but they are marked with curly brackets instead of square
+ones. You can also place secondary footnotes in regular footnotes.
+This is meant for critical edition, but you may use them to
+differentiate between author's notes and translator's notes.
+
+{{{
+
+This is a regular [4] footnote, and this a secondary {1}
+
+[4] Regular footnote, and has a secondary one on it {2}
+
+{1} Secondary footnote body (1)
+
+{2} Secondary footnote body (2)
+
+}}}
+
+Which produces:
+
+----
+
+This is a regular [4] footnote, and this a secondary {1}
+
+[4] Regular footnote, and has a secondary one on it {2}
+
+{1} Secondary footnote body (1)
+
+{2} Secondary footnote body (2)
+
+----
 
 ** Poetic stanzas
 
