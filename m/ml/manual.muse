@@ -334,7 +334,7 @@ with this bundle there is support for the following directives:
 
  - =#hyphenation=
 
-   See above.
+   See below.
 
 *** Correcting the hyphenation in the PDF output
 
@@ -358,8 +358,7 @@ and diacritics are fine, though). You specify a breakpoint with the
 hyphen character “-”. Using a word without any hyphen will prevent the
 hyphenation for that word.
 
-** Bold, italicized and monospace text
-
+** Bold, italicized and monospace text, non breaking space.
   
 To emphasize text, surround it with certain specially recognized
 characters.
@@ -434,6 +433,17 @@ respective tags:
 
 =this= is the same as <code>this</code>
 }}}
+
+*** Non-breaking space.
+
+Non breaking space (=0xA0= Unicode, NO-BREAK SPACE) is just a regular
+character, but it's somehow complicate to manage, because very often
+appears like a normal space. You can use a double tilde
+<verbatim>~~</verbatim> to insert a non breaking space which is
+explicit in the muse document.
+
+This feature was added in Text::Amuse 0.94 but it was present in Emacs
+Muse.
 
 ** Footnotes
 
