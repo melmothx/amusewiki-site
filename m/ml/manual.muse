@@ -3,9 +3,9 @@
 #topics doc, howto
 #authors Marco Pessotto, Michael Olson, John Wiegley
 #subtitle The writer’s guide
-#date 2012
+#date 2017
 #teaser Everything you have to know about the Text::Amuse markup. Last
- updated for version 0.90 (released on August 30, 2017).
+ updated for version 0.94 (released on December 25, 2017).
 
 Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software
 Foundation, Inc.
