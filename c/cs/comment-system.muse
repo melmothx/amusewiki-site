@@ -1,0 +1,23 @@
+#title Commenting system
+#lang en
+#topics howto
+#date 2017
+#teaser How to permit comments on Amusewiki
+
+Amusewiki's primary concern is the text management and publishing.
+However there are solutions to outsource the comments, permitting
+people needing them for a reason or another.
+
+The suggested solution is [[https://posativ.org/isso/][Isso]].
+
+See the [[https://posativ.org/isso/docs/install/][install]] and
+[[https://posativ.org/isso/docs/quickstart/][quickstart]] documents to
+get it installed and running.
+
+On the amusewiki side, you need to decide where to allow comments. The
+admin interface provides a way to inject arbitrary HTML in the pages.
+You can add them to regular pages only, to special pages only, or both.
+
+[[c-s-isso-1.png][setup]]
+
+[[c-s-isso-2.png][result]]
