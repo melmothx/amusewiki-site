@@ -1070,7 +1070,7 @@ The ordering of the footer, header and table body blocks is irrelevant
 for the output (HTML requires you put first the header, then the
 footer, then the body). Ordering of the single rows is of course
 preserved. Inside the cells you can do pretty much what you want
-(beside headers and lists): mark them up freely.
+(besides headers and lists): mark them up freely.
 
 *** Floating tables
 
@@ -1487,7 +1487,7 @@ trigger a table, Text::Amuse requires some initial indentation. To
 write compatible table, please indent and keep the bars surrounded by
 spaces.
 
-Since version 0.60, the code blocks, beside the =<example>= tag, can
+Since version 0.60, the code blocks, besides the =<example>= tag, can
 also be written as ={{{= =}}}=, e.g.
 
 <example>
