@@ -1463,6 +1463,42 @@ without meaning a footnote reference, or asterisks without meaning an
 emphasis, e.g. <verbatim>*this*</verbatim>.
 }}}
 
+** Differences between =Text::Amuse= and =Emacs Muse=
+
+Unfortunately, the Emacs Muse project is dead. However,
+[[https://pandoc.org][pandoc]] supports the muse syntax.
+
+*** Inline markup
+
+Underlining has been dropped.
+
+Emphasis and strong can also be written with tags, like <verbatim><em>emphasis</em>,
+<strong>strong</strong> and <code>code</code>.</verbatim>
+
+Added tag <verbatim><sup> and <sub></verbatim> for superscript and
+subscript.
+
+*** Block markup
+
+The only tables supported are the native one (with =|||= as separator).
+
+While Emacs Muse requires the bars to be surrounded by spaces to
+trigger a table, Text::Amuse requires some initial indentation. To
+write compatible table, please indent and keep the bars surrounded by
+spaces.
+
+Since version 0.60, the code blocks, beside the =<example>= tag, can
+also be written as ={{{= =}}}=, e.g.
+
+<example>
+{{{
+ if ($perl) {...}
+}}}
+</example>
+
+Since 0.91, there is full support for secondary footnotes with number
+inside curly brackets. Emacs Muse is missing this feature.
+
 * GNU Free Documentation License
 
 
