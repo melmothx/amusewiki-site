@@ -7,7 +7,7 @@ Amusewiki stores its files in a plain text lightweight format called
 Emacs Muse (actually a dialect of it) and described in depth in the
 [[https://amusewiki.org/library/manual][manual]]. Such files are
 always listed in the infobox with the downloads and are labelled as
-"plain text source" and have a =.muse= extension. The same file is
+“plain text source” and have a =.muse= extension. The same file is
 also bundled in the =.zip=, which also gives you the eventual
 attachments.
 
