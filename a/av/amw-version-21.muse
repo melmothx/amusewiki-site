@@ -1,11 +1,16 @@
 #title Version 2.1
-#date 2017-12-27
+#date 2017-12-29
 #teaser Fine tuning of produced downloads, search engines optimization, parallel PDF compilation, secondary footnotes
 #cat releases
 #lang en
 
 The 2.1 series does not bring any incompatibility or upgrade issues
 from the 2.0 series.
+
+*** 2.098 2017-12-29
+
+ - Add BB/CF option start_with_empty_page
+ - Localization updates: it, hr (complete)
 
 *** 2.096 2017-12-27
 

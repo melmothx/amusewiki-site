@@ -57,7 +57,7 @@ packages are exactly the same.
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_2.096.tar.gz][latest version is 2.096]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_2.098.tar.gz][latest version is 2.098]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
