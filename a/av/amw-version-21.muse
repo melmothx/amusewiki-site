@@ -1,5 +1,5 @@
 #title Version 2.1
-#date 2017-12-29
+#date 2018-01-27
 #teaser Fine tuning of produced downloads, search engines optimization, parallel PDF compilation, secondary footnotes
 #cat releases
 #lang en
