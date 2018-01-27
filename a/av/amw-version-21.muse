@@ -7,6 +7,22 @@
 The 2.1 series does not bring any incompatibility or upgrade issues
 from the 2.0 series.
 
+*** 2.099 2018-01-27
+
+ - Updated i18n: ru, it, hr
+ - Documentation fixes
+ - Upgraded Text::Amuse version to interpret =<code>= as verbatim
+
+This release changes the behaviour of the =<code>= and
+<verbatim>=code=</verbatim> tag which are now verbatim ones.
+
+To ensure some degree of backcompatibility, if =<verbatim>= is found
+inside a tag, a warning is issued.
+
+=<code><verbatim>Material</verbatim></code>= is also considered as the
+same way as <code>=Material=</code>.
+
+
 *** 2.098 2017-12-29
 
  - Add BB/CF option start_with_empty_page
