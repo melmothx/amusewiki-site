@@ -368,23 +368,24 @@ The following example will produce:
      *emphasis*
      **strong emphasis**
      ***very strong emphasis***
-     =code and monospace=
+     =verbatim and monospace=
 
 <example>
      *emphasis*
      **strong emphasis**
      ***very strong emphasis***
-     =code and monospace=
+     =verbatim and monospace=
 </example>
 
 Each of these forms may span
 multiple lines, but not multiple paragraphs.
 
-You can also use the <code><verbatim><code></verbatim></code> tag to indicate code and monospace
-text. This is handy for regions that have an “=” in them.
+You can also use the =<code>= tag to indicate code and monospace
+text. This is handy for regions that have a “=” in them.
 
 If the “*” confuse you or the preview is screwed up, you can use
-inline tag <code><verbatim><em></verbatim></code> and <code><verbatim><strong></verbatim></code>, which are guaranteed to work in any case.
+inline tag =<em>= and =<strong>=, which are guaranteed to work in any
+case.
 
 The above example rewritten with tags:
 
@@ -392,7 +393,7 @@ The above example rewritten with tags:
      <em>emphasis</em>
      <strong>strong emphasis</strong>
      <strong><em>very strong emphasis</em></strong>
-     <code>code and monospace</code>
+     <code>verbatim and monospace</code>
 </example>
 
 And produces the same thing.
@@ -400,7 +401,7 @@ And produces the same thing.
      <em>emphasis</em>
      <strong>strong emphasis</strong>
      <strong><em>very strong emphasis</em></strong>
-     <code>code and monospace</code>
+     <code>verbatim and monospace</code>
 
 Please note that there is no support for the underline. Underlining is
 an handwritten substitute for the italics. You simply don’t need it.
@@ -408,9 +409,14 @@ an handwritten substitute for the italics. You simply don’t need it.
 Also, small caps are missing, mainly because on the HTML they look
 awful and a very few fonts have decent small caps.
 
-Other tags are <code><verbatim><sub></verbatim></code> and
-<code><verbatim><sup></verbatim></code> for subscript and superscript. And
-there is also a <code><verbatim><del></verbatim></code> tag for overstriking.
+Since Text::Amuse version 0.96 (released 2018-01-27), which restored
+Emacs Muse compatibility in this regard, material in =<code>= tags and
+equivalent markup between equal signs is also verbatim, but with a
+monospace font.
+
+Other tags are =<sub>= and
+=<sup>= for subscript and superscript. And
+there is also a =<del>= tag for overstriking.
 
 <example>
 This is the <sup>superscript</sup> and this is a
@@ -422,8 +428,8 @@ This is the <sup>superscript</sup> and this is a
 <sub>subscript</sub>, and this is <del>something deleted and
 overstriked</del>
 
-If you nest the same tag (e.g. <code><verbatim><em>this <em>and
-this</em></em></verbatim></code>, you are going to get weird results
+If you nest the same tag (e.g. =<em>this <em>and
+this</em></em>=, you are going to get weird results
 (and doesn’t make any sense), so don’t do it. <code>=</code> and
 <code>*</code> when surrounding words have the same meaning of the
 respective tags:
@@ -694,7 +700,7 @@ A description list
 
 If for some reason you want to break the list without starting a
 regular paragraph, you can do so by inserting a
-<verbatim><br></verbatim> tag (which adds some white space between
+=<br>= tag (which adds some white space between
 them) or a comment (invisible). E.g.
 
 {{{
@@ -1453,7 +1459,7 @@ Sometimes you want to write something like <verbatim>[1]</verbatim>
 without meaning a footnote reference, or asterisks without meaning an
 emphasis, e.g. <verbatim>*this*</verbatim>.
 
-You can do so wrapping the words with the <verbatim><verbatim></verbatim> tag.
+You can do so wrapping the words with the =<verbatim>= tag.
 
 Example:
 
@@ -1462,6 +1468,11 @@ Sometimes you want to write something like <verbatim>[1]</verbatim>
 without meaning a footnote reference, or asterisks without meaning an
 emphasis, e.g. <verbatim>*this*</verbatim>.
 }}}
+
+Since Text::Amuse version 0.96 (released 2018-01-27), which restored
+Emacs Muse compatibility in this regard, material in =<code>= tags and
+equivalent markup between equal signs is also verbatim, but with a
+monospace font.
 
 ** Differences between =Text::Amuse= and =Emacs Muse=
 
@@ -1472,10 +1483,10 @@ Unfortunately, the Emacs Muse project is dead. However,
 
 Underlining has been dropped.
 
-Emphasis and strong can also be written with tags, like <verbatim><em>emphasis</em>,
-<strong>strong</strong> and <code>code</code>.</verbatim>
+Emphasis and strong can also be written with tags, like =<em>emphasis</em>=,
+=<strong>strong</strong>= and =<code>code</code>=.
 
-Added tag <verbatim><sup> and <sub></verbatim> for superscript and
+Added tag =<sup>= and =<sub>= for superscript and
 subscript.
 
 *** Block markup
