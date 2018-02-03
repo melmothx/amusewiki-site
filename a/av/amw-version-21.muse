@@ -1,11 +1,15 @@
 #title Version 2.1
-#date 2018-01-27
-#teaser Fine tuning of produced downloads, search engines optimization, parallel PDF compilation, secondary footnotes
+#date 2018-02-03
+#teaser Fine tuning of produced downloads, search engines optimization, parallel PDF compilation, secondary footnotes, improved editing user interface
 #cat releases
 #lang en
 
 The 2.1 series does not bring any incompatibility or upgrade issues
 from the 2.0 series.
+
+*** 2.100 2018-02-03
+
+ - Improved editing UI: batch file upload and ajax preview.
 
 *** 2.099 2018-01-27
 
