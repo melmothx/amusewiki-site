@@ -1,3 +1,4 @@
+pubdate 2017-11-07 09:28:54 +0100
 #title Version 2.1
 #date 2018-02-03
 #teaser Fine tuning of produced downloads, search engines optimization, parallel PDF compilation, secondary footnotes, improved editing user interface

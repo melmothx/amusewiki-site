@@ -1,3 +1,4 @@
+pubdate 2014-09-04 15:54:22 +0200
 #title The Text::Amuse markup manual
 #lang en
 #topics doc, howto
