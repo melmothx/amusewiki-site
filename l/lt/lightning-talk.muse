@@ -1,3 +1,4 @@
+#pubdate 2015-10-21 12:37:40 +0200
 #title AmuseWiki, yet another wiki engine
 #subtitle Vienna, Perl Dancer 2015
 #author Marco Pessotto (melmothX)

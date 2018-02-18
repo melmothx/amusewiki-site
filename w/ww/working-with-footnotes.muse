@@ -1,3 +1,4 @@
+#pubdate 2017-05-24 11:03:41 +0200
 #title Working with footnotes
 #lang en
 #topics howto

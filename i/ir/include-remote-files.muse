@@ -1,3 +1,4 @@
+#pubdate 2016-07-14 15:51:06 +0200
 #title Include remote files
 #topics howto
 #lang en

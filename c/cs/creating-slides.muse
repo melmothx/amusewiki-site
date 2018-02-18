@@ -1,3 +1,4 @@
+#pubdate 2016-07-18 11:35:08 +0200
 #title Creating slides
 #author Marco Pessotto
 #topics howto

@@ -1,3 +1,4 @@
+#pubdate 2017-11-07 11:43:39 +0100
 #title Multi-language support
 #lang en
 #teaser Hosting texts with different languages on an amusewiki instance
