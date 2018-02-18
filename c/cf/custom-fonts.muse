@@ -1,4 +1,3 @@
-pubdate 2017-11-07 12:20:47 +0100
 #title Custom fonts
 #lang en
 #teaser Fine tuning for fonts in the downloadable files

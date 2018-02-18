@@ -1,4 +1,3 @@
-pubdate 2016-08-11 12:35:19 +0200
 #title Amusewiki: a year of development
 #author Marco Pessotto (melmothX)
 #SORTauthors Marco Pessotto

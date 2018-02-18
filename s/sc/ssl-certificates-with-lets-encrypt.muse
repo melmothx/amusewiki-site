@@ -1,4 +1,3 @@
-pubdate 2017-11-26 13:13:52 +0100
 #title SSL certificates
 #lang en
 #topics howto, doc

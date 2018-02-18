@@ -1,4 +1,3 @@
-pubdate 2017-06-12 12:18:41 +0200
 #title How to install AmuseWiki
 #author Marco Pessotto
 #lang en

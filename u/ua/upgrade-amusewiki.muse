@@ -1,4 +1,3 @@
-pubdate 2017-06-15 12:27:43 +0200
 #title Upgrading
 #author Marco Pessotto
 #lang en

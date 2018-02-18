@@ -1,4 +1,3 @@
-pubdate 2016-11-02 09:44:57 +0100
 #title Version 2.0
 #date 2017-10-27
 #teaser New font subsystem, edit screen customization, font-awesome, **security fix**, mass rebuilding, PDF metadata, custom formats

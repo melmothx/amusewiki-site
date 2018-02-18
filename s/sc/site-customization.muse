@@ -1,4 +1,3 @@
-pubdate 2017-11-26 13:13:52 +0100
 #title Site customization
 #lang en
 #topics doc, howto
