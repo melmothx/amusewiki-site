@@ -1,12 +1,18 @@
-#pubdate 2018-02-03
+#pubdate 2018-02-19
 #title Version 2.1
-#date 2018-02-03
+#date 2018-02-19
 #teaser Fine tuning of produced downloads, search engines optimization, parallel PDF compilation, secondary footnotes, improved editing user interface
 #cat releases
 #lang en
 
 The 2.1 series does not bring any incompatibility or upgrade issues
 from the 2.0 series.
+
+*** 2.102 2018-02-19
+
+ - Minor fix dependencies in debian packages (ghostscript was missing)
+ - Added texts sorting by number of pages
+ - Enforce weak etags for files served by the application
 
 *** 2.101 2018-02-10
 

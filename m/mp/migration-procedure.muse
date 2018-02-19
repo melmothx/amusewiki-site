@@ -1,0 +1,51 @@
+#title How to migrate a site from one instance to another
+#cat howto
+#pubdate 2018-02-19
+
+{{{
+amusewiki clone-site export --directory /tmp/export-sites-$(date -I)
+}}}
+
+Copy the directory over and on the new instance run
+
+{{{
+amusewiki clone-site import /tmp/export-sites-$(date -I)/*
+}}}
+
+Clone the git repositories in =/var/lib/amusewiki/repo/=
+
+Install the logos in the texmf tree, if you use them, and run:
+
+{{{
+mkdir -p `kpsewhich -var-value TEXMFHOME`/tex/generic/amusewiki/data
+cp mylogo.pdf `kpsewhich -var-value TEXMFHOME`/tex/generic/amusewiki/data
+texhash `kpsewhich -var-value TEXMFHOME`
+kpsewhich mylogo.pdf
+}}}
+
+Finally, rebuild all the imported archives (if you have large sites,
+this will take a while, so execute it under screen or tmux).
+
+{{{
+amusewiki bootstap-archive
+}}}
+
+You probably want to adjust the global nginx configuration for the
+usual suspects, like gzipping javascript and max body size.
+
+If you used to serve the git repositories via =git-daemon=, install it
+and export the repo, e.g.
+
+{{{
+touch /var/lib/amusewiki/repo/amw/.git/git-daemon-export-ok
+cd /var/lib/git
+ln -s ../amusewiki/repo/amw/.git amw.git
+}}}
+
+
+
+
+
+
+
+
