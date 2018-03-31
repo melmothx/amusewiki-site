@@ -446,7 +446,7 @@ respective tags:
 Non breaking space (=0xA0= Unicode, NO-BREAK SPACE) is just a regular
 character, but it's somehow complicate to manage, because very often
 appears like a normal space. You can use a double tilde
-<verbatim>~~</verbatim> to insert a non breaking space which is
+<verbatim>~~</verbatim> to insert a non~~breaking~~space which is
 explicit in the muse document.
 
 This feature was added in Text::Amuse 0.94 but it was present in Emacs
