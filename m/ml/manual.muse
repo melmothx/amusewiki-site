@@ -1280,18 +1280,31 @@ Results:
 
 ** Named anchors
 
-If you start a line with “#anchor” – where “anchor” can be any (ASCII)
-word that starts with a letter and contains only ASCII letters and
-digits – it defines an anchor at that point into the document. This
-point can be referenced using “#anchor” as the target in a Muse link.
-Please note that the anchor must be on a line by itself.
+If you start a line (regardless of the indentation) with a word
+prefixed by an hash, e.g. =#anchor= – where =anchor= can be any
+(ASCII) word that starts with a letter and contains only ASCII
+letters, digits and dashes – it defines an anchor at that point into
+the document. This point can be referenced using “#anchor” as the
+target in a Muse link.
 
-You can’t have an anchor at the very beginning of the text, because it’s
-merged into the header, so, if you really have to, put a =br= tag before
-it.
+If you need to start a line with an hash, wrap it in =<verbatim>= E.g.
+
+{{{
+<verbatim>#hashtag</verbatim> verbatim.
+=#hashtag= verbatim as code.
+}}}
+
+Yielding:
+
+<verbatim>#hashtag</verbatim> verbatim.
+=#hashtag= verbatim as code.
 
 The support for this feature was introduced in Text::Amuse version
-0.70 and improved in 0.82
+0.70 and improved in 0.82. Compatibility with Emacs Muse was restored
+in version 1.10, released on April 23, 2018, allowing text material on
+the same line of the anchor.
+
+Example:
 
 {{{
 #title My text
@@ -1304,6 +1317,13 @@ This is not an anchor, it's part of the header with a dummy name.
 #begin
 This will work.
 
+#an-anchor At the beginning of the line.
+
+<verbatim>#hashtag</verbatim> verbatim.
+
+=#hashtag= verbatim as code.
+
+#anchor-to-section
 *** Section
 
 #anchor
@@ -1316,7 +1336,6 @@ More text.
 
 And here we can link to [[#anchor][our anchor]] and to the
 [[#begin][begin]] and to [[#nextsection][this section]].
-
 }}}
 
 Please note that the name in the HTML output is not kept verbatim.
