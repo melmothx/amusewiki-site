@@ -1,0 +1,93 @@
+#pubdate 2018-04-23
+#title Version 2.2
+#date 2018-04-23
+#teaser
+
+*** 2.203 2019-04-23
+
+ - Bump dependency on Text::Amuse 1.10 with improved anchors and
+   restored compatibility with Emacs Muse
+ - Improve anchor display on editing and preview
+
+*** 2.202 2018-03-31
+
+ - Bump dependency on Text::Amuse 1.01 and Text::Amuse::Compile 1.04
+ - Do not list ignored files in /mirror.txt
+ - Debian: install a disabled fontconfig setting for woff fonts
+ - Optimize static indexes
+ - Use option restrict_mirror to disable mirroring
+ - Update ru i18n (thanks @labdsf)
+
+*** 2.201 2018-03-27
+
+ - Bump dependency on Text::Amuse 1.00 and Text::Amuse::Compile 1.03
+ - Fix secondary footnotes CSS
+
+With Text::Amuse::Compile 1.03, a relatively recent =bigfoot.sty=
+version is needed for the LaTeX compiler. If your installation is
+missing it (notably jessie, stretch is fine), you can install it as
+the user running the amusewiki instance with the following commands:
+
+{{{
+   $ cd /tmp/
+   $ mkdir -p `kpsewhich -var-value TEXMFHOME`/tex/latex/bigfoot
+   $ wget http://mirrors.ctan.org/macros/latex/contrib/bigfoot.zip
+   $ unzip bigfoot.zip
+   $ cd bigfoot
+   $ make
+   $ mv *.sty `kpsewhich -var-value TEXMFHOME`/tex/latex/bigfoot
+   $ texhash `kpsewhich -var-value TEXMFHOME`
+}}}
+
+*** 2.200 2018-03-20
+
+ - Refactored the search page, using facets now
+ - Updated ru (thanks @labdsf), it and hr translations, add cs
+   preliminary support
+ - serve a list of urls to mirror under =/mirror.txt= and =/mirror.ts.txt=
+   to feed wget with it. Plus provided a client in
+   =script/mirror-site.sh=
+
+This version brings a refactored, faceted search page. To get the
+facets working, you need a =Search::Xapian= module newer then 1.2.22.0.
+Notably, Debian jessie has a 1.2.19.0. Another problem is that the
+current 1.2.25.0 version on CPAN fails to install using Xapian system
+libraries in the 1.2 branch (I believe the issue, a single test
+failing, will be addressed in the next =Search::Xapian= release).
+
+Please note that without satisfying this dependency, Amusewiki will
+still work without problems. You are just going to miss a nice
+feature.
+
+There are 4 cases here:
+
+ - Debian stretch, Amusewiki installed with deb package: works out of
+   the box.
+
+ - Recent distro, with Xapian (system library) > 1.4, and Amusewiki
+   installed from git. It could already work out of the box. If not
+   so, upgrading =Search::Xapian= from CPAN (e.g. =cpanm Search::Xapian=)
+   will do.
+
+ - Older distro (with Xapian system library 1.2) and Amusewiki
+   installed with git: you need to install =Search::Xapian= from CPAN.
+   If it refuses to install because of a single test failing, force
+   the installation skipping the tests =cpanm -f Search::Xapian=. I
+   asked the upstream, and they confirmed it's harmless.
+
+ - Debian jessie, Amusewiki installed with deb package: you need to
+   build a recent =Search::Xapian.= You can install it from CPAN
+   system-wide, but it has the downside of making your system dirty,
+   so it's not recommended. Instead, you could build a deb package
+   with the following procedure (the =libsearch-xapian-perl= sources
+   are provided as courtesy for this case, incorporating the needed
+   patch) and install the resulting deb (as root) in the parent
+   directory.
+
+{{{
+   # apt-get install libdevel-leak-perl libtest-pod-perl devscripts \
+                     build-essential fakeroot libxapian-dev
+   $ git clone https://github.com/melmothx/amusewiki-debian-packages.git
+   $ cd amusewiki-debian-packages/libsearch-xapian-perl-1.2.24.0/
+   $ debuild -i -us -uc -b
+}}}
