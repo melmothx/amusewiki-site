@@ -1,7 +1,8 @@
-#pubdate 2018-04-23
+#pubdate 2018-04-28
 #title Version 2.2
 #date 2018-04-23
 #teaser Faceted search, mirroring with =/mirror.txt=, improved anchors (Emacs Muse compatibility)
+#cat releases
 
 *** 2.203 2019-04-23
 
@@ -91,3 +92,4 @@ There are 4 cases here:
    $ cd amusewiki-debian-packages/libsearch-xapian-perl-1.2.24.0/
    $ debuild -i -us -uc -b
 }}}
+
