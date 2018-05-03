@@ -3,7 +3,11 @@
 #date 2018-04-23
 #teaser Faceted search, mirroring with =/mirror.txt=, improved anchors (Emacs Muse compatibility)
 
-*** 2.203 2019-04-23
+*** 2.210 2018-05-03
+
+ - Various fixes and optimizations on mirror routes and Xapian
+
+*** 2.203 2018-04-23
 
  - Bump dependency on Text::Amuse 1.10 with improved anchors and
    restored compatibility with Emacs Muse
