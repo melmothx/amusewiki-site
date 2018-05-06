@@ -1,6 +1,7 @@
-#title How to migrate a site from one instance to another
+#title Migrations
 #cat howto
 #pubdate 2018-02-19
+#teaser How to migrate one or more sites from an instance to another.
 
 {{{
 amusewiki clone-site export --directory /tmp/export-sites-$(date -I)
