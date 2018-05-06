@@ -1,12 +1,13 @@
 #title Mirroring a site running AmuseWiki
 #pubdate 2018-05-06
+#lang en
 #cat howto
 #teaser How to download a whole amusewiki site, create a mirror and keep it updated
 
 Starting with AmuseWiki version 2.031, released on October 14, 2017,
 each AmuseWiki site provides a =/mirror/= path offering a static
 version of the site, suitable for mirroring, backup and batch
-download.
+download. See e.g. [[https://amusewiki.org/mirror]]
 
 Starting with AmuseWiki version 2.2, released on March 20, 2018, the
 list of files to download is provided on two URLs: =/mirror.txt=
@@ -34,7 +35,7 @@ All this is happening quietly (=-q=).
 
 **** Windows
 
-If you don't have =wget= installed or you can't pipe commands, the
+If you don’t have =wget= installed or you can’t pipe commands, the
 procedure is a bit different.
 
 First you need to install =wget=. See
@@ -53,7 +54,7 @@ wget https://amusewiki.org/mirror.txt
 wget -x -N -i mirror.txt
 }}}
 
-And that's it.
+And that’s it.
 
 *** Private sites
 
@@ -72,7 +73,7 @@ wget -q -O - --user=user --password=password \
 **** Filtering
 
 Creative people can also additionally filter the file list to exclude
-formats they don't want or get only a specific format, editing
+formats they don’t want or get only a specific format, editing
 (locally or on the fly) the file list passed to =wget=.
 
 Example: download all the EPUB files and put them in the current
@@ -84,7 +85,7 @@ wget -q -O - https://amusewiki.org/mirror.txt | grep '\.epub$' |  wget -N -i -
 
 **** Be nice with the servers
 
-The above described techniques are good for a one-time job, they don't
+The above described techniques are good for a one-time job, they don’t
 create much traffic if there are no changes, but they still hammer the
 sites with a lot of requests.
 
