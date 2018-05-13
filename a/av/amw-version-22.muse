@@ -1,8 +1,16 @@
-#pubdate 2018-04-28
+#pubdate 2018-05-13
 #title Version 2.2
-#date 2018-04-23
+#date 2018-05-13
 #teaser Faceted search, mirroring with =/mirror.txt=, improved anchors (Emacs Muse compatibility)
 #cat releases
+
+*** 2.220 2018-05-13
+
+ - Add empty localization for Turkish language
+ - Add new imposition schema: 2x4x1 (via upgraded PDF::Imposition)
+ - Provide a disabled and not yet documented application to provide
+   an aggregated search of a given set of amusewiki sites residing on
+   the same server
 
 *** 2.210 2018-05-03
 
