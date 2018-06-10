@@ -528,3 +528,33 @@ Environment="EMAIL_SENDER_TRANSPORT=SMTP"
 Environment="EMAIL_SENDER_TRANSPORT_host=smtp.example.com"
 Environment="EMAIL_SENDER_TRANSPORT_port=2525"
 }}}
+
+** Caddy webserver
+
+Although recommended and supported setup in nginx, [[https://caddyserver.com][Caddy server]] may be easier to setup, at least for development purposes.
+
+Here, Amusewiki is assumed to be installed in =/home/amusewiki/amusewiki/= and hostname is =amusewiki.local=.
+
+When [[https://caddyserver.com/download][downloading Caddy]], enable =http.cgi= plugin.
+To run Amusewiki, create a =Caddyfile= in the Amusewiki installation directory with the following contents:
+{{{
+amusewiki.local:8080
+tls off
+log ./access.log
+errors ./error.log
+root /usr/home/amusewiki/amusewiki/root
+
+cgi {
+        except /git/cgit.css
+        except /git/cgit.png
+        match /git
+        exec /home/amusewiki/amusewiki/root/git/cgit.cgi
+}
+
+fastcgi / unix:/usr/home/amusewiki/amusewiki/var/amw.sock {
+        except /static/
+        except /git/
+}
+}}}
+
+Start Amusewiki services with =./init-all.sh start= and then start =caddy=.
