@@ -102,7 +102,7 @@ msginit --input=messages.pot --output=sv.po --locale=sv
 }}}
 
 Add the language code and the language string to the
-=AmuseWikiFarm::Schema::Result::Site::known_langs= method.
+=AmuseWikiFarm::Utils::Amuse::known_langs= method.
 
 Add the language code to the =script/upgrade_i18n= script.
 
