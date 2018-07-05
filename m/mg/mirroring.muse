@@ -103,7 +103,7 @@ This can be easily parsed and a client can check the local timestamp
 before doing the request.
 
 See
-[[https://github.com/melmothx/amusewiki/blob/master/script/mirror-site.sh]]
-for an simple implementation in a shell script.
+[[https://github.com/melmothx/amusewiki/blob/master/script/mirror-site.pl]]
+for a simple (and usable) implementation.
 
 
