@@ -1,8 +1,28 @@
-#pubdate 2018-07-04
+#pubdate 2018-08-16
 #title Version 2.2
-#date 2018-07-04
+#date 2018-08-16
 #teaser Faceted search, mirroring with =/mirror.txt=, improved anchors (Emacs Muse compatibility)
 #cat releases
+
+*** 2.226 2018-08-16
+
+ - Expose the legacy links via /api/legacy-links (#205)
+ - Show the git log when pulling (#207)
+
+*** 2.225 2018-07-29
+
+ - Improve category sorting (take numbers in account)
+
+*** 2.224 2018-07-28
+
+ - Dependencies bump with RTL support in the parser
+ - Update the wordpress import script
+
+*** 2.223 2018-07-20
+
+ - New Bookbuilder/custom format options: centerchapter, centersection,
+   continuefootnotes
+ - Respect the default sorting setting in static indexes
 
 *** 2.222 2018-07-04
 
