@@ -1,0 +1,62 @@
+#title Publishing with Amusewiki
+#pubdate 2018-09-07
+#subtitle Oslo, Nordic Perl Workshop 2018
+#author Marco Pessotto (melmothX)
+#SORTauthors Marco Pessotto
+#date September 6, 2018
+#slides ON
+
+*** About me: Marco Pessotto
+
+  PAUSE id :: =MELMOTHX=
+  IRC :: =melmothX= on Freenode and =irc.perl.org=
+  E-mail :: =melmothx@gmail.com=
+  Homepage :: [[http://amusewiki.org]]
+  IRC channel :: =irc://chat.freenode.net/#amusewiki=
+  GitHub :: [[https://github.com/melmothx]]
+  Background :: Humanities (history and translations)
+
+*** Overview
+
+**** Sample page
+
+[[o-s-slides-1.png]]
+
+**** Sample imposed PDF
+
+[[o-s-slides-2.png]]
+
+**** Sample EPUB (on Firefox, Epubreader plugin)
+
+[[o-s-slides-3.png]]
+
+**** Sample Slides
+
+ - Amusewiki can be used to produce slides as well
+ - You are looking at them =:-)=
+
+**** Upload a text
+
+[[o-s-slides-4.png]]
+
+**** Editing
+
+[[o-s-slides-5.png]]
+
+**** Ready to publish?
+
+[[o-s-slides-6.png]]
+
+**** Checking
+
+[[o-s-slides-7.png]]
+
+**** Publish
+
+[[o-s-slides-8.png]]
+
+**** Done
+
+[[o-s-slides-9.png]]
+
+
