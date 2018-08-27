@@ -134,7 +134,8 @@ Here's a list
 **** Static mirror
 
 {{{
-wget -q -O - https://amusewiki.org/mirror.txt | wget -x -N -q -i -
+wget -q -O - https://amusewiki.org/mirror.txt | \
+     wget -x -N -q -i -
 }}}
 
 [[o-s-slides-11.png]]
@@ -155,7 +156,7 @@ Tutorial available at [[https://amusewiki.org/library/bookbuilder-tutorial]]
 
 **** Questions?
 
-Thanks!
+           Thanks!
 
 
 
