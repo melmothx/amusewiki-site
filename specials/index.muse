@@ -3,6 +3,23 @@
 
 This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine. Amusewiki is more than just a wiki engine, it's also a powerful authoring, archiving and publishing platform.
 
+** Security alert (August 27th, 2018)
+
+[[https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=907332]]
+
+Ghostscript is used (indirectly) to generate PDF previews.
+
+Until a patch come out, you're advised to do
+
+{{{
+mv /usr/bin/gs /usr/bin/gs.removed
+}}}
+
+to avoid exploits.
+
+
+** About Amusewiki
+
 Amusewiki is 100% free software. You can download it at
 [[https://github.com/melmothx/amusewiki/releases][github]] (make sure to follow
 the [[/library/install][installation instructions]])
