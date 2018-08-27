@@ -1,15 +1,15 @@
 #title News
 #lang en
 
-This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine. Amusewiki is more than just a wiki engine, it's also a powerful authoring, archiving and publishing platform.
+This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine. Amusewiki is more than just a wiki engine, it’s also a powerful authoring, archiving and publishing platform.
 
-** Security alert (August 27th, 2018)
+** Security alert (August 27<sup>th</sup>, 2018)
 
 [[https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=907332]]
 
 Ghostscript is used (indirectly) to generate PDF previews.
 
-Until a patch come out, you're advised to do
+Until a patch come out, you’re advised to do
 
 {{{
 mv /usr/bin/gs /usr/bin/gs.removed
@@ -27,7 +27,7 @@ or save time, energy and troubles and install it on Debian/Ubuntu with
 the (unofficial) packages provided at
 [[http://packages.amusewiki.org][packages.amusewiki.org]], which are regularly updated at each release.
 
-If you need help, you're welcome to drop to the
+If you need help, you’re welcome to drop to the
 [[https://amusewiki.org/help/irc][IRC channel]].
 
 This site runs on amusewiki itself. If you want to try out the editing
@@ -49,8 +49,8 @@ Instead, you should consider amusewiki if:
  - You want a site with a flat-file and [[/git][**Git** backend]] for long-term archiving.
  - You want to be able to reformat the PDFs, merging texts into **collections**. Add a text and [[/bookbuilder][take a look at the **bookbuilder**]]
  - You want an [[/help/opds][OPDS server]] for mobile users to deliver the texts straight into the apps
- - You don't want or need fine-grained user permissions.
- - You don't want or need talks, comments, forums, social, etc
+ - You don’t want or need fine-grained user permissions.
+ - You don’t want or need talks, comments, forums, social, etc
    embedded into the site.
 
 [[/special/about][See the feature list for more details.]]
