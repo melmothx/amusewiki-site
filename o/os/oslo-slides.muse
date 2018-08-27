@@ -59,4 +59,104 @@
 
 [[o-s-slides-9.png]]
 
+*** Source sample
+
+{{{
+#title My title
+#subtitle Another boring essay
+#author John Doe
+#topics boring things, another topic
+#date October 22, 2015
+#notes This was just a test
+
+** Chapter one
+
+And **here** the *text* starts
+
+Here's a list
+
+ 1. Foo
+ 2. Bar
+
+}}}
+
+*** Emacs Muse
+
+ - Borrowed from Emacs Muse [[https://www.gnu.org/software/emacs-muse/index.html]]
+ - Expressive and compact, similar to Markdown
+ - It comes with a full manual at [[https://amusewiki.org/library/manual]]
+ - In 2017 got =pandoc= support, see [[https://pandoc.org/]]
+ - HTML importer provided
+ - Why not markdown? [[https://amusewiki.org/library/rationale]]
+ 
+*** Architecture
+
+ - Flat file storage, under Git
+ - One file is one text, self-contained
+ - Rich range of output formats (PDF, Epub, HTML)
+ - Don't lock the users in: high decoupling (single text / archive / application)
+ - Under development since 2013 in its current form
+
+*** Web Frontend
+
+ Framework :: Catalyst
+ Layout :: Bootstrap
+ Multisite ::  on one instance you can run as many sites you want
+ Database :: =DBIx::Class= (SQLite, MySQL, PostgreSQL)
+ Search :: Xapian
+ Templating :: Template Toolkit
+ Localization :: Danish, German, English, Spanish, Finnish, French,
+                 Serbo-Croatian, Italian, Macedonian, Dutch, Russian,
+                 Albanian, Swedish
+ Users :: peer-based.
+
+*** Modules and offline tools
+
+ =Text::Amuse= :: The parser
+ =Text::Amuse::Preprocessor= :: Typographical filters (=muse-preprocessor.pl=) and HTML importer (=html-to-muse.pl=)
+ =Text::Amuse::Compiler= :: The compiler (=muse-compile.pl=)
+ =PDF::Imposition= :: The PDF imposer (=pdf-imposer.pl=)
+ =PDF::Cropmarks= :: Add cropmarks to the PDF (=pdf-cropmarks.pl=)
+
+*** Web application features
+
+ - Built-in Let's Encrypt support
+ - Built-in =OPDS= (Open Publication Distribution System) server
+ - Automatic DB upgrades with =DBIx::Class::DeploymentHandler=
+ - Slow jobs are pushed into the background with a simple SQL-based
+   queue system, relatively fast publishing.
+ - Application and modules come with an extensive test suite
+
+**** Powerful and fast faceted search, powered by Xapian
+
+[[o-s-slides-10.png]]
+
+**** Static mirror
+
+{{{
+wget -q -O - https://amusewiki.org/mirror.txt | wget -x -N -q -i -
+}}}
+
+[[o-s-slides-11.png]]
+
+**** Bookbuilder (format)
+
+[[o-s-slides-12.png]]
+
+Tutorial available at [[https://amusewiki.org/library/bookbuilder-tutorial]]
+
+**** Imposer
+
+[[o-s-slides-13.png]]
+
+**** Fine tuning for formats
+
+[[o-s-slides-14.png]]
+
+**** Questions?
+
+Thanks!
+
+
+
 
