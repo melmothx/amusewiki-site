@@ -1501,10 +1501,16 @@ Unfortunately, the Emacs Muse project is dead. However,
 
 *** Inline markup
 
+**** Underlining
+
 Underlining has been dropped.
+
+**** Tags for emphasis
 
 Emphasis and strong can also be written with tags, like =<em>emphasis</em>=,
 =<strong>strong</strong>= and =<code>code</code>=.
+
+**** Superscript and subscript tags
 
 Added tag =<sup>= and =<sub>= for superscript and
 subscript.
