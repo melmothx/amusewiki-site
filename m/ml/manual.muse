@@ -1494,7 +1494,7 @@ Emacs Muse compatibility in this regard, material in =<code>= tags and
 equivalent markup between equal signs is also verbatim, but with a
 monospace font.
 
-** Differences between =Text::Amuse= and =Emacs Muse=
+** Differences between =Text::Amuse= and Emacs Muse
 
 Unfortunately, the Emacs Muse project is dead. However,
 [[https://pandoc.org][pandoc]] supports the muse syntax.
