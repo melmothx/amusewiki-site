@@ -1515,6 +1515,16 @@ Emphasis and strong can also be written with tags, like =<em>emphasis</em>=,
 Added tag =<sup>= and =<sub>= for superscript and
 subscript.
 
+**** Allowed characters before lightweight markup
+
+Unlike Emacs Muse (as of version 3.20.2), any non-alphanumeric characters
+are allowed before the opening =*= and <code>=</code>. For example, the
+following markup is interpreted as bold code by Amusewiki
+{{{
+**=Bold code=**
+}}}
+while Emacs Muse interprets it as bold "<verbatim>=Bold code=</verbatim>".
+
 *** Block markup
 
 The only tables supported are the native one (with =|||= as separator).
