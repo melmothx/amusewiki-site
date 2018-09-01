@@ -1517,6 +1517,18 @@ subscript.
 
 **** Allowed characters before lightweight markup
 
+Asterisk and equal symbols (<verbatim>*, **, *** =</verbatim>) are
+interpreted as markup elements if they are paired (an opening one and
+a closing one).
+
+The opening one must be preceded by something which is not an
+alphanumerical character (or at the beginning of the line) and
+followed by something which is not a space.
+
+The closing one must be preceded by something which is not a space,
+and followed by something which is not an alphanumerical character (or
+at the end of the line).
+
 Unlike Emacs Muse (as of version 3.20.2), any non-alphanumeric characters
 are allowed before the opening =*= and <code>=</code>. For example, the
 following markup is interpreted as bold code by Amusewiki
