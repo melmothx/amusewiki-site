@@ -70,7 +70,9 @@
 
 *** Source sample
 
-Borrowed from Emacs Muse [[https://www.gnu.org/software/emacs-muse/index.html]]
+ - Borrowed from Emacs Muse [[https://www.gnu.org/software/emacs-muse/index.html]]
+
+ - Supported (read/write) by Pandoc [[https://pandoc.org/]]
 
 {{{
 #title My title
@@ -124,9 +126,49 @@ wget -q -O - https://amusewiki.org/mirror.txt | \
 
 Tutorial available at [[https://amusewiki.org/library/bookbuilder-tutorial]]
 
-**** Questions?
+**** Imposer
 
-           Thanks!
+[[o-s-slides-13.png]]
 
+**** Fine tuning for formats
+
+[[o-s-slides-14.png]]
+
+*** Any time left? Debian packages
+
+Instead of running the app from the git tree on a dedicated home, with
+a =local::lib= tree or with a perl installed in the home, now you can
+visit [[http://packages.amusewiki.org/]] and follow the instructions
+there (import the key, add the repository, and install the package).
+
+Minimum requirement: Debian Jessie and Ubuntu 16.04 LTS.
+
+[[https://github.com/melmothx/amusewiki-debian-packages]]
+
+**** Debian packages cons
+
+ - More burden on the developer
+ - Trivial changes require a package rebuild
+ - Needs to ship about 25 new packages (fonts and perl modules)
+ - Can't use fresh code from the module used without being too invasive.
+ - Debian people usually don't like private repositories
+
+**** Debian packages pros
+
+ - Installation is straightforward
+ - Maintenance for the administrator is integrated in the regular =apt-get= routine
+ - Much smaller installation footprint (mostly because the texlive
+   installation is optimized and shared)
+ - Improved security
+    - code is installed and owned by root, not by the user running the application
+    - debian is taking care of the security updates of the
+      dependencies (not only the perl dependencies, but also the
+      libraries used by =LaTeX=, =cgit= and other utilities)
+ - 0 downtime upgrades out of the box
+ - Predictability of locations and module versions (so gets more live testing)
+
+*** Questions?
+
+                 Thanks!
 
 
