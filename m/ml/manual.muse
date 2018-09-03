@@ -1558,6 +1558,13 @@ also be written as ={{{= =}}}=, e.g.
 Since 0.91, there is full support for secondary footnotes with number
 inside curly brackets. Emacs Muse is missing this feature.
 
+Lists require whitespace after list item marker.
+{{{
+ -This is not a list item.
+
+ 1.This is not an ordered list item.
+}}}
+
 * GNU Free Documentation License
 
 
