@@ -11,7 +11,7 @@
   PAUSE id :: =MELMOTHX=
   IRC :: =melmothX= on Freenode and =irc.perl.org=
   E-mail :: =melmothx@gmail.com=
-  Homepage :: [[http://amusewiki.org]]
+  Homepage :: [[https://amusewiki.org]]
   IRC channel :: =irc://chat.freenode.net/#amusewiki=
   GitHub :: [[https://github.com/melmothx]]
   Background :: Humanities (history and translations)
