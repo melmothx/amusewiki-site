@@ -1,0 +1,31 @@
+#pubdate 2018-09-23
+#title Version 2.3
+#date 2018-09-23
+#teaser Search suggestions (did you mean?), category manager
+#cat releases
+
+*** 2.300 2018-09-22
+
+ - Replace GraphicsMagick with Imager module
+ - Add category manager page (can set some author/topic to inactive,
+   hiding it)
+ - Add a simple JS RSS aggregator (it needs an upstream with CORS,
+   like amusewiki sites)
+ - Add autocomplete on the layout search box
+ - Add spelling corrections on search
+ - Add the apple-touch-icon (using the opengraph.png file).
+
+After a lot of wondering, the system call to GraphicsMagick have been
+removed. GM is probably safer than IM, but on the other hand it has
+too many features which we don't need and a larger attack surface.
+Plus working with a module is more flexible than shelling out.
+
+The PDF thumbnailing is now a call to Ghostscript (which is what GM
+was doing anyway).
+
+However, the Imager module requires system libraries to be installed
+properly. There is a check on startup to assert you're covered.
+Otherwise refer to
+[[https://metacpan.org/pod/distribution/Imager/lib/Imager/Install.pod][Imager::Install]]
+if in doubt.
+
