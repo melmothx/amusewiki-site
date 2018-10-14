@@ -1,0 +1,4 @@
+<p>The polyglossia package shipped with Debian stable is hit by this bug: https://tex.stackexchange.com/questions/330844/prevent-line-break-before/330848#330848</p>
+
+<p>&nbsp;</p>
+
