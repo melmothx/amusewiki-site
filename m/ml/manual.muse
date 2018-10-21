@@ -333,6 +333,26 @@ with this bundle there is support for the following directives:
    original, original contribution, etc.). The preferred format is 
    “Retrieved on March 8, 2012 from [[http://url.org][the url]]”
 
+ - =#publisher=
+
+   Publisher data, if any.
+
+ - =#isbn=
+
+   ISBN, if any.
+
+ - =#rights=
+
+   Copyright info, if any.
+
+ - =#seriesname=
+
+   If the book belongs to a serie, put it here.
+
+ - =#seriesnumber= 
+
+   If the book belongs to a serie, use this slot for the number.
+
  - =#hyphenation=
 
    See below.
