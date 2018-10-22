@@ -28,6 +28,8 @@ Procedure to create a site with SSL certificates using Let's Encrypt:
 
 First, login in the admin and create the site.
 
+**Edit the site and check the Let's Encrypt option on**.
+
 Reload the webserver as per instructions.
 
 {{{
