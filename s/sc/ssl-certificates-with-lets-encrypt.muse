@@ -43,3 +43,13 @@ Reload the webserver as per instructions.
   script/amusewiki-generate-nginx-conf 
 }}}
 
+
+If you installed amusewiki with a Debian package, the commands executed by root are:
+
+{{{
+# amusewiki generate-nginx-conf
+# amusewiki letsencrypt
+# amusewiki generate-nginx-conf 
+}}}
+
+(Same thing as above, but using the =amusewiki= executable, which is the correct thing to do on Debian).
