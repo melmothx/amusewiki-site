@@ -40,3 +40,6 @@ the workflow's details.
                     present, pagelogo.png will be used, otherwise
                     navlogo.png will be used, with often odd results.
 
+
+If you have a new site and the files don't show up, please run =amusewiki bootstrap-archive --refresh <site_id>= (if installed with deb, otherwise =script/amusewiki-bootstrap-archive --refresh <site_id>=)
+ 

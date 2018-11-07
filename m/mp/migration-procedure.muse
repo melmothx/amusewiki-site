@@ -15,9 +15,10 @@ amusewiki clone-site import /tmp/export-sites-$(date -I)/*
 
 Clone the git repositories in =/var/lib/amusewiki/repo/=
 
-Install the logos in the texmf tree, if you use them, and run:
+Install the logos in the texmf tree, if you use them, and run (as user amusewiki)
 
 {{{
+#amusewiki shell
 mkdir -p `kpsewhich -var-value TEXMFHOME`/tex/generic/amusewiki/data
 cp mylogo.pdf `kpsewhich -var-value TEXMFHOME`/tex/generic/amusewiki/data
 texhash `kpsewhich -var-value TEXMFHOME`
