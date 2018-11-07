@@ -83,6 +83,20 @@ directory (no directory tree):
 wget -q -O - https://amusewiki.org/mirror.txt | grep '\.epub$' |  wget -N -i -
 }}}
 
+**** Building ZIM file
+
+Mirror can be converted to [[http://www.openzim.org][ZIM file format]] for [[http://www.openzim.org/wiki/Readers][offline reading]].
+
+Download all files, excluding bare HTML format:
+{{{
+wget -q -O - https://amusewiki.org/mirror.txt | grep -v '\.bare.html$' | wget -x -N -q -i -
+}}}
+
+Compile ZIM file using [[https://github.com/openzim/zimwriterfs][zimwriterfs]]:
+{{{
+zimwriterfs -w index.html -f site_files/favicon.ico -l EN -t Amusewiki -d "Amusewiki" -c "Amusewiki" -p "Amusewiki" amusewiki.org/mirror/ amuse.zim
+}}}
+
 **** Be nice with the servers
 
 The above described techniques are good for a one-time job, they don’t
