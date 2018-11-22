@@ -30,13 +30,13 @@ AmuseWiki source code is managed with [[https://git-scm.com/][Git]]. On Debian-b
 To get the copy of source code, run (as normal user)
 {{{
 $ git clone https://github.com/melmothx/amusewiki
-}}}an
+}}}
 
 This will create =amusewiki= directory. It contains the =Vagrantfile=, which specifies how to setup development environment for AmuseWiki. You don't need to read it, Vagrant does it for you.
 
 To create and start the virtual machine, run
 {{{
-$ cd amusewikian
+$ cd amusewiki
 $ vagrant up
 }}}
 
