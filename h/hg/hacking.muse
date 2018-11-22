@@ -1,0 +1,108 @@
+#title Hacking on AmuseWiki
+#author Alexander Krotov
+#lang en
+#pubdate 2018-11-22T19:54:08
+#topics doc, howto
+#teaser How to setup development environment
+
+This guide describes how to setup development environment for AmuseWiki using [[https://www.vagrantup.com/][Vagrant]]. Vagrant is a program that automates setting up virtual machines with development environments. Virtual machine is a good alternative to actually installing AmuseWiki and its dependencies on your computer.
+
+*** Installing Vagrant
+
+First, you need to install Vagrant and [[https://www.virtualbox.org/][VirtualBox]]. Vagrant will manage virtual machine in VirtualBox.
+
+On [[https://www.debian.org/][Debian]]-based operating systems you can install Vagrant and VirtualBox by running (as a superuser)
+{{{
+# apt-get install vagrant virtualbox
+}}}
+
+You may need to reboot the system before running VirtualBox for the first time.
+
+For other operating systems refer to [[https://www.vagrantup.com/docs/installation/][Vagrant documentation]].
+
+*** Obtaining the source code
+
+AmuseWiki source code is managed with [[https://git-scm.com/][Git]]. On Debian-based systems you can install it with
+{{{
+# apt-get install git
+}}}
+
+To get the copy of source code, run (as normal user)
+{{{
+$ git clone https://github.com/melmothx/amusewiki
+}}}an
+
+This will create =amusewiki= directory. It contains the =Vagrantfile=, which specifies how to setup development environment for AmuseWiki. You don't need to read it, Vagrant does it for you.
+
+To create and start the virtual machine, run
+{{{
+$ cd amusewikian
+$ vagrant up
+}}}
+
+On the first run, Vagrant will download the operating system image, called [[https://www.vagrantup.com/docs/boxes.html][box]] in Vagrant terms. This may take some time.
+
+When Vagrant is done setting up your development environment, point your web browser to [[http://localhost:8080]]. You will be present with AmuseWiki web interface, which asks you for login and password.
+
+*** Resetting AmuseWiki password
+
+AmuseWiki development environment comes with a preconfigured website with one user, =amusewiki=. Its password is generated randomly on setup, so you need to reset it in order to login.
+
+To reset AmuseWiki password, run
+{{{
+$ vagrant ssh
+}}}
+
+It will connect to the virtual machine and present you with a shell prompt. To reset 
+{{{
+vagrant@debian-9:~$ cd /vagrant
+vagrant@debian-9:/vagrant$ eval `perl -Mlocal::lib`
+vagrant@debian-9:/vagrant$ script/amusewiki-reset-password amusewiki
+}}}
+
+On the first line we change the working directory to =/vagrant=. =/vagrant= inside the virtual machine is the same directory as the directory with the source code on the host machine. It is automatically synchronized.
+
+On the second line we run =eval `perl -Mlocal::lib`= so the scripts can find locally installed Perl libraries.
+
+On the third line we reset the password for the `amusewiki` user. It will output something like
+{{{
+vagrant@debian-9:/vagrant$ script/amusewiki-reset-password amusewiki
+Password for amusewiki is now 'correct horse battery staple'
+}}}
+
+Then, you can login as =amusewiki= with the password =correct horse battery staple= in your web browser.
+
+*** Changing the source code
+
+As the repository is mounted into =/vagrant= inside the virtual machine, any modifications to the code will immediately affect the running web application. Good place to start is to try modifying web page templates, which are stored in =amusewiki/root/src/=.
+
+*** Stopping the development environment
+
+When done, you can suspend the virtual machine by running
+{{{
+$ vagrant suspend
+}}}
+or shutdown it completely with
+{{{
+$ vagrant halt
+}}}
+
+To resume the development environment, simply run
+{{{
+$ vagrant up
+}}}
+again.
+
+If you want to reinstall your development environment from scratch, you can delete the virtual machine by running
+{{{
+$ vagrant destroy
+}}}
+All your code modifications will be left intact, as they are stored in the shared folder. You can then commit them and submit a pull request.
+
+*** Where to go from here
+
+To learn more about Vagrant, start by reading the [[https://www.vagrantup.com/intro/getting-started/][Getting Started]] guide.
+
+AmuseWiki built with [[http://www.catalystframework.org/][Catalyst framework]] and [[https://getbootstrap.com/][Bootstrap]]. Depending on the area you want to modify, you may want to learn more about these technologies.
+
+Happy hacking.
