@@ -1,8 +1,33 @@
-#pubdate 2018-09-23
+#pubdate 2018-11-24
 #title Version 2.3
-#date 2018-09-23
+#date 2018-11-24
 #teaser Search suggestions (did you mean?), category manager
 #cat releases
+
+*** 2.320 2018-11-24
+
+ - Update ru.po, many thanks to @link2xt and @kabanoid
+ - Add Vagrantfile for quick hacking setup (@link2xt)
+ - Style improvements with Font Awesome (@link2xt)
+ - New bookbuilder options (typearea, tolerances)
+ - Fixed a couple of accessibility glitches
+ - Enhanced search suggestions
+ - Live job monitor (for root users)
+ - Fix redundant job scheduling in some corner cases
+
+
+*** 2.311 2018-10-27
+
+ - Fix encoding of Git::Wrapper output.
+ - Update ru.po (@link2xt)
+
+*** 2.310 2018-10-21
+
+ - Fix the "title" table to work nice when MySQL is in strict mode,
+   permitting NULLs and removing the default value. Tests pass. We
+   already populate those values in code.
+ - Log the output of create-doc-site, so if buried, the user can
+   inspect it.
 
 *** 2.300 2018-09-22
 
