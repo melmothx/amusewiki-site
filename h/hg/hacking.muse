@@ -3,9 +3,9 @@
 #lang en
 #pubdate 2018-11-22T19:54:08
 #topics doc, howto
-#teaser How to setup development environment
+#teaser How to setup a development environment
 
-This guide describes how to setup development environment for AmuseWiki using [[https://www.vagrantup.com/][Vagrant]]. Vagrant is a program that automates setting up virtual machines with development environments. Virtual machine is a good alternative to actually installing AmuseWiki and its dependencies on your computer.
+This guide describes how to setup a development environment for AmuseWiki using [[https://www.vagrantup.com/][Vagrant]]. Vagrant is a program that automates setting up virtual machines with development environments. Virtual machine is a good alternative to actually installing AmuseWiki and its dependencies on your computer.
 
 *** Installing Vagrant
 
@@ -32,7 +32,7 @@ To get the copy of source code, run (as normal user)
 $ git clone https://github.com/melmothx/amusewiki
 }}}
 
-This will create =amusewiki= directory. It contains the =Vagrantfile=, which specifies how to setup development environment for AmuseWiki. You don't need to read it, Vagrant does it for you.
+This will create =amusewiki= directory. It contains the =Vagrantfile=, which specifies how to setup a development environment for AmuseWiki. You don't need to read it, Vagrant does it for you.
 
 To create and start the virtual machine, run
 {{{
@@ -56,15 +56,12 @@ $ vagrant ssh
 It will connect to the virtual machine and present you with a shell prompt. To reset 
 {{{
 vagrant@debian-9:~$ cd /vagrant
-vagrant@debian-9:/vagrant$ eval `perl -Mlocal::lib`
 vagrant@debian-9:/vagrant$ script/amusewiki-reset-password amusewiki
 }}}
 
 On the first line we change the working directory to =/vagrant=. =/vagrant= inside the virtual machine is the same directory as the directory with the source code on the host machine. It is automatically synchronized.
 
-On the second line we run =eval `perl -Mlocal::lib`= so the scripts can find locally installed Perl libraries.
-
-On the third line we reset the password for the `amusewiki` user. It will output something like
+On the second line we reset the password for the =amusewiki= user. It will output something like
 {{{
 vagrant@debian-9:/vagrant$ script/amusewiki-reset-password amusewiki
 Password for amusewiki is now 'correct horse battery staple'
@@ -75,6 +72,32 @@ Then, you can login as =amusewiki= with the password =correct horse battery stap
 *** Changing the source code
 
 As the repository is mounted into =/vagrant= inside the virtual machine, any modifications to the code will immediately affect the running web application. Good place to start is to try modifying web page templates, which are stored in =amusewiki/root/src/=.
+
+*** Running test suite
+
+To run the test suite, use
+{{{
+vagrant@debian-9:/vagrant$ make test
+}}}
+
+If some tests are failing, they will be reported in the end:
+{{{
+...
+Test Summary Report
+-------------------
+t/full-blog-mode.t              (Wstat: 256 Tests: 228 Failed: 1)
+  Failed test:  166
+  Non-zero exit status: 1
+t/xapian.t                      (Wstat: 1024 Tests: 43 Failed: 4)
+  Failed tests:  26-29
+  Non-zero exit status: 4
+...
+}}}
+
+To rerun a particular test suite, for example =t/full-blog-mode.t=, use
+{{{
+vagrant@debian-9:/vagrant$ perl -Mblib t/full-blog-mode.t
+}}}
 
 *** Stopping the development environment
 
@@ -98,6 +121,19 @@ If you want to reinstall your development environment from scratch, you can dele
 $ vagrant destroy
 }}}
 All your code modifications will be left intact, as they are stored in the shared folder. You can then commit them and submit a pull request.
+
+*** Cleaning the workdir
+
+Even though you want to keep your modifications, you may want to remove modifications made automatically, such as creation of the SQLite database. Such automatically created files are already listed in =.gitignore=. You can remove them with
+{{{
+$ git clean -dffX
+}}}
+
+Don't confuse =-X= switch with =-x=! =-X= removes *only* the files from .gitignore, while =-x= also removes untracked files created by you. The safest way is to
+{{{
+git stash
+}}}
+or commit your modifications before cleanup.
 
 *** Where to go from here
 
