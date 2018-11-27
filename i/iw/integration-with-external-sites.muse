@@ -83,7 +83,7 @@ If you miss the the authentication parameters, you get a 401 response.
 
 ***** Optional
 
-They are the very same parameters you can fin in the
+They are the very same parameters you can find in the
 =/action/text/new= form.
 
  =subtitle=    :: Text subtitle
