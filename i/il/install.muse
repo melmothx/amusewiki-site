@@ -54,7 +54,7 @@ Prerequisites:
  - Xapian libraries and development files (=xapian-tools= =libxapian-dev=)
  - commonly used utilities: =unzip=, =wget=, =git=, =rsync=
  - TeX Live full > 2012, either from system repo (recommended) or from
-   https://www.tug.org/texlive/
+   [[https://www.tug.org/texlive/]]
 
 Log in as the user you want to run the site.
 
