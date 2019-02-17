@@ -1,6 +1,6 @@
-#pubdate 2018-11-24
+#pubdate 2019-02-16
 #title Version 2.3
-#date 2018-11-24
+#date 2019-02-16
 #teaser Search suggestions (did you mean?), category manager
 #cat releases
 
