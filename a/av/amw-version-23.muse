@@ -4,6 +4,10 @@
 #teaser Search suggestions (did you mean?), category manager
 #cat releases
 
+*** 2.323 2019-02-17
+
+ - Fix mirror CSS broken by forkawesome migration
+
 *** 2.322 2019-02-16
 
  - Update ru translations (@link2xt)
