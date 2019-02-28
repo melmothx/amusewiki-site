@@ -144,9 +144,9 @@ export AMW_WORKERS=5
 To start/stop/restart the application:
 
 {{{
-carton exec ./init-all.sh start
-carton exec ./init-all.sh stop
-carton exec ./init-all.sh restart
+./init-all.sh start
+./init-all.sh stop
+./init-all.sh restart
 }}}
 
 This is not needed if you use systemd.
@@ -184,7 +184,7 @@ Catalyst::Manual::Deployment::Apache::FastCGI]] should help.
 To regenerate the nginx configuration after adding a site:
 
 {{{
-script/amusewiki-generate-nginx-conf
+carton exec script/amusewiki-generate-nginx-conf
 }}}
 
 Follow the printed instructions to install generated configuration.
@@ -523,7 +523,7 @@ Remove the cgit wrapper, we’re going to install systemd unit files.
 {{{
 $ rm root/git/cgit.cgi
 $ ./script/generate-systemd-unit-files
-$ ./script/amusewiki-generate-nginx-conf
+$ carton exec ./script/amusewiki-generate-nginx-conf
 }}}
 
 Read the output and install the fresh nginx configuration.
