@@ -20,14 +20,11 @@ because of the full installation of TeX Live. If you’re short on disk
 space, don’t even start to install. The app will create files at full
 speed anyway, so consider 10 Gb for a reasonable start.
 
-On a slow server, it takes 2 hours (mostly spent on installing and
-testing Perl modules, and 20 minutes to download and install the full
-TeX Live 2015), but the procedure is fully automated, so start it,
-check if it bails out at the beginning, forget about it for an hour or
-two (run it under [[https://www.gnu.org/software/screen/][screen]]),
-then come back later and finish it up to complete it for the
-operations which require root privileges (notably the webserver
-configuration).
+The procedure is fully automated, so start it, check if it bails
+out at the beginning, forget about it for some time (run it under
+[[https://www.gnu.org/software/screen/][screen]]), then come back later
+and finish it up to complete it for the operations which require root
+privileges (notably the webserver configuration).
 
 You can speed up the process by installing TeX Live from the OS
 repositories, which is the suggested approach because this way the
