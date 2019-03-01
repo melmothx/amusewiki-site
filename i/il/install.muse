@@ -1,5 +1,6 @@
 #pubdate 2017-06-12 12:18:41 +0200
 #title How to install Amusewiki
+#authors Marco Pessotto; Alexander Krotov;
 #author Marco Pessotto, Alexander Krotov
 #lang en
 #topics doc, howto
@@ -484,7 +485,7 @@ $ cd /vaw/www/amusewiki
 $ git clone https://github.com/melmothx/amusewiki.git
 $ cd amusewiki # you're now in /vaw/www/amusewiki/amusewiki, our app home
 $ ./script/install-texlive.sh # install texlive
-$ echo 'export PATH=$HOME/amw-perl/bin:$HOME/texlive/2017/bin/x86_64-linux:$PATH' >> $HOME/.bashrc
+$ echo 'export PATH=$HOME/amw-perl/bin:$HOME/texlive/2018/bin/x86_64-linux:$PATH' >> $HOME/.bashrc
 $ chmod 755 $HOME  # open the home so plackup is accessible to nginx
 }}}
 
@@ -492,14 +493,14 @@ Logout and login again and check the program paths to point to the newly install
 
 {{{
 $ which perl # should be: ~/amw-perl/bin/perl
-$ which xelatex # should be ~/texlive/2017/bin/x86_64-linux/xelatex
+$ which xelatex # should be ~/texlive/2018/bin/x86_64-linux/xelatex or equivalent
 }}}
 
 Install cpanm and the dependencies
 
 {{{
-$ perl -MCPAN -e 'install App::cpanminus'
-$ which cpanm # should be ~/amw-perl/bin/cpanm
+$ perl -MCPAN -e 'install Carton'
+$ which carton # should be ~/amw-perl/bin/carton
 $ cd /var/www/amusewiki/amusewiki/
 $ ./script/install.sh
 }}}
