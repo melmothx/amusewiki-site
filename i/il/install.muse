@@ -323,13 +323,13 @@ The following sections contain installation instructions for uncommon
 operating systems. Note that these sections may be outdated, so read
 general installation instructions first.
 
-**** FreeBSD
+**** FreeBSD 12.0
 
 Install prerequisites:
 
 {{{
 pkg install perl5 p5-carton git texlive-full-20150521 \
-    cgit ImageMagick GraphicsMagick shared-mime-info \
+    cgit GraphicsMagick shared-mime-info \
     xapian-core xapian-bindings \
     nginx fcgiwrap unzip rsync wget bash
 }}}
@@ -374,8 +374,8 @@ fcgiwrap_user=www
 fcgiwrap_socket="unix:/var/run/fcgiwrap/socket"
 
 # create an include sites-enabled directory for nginx and log dir
-mkdir /usr/local/etc/nginx/sites-enabled
-mkdir /var/log/nginx/
+mkdir -p /usr/local/etc/nginx/sites-enabled
+mkdir -p /var/log/nginx/
 # and add an include directive in nginx.conf inside the http { } stanza, at the end.
 # include /usr/local/etc/nginx/sites-enabled/*;
 vi /usr/local/etc/nginx/nginx.conf
@@ -392,7 +392,7 @@ service fcgiwrap start
 su - amusewiki
 git clone https://github.com/melmothx/amusewiki.git
 cd amusewiki
-./script/install.sh
+CXX=c++ ./script/install.sh
 # create the config
 cat << EOF > amusewikifarm_local.conf
 <Model::Webserver>
@@ -408,7 +408,9 @@ Then decide to which hostname you want to serve this and run
 ./script/configure.sh amw.localdomain
 }}}
 
-Take note of the credentials, and follow the instructions.
+Read the output (you'll need to configure a database), do what it says
+and run it again, taking note of the credentials, and follow the
+instructions.
 
 **** CentOS 7
 
