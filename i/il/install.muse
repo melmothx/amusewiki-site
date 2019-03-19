@@ -1,10 +1,10 @@
-#pubdate 2017-06-12 12:18:41 +0200
+#pubdate 2018-03-19
 #title How to install Amusewiki
 #authors Marco Pessotto; Alexander Krotov;
 #author Marco Pessotto, Alexander Krotov
 #lang en
 #topics doc, howto
-#teaser Installation and post-installation configuration
+#teaser Installation and post-installation configuration for various OS
 #notes This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 The recommended way to install Amusewiki is via
@@ -87,13 +87,15 @@ and complete the installation:
 
 **** Configure database
 
+#mysql
 Create a database for the application. E.g., for MySQL:
 
 {{{
-mysql> create database amuse DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
-mysql> grant all privileges on amuse.* to amuse@localhost identified by XXX
+mysql> create database amusewiki DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+mysql> grant all privileges on amusewiki.* to amusewiki@localhost identified by 'Pa55Word';
 }}}
 
+#psql
 Or, for PostgreSQL:
 
 Login as root.
@@ -101,8 +103,8 @@ Login as root.
 {{{
 su - postgres
 psql
-create user amuse with password 'XXXX';
-create database amuse owner amuse;
+create user amusewiki with password 'XXXX';
+create database amusewiki owner amusewiki;
 }}}
 
 For SQLite no setup is required.
@@ -329,7 +331,8 @@ so read general installation instructions first.
 Install prerequisites:
 
 {{{
-pkg install perl5 p5-carton git texlive-full-20150521 \
+pkg install perl5 p5-App-cpanminus \
+    p5-carton git texlive-full \
     cgit GraphicsMagick shared-mime-info \
     xapian-core xapian-bindings \
     nginx fcgiwrap unzip rsync wget bash
@@ -412,6 +415,53 @@ Then decide to which hostname you want to serve this and run
 Read the output (you'll need to configure a database), do what it says
 and run it again, taking note of the credentials, and follow the
 instructions.
+
+If you want to use MySQL, run as root:
+
+{{{
+pkg install mysql57-server
+echo 'mysql_enable=YES' >> /etc/rc.conf
+service mysql-server start
+cat ~/.mysql_secret # see password
+mysql -h localhost -p
+}}}
+
+Create the database as described above in the [[#mysql][generic section]]
+and then finalize the configuration with the amusewiki user:
+
+{{{
+# su - amusewiki
+$ cd amusewiki
+$ cpanm -L local DBD::mysql
+$ cp dbic.yaml.mysql.example dbic.yaml
+$ vi dbic.yaml # edit db credentails
+$ ./script/configure.sh amw.localdomain # reconfigure
+$ ./init-all start
+}}}
+
+For PostgreSQL, run as root:
+
+{{{
+pkg install postgresql96-server
+echo 'postgresql_enable=YES' >> /etc/rc.conf
+service postgresql initdb
+service postgresql start
+su - postgres
+}}}
+
+Create the database as described above in the [[#psql][generic section]]
+and then finalize the configuration with the amusewiki user:
+
+{{{
+# su - amusewiki
+$ cd amusewiki
+$ cpanm -L local DBD::Pg
+$ cp dbic.yaml.pg.example dbic.yaml
+$ vi dbic.yaml # edit db credentails
+$ ./script/configure.sh amw.localdomain # reconfigure
+$ ./init-all start
+}}}
+
 
 **** CentOS 7
 
