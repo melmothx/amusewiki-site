@@ -1,4 +1,4 @@
-#pubdate 2018-03-19
+#pubdate 2019-03-19
 #title How to install Amusewiki
 #authors Marco Pessotto; Alexander Krotov;
 #author Marco Pessotto, Alexander Krotov
@@ -434,7 +434,7 @@ and then finalize the configuration with the amusewiki user:
 $ cd amusewiki
 $ cpanm -L local DBD::mysql
 $ cp dbic.yaml.mysql.example dbic.yaml
-$ vi dbic.yaml # edit db credentails
+$ vi dbic.yaml # edit db credentials
 $ ./script/configure.sh amw.localdomain # reconfigure
 $ ./init-all start
 }}}
@@ -457,7 +457,7 @@ and then finalize the configuration with the amusewiki user:
 $ cd amusewiki
 $ cpanm -L local DBD::Pg
 $ cp dbic.yaml.pg.example dbic.yaml
-$ vi dbic.yaml # edit db credentails
+$ vi dbic.yaml # edit db credentials
 $ ./script/configure.sh amw.localdomain # reconfigure
 $ ./init-all start
 }}}
