@@ -1,8 +1,15 @@
-#pubdate 2019-02-16
+#pubdate 2019-03-20
 #title Version 2.3
-#date 2019-02-16
-#teaser Search suggestions (did you mean?), category manager
+#date 2019-03-20
+#teaser Search suggestions (did you mean?), category manager, improvements to the build system (=carton=, =vagrant=)
 #cat releases
+
+*** 2.324 2019-03-19 (Spring equinox version)
+
+ - Switch to =carton= for dependencies tracking (@link2xt)
+ - Fix bookbuilder bug on centersection/centerchapter
+ - Add a layout template slot for copyright/licence notices
+ - Update/check/refresh install scripts
 
 *** 2.323 2019-02-17
 
