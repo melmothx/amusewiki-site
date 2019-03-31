@@ -1,42 +1,45 @@
 #title News
 #lang en
 
-This is the homepage for [[/special/about][amusewiki]], a library-oriented wiki engine. Amusewiki is more than just a wiki engine, it’s also a powerful authoring, archiving and publishing platform.
+This is the homepage for [[/special/about][amusewiki]], a
+library-oriented wiki engine. Amusewiki is more than just a wiki
+engine, it’s also a powerful authoring, archiving and publishing
+platform.
 
-** About Amusewiki
+** Getting started
 
 Amusewiki is 100% free software. You can download it at
 [[https://github.com/melmothx/amusewiki/releases][github]] (make sure to follow
-the [[/library/install][installation instructions]])
+the [[/library/install][**installation instructions**]])
 or save time, energy and troubles and install it on Debian/Ubuntu with
 the (unofficial) packages provided at
 [[http://packages.amusewiki.org][packages.amusewiki.org]], which are regularly updated at each release.
 
-If you need help, you’re welcome to drop to the
-[[https://amusewiki.org/help/irc][IRC channel]].
+Amusewiki is based on the
+[[https://www.gnu.org/software/emacs-muse/][Emacs Muse]] markup,
+remaining mostly compatible with the original implementation. A
+detailed [[/library/manual][**markup manual**]] is provided.
 
 This site runs on amusewiki itself. If you want to try out the editing
 and publishing process, you can use the
 [[https://sandbox.amusewiki.org][sandbox]]
 
-*** Why would I want this engine and not MediaWiki / Drupal / WordPress / whatever?
+If you need help, you’re welcome to drop to the
+[[https://amusewiki.org/help/irc][IRC channel]].
 
-Amusewiki is **not** a clone of an existing CMS. It was created to manage and
-edit large amounts of texts (books and articles) with a special focus
-on quality, printing and first rate reading experience. See
-[[/library/rationale]] to understand its architecture.
+** Features
 
-If you only need a CMS for a fancy site, amusewiki is not for you.
+Amusewiki was created to manage and edit large amounts of texts (books
+and articles) with a special focus on quality, printing and first rate
+reading experience. See [[/library/rationale]] to understand its
+architecture.
 
-Instead, you should consider amusewiki if:
+Core features:
 
- - You want **high-quality output** ([[/special/index.epub][**EPUB**]] and [[/special/index.pdf][**PDF with LaTeX quality**]]).
- - You want a site with a flat-file and [[/git][**Git** backend]] for long-term archiving.
- - You want to be able to reformat the PDFs, merging texts into **collections**. Add a text and [[/bookbuilder][take a look at the **bookbuilder**]]
- - You want an [[/help/opds][OPDS server]] for mobile users to deliver the texts straight into the apps
- - You don’t want or need fine-grained user permissions.
- - You don’t want or need talks, comments, forums, social, etc
-   embedded into the site.
+ - **high-quality output** ([[/special/index.epub][**EPUB**]] and [[/special/index.pdf][**PDF with LaTeX quality**]]).
+ - flat-file and [[/git][**Git** backend]] for long-term archiving.
+ - the [[/library/bookbuilder-tutorial][**bookbuilder**]]
+ - [[/help/opds][**OPDS** server]] for mobile users to deliver the texts straight into the reading apps
 
 [[/special/about][See the feature list for more details.]]
 
