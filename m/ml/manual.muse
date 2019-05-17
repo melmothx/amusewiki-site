@@ -1324,6 +1324,10 @@ The support for this feature was introduced in Text::Amuse version
 in version 1.10, released on April 23, 2018, allowing text material on
 the same line of the anchor.
 
+Anchors adjacent to section headers will be attached to them, while
+lonely anchors not adjacent to any material will attach to the next
+first regular text.
+
 Example:
 
 {{{
