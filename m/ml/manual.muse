@@ -69,7 +69,7 @@ And this is right
 
 This is a quotation:
 
-  
+
   But if a line begins with whitespace (at least 2 spaces), though
   less than six columns, it indicates a quoted paragraph.
   Alternatively, you can use the =<quote>= tag to surround regions that
@@ -129,7 +129,7 @@ spaces, notably lists and tables.**
 
 *** Literal paragraphs
 
- 
+
 The =<example>= tag is used for examples, where whitespace should be
 preserved, the text rendered in monospace, and any characters special
 to the output style escaped.
@@ -207,20 +207,20 @@ you’ll get a page break in the PDF.
 This code will break the page.
 
 <example>
-       * * * * * 
+       * * * * *
 </example>
 
-       * * * * * 
+       * * * * *
 
 Anyway, using three of them is just a decorator and it’s not treated specially.
 
-       * * * 
+       * * *
 
 It’s just a centered paragraph with 3 “*”.
 
 ** Levels of headings
 
-  
+
 A heading becomes a chapter or section in printed output — depending on
 the style.  To indicate a heading, start a new paragraph with one or
 more asterisks, followed by a space and the heading title.  Then begin
@@ -296,7 +296,7 @@ with this bundle there is support for the following directives:
 
    This directive is used (defaulting to =#title=) to alphabetically
    sort the titles. It’s handy if you want, for example, sort “A
-   title” under “T” and not under “A”. 
+   title” under “T” and not under “A”.
 
    In this case you may write =#LISTtitle Title=
 
@@ -304,7 +304,7 @@ with this bundle there is support for the following directives:
 
    The subtitle (if any)
 
- - =#SORTauthors= 
+ - =#SORTauthors=
 
    If not provided, this default to =#author=. It’s a list
    separated by semicolons or commas with the various authors. While
@@ -317,20 +317,20 @@ with this bundle there is support for the following directives:
    semicolon-separated) list of topics for the current text. Used to
    index the document.
 
- - =#date= 
+ - =#date=
 
    The **year** of publishing of the document. More information
    should be provided in the =#notes= directive.
 
- - =#notes= 
+ - =#notes=
 
    This directive is used for additional information here (original
    title, translators, credits, etc.).
 
- - =#source= 
-   
+ - =#source=
+
    This directive is used for the source or the text (url, scanned from
-   original, original contribution, etc.). The preferred format is 
+   original, original contribution, etc.). The preferred format is
    “Retrieved on March 8, 2012 from [[http://url.org][the url]]”
 
  - =#publisher=
@@ -349,7 +349,7 @@ with this bundle there is support for the following directives:
 
    If the book belongs to a serie, put it here.
 
- - =#seriesnumber= 
+ - =#seriesnumber=
 
    If the book belongs to a serie, use this slot for the number.
 
@@ -380,7 +380,7 @@ hyphen character “-”. Using a word without any hyphen will prevent the
 hyphenation for that word.
 
 ** Bold, italicized and monospace text, non breaking space.
-  
+
 To emphasize text, surround it with certain specially recognized
 characters.
 
@@ -476,7 +476,7 @@ Muse.
 
 A footnote reference is simply a number in square brackets.  To define
 the footnote, place this definition starting the line with a digit in
-square brackets. 
+square brackets.
 
 <example>
 This is the text, and we refer to a footnote [1]
@@ -602,7 +602,7 @@ Or this
 
 > A line of Emacs verse;
 >   forgive its being so terse.
-> 
+>
 > In terms of terse verse,
 >   you could do worse.
 
@@ -620,7 +620,7 @@ Or this
 
 > A line of Emacs verse;
 >   forgive its being so terse.
-> 
+>
 > In terms of terse verse,
 >   you could do worse.
 
@@ -1298,7 +1298,9 @@ Results:
 
 ----
 
+#namedanchor
 ** Named anchors
+
 
 If you start a line (regardless of the indentation) with a word
 prefixed by an hash, e.g. =#anchor= – where =anchor= can be any
@@ -2009,19 +2011,19 @@ public wiki that anybody can edit is an example of such a server.  A
 “Massive Multiauthor Collaboration” (or “MMC”) contained in the site
 means any set of copyrightable works thus published on the MMC site.
 
-“CC-BY-SA” means the Creative Commons Attribution-Share Alike 3.0 
-license published by Creative Commons Corporation, a not-for-profit 
-corporation with a principal place of business in San Francisco, 
-California, as well as future copyleft versions of that license 
+“CC-BY-SA” means the Creative Commons Attribution-Share Alike 3.0
+license published by Creative Commons Corporation, a not-for-profit
+corporation with a principal place of business in San Francisco,
+California, as well as future copyleft versions of that license
 published by that same organization.
 
-“Incorporate” means to publish or republish a Document, in whole or in 
+“Incorporate” means to publish or republish a Document, in whole or in
 part, as part of another Document.
 
-An MMC is “eligible for relicensing” if it is licensed under this 
-License, and if all works that were first published under this License 
-somewhere other than this MMC, and subsequently incorporated in whole or 
-in part into the MMC, (1) had no cover texts or invariant sections, and 
+An MMC is “eligible for relicensing” if it is licensed under this
+License, and if all works that were first published under this License
+somewhere other than this MMC, and subsequently incorporated in whole or
+in part into the MMC, (1) had no cover texts or invariant sections, and
 (2) were thus incorporated prior to November 1, 2008.
 
 The operator of an MMC Site may republish an MMC contained in the site
