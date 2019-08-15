@@ -1,0 +1,98 @@
+#pubdate 2019-08-15
+#title Version 2.4
+#teaser Introducing nodes, ACME2 support, improved support for binary uploads, express publishing
+#date 2019-08-15
+
+** Overview
+
+*** Introducing nodes
+
+The development for Amusewiki 2.4 started in the late spring 2019
+developing a new feature, the "nodes", to overcome the limitation of
+the single level author/topic structure and to gain the ability to
+build arbitrary trees of texts.
+
+Sometimes this approach can be better than having the category
+hardcoded into the text, but it's your choice. You can use this or the
+classical system, or both.
+
+The feature is still marked as experimental, but it can be accessed under
+[[/node]]
+
+A quick demo would probably give you a better idea of what is about.
+
+[[a-v-nodes-1.png f][Create the initial node]]
+
+[[a-v-nodes-2.png f][Add a title and an optional body, and attach texts]]
+
+[[a-v-nodes-3.png f][Overview of the tree, you can add a child node]]
+
+[[a-v-nodes-5.png f][An attached text will carry the breadcrumbs]]
+
+[[a-v-nodes-6.png f][The updated sitemap]]
+
+[[a-v-nodes-7.png f][The node page with texts and children nodes]]
+
+[[a-v-nodes-8.png f][When adding a text, you can attach it to a node right away]]
+
+*** Binary uploads
+
+The support for attached files has been extended. You can now upload
+audio and video files (you will probably need to tweak the max upload
+size in the admin) and create pages to display them without the
+infobox.
+
+Example source:
+
+{{{
+#ATTACH t-t-test-1.webm t-t-test-2.pdf t-t-test-4.mp3 t-t-test-3.mp4
+#title File Gallery
+#blob 1
+}}}
+
+Resulting in such page:
+
+[[a-v-nodes-9.png]]
+
+*** Express publishing
+
+A new option has been added in the admin, "Speed up the publishing
+process", which will skip the revision page if you have the permission
+to publish and there are no conflicts. Also when the publishing is
+complete, you will be redirected automatically to the target page.
+
+This makes sense if you are the only one working on the site and the
+publishing procedure seems too long and kind of gratuitous (it's not,
+really!) to you.
+
+
+*** Let's Encrypt
+
+The version 1 of the ACME protocol is going away soon, so Amusewiki is
+now using the version 2, thanks to
+[[https://metacpan.org/pod/Net::ACME2][=Net::ACME2=]]. Unofficial
+Debian packages are available for Stretch and Buster at
+[[https://packages.amusewiki.org/][packages.amusewiki.org]]
+
+** Changes
+
+*** 2.391 2019-08-15
+
+ - Migrate from =Protocol::ACME= to =Net::ACME2= to get Let's Encrypt
+   certificate using the new protocol, given that the old one is
+   getting sinked soon.
+ - New site option: express_publishing. If in effect, the publishing
+   procedure is speeded up and if no conflict is found, the text will
+   be published right away. This is useful if there are no external
+   contributions.
+ - Add List-Id to our mails, so clients have a chance to pick it up.
+ - Support per-format template files via newest Text::Amuse::Compile
+
+*** 2.390 2019-07-25
+
+ - Added experimental node system. It's accessible to logged in users
+   under =/node=. The basic functionality is there. Probably needs
+   refinement with locale-aware sorting. This permits to create
+   arbitrary category trees.
+ - Added experimental feature for adding binary files like
+   video/audio. Available in the configuration panel.

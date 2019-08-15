@@ -1,8 +1,17 @@
-#pubdate 2019-05-27
+#pubdate 2019-07-12
 #title Version 2.3
-#date 2019-05-27
+#date 2019-07-12
 #teaser Search suggestions (did you mean?), category manager, improvements to the build system (=carton=, =vagrant=)
 #cat releases
+
+*** 2.331 2019-07-12
+
+ - Handle Pg listening on 5433 instead of 5432 (debian packaging)
+ - Fix the query params for the freenode webchat (they moved from
+   qwebirc to Kiwi IRC).
+ - Symlink system wide fontspec.json if found installed
+ - Display the --ttdir argument for muse-compiler.pl
+
 
 *** 2.330 2019-05-26
 
