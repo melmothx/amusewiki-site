@@ -1,7 +1,7 @@
-#pubdate 2019-08-15
+#pubdate 2019-08-23
 #title Version 2.4
 #teaser Introducing nodes, ACME2 support, improved support for binary uploads, express publishing
-#date 2019-08-15
+#cat releases
 
 ** Overview
 
@@ -75,6 +75,10 @@ Debian packages are available for Stretch and Buster at
 [[https://packages.amusewiki.org/][packages.amusewiki.org]]
 
 ** Changes
+
+*** 2.392 2019-08-23
+
+ - Upgraded HR and IT localization
 
 *** 2.391 2019-08-15
 
