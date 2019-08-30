@@ -45,6 +45,14 @@ Core features:
 
 ** News
 
+*** A new logo! (August 30, 2019)
+
+As summer is ending and the official release 2.4 is approaching,
+AmuseWiki got a real logo from a real designer!
+
+Huge thanks to our friend [[http://zvonimircacic.com/][Zvonimir “Zvone” Čačić]]
+who donated love, time and expertise to AmuseWiki!
+
 *** Pandoc supports muse format!
 
 [[https://pandoc.org/releases.html][pandoc 2.0 (released 29 Oct 2017)]] supports muse format (both as reader and as a writer). This is simply awesome! Thanks to Alexander Krotov for that.
@@ -57,8 +65,8 @@ An in-depth explanation of the bookbuilder is available [[/library/bookbuilder-t
 
 Debian packages are available at [[http://packages.amusewiki.org]]!
 This is the fastest and recommended way to install amusewiki with no
-pain at all. Ubuntu 16.04 LTS is supported and the procedure and the
-packages are exactly the same.
+pain at all. Stretch, Buster and Ubuntu 18.04 LTS are supported.
+Packages for Jessie and Ubuntu 16.04 are available but archived.
 
 ** Download and bug reports
 
