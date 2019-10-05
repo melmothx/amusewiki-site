@@ -45,6 +45,12 @@ Core features:
 
 ** News
 
+*** Atom package for Muse markup (October 5, 2019)
+
+Thanks to Alexander Krotov, there is a Atom package available to edit
+Muse files! You can find it at [[https://atom.io/packages/atom-muse]]
+and it's ready to be installed.
+
 *** A new logo! (August 30, 2019)
 
 As summer is ending and the official release 2.4 is approaching,
