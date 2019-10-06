@@ -200,7 +200,7 @@ Here we go.
 
 *** Page breaks
 
-If you put exactly five “*” separated by whitespace on a line by
+If you put exactly five <verbatim>“*”</verbatim> separated by whitespace on a line by
 itself, indented by 6 or more spaces (like a centered paragraph),
 you’ll get a page break in the PDF.
 
@@ -216,7 +216,7 @@ Anyway, using three of them is just a decorator and it’s not treated specially
 
        * * *
 
-It’s just a centered paragraph with 3 “*”.
+It’s just a centered paragraph with 3 <verbatim>“*”</verbatim>.
 
 ** Levels of headings
 
@@ -402,9 +402,9 @@ Each of these forms may span
 multiple lines, but not multiple paragraphs.
 
 You can also use the =<code>= tag to indicate code and monospace
-text. This is handy for regions that have a “=” in them.
+text. This is handy for regions that have a <verbatim>“=”</verbatim> in them.
 
-If the “*” confuse you or the preview is screwed up, you can use
+If the <verbatim>“*”</verbatim> confuse you or the preview is screwed up, you can use
 inline tag =<em>= and =<strong>=, which are guaranteed to work in any
 case.
 
