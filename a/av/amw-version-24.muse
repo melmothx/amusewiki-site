@@ -1,4 +1,4 @@
-#pubdate 2019-08-23
+#pubdate 2019-10-27
 #title Version 2.4
 #teaser Introducing nodes, ACME2 support, improved support for binary uploads, express publishing
 #cat releases
