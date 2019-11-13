@@ -14,6 +14,17 @@ the =site_files= directory in the =repo/SITE_ID/= directory, which is
 the git repository of the site. See [[offline-editing-via-git]] for
 the workflow's details.
 
+If you installed Amusewiki via the
+[[https://packages.amusewiki.org][Debian packages]], this directory is
+located in =/var/lib/amusewiki/repo/SITE_ID/site_files= (where
+=SITE_ID= is the site code).
+
+The normal way to add this file would be to use
+[[offline-editing-via-git][Git]], but if you place them manually in
+the tree, just remember to run =amusewiki bootstrap-archive --refresh SITE_ID=
+(or =scripts/bootstrap-archive --refresh SITE_ID= if not installed by .deb, from the amusewiki installation directory)
+
+
  =favicon.ico= :: If present, this will be used as favicon.
 
  =local.css= :: Additional CSS rules.
