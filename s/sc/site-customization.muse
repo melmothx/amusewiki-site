@@ -4,6 +4,8 @@
 #topics doc, howto
 #teaser Which files to add to the site repository to customize it
 
+** Site-wide changes
+
 Each site is configurable by root and admin users in the console
 (=/user/site= or =admin/sites=).
 
@@ -43,7 +45,7 @@ the workflow's details.
 
 If you have a new site and the files don't show up, please run =amusewiki bootstrap-archive --refresh <site_id>= (if installed with deb, otherwise =script/amusewiki-bootstrap-archive --refresh <site_id>=)
  
-*** Per-text changes
+** Per-text changes
 
 For maximum flexibility, you should use the
 =repo/SITE_ID/site_files/local.js= file. Every text has an API
