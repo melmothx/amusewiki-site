@@ -19,12 +19,6 @@ If you installed Amusewiki via the
 located in =/var/lib/amusewiki/repo/SITE_ID/site_files= (where
 =SITE_ID= is the site code).
 
-The normal way to add this file would be to use
-[[offline-editing-via-git][Git]], but if you place them manually in
-the tree, just remember to run =amusewiki bootstrap-archive --refresh SITE_ID=
-(or =scripts/amusewiki-bootstrap-archive --refresh SITE_ID= if not installed by .deb, from the amusewiki installation directory)
-
-
  =favicon.ico= :: If present, this will be used as favicon.
 
  =local.css= :: Additional CSS rules.
@@ -54,8 +48,11 @@ the tree, just remember to run =amusewiki bootstrap-archive --refresh SITE_ID=
                     navlogo.png will be used, with often odd results.
 
 
-If you have a new site and the files don't show up, please run =amusewiki bootstrap-archive --refresh <site_id>= (if installed with deb, otherwise =script/amusewiki-bootstrap-archive --refresh <site_id>=)
- 
+The normal way to add these files would be to use
+[[offline-editing-via-git][Git]], but if you place them manually in
+the tree, just remember to run =amusewiki bootstrap-archive --refresh SITE_ID=
+(or =scripts/amusewiki-bootstrap-archive --refresh SITE_ID= if not installed by .deb, from the amusewiki installation directory)
+
 ** Per-text changes
 
 For maximum flexibility, you should use the
@@ -94,4 +91,8 @@ $(document).ready(function () {
     }
 });
 }}}
+
+If the changes don't show up immediately try first to force reload the
+browser, there is probably cache, while if the file is not loaded at
+all, try to run =amusewiki bootstrap-archive --refresh SITE_ID= again.
 
