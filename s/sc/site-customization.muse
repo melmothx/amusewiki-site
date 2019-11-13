@@ -1,4 +1,4 @@
-#pubdate 2017-11-26 13:13:52 +0100
+#pubdate 2019-11-13
 #title Site customization
 #lang en
 #topics doc, howto
@@ -43,3 +43,42 @@ the workflow's details.
 
 If you have a new site and the files don't show up, please run =amusewiki bootstrap-archive --refresh <site_id>= (if installed with deb, otherwise =script/amusewiki-bootstrap-archive --refresh <site_id>=)
  
+*** Per-text changes
+
+For maximum flexibility, you should use the
+=repo/SITE_ID/site_files/local.js= file. Every text has an API
+endpoint which you can hit to get the values of the header of the text
+file, regardless if the field is supported or not.
+
+In this example, we don't want to show the body when we use in the header:
+
+{{{
+#hidebody 1
+#title My title
+
+Text....
+}}}
+
+We can do this in the =local.js= file:
+
+{{{
+$(document).ready(function () {
+    // check if we are in a text page
+    var api = $('#page').data('text-json-header-api');
+    if (api) {
+        $.ajax({
+            url: api,
+            dataType: 'json',
+            success: function(response) {
+                // log what we get
+                console.log(response);
+                if (response.hidebody) {
+                    $('.page-header').remove();
+                    $('#htmltextbody').remove();
+                }
+            }
+        });
+    }
+});
+}}}
+
