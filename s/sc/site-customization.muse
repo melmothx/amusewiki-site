@@ -22,7 +22,7 @@ located in =/var/lib/amusewiki/repo/SITE_ID/site_files= (where
 The normal way to add this file would be to use
 [[offline-editing-via-git][Git]], but if you place them manually in
 the tree, just remember to run =amusewiki bootstrap-archive --refresh SITE_ID=
-(or =scripts/bootstrap-archive --refresh SITE_ID= if not installed by .deb, from the amusewiki installation directory)
+(or =scripts/amusewiki-bootstrap-archive --refresh SITE_ID= if not installed by .deb, from the amusewiki installation directory)
 
 
  =favicon.ico= :: If present, this will be used as favicon.
