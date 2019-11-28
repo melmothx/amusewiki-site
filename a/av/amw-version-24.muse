@@ -1,4 +1,4 @@
-#pubdate 2019-10-27
+#pubdate 2019-11-28
 #title Version 2.4
 #teaser Introducing nodes, ACME2 support, improved support for binary uploads, express publishing, custom category types (not limited to authors/topics), bookbuilder improvements
 #cat releases
