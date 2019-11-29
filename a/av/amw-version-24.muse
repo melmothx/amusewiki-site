@@ -108,6 +108,10 @@ A quick demo would probably give you a better idea of what is about.
 
 ** Changes
 
+*** 2.411 2019-11-29
+
+ - Extend the use of datatables and localize them ([[https://github.com/melmothx/amusewiki/issues/324][GH#324]])
+
 *** 2.410 2019-11-28
 
  - Use datatables.net Javascript for large tables in the admin (users,
