@@ -108,6 +108,12 @@ A quick demo would probably give you a better idea of what is about.
 
 ** Changes
 
+*** 2.420 2019-12-04
+
+ - Refactor the static indexes ([[https://github.com/melmothx/amusewiki/issues/325][GH#325]])
+ - Keep the custom formats name stable across migrations ([[https://github.com/melmothx/amusewiki/issues/321][GH#321]])
+
+
 *** 2.412 2019-12-01 [SECURITY]
 
  -  Restrict remote repositories set in the web interface to git/http.
