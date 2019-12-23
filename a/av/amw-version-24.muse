@@ -108,6 +108,10 @@ A quick demo would probably give you a better idea of what is about.
 
 ** Changes
 
+*** 2.431 2019-12-23
+
+ - Logging tuning
+
 *** 2.430 2019-12-23
 
  - Include deferred texts in search results for logged in ([[https://github.com/melmothx/amusewiki/issues/327][GH#327]])
