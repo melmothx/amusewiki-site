@@ -5,6 +5,21 @@
 
 ** Overview
 
+*** Parent-children relationship between texts
+
+You can now use the =#parent= directive in a text, which will become
+its child. A child text will not be listed in the categories listing
+and will inherit them from the parent.
+
+{{{
+#title Example
+#parent my-other-text-uri
+}}}
+
+The infobox will link to the parent, and the parent will have a box
+pointing to the children.
+
+
 *** Binary uploads
 
 The support for attached files has been extended. You can now upload
