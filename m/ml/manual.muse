@@ -1,12 +1,12 @@
-#pubdate 2018-01-28
+#pubdate 2020-02-16
 #title The Text::Amuse markup manual
 #lang en
 #topics doc, howto
 #authors Marco Pessotto, Michael Olson, John Wiegley
 #subtitle The writer’s guide
-#date 2018
+#date 2020
 #teaser Everything you have to know about the Text::Amuse markup. Last
- updated for version 0.97 (released on February 28, 2018).
+ updated for version 1.40 (released on February 16, 2020).
 
 Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software
 Foundation, Inc.
@@ -262,6 +262,24 @@ Some other text.
 
 ***** Fifth level, aka subsubsection
 </example>
+
+*** Alternate headings | How to indicate alternate headings
+
+[*This syntax is available with Text::Amuse version 1.40, released on
+2020-02-16.*]
+
+Sometimes it's desirable to have an alternate, usually shorter, title
+for the table of content. You can indicate that using this syntax:
+
+{{{
+** Alternate headings | How to indicate alternate headings
+}}}
+
+I.e. separate the short and the long title with a pipe character
+<code>|</code> surrounded by spaces.
+
+In this example, "The Alternate headings" will go into the table of
+contents, while the second part will go in the document.
 
 ** Directives at the beginning of a document
 
