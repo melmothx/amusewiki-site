@@ -123,6 +123,14 @@ A quick demo would probably give you a better idea of what is about.
 
 ** Changes
 
+*** 2.442 2020-02-25
+
+ - Enable ipv6 ports on nginx
+ - Bump dependency on Text::Amuse to bring in the short form of headings
+ - Improve messages for git pulling ([[https://github.com/melmothx/amusewiki/issues/331][GH#331]] and [[https://github.com/melmothx/amusewiki/issues/332][GH#332]])
+ - Add site option no_autoassign_pubdate ([[https://github.com/melmothx/amusewiki/issues/330][GH#330]])
+
+
 *** 2.441 2020-01-17
 
  - Fix bug with arbitrary pagination size in the pagination widget
