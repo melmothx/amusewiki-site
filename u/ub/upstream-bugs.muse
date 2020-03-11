@@ -1,0 +1,91 @@
+#title Upstream bugs
+#teaser In this page upstream bugs are tracked and fixes are provided if they exist
+#cat doc
+#lang en
+
+The current approach is to patch the files system-wide so on upgrade
+these changes will be overwritten by versions shipped by Debian.
+
+The long term plan is to repackage texlive in a minimal package, so we
+can ship the latest versions.
+
+** Russian: undefined =\chapterformat=
+
+On Debian 10 (Buster), Russian documents are hitting this bug:
+[[https://github.com/reutenauer/polyglossia/issues/210]]
+
+{{{
+commit d2f383ee4b84bbed78a618fc1261f7fb3ccf9447
+Author: Maksim Zholudev <maximzms@gmail.com>
+Date:   Tue Aug 14 08:35:00 2018 +0300
+
+    Fix Russian language for KOMA-Script classes without chapters
+
+diff --git a/tex/gloss-russian.ldf b/tex/gloss-russian.ldf
+index d2c86a3..5d207ff 100644
+--- a/tex/gloss-russian.ldf
++++ b/tex/gloss-russian.ldf
+@@ -170,7 +170,8 @@
+ % The following is based on some ideas from ruscor.sty
+ \def\russian@capsformat{%
+    \ifdef{\KOMAScript}{%
+-      \renewcommand{\chapterformat}{\prechapter\thechapter\postchapter}%
++      \ifdef{\chapterformat}{%
++        \renewcommand{\chapterformat}{\prechapter\thechapter\postchapter}}{}%
+       \renewcommand{\sectionformat}{\presection\thesection\postsection}%
+       \renewcommand{\subsectionformat}{\presubsection\thesubsection\postsubsection}%
+       \renewcommand{\subsubsectionformat}{\presubsubsection\thesubsubsection\postsubsubsection}%
+@@ -224,7 +225,8 @@
+
+ \def\noextras@russian{%
+    \ifdef{\KOMAScript}{%
+-      \renewcommand{\chapterformat}{\thechapter\autodot\enskip}%
++      \ifdef{\chapterformat}{%
++        \renewcommand{\chapterformat}{\thechapter\autodot\enskip}}{}%
+       \renewcommand{\sectionformat}{\thesection\autodot\enskip}%
+       \renewcommand{\subsectionformat}{\thesubsection\autodot\enskip}%
+       \renewcommand{\subsubsectionformat}{\thesubsubsection\autodot\enskip}%
+}}}
+
+You need to patch =gloss-russian.ldf= file. Save the patch in, e.g.
+=russian.patch= and then as root execute:
+
+
+{{{
+patch -p1 /usr/share/texlive/texmf-dist/tex/latex/polyglossia/gloss-russian.ldf russian.patch
+}}}
+
+** French: missing spacing after punctuation
+
+The polyglossia package shipped with Debian 9 (Stretch) is hit by this bug: [[https://tex.stackexchange.com/questions/330844/prevent-line-break-before/330848#330848][tex.stackexchange.com]] (missing no-break spaces in French punctuation). 
+
+You can work around it in two ways:
+
+ - Use LuaTeX instead of XeTeX (root users have access to the switch in the admin).
+ - Patch polyglossia (see below).
+
+*** Patching polyglossia
+
+{{{
+--- /usr/share/texlive/texmf-dist/tex/latex/polyglossia/gloss-french.ldf        2016-03-25 23:06:03.000000000 +0100
++++ texmf/tex/latex/polyglossia/gloss-french.ldf        2018-10-14 09:45:47.171843623 +0200
+@@ -54,6 +54,13 @@
+       \XeTeXinterchartoks \french@punctguillend \french@punctthin = {\nobreak\thinspace}% "»;" -> "» ;"
+       \XeTeXinterchartoks \french@punctguillend \french@punctthick = {\nobreakspace}% "»:" -> "» :"
+       \XeTeXinterchartoks \french@punctthin \french@punctguillend  = {\nobreakspace}% "?»" -> "? »"
++
++      % see https://tex.stackexchange.com/questions/330844/prevent-line-break-before/330848#330848
++      \XeTeXinterchartoks 4095 \french@punctthin = {\xpg@unskip\nobreak\thinspace}%
++      \XeTeXinterchartoks 4095 \french@punctthick = {\xpg@unskip\nobreakspace}%
++      \XeTeXinterchartoks 4095 \french@punctguillend = {\xpg@unskip\nobreakspace}% "  »" -> "~»"
++      \XeTeXinterchartoks \french@punctguillstart 4095 = {\nobreakspace\xpg@nospace}% "«  " -> "«~"
++
+     \fi
+     }
+}}}
+
+Save the patch in a file, e.g. =french.patch= and then as root execute:
+
+{{{
+patch -p1 /usr/share/texlive/texmf-dist/tex/latex/polyglossia/gloss-french.ldf french.patch
+}}}
