@@ -47,7 +47,7 @@ $ for i in repo/*/.git ; do touch $i/git-daemon-export-ok; done
 
 ** Editing
 
-Amusewiki fully support offline editing. This document describes how
+Amusewiki fully supports offline editing. This document describes how
 you can do it. It assumes you have some knowledge about how Git works.
 The internet is full of tutorials and documentation on this matter.
 
@@ -55,30 +55,41 @@ This assumes that the site's archive is public and accessible. The
 place to find the git clone URL is usually the CGIT interface,
 accessible from each text via the recent changes features, and
 navigating to the root of the repository, e.g.
-[[http://www.amusewiki.org/git/amw/]], where you can find a “Clone” URL.
+[[http://www.amusewiki.org/git/amw/]], where you can find the “Clone”
+URL.
 
-Locally on your machine, clone it.
+On your machine, clone it, so you can work on it (this step can also
+be done via SSH if the site is private):
 
 <example>
 git clone git://git.amusewiki.org/git/amw.git
+# or, for private sites
+git clone ssh://www.amusewiki.org/var/lib/amusewiki/repo/amw
 </example>
 
-The repo is read-only, so now you have to create now where you can
-push. It can be anywhere (on the same server of the site or on
-another, on github, gitorious, etc.), as long the site can pull from
-there. Push the local tree there and set it to the new origin, keeping
+Now we have the =amw= repository locally, but we don't know where to
+push our changes, yet, because we just cloned the working tree of the
+site, so we cannot and we should not push there directly. Instead, we
+have to provide another one, let's call it "bridge", where we can
+push and where amusewiki can pull.
+
+Usually it's enough to set it up on GitLab or GitHub or a normal
+repository on the same machine where amusewiki resides and where
+amusewiki can read.
+
+We are going to initialize it and set it to the new origin, keeping
 the read-only on a branch.
 
 <example>
-# on the server, e.g.
+# on the server, create the bridge repo
 mkdir -p /var/cache/git/marco
 cd /var/cache/git/marco
 git init --bare amw.git
 
-# on your machine
+# on your machine, initialize it
 git remote rename origin web
 git remote add origin \
-    ssh://git.amusewiki.org/var/cache/git/marco/amw.git
+    ssh://www.amusewiki.org/var/cache/git/marco/amw.git
 git push -u origin master
 # track the upstream on your machine in a branch
 git checkout -b upstream -t web/master 
@@ -100,8 +111,15 @@ git push
 
 It's recommended to do so each time you start editing locally.
 
-Visit =/console/git= to add your personal repository (in this case
-=/var/cache/git/marco/amw.git=, literally).
+Visit =/console/git= to add your personal repository. If it's a
+GitLab/GitHub one, you can use the web interface. Otherwise you have
+to add it manually. Refresh =/console/git=.
+
+{{{
+# as the amusewiki user, add our bridge repository
+cd /var/lib/amusewiki/repo/amw
+git remote add marco /var/cache/git/marco/amw.git
+}}}
 
 With the “Fetch” button you will pull your changes.
 
@@ -176,7 +194,7 @@ In all the files, the =#title= header line is mandatory.
 
 *** Images
 
-Images have to go in the same directory of the belonging text. It's
+Images belongs to the same directory as the corresponding text. It's
 highly recommended to use a prefix to make it clear to which
 subdirectory it belongs, to reduce the chance of clashes when
 inserting them manually.
