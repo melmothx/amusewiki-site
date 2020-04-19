@@ -63,7 +63,7 @@ On the first line we change the working directory to =/vagrant=. =/vagrant= insi
 
 On the second line we reset the password for the =amusewiki= user. It will output something like
 {{{
-vagrant@debian-9:/vagrant$ script/amusewiki-reset-password amusewiki
+vagrant@debian-9:/vagrant$ carton exec script/amusewiki-reset-password amusewiki
 Password for amusewiki is now 'correct horse battery staple'
 }}}
 
@@ -77,7 +77,7 @@ As the repository is mounted into =/vagrant= inside the virtual machine, any mod
 
 To run the test suite, use
 {{{
-vagrant@debian-9:/vagrant$ make test
+vagrant@debian-9:/vagrant$ carton exec prove -l
 }}}
 
 If some tests are failing, they will be reported in the end:
@@ -96,7 +96,7 @@ t/xapian.t                      (Wstat: 1024 Tests: 43 Failed: 4)
 
 To rerun a particular test suite, for example =t/full-blog-mode.t=, use
 {{{
-vagrant@debian-9:/vagrant$ perl -Mblib t/full-blog-mode.t
+vagrant@debian-9:/vagrant$ carton exec prove -wl t/full-blog-mode.t
 }}}
 
 *** Stopping the development environment
