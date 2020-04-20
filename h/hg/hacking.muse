@@ -96,7 +96,7 @@ t/xapian.t                      (Wstat: 1024 Tests: 43 Failed: 4)
 
 To rerun a particular test suite, for example =t/full-blog-mode.t=, use
 {{{
-vagrant@debian-9:/vagrant$ carton exec prove -wl t/full-blog-mode.t
+vagrant@debian-9:/vagrant$ carton exec prove -vl t/full-blog-mode.t
 }}}
 
 *** Stopping the development environment
