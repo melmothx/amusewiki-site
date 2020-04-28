@@ -1406,6 +1406,19 @@ Good example:
 See [[#anchor][the previous chapter]] for more information.
 }}}
 
+If you give preference to the printing, you may want to have a page
+number instead of a hyperlink.
+
+You can then use this syntax:
+
+{{{
+See [[#anchor][the previous chapter on page ??]] for more information.
+}}}
+
+I.e., the double question mark <code>??</code> will be replaced by the
+page number in the PDF and kept verbatim in the HTML. This feature was
+introduced on Text::Amuse 1.50, released 2020-03-28.
+
 ** Lines to omit from published output
 
 <example>
