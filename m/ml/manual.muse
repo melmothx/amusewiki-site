@@ -1089,9 +1089,8 @@ And results in:
 
 ** Generation of data tables
 
-
-Only very simple tables are supported. The syntax is as follows (just
-keep the indentation consistent and separate each cell by one or more
+Only simple tables are supported. The syntax is as follows (just keep
+the indentation consistent and separate each cell by one or more
 textbars).
 
 Indentation (one or more leading spaces) is required to trigger the
@@ -1116,6 +1115,59 @@ for the output (HTML requires you put first the header, then the
 footer, then the body). Ordering of the single rows is of course
 preserved. Inside the cells you can do pretty much what you want
 (besides headers and lists): mark them up freely.
+
+*** GitHub Markdown tables
+
+They mainly work like the native tables, with some differences:
+
+ - the line starts with the pipe symbol and doesn't need to have
+   leading whitespace.
+
+ - You can mark the header with hyphens (at least 3), drawing a dashed
+   line, as shown above (it needs to be the second line for this
+   purpose).
+
+ - You can control the alignment of the column using the line marking
+   the header, placing a colon on the left, on the right, or on both
+   ends (centering) of the dashed line. Please note that the header
+   itself is not required. See the examples below.
+
+The line marking the header determines the alignment of the column
+(see where the colons are):
+
+{{{
+| Left aligned  | Centered | Right aligned | Justified text |
+| :------------ | :------: | ------------: | -------------- |
+| Content Cell  | Cell 1   | *Right*       | This text is justfied and can be very long   |
+| See **here**  | Cell 2   | Right         | This *text* is justfied and can be very long |
+|+ legend +|
+}}}
+
+Output:
+
+| Left aligned  | Centered | Right aligned | Justified text |
+| :------------ | :------: | ------------: | -------------- |
+| Content Cell  | Cell 1   | *Right*       | This text is justfied and can be very long   |
+| See **here**  | Cell 2   | Right         | This *text* is justfied and can be very long |
+|+ legend +|
+
+And without header (but still controlling the alignment):
+
+{{{
+| :------------ | :------: | ------------: | -------------- |
+| Content Cell  | Cell 1   | *Right text*  | This text is justfied and can be very long   |
+| See **here**  | Cell 2   | Right         | This *text* is justfied and can be very long |
+|+ legend +|
+}}}
+
+Output:
+
+| :------------ | :------: | ------------: | -------------- |
+| Content Cell  | Cell 1   | *Right text*  | This text is justfied and can be very long   |
+| See **here**  | Cell 2   | Right         | This *text* is justfied and can be very long |
+|+ legend +|
+
+This feature was introduced on Text::Amuse 1.51, released 2020-04-02.
 
 *** Floating tables
 
@@ -1596,7 +1648,8 @@ while Emacs Muse interprets it as bold "<verbatim>=Bold code=</verbatim>".
 
 *** Block markup
 
-The only tables supported are the native one (with =|||= as separator).
+The tables supported are the native one (with =|||= as separator) and
+the GitHub Markdown tables.
 
 While Emacs Muse requires the bars to be surrounded by spaces to
 trigger a table, Text::Amuse requires some initial indentation. To
