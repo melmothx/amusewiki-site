@@ -123,6 +123,12 @@ A quick demo would probably give you a better idea of what is about.
 
 ** Changes
 
+*** 2.453 (2020-05-01)
+
+ - Add /site-admin/users route for site administrators for user
+   management. ([[https://github.com/melmothx/amusewiki/issues/340][GH#340]])
+
+
 *** 2.452 (2020-04-18)
 
  - Implement robots.txt override from the database (new option in the admin panel) [[https://github.com/melmothx/amusewiki/issues/338][GH#338]]
