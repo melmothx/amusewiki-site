@@ -123,6 +123,14 @@ A quick demo would probably give you a better idea of what is about.
 
 ** Changes
 
+*** 2.456 (2020-06-12)
+
+ - Updated i18n: DE, PL, MK
+ - New feature: grant read access to private sites, git and mirror via
+   IP whitelisting. The feature is accessible via the admin panel and
+   with a new script, =amusewiki-whitelist-ip=
+
+
 *** 2.455 (2020-05-31)
 
  - Updated i18n (added PL)
