@@ -1,4 +1,4 @@
-#pubdate 2020-06-22
+#pubdate 2020-07-03
 #title Version 2.4
 #teaser Introducing nodes, ACME2 support, improved support for binary uploads, express publishing, custom category types (not limited to authors/topics), bookbuilder improvements, **security fix**
 #cat releases
@@ -122,6 +122,10 @@ A quick demo would probably give you a better idea of what is about.
 
 
 ** Changes
+
+*** 2.459 (2020-07-03)
+
+ - Store the feed teaser in the Xapian DB to improve Meta output
 
 *** 2.458 (2020-06-22)
 
