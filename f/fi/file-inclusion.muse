@@ -1,0 +1,87 @@
+#title File inclusion in documents
+#pubdate 2020-09-14
+#topics howto
+#teaser Include snippets from other files
+
+Starting with version 2.500, Amusewiki can be setup to include other
+files.
+
+*** Syntax
+
+The syntax is (with no leading space):
+
+{{{
+#include path/to/file.muse
+}}}
+
+The directive can be placed anywhere in the muse body (*not* in the
+header, where it would be just a custom header line).
+
+The file content is included as is *before* any parsing, and will be
+transparently parsed after being included.
+
+To include a muse document you would just do:
+
+{{{
+Here starts the body....
+
+#include path/to/muse-document.muse
+
+Here it continues....
+}}}
+
+And to include, e.g., a configuration file:
+
+<example>
+{{{
+#include examples/file.conf
+}}}
+</example>
+
+The markup surrounding the inclusion will include it as a verbatim
+snippet.
+
+*** Path
+
+Included paths are *searched* in the directories (possibly multiple)
+set site-wide, just like a binary is searched in the =PATH= variable,
+and the first match is used.
+
+If the site sets, e.g. =/etc= as a include path (which for sure is *not*
+a good idea), this would include =/etc/passwd= and =/etc/apt/sources.list=
+
+<example>
+{{{
+#include passwd
+}}}
+
+{{{
+#include apt/sources.list
+}}}
+</example>
+
+*** Enabling
+
+This feature needs to be explicitly enabled on the CLI with the
+provided command =amusewiki-include-path=. On Debian this can be
+called with =amusewiki include-path=, while when installed from Git it
+can be called, e.g., as:
+
+{{{
+PERL5LIB=$(pwd)/local/lib/perl5/ script/amusewiki-include-path --help
+}}}
+
+The typical usage would be:
+
+{{{
+amusewiki-include-path --site testsite --repo
+}}}
+
+Which will add the site repository itself to the include paths, so you
+could have a =include= directory where you can keep the shared files.
+
+On a git pull, included files are checked for freshness and a rebuild
+is triggered if needed.
+
+
+
