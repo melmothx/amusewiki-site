@@ -11,7 +11,7 @@ files.
 The syntax is (with no leading space):
 
 {{{
-#include path/to/file.muse
+#include path/to/file
 }}}
 
 The directive can be placed anywhere in the muse body (*not* in the
@@ -25,7 +25,7 @@ To include a muse document you would just do:
 {{{
 Here starts the body....
 
-#include path/to/muse-document.muse
+#include path/to/muse-document
 
 Here it continues....
 }}}
@@ -40,6 +40,13 @@ And to include, e.g., a configuration file:
 
 The markup surrounding the inclusion will include it as a verbatim
 snippet.
+
+Please note that including files with a =.muse= extension will likely
+trigger a harmless warning, suggesting to place it in another path.
+For this reason the suggestion is to avoid the use of the =.muse=
+extension for inclusion, while reserving it for full documents.
+Anything else (like =.txt= or =.muse.inc=) or no extension at all will
+do.
 
 *** Path
 
