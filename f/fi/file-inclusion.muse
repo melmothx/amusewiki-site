@@ -75,7 +75,7 @@ called with =amusewiki include-path=, while when installed from Git it
 can be called, e.g., as:
 
 {{{
-PERL5LIB=$(pwd)/local/lib/perl5/ script/amusewiki-include-path --help
+carton exec "script/amusewiki-include-path --help"
 }}}
 
 The typical usage would be:

@@ -1,0 +1,17 @@
+#pubdate 2020-10-28
+#title Version 2.5
+#teaser File inclusion in Muse documents
+#cat releases
+
+** Overview
+
+The 2.5 series brings in file inclusion in Muse documents, which is
+detailed in [[/library/file-inclusion][its own page]].
+
+There are no upgrade or backcompatibility issues.
+
+** Changes
+
+*** 2.500 (2020-10-28)
+
+ - Support file inclusion [[https://github.com/melmothx/amusewiki/issues/53][GH#53]])
