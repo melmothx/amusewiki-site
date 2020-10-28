@@ -1,7 +1,13 @@
 #title Upstream bugs
-#teaser In this page upstream bugs are tracked and fixes are provided if they exist
+#teaser Legacy page for older installations without the repackaged TeXlive! (=amusewiki-texlive=)
 #cat doc
 #lang en
+#pubdate 2020-03-11
+
+**This is a legacy page which only applies to older installations,
+  with a old TeXlive! installation**
+
+--------------
 
 The current approach is to patch the files system-wide so on upgrade
 these changes will be overwritten by versions shipped by Debian.
