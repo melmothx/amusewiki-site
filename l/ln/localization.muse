@@ -112,3 +112,4 @@ Tests which have a plan depending on the number of supported languages:
 
  - =t/controller_Latest.t=
  - =t/multilang.t=
+ - =t/lexicon-wildcards.t=
