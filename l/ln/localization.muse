@@ -104,6 +104,8 @@ msginit --input=messages.pot --output=sv.po --locale=sv
 Add the language code and the language string to the
 =AmuseWikiFarm::Utils::Amuse::known_langs= method.
 
+Add the datatable alias for i18n at =AmuseWikiFarm::Controller::API=
+
 Add the language code to the =script/upgrade_i18n= script.
 
 Add the babel name to =Text::Amuse::_language_mapping= if missing.
