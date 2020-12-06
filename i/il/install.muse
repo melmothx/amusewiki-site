@@ -1,4 +1,4 @@
-#pubdate 2019-03-19
+#pubdate 2020-12-06
 #title How to install Amusewiki
 #authors Marco Pessotto; Alexander Krotov;
 #author Marco Pessotto, Alexander Krotov
@@ -8,19 +8,28 @@
 #notes This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 The recommended way to install Amusewiki is via
-[[https://packages.amusewiki.org][Debian repository]]. If you want to
-install manually, read on. If you need to do some post-installation
-tweaking for ports and webserver logging, jump to the
-[[#configuration][configuration section]]. Otherwise feel free to
+[[https://packages.amusewiki.org][Debian repository]].
+
+Since October 2020, Amusewiki installs a stripped down *TeX~~Live!*
+which greatly reduces the installation size.
+
+On a clean Debian Buster installation, which takes about 1Gb of space,
+following the procedure described at
+[[https://packages.amusewiki.org][packages.amusewiki.org]], installing
+Amusewiki takes 308Mb of archives resulting in 920Mb of space used,
+plus 160Mb of extra fonts, ending up with a total disk usage of about
+2.2Gb.
+
+However, please keep in mind that Amusewiki produces a lot of files,
+so for a working instance the recommended *minimum* free space would
+be something like 5Gb.
+
+If you want to install manually, read on. If you need to do some
+post-installation tweaking for ports and webserver logging, jump to
+the [[#configuration][configuration section]]. Otherwise feel free to
 skip this document entirely.
 
 *** General installation
-
-The installation of Amusewiki takes time (depending on speed of the
-machine and of the network) and requires about 5 Gb of disk space
-because of the full installation of TeX Live. If you’re short on disk
-space, don’t even start to install. The app will create files at full
-speed anyway, so consider 10 Gb for a reasonable start.
 
 The procedure is fully automated, so start it, check if it bails
 out at the beginning, forget about it for some time (run it under
