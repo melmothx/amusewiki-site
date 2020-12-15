@@ -1,4 +1,3 @@
-#pubdate 2020-10-28
 #title Version 2.5
 #teaser File inclusion in Muse documents
 #cat releases
