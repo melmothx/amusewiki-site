@@ -12,6 +12,28 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.505 2020-12-15
+
+ - Fix an old bug with the amusewiki restart command not killing the
+   children.
+ - Improve logging for the =/git= route
+ - Improve sorting for revisions page
+ - Add pagination to OPDS category routes (and added custom categories)
+ - Cache =/opds/crawlable= which was too slow
+ - Updated I18N: PL
+
+*** 2.504 2020-11-05
+
+ - Updated i18n: BG
+
+*** 2.503 2020-11-05
+
+ - Fix support for BG.
+
+*** 2.502 2020-11-05
+
+ - Updated i18n (added BG)
+
 *** 2.501 (2020-10-29)
 
  - Fix access permissions to whitelisted IPs to =/git= and =/mirror=
