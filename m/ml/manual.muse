@@ -375,6 +375,57 @@ with this bundle there is support for the following directives:
 
    See below.
 
+A number of directives affects the output formats. The directives have
+a mandatory argument, so "1" usually means a generic true value.
+
+ - =#slides 1=
+
+   Indicates that the document is meant to produce slides as well as
+   the regular formats.
+
+ - =#DELETED REASON=
+
+   Indicates that the text is not meant to be published.
+
+ - =#cover file.jpg=
+
+   Put the named image (jpg or png, in the same directory of the muse
+   file) on the cover page.
+
+ - =#coverwidth 0.5=
+
+   Specify the width of the cover image in a fraction of the text
+   block width. This is mostly to give you some control over its
+   dimensions if the default doesn't look good.
+
+ - =#nocoverpage 1=
+
+   Do not create a cover page but start the text right away.
+
+ - =#notoc 1=
+
+   Do not create a table of contents.
+
+ - =#nofinalpage 1=
+
+   Do not create a final page.
+
+ - =#impressum 1=
+
+   Create an impressum page after the cover page.
+
+ - =#continuefootnotes 1=
+
+   Continue the footnotes numbering across chapters.
+
+ - =#centerchapter 1=
+
+   Use centered chapter titles.
+
+ - =#centersection 1=
+
+   Use centered section titles (all levels).
+
 *** Correcting the hyphenation in the PDF output
 
 Sometimes you may notice some words with incorrect hyphenation in your
