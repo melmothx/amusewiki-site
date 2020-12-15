@@ -11,7 +11,7 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
-*** 2.505 2020-12-15
+*** 2.505 (2020-12-15)
 
  - Fix an old bug with the amusewiki restart command not killing the
    children.
@@ -21,15 +21,15 @@ There are no upgrade or backcompatibility issues.
  - Cache =/opds/crawlable= which was too slow
  - Updated I18N: PL
 
-*** 2.504 2020-11-05
+*** 2.504 (2020-11-05)
 
  - Updated i18n: BG
 
-*** 2.503 2020-11-05
+*** 2.503 (2020-11-05)
 
  - Fix support for BG.
 
-*** 2.502 2020-11-05
+*** 2.502 (2020-11-05)
 
  - Updated i18n (added BG)
 
