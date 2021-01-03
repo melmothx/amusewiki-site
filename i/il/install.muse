@@ -278,6 +278,9 @@ Example:
 $ export EMAIL_SENDER_TRANSPORT=SMTP
 $ export EMAIL_SENDER_TRANSPORT_host=smtp.example.com
 $ export EMAIL_SENDER_TRANSPORT_port=2525
+$ export EMAIL_SENDER_TRANSPORT_sasl_username=XXXX
+$ export EMAIL_SENDER_TRANSPORT_sasl_password=XXXX
+
 ./init-all.sh restart
 }}}
 
@@ -290,13 +293,17 @@ cp /lib/systemd/system/amusewiki-web.service \
    /etc/systemd/system
 }}}
 
-Add in the =[Service]= stanza the needed variables, like this
+Add in the =[Service]= stanza the needed variables to both unit files, like this:
 
 {{{
 Environment="EMAIL_SENDER_TRANSPORT=SMTP"
 Environment="EMAIL_SENDER_TRANSPORT_host=smtp.example.com"
 Environment="EMAIL_SENDER_TRANSPORT_port=2525"
+Environment="EMAIL_SENDER_TRANSPORT_sasl_username=XXXX"
+Environment="EMAIL_SENDER_TRANSPORT_sasl_password=XXXX"
 }}}
+
+and reload systemd with =systemctl daemon-reload=
 
 #multiple
 **** Multiple installations
