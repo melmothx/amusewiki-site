@@ -1,7 +1,7 @@
 #title Templates and custom formats
 #cat doc howto
 #lang en
-#pubdate 2019-11-29
+#pubdate 2021-01-14
 #teaser Even if Amusewiki can be used as a blog or wiki engine, its prominent
 feature is the production of camera-ready PDFs. There are various ways
 you can affect the output. This article explains what to do if you
@@ -113,12 +113,19 @@ The list of permitted commands is:
  - =\raggedbottom=
  - =\markrigth{TEXT}=
  - =\markboth{TEXT}{TEXT}=
+ - =\sloppy=
+ - =\fussy=
+ - =\vfill=
+ - =\clearpage=
+ - =\cleardoublepage=
+ - <code>\looseness=INTEGER</code>
 
 Possible arguments:
 
  =STYLE= :: One of =plain=, =empty=, =headings=, =myheadings=, =scrheadings=.
  =TEXT= :: Plain text, without any of the reserved LaTeX characters.
  =DIMENSION= :: regular TeX size in =mm=, =cm=, =pt=, =em=, e.g. =3mm=.
+ =INTEGER= :: An integer positive or negative
 
 This assumes that you are comfortable with LaTeX and you know what
 these commands do, but they should be enough to give you full control
@@ -126,8 +133,14 @@ on the page and to do some corrections. If you think that something
 else should be added, please open a bug report against
 [[https://github.com/melmothx/text-amuse-compile]]
 
+For maximum flexibility, you can define commands starting with
+=\amusewiki= in your template (without any argument) and use them in
+the magic comments. This allows you to inject arbitrary (but still)
+TeX commands in the body in a relatively safe fashion.
+
 [1] This is an Amusewiki extension, it was not present in the original
-    Emacs Muse implementation.
+    Emacs Muse implementation. List updated to =Text::Amuse::Compile=
+    version 1.52, released on January 14, 2021
 
 ** Templates
 
