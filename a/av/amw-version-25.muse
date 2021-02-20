@@ -11,6 +11,10 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.508 (2021-02-14)
+
+ - Support =sc= and =sf= inline tags via new =Text::Amuse=
+
 *** 2.507 (2021-01-14)
 
  - Store and display isbn, publisher, series info, copyright info if
