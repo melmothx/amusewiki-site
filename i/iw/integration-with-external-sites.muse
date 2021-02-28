@@ -1,7 +1,7 @@
 #pubdate 2021-02-28
 #title Integration with external sites
 #lang en
-#teaser Embedding existing texts and creating new texts via API
+#teaser Embedding existing texts, creating and editing texts via API
 #topics doc
 
 *** Embedding an existing text
