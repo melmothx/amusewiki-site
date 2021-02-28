@@ -1,4 +1,4 @@
-#pubdate 2017-11-07 11:28:32 +0100
+#pubdate 2021-02-28
 #title Integration with external sites
 #lang en
 #teaser Embedding existing texts and creating new texts via API
@@ -30,18 +30,18 @@ going to get a text which needs fixing.
 You need an existing user on the site.
 
 The API endpoint is =/remote/create=, e.g.
-=https://sandbox.amusewiki.org/remote/create=.
+=https://staging.amusewiki.org/remote/create=.
 
 You need to do a =POST= request with some mandatory and some optional parameters
 
 Request:
 
 {{{
-$ curl -F __auth_pass=XXXXX \
-       -F __auth_user=tester \
-       -F title=prova \
+$ curl -F __auth_user=$username \
+       -F __auth_pass=$password \
+       -F title=Test \
        -F textbody='Hello <em>hello</em>' \
-       https://sandbox.amusewiki.org/remote/create
+       https://staging.amusewiki.org/remote/create
 }}}
 
 Response is a JSON string, which holds the URL of the text which is
@@ -49,18 +49,18 @@ going to be created and the job URL with the publishing.
 
 {{{
 {
-  "url":"https://sandbox.amusewiki.org/library/prova",
-  "job":"https://sandbox.amusewiki.org/tasks/status/17097"
+  "url":"https://staging.amusewiki.org/library/test",
+  "job":"https://staging.amusewiki.org/tasks/status/17097"
 }
 }}}
 
 If you are missing some mandatory parameters you get an error:
 
 {{{
-curl -F __auth_pass=XXXX \
-     -F __auth_user=tester \
+curl -F __auth_user=$username \
+     -F __auth_pass=$password \
      -F textbody='Hello <em>hello</em>' \
-     https://sandbox.amusewiki.org/remote/create
+     https://staging.amusewiki.org/remote/create
 }}}
 
 Response:
@@ -71,6 +71,29 @@ Response:
 
 
 If you miss the the authentication parameters, you get a 401 response.
+
+To create a new special page, append[1] =special= to the endpoint:
+
+{{{
+curl -F __auth_user=$username \
+     -F __auth_pass=$pwd \
+     -F title='My special' \
+     -F textbody='Hello <em>special</em>' \
+     https://staging.amusewiki.org/remote/create/special
+}}}
+
+Response:
+
+{{{
+{
+  "job":"https://staging.amusewiki.org/tasks/status/31848",
+  "url":"https://staging.amusewiki.org/special/my-special"
+}
+}}}
+
+
+[1] Actually, =/remote/create= is an alias for =/remote/create/library=
+
 
 **** Parameters
 
@@ -102,4 +125,90 @@ They are the very same parameters you can find in the
  =pubdate=     :: Publication date
 
 
+*** Non-interactive editing
 
+Editing pages via API works the same way. However, a word of caution:
+while using the web interface you get warned if there are pending
+revisions, via API you unconditionally spawn a revision and publish it.
+If by chance you have other users editing it, they will get conflicts,
+have your or their changes overwritten.
+
+{{{
+curl -F __auth_user=$username \
+     -F __auth_pass=$password \
+     -F body='<test.muse' \
+     -F message='Edit my special via api' \
+     https://staging.amusewiki.org/remote/edit/special/my-special
+}}}
+
+Or:
+
+{{{
+curl -F __auth_user=$username \
+     -F __auth_pass=$password \
+     -F body='<test.muse' \
+     -F message='Edit my library via api' \
+     https://staging.amusewiki.org/remote/edit/library/my-library
+}}}
+
+And the responses:
+
+{{{
+{
+  "job":"https://staging.amusewiki.org/tasks/status/31864",
+  "url":"https://staging.amusewiki.org/special/my-special"
+}
+}}}
+
+or an error:
+
+{{{
+{"error":"This text cannot be edited"}
+}}}
+
+As shown above, the endpoint in =/remote/edit/= with the full URI of
+the text appended.
+
+**** Parameters
+
+***** Mandatory
+
+ =__auth_user= :: The username
+ =__auth_pass= :: The password
+ =message= :: A commit message to explain what you did
+ =body= :: The full body in Muse format (in the examples above, =curl= is reading from a file)
+
+***** Optional
+
+The are the same options you can find in the editing page. Use a value
+of 1 to activate them.
+
+ =fix_links= :: Make all links active
+ =fix_typography= :: Smart quotes
+ =fix_nbsp remove_nbsp= :: Unconditionally remove all the invisible non-breaking spaces in the text
+ =show_nbsp= :: Make all non-breaking spaces explicit and visible as <verbatim>~~</verbatim>
+ =fix_footnotes= :: Rearrange the footnotes
+
+{{{
+curl -F __auth_user=$username \
+     -F __auth_pass=$password \
+     -F body='<test.muse' \
+     -F fix_footnotes=1 \
+     -F message='Edit my library via api' \
+     https://staging.amusewiki.org/remote/edit/library/my-library
+}}}
+
+Beware that some filters, like the footnote filter, may trigger errors
+which are returned to the caller, e.g.:
+
+{{{
+{
+  "error": {
+    "references": 1,
+    "references_found": "[2]",
+    "footnotes": 0,
+    "footnotes_found": "",
+    "differences": "@@ -0,0 +1 @@\n+[2]\n"
+  }
+}
+}}}
