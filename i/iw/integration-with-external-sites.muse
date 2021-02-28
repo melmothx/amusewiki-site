@@ -151,7 +151,7 @@ curl -F __auth_user=$username \
      https://staging.amusewiki.org/remote/edit/library/my-library
 }}}
 
-And the responses:
+Response:
 
 {{{
 {
