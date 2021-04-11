@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.511 (2021-04-11)
+
+ - Add Greek I18N
+ - Do not trigger Xapian suggestions if not enabled ([[https://github.com/melmothx/amusewiki/issues/366][GH#366]])
+
 *** 2.510 (2021-04-05)
 
  - Add support for images in the API
