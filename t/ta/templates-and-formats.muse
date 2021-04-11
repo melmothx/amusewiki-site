@@ -94,12 +94,22 @@ My text starts...
 ; :c9: \vskip 10mm
 ; :DEFAULT: \fussy
 ; :c111: \sloppy
+; :ALL: \newpage
+; :*: \newpage
 
 My text continues...
 }}}
 
-The =DEFAULT= code is used when no custom format is used. As you can
-see, commands for different formats can coexist without problems.
+The =DEFAULT= code is used when no custom format is used.
+
+The =ALL= code (and its alias, an asterisk), *always* trigger the
+command, regardless of the custom format passed. [2]
+
+[2] The =ALL= trigger was introduced with Text::Amuse::Compile 1.61,
+    released on 2021-04-11.
+
+As you can see, commands for different formats can coexist without
+problems.
 
 The list of permitted commands is:
 
