@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.512 (2021-04-25)
+
+ - Update i18n: el
+ - Refresh the shared repo's hook when the site is reconfigured
+
 *** 2.511 (2021-04-11)
 
  - Add Greek I18N
