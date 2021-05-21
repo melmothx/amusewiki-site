@@ -1,5 +1,5 @@
 #title Version 2.5
-#teaser File inclusion in Muse documents, extended API.
+#teaser File inclusion in Muse documents, extended API, configurable web chat
 #cat releases
 
 ** Overview
@@ -10,6 +10,18 @@ detailed in [[/library/file-inclusion][its own page]].
 There are no upgrade or backcompatibility issues.
 
 ** Changes
+
+*** 2.513 (2021-05-21)
+
+ - Do not rely on Freenode for the webchat. Instead, make the iframe
+   url editable. Nothing by default. The iframe with the webchat
+   didn't seem to work anyway. At some point it stopped working. If
+   you set a webchat url, the link to the page with the embedded
+   iframe will always appear in the dropdown menu. On the other hand,
+   the default with the =#amusewiki= channel has been removed. Site
+   admins need to find and set one.
+ - Update i18n strings
+ - AMW-Meta: Implement OPDS
 
 *** 2.512 (2021-04-25)
 
