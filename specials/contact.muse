@@ -3,8 +3,8 @@
 
 The preferred way to get help and support is via IRC:
 
- - Server: =chat.freenode.net=
+ - Server: =irc.libera.chat=
  - Channel: =#amusewiki=
 
-You can also contact me via mail (=melmothx at gmail dot com=).
+You can also contact me via mail (=info at amusewiki dot org=).
 

@@ -9,10 +9,10 @@
 *** About me: Marco Pessotto
 
   PAUSE id :: =MELMOTHX=
-  IRC :: =melmothX= on Freenode and =irc.perl.org=
+  IRC :: =melmothX= on Libera Chat and =irc.perl.org=
   E-mail :: =melmothx@gmail.com=
   Homepage :: [[http://amusewiki.org]]
-  IRC channel :: =irc://chat.freenode.net/#amusewiki=
+  IRC channel :: =irc://irc.libera.chat/#amusewiki=
   GitHub :: [[https://github.com/melmothx]]
   Background :: Humanities (history and translations)
  
