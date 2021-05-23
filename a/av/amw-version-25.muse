@@ -11,6 +11,12 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.514 (2021-05-23)
+
+ - Fix bug with links which URI doesn't understand (reported by
+   =anelki= on the =#amusewiki= channel)
+
+
 *** 2.513 (2021-05-21)
 
  - Do not rely on Freenode for the webchat. Instead, make the iframe
