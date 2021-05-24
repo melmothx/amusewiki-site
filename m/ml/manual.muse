@@ -426,6 +426,10 @@ a mandatory argument, so "1" usually means a generic true value.
 
    Use centered section titles (all levels).
 
+ - =#formats CODE=
+
+   Select the [[/library/templates-and-formats][custom formats]] for this text
+
 *** Correcting the hyphenation in the PDF output
 
 Sometimes you may notice some words with incorrect hyphenation in your
