@@ -68,6 +68,15 @@ bookbuilder (right-hand top menu).
 
 [[t-a-listing-3.png]]
 
+To suppress their generations for a given text, you can add to the
+header:
+
+{{{
+#formats none
+}}}
+
+(as =none= is just a non-existing format).
+
 *** Leveraging the custom formats to correct the final PDFs
 
 Muse is an abstract markup. It tries to hide the complexities of
