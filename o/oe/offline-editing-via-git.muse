@@ -196,11 +196,28 @@ In all the files, the =#title= header line is mandatory.
 
 Images belongs to the same directory as the corresponding text. You
 need to use a **prefix** to make it clear to which subdirectory it
-belongs.
+belongs, following the naming convention described in the previous
+section.
 
-E.g., a file attached to the normal page =testing.muse= should have a
-name like =t-g-image-1.png= or =t-g-image-2.jpg=. Only PNG and JPG
-should be attached.
+E.g., a file attached to the normal page =my-test-file.muse= should
+have a name like =m-t-image-1.png= or =my-test-whatever.png=. Only PNG
+and JPG images should be attached.
+
+E.g.:
+
+{{{
+m/mt/my-test-file.muse
+m/mt/my-test-image-1.png
+m/mt/my-test-image-2.png
+}}}
+
+or, using the same scheme the web application is using:
+
+{{{
+m/mt/my-test-file.muse
+m/mt/m-t-image-1.png
+m/mt/m-t-image-2.png
+}}}
 
 PDFs attached to the page (via =#ATTACH filename.pdf= header), must be
 placed into the =uploads= directory.
