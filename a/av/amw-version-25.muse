@@ -1,5 +1,5 @@
 #title Version 2.5
-#teaser File inclusion in Muse documents, extended API, configurable web chat
+#teaser  **Security fix for untrusted remote repository (2021-06-05)**. File inclusion in Muse documents, extended API, configurable web chat.
 #cat releases
 
 ** Overview
@@ -10,6 +10,22 @@ detailed in [[/library/file-inclusion][its own page]].
 There are no upgrade or backcompatibility issues.
 
 ** Changes
+
+*** 2.515 (2021-06-05)
+
+ - **[SECURITY]** When pulling a remote git, remove symlinks pointing
+   outside the tree. This is a security patch against potential
+   symlink-based attacks coming from remote repository, tricking the
+   application to access files outside the site root.
+
+   To be exploited, the flaw, fixed in this release, requires a
+   malicious or naive site administrator pulling from a malicious
+   repository.
+
+ - Serve symlinks if they point inside the tree.
+
+ - New option to toggle the display of latest entries on special pages
+
 
 *** 2.514 (2021-05-23)
 
