@@ -194,14 +194,13 @@ In all the files, the =#title= header line is mandatory.
 
 *** Images
 
-Images belongs to the same directory as the corresponding text. It's
-highly recommended to use a prefix to make it clear to which
-subdirectory it belongs, to reduce the chance of clashes when
-inserting them manually.
+Images belongs to the same directory as the corresponding text. You
+need to use a **prefix** to make it clear to which subdirectory it
+belongs.
 
-E.g., a file attached to the normal page =testing.muse= could have a
-name like =t-g-image-1.png= or =t-g-image-2.jpg=. Only PNG and JPG should
-be attached.
+E.g., a file attached to the normal page =testing.muse= should have a
+name like =t-g-image-1.png= or =t-g-image-2.jpg=. Only PNG and JPG
+should be attached.
 
 PDFs attached to the page (via =#ATTACH filename.pdf= header), must be
 placed into the =uploads= directory.
