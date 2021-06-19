@@ -11,6 +11,14 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.516 (2021-06-19)
+
+ - Display the fail details on compilation failure
+   ([[https://github.com/melmothx/amusewiki/issues/371][GH#371]])
+ - Support arbitrary margin in the bookbuilder
+   ([[https://github.com/melmothx/amusewiki/issues/372][GH#372]])
+ - Update texlive install script for TeXlive! 2021
+
 *** 2.515 (2021-06-05)
 
  - **[SECURITY]** When pulling a remote git, remove symlinks pointing
