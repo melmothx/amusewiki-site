@@ -1,4 +1,3 @@
-#pubdate 2020-12-06
 #title How to install Amusewiki
 #authors Marco Pessotto; Alexander Krotov;
 #author Marco Pessotto, Alexander Krotov
@@ -184,10 +183,8 @@ configure in the next section.
 **** Web server configuration
 
 The supported and recommended setup is nginx + FCGI. The FCGI setup
-should work with Apache HTTP Server as well, but it’s not actively
-supported, even if
-[[https://metacpan.org/pod/distribution/Catalyst-Manual/lib/Catalyst/Manual/Deployment/Apache/FastCGI.pod][perldoc
-Catalyst::Manual::Deployment::Apache::FastCGI]] should help.
+should work with Apache HTTP Server and Caddy Server as well (see
+below).
 
 ***** Nginx configuration
 
@@ -198,6 +195,27 @@ carton exec script/amusewiki-generate-nginx-conf
 }}}
 
 Follow the printed instructions to install generated configuration.
+
+***** Apache
+
+Sample configuration. 
+
+{{{
+<VirtualHost *:80>
+	#ServerName www.example.com
+	ServerAdmin webmaster@localhost
+	DocumentRoot /usr/share/perl5/AmuseWikiFarm/root/
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    # serve static from root
+    ProxyPass /static !
+    ProxyFCGIBackendType GENERIC
+    ProxyFCGISetEnvIf true SCRIPT_NAME
+    # Correct the socket path if needed, but leave the fcgi://localhost/ intact
+    ProxyPass "/" "unix:/var/lib/amusewiki/amusewiki.socket|fcgi://localhost/"
+</VirtualHost>
+}}}
 
 ***** Caddy configuration
 
