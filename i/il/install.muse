@@ -198,7 +198,7 @@ Follow the printed instructions to install generated configuration.
 
 ***** Apache
 
-Sample configuration. 
+Sample configuration. You need =mod_proxy= and =mod_proxy_fcgi= loaded.
 
 {{{
 <VirtualHost *:80>
