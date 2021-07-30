@@ -207,8 +207,13 @@ become incomplete in the future.
 
 Here, Amusewiki is assumed to be installed in =/home/amusewiki/amusewiki/= and hostname is =amusewiki.local=.
 
-When [[https://caddyserver.com/download][downloading Caddy]], enable =http.cgi= plugin.
-To run Amusewiki, create a =Caddyfile= in the Amusewiki installation directory with the following contents:
+After [[https://caddyserver.com/docs/install][installing Caddy]],
+create a =Caddyfile= with the correct paths to the webserver root and
+to the FCGI socket.
+
+For Caddy Version 1 (in this example we're using a sample amusewiki
+install from git):
+
 {{{
 amusewiki.local:8080
 tls off
@@ -216,16 +221,29 @@ log ./access.log
 errors ./error.log
 root /usr/home/amusewiki/amusewiki/root
 
-cgi {
-        except /git/cgit.css
-        except /git/cgit.png
-        match /git
-        exec /home/amusewiki/amusewiki/root/git/cgit.cgi
-}
-
 fastcgi / unix:/usr/home/amusewiki/amusewiki/var/amw.sock {
         except /static/
         except /git/
+}
+}}}
+
+For Caddy Version 2 (in this example with a system-wide installation
+via [[http://packages.amusewiki.org/][Debian package]]):
+
+{{{
+http://amusewiki.local:8080 {
+    @static {
+       path /static/*
+    }
+    @fcgi {
+       not path /static/*
+    }
+    file_server @static {
+        root /usr/share/perl5/AmuseWikiFarm/root/
+    }
+    reverse_proxy @fcgi unix//var/lib/amusewiki/amusewiki.socket {
+        transport fastcgi
+    }
 }
 }}}
 
