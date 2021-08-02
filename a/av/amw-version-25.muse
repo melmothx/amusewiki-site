@@ -11,6 +11,16 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.517 (2021-08-02)
+
+ - Fix crash on debian package when temporary process is gone ([[https://github.com/melmothx/amusewiki/issues/373][GH#373]])
+ - Increase paper size values
+ - Prevent db insertion crash on #uid too long ([[https://github.com/melmothx/amusewiki/issues/376][GH#376]])
+ - New restricted option preventing redirection on aliases to canonical ([[https://github.com/melmothx/amusewiki/issues/377][GH#377]])
+ - New restricted option to inject nginx configuration snippets into site stanza ([[https://github.com/melmothx/amusewiki/issues/378][GH#378]])
+ - Theme switcher (dark/light toggler) ([[https://github.com/melmothx/amusewiki/issues/379][GH#379]])
+
+
 *** 2.516 (2021-06-19)
 
  - Display the fail details on compilation failure
