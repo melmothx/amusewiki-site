@@ -11,6 +11,12 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.519 (2021-08-04)
+
+ - Deny access to git pull logs to anonymous users. This fixes a
+   potential information disclosure (git logs) when using the
+   pulling with a system user. **[SECURITY]**
+
 *** 2.518 (2021-08-03)
 
  - Fix theme-switcher persistence for non-logged in (reported by
