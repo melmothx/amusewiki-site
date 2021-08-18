@@ -79,7 +79,7 @@ An in-depth explanation of the bookbuilder is available [[/library/bookbuilder-t
 
 Debian packages are available at [[http://packages.amusewiki.org]]!
 This is the fastest and recommended way to install amusewiki with no
-pain at all. Stretch, Buster and Ubuntu 18.04 LTS are supported.
+pain at all. Bullseye, Buster, Stretch and Ubuntu >= 18.04 LTS are supported.
 Packages for Jessie and Ubuntu 16.04 are available but archived.
 
 ** Download and bug reports
