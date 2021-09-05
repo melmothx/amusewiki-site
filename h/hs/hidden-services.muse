@@ -4,7 +4,7 @@
 #pubdate 2021-09-05T10:54:08
 #topics doc, howto
 #teaser How to configure a hidden service
-This guide describes how to create a [[https://community.torproject.org/onion-services/]][Tor hidden service] for your AmuseWiki instance. You should also be able to use [[https://geti2p.net/en/]][i2p] and [[https://gnunet.org/en/]][Gnunet] but those are untested.
+This guide describes how to create a [[https://community.torproject.org/onion-services/][Tor hidden service]] for your AmuseWiki instance. You should also be able to use [[https://geti2p.net/en/][i2p]] and [[https://gnunet.org/en/][Gnunet]] but those are untested.
 
 *** Installing Tor
 
