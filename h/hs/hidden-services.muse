@@ -15,7 +15,7 @@ On [[https://www.debian.org/][Debian]]-based operating systems you can install T
 # apt-get install tor
 }}}
 
-For other operating systems refer or if you wish to use The Tor Project's repository check [[https://tb-manual.torproject.org/installation/]][their guide].
+For other operating systems refer or if you wish to use The Tor Project's repository check [[https://tb-manual.torproject.org/installation/][their guide]].
 
 *** Configure Tor
 
