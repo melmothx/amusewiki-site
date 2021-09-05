@@ -47,4 +47,6 @@ In the "Additional nginx configuration" box:
 }}}
 for automatic redirection to the onion service.
 
+Under the SSL Configuration make sure "The generate webserver configuration will redirect all the HTTP requests to HTTPS" is unchecked.
+
 Your onion domain should now be working. Make sure you use relative paths for local links in order to avoid redirection.
