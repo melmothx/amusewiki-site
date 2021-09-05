@@ -25,12 +25,13 @@ HiddenServiceDir /var/lib/tor/hidden_service/
 HiddenServicePort 80 127.0.0.1:80
 }}}
 
-Load Tor, enable auto-start, and get your new onion domain. If the hostname file doesn't exist wait a few seconds and try again.
+Load Tor, enable auto-start, and get your new onion domain.
 {{{
 # service tor start && service tor enable
 # cat /var/lib/tor/hidden_service/hostname
 {your-domain}.onion
 }}}
+If the hostname file doesn't exist wait a few seconds and try again.
 
 *** Add hidden service url to amusewiki
 
@@ -41,7 +42,9 @@ Check the box next to "Do not redirect aliases to canonical"
 Under Virtual hosts, one per line, add {your-domain}.onion
 
 In the "Additional nginx configuration" box:
-{{{add_header Onion-Location http://{your-domain}.onion$request_uri;}}}
+{{{
+   add_header Onion-Location http://{your-domain}.onion$request_uri;
+}}}
 for automatic redirection to the onion service.
 
 Your onion domain should now be working. Make sure you use relative paths for local links in order to avoid redirection.
