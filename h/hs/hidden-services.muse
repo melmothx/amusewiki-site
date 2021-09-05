@@ -1,0 +1,52 @@
+#title Creating a hidden service for amusewiki
+#author stayinside
+#lang en
+#pubdate 2021-09-05T10:54:08
+#topics doc, howto
+#teaser How to configure a hidden service
+This guide describes how to create a [[https://community.torproject.org/onion-services/]][Tor hidden service] for your AmuseWiki instance. You should also be able to use [[https://geti2p.net/en/]][i2p] and [[https://gnunet.org/en/]][Gnunet] but those are untested.
+
+*** Installing Tor
+
+Install tor via the package manager, for example:
+
+On [[https://www.debian.org/][Debian]]-based operating systems you can install Tor by running (as a superuser)
+{{{
+# apt-get install tor
+}}}
+
+For other operating systems refer or if you wish to use The Tor Project's repository check [[https://tb-manual.torproject.org/installation/]][their guide].
+
+*** Configure Tor
+
+To configure your Tor hidden service, edit /etc/torrc and add the lines:
+{{{
+HiddenServiceDir /var/lib/tor/hidden_service/
+HiddenServicePort 80 127.0.0.1:80
+}}}
+
+Load Tor, enable auto-start, and get your new onion domain.
+{{{
+# service tor start && service tor enable
+# cat /var/lib/tor/hidden_service/hostname
+{your-domain}.onion
+}}}
+If the hostname file doesn't exist wait a few seconds and try again.
+
+*** Add hidden service url to amusewiki
+
+Login to the web interface and navigate to the Restricted configuration variables page.
+
+Check the box next to "Do not redirect aliases to canonical"
+
+Under Virtual hosts, one per line, add {your-domain}.onion
+
+In the "Additional nginx configuration" box:
+{{{
+   add_header Onion-Location http://{your-domain}.onion$request_uri;
+}}}
+for automatic redirection to the onion service.
+
+Under the SSL Configuration make sure "The generate webserver configuration will redirect all the HTTP requests to HTTPS" is unchecked.
+
+Your onion domain should now be working. Make sure you use relative paths for local links in order to avoid redirection.
