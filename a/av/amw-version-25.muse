@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.521 2021-10-10
+
+ - Fix =/api/latest= missing critical key
+ - Fix =/p/xxx= sitemap and robots
+
 *** 2.520 2021-10-10
 
  - Add experimental routes =p/xxx= mapping to =repo/site_files/public/xxx= to
