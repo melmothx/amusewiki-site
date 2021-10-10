@@ -1,5 +1,5 @@
 #title Version 2.5
-#teaser  **Security fix for untrusted remote repository (2021-06-05)**. File inclusion in Muse documents, extended API, configurable web chat, theme switcher
+#teaser  **Security fix for untrusted remote repository (2021-06-05)**. File inclusion in Muse documents, extended API, configurable web chat, theme switcher, custom pages under =/p/=
 #cat releases
 
 ** Overview
@@ -10,6 +10,13 @@ detailed in [[/library/file-inclusion][its own page]].
 There are no upgrade or backcompatibility issues.
 
 ** Changes
+
+*** 2.520 2021-10-10
+
+ - Add experimental routes =p/xxx= mapping to =repo/site_files/public/xxx= to
+   build arbitrary custom pages.
+ - add =/api/latest= exposing the title info as JSON
+
 
 *** 2.519 (2021-08-04)
 
