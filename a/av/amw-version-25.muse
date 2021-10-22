@@ -11,6 +11,10 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.522 2021-10-22
+
+ - New theme, =amusebaskerville=
+
 *** 2.521 2021-10-10
 
  - Fix =/api/latest= missing critical key
