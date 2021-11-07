@@ -4,141 +4,71 @@
 #lang en
 #teaser Full documentation for git setup: server side, client side, user workflow
 
-** Server-side setup for public accessible sites.
-
-Obviously, don't export the private sites.
-
-*** Make the repositories read-only available via git-daemon.
-
-{{{
-apt-get install git-daemon-sysinit
-}}}
-
-Change /etc/default/git-daemon to read:
-
-{{{
-GIT_DAEMON_ENABLE=true
-}}}
-
-Start the service
-
-{{{
-service git-daemon start
-}}}
-
-*** Export the repositories
-
-Link the repositories in =/var/lib/git= (as per package documentation).
-
-Something like this should do, assuming the application root is =/var/lib/amusewiki=
-
-{{{
-root@localhost:/var/lib/git# for i in /var/lib/amusewiki/repo/*; \
-     do if [ -d "$i/.git" ]; then echo $(basename $i); \
-     ln -s $i/.git $(basename $i).git ; fi ; done
-}}}
-
-And in your application directory, mark the repository for export:
-
-{{{
-$ for i in repo/*/.git ; do touch $i/git-daemon-export-ok; done
-}}}
-
-
 ** Editing
 
 Amusewiki fully supports offline editing. This document describes how
 you can do it. It assumes you have some knowledge about how Git works.
 The internet is full of tutorials and documentation on this matter.
 
-This assumes that the site's archive is public and accessible. The
-place to find the git clone URL is usually the CGIT interface,
-accessible from each text via the recent changes features, and
-navigating to the root of the repository, e.g.
-[[http://www.amusewiki.org/git/amw/]], where you can find the “Clone”
-URL.
+The procedure depends if you can access the server where Amusewiki is
+running with a system user, or if you need to use an external service
+like GitLab, GitHub, etc.
 
-On your machine, clone it, so you can work on it (this step can also
-be done via SSH if the site is private):
+The instructions can be found at =/console/git=, where you will find
+the exact paths to use.
 
-<example>
-git clone git://git.amusewiki.org/git/amw.git
-# or, for private sites
-git clone ssh://www.amusewiki.org/var/lib/amusewiki/repo/amw
-</example>
+*** System user with SSH access
 
-Now we have the =amw= repository locally, but we don't know where to
-push our changes, yet, because we just cloned the working tree of the
-site, so we cannot and we should not push there directly. Instead, we
-have to provide another one, let's call it "bridge", where we can
-push and where amusewiki can pull.
-
-Usually it's enough to set it up on GitLab or GitHub or a normal
-repository on the same machine where amusewiki resides and where
-amusewiki can read.
-
-We are going to initialize it and set it to the new origin, keeping
-the read-only on a branch.
-
-<example>
-# on the server, create the bridge repo
-mkdir -p /var/cache/git/marco
-cd /var/cache/git/marco
-git init --bare amw.git
-
-# on your machine, initialize it
-git remote rename origin web
-git remote add origin \
-    ssh://www.amusewiki.org/var/cache/git/marco/amw.git
-git push -u origin master
-# track the upstream on your machine in a branch
-git checkout -b upstream -t web/master 
-</example>
-
-The site will refuse to accept changes which don't result in a
-fast-forward, so you have to keep the upstream in a branch (as per
-last command).
-
-This way, if the site refuses the changes, you have to do:
-
-<example>
-git checkout upstream
-git pull
-git checkout master
-git merge upstream
-git push
-</example>
-
-It's recommended to do so each time you start editing locally.
-
-Visit =/console/git= to add your personal repository. If it's a
-GitLab/GitHub one, you can use the web interface. Otherwise you have
-to add it manually. Refresh =/console/git=.
+This is as simple as doing:
 
 {{{
-# as the amusewiki user, add our bridge repository
-cd /var/lib/amusewiki/repo/amw
-git remote add marco /var/cache/git/marco/amw.git
+git clone ssh://amusewiki.org/var/lib/amusewiki/shared/repo/amw.git
+cd amw
+git pull
+# edit, commit...
+git push
 }}}
 
-With the “Fetch” button you will pull your changes.
+The instance will pull the changes automatically.
 
-The page itself contains some documentation about the workflow.
+*** Provide a remote reposity
 
-After the setup, the workflow strips down to:
+Create a public repository on GitLab, GitHub or similar services (or
+on your own server).
 
-<example>
-# locally
+Please initialized it empty, without any README,license, .gitignore or
+similar.
+
+Get the repository HTTPS URL, e.g. https://example.com/git/test and
+add it using the form you can find on the =/console/git= page of you
+Amusewiki instance. You can have one personal repository.
+
+Now we are going to populate it and get it ready:
+
+{{{
+git clone https://amusewiki.org/git/amw
+cd amw
+git remote rename origin web
+# Please replace the example URL in the next line with the real one with SSH protocol
+git remote add origin git@example.com/git/test
+git push -u origin master
+git checkout -b upstream -t web/master
+}}}
+
+And the workflow is:
+
+{{{
 git checkout upstream
 git pull
 git checkout master
 git merge upstream
-# edit, add, commit, hack, etc.
+# edit, commit...
 git push
-</example>
+}}}
 
-Visiting =/console/git= and fetching from your repo. Merge the upstream
-again if the fetching fails.
+The tricky part is that you need to visit =/console/git= and press the
+"fetch" button to pull the changes into the site. This doesn't happen
+automatically.
 
 ** Naming convention in the archive tree
 
