@@ -31,6 +31,8 @@ git push
 
 The instance will pull the changes automatically.
 
+Please ensure that your system user is member of the =amusewiki= group.
+
 *** Provide a remote reposity
 
 Create a public repository on GitLab, GitHub or similar services (or
