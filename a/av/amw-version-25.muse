@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.532 2021-12-19
+
+ - Add a new route =/console/git-fine-diff= do compare given commits on
+   a file.
+
 *** 2.531 2021-11-21
 
  - Always provide an https:// site. This aligns the behavior to the
