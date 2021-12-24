@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.533 2021-12-24
+
+ - Add proper links to =/console/git-fine-diff=
+ - Add Chinese i18n (without =Text::Amuse= support)
+
 *** 2.532 2021-12-19
 
  - Add a new route =/console/git-fine-diff= do compare given commits on
