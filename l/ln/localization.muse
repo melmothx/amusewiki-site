@@ -109,3 +109,5 @@ Add the datatable alias for i18n at =AmuseWikiFarm::Controller::API=
 Add the language code to the =script/upgrade_i18n= script.
 
 Add the babel name to =Text::Amuse::Utils= if missing.
+
+Run =make manifest=
