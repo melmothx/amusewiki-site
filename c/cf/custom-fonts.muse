@@ -1,10 +1,10 @@
 #pubdate 2017-11-07 12:20:47 +0100
-#title Custom fonts
+#title Font management
 #lang en
-#teaser Fine tuning for fonts in the downloadable files
+#teaser Fine tuning for fonts in the downloadable files and for languages
 #topics doc
 
-*** fontspec.json
+** fontspec.json
 
 The global font definition file is called =fontspec.json= and resides
 in the application directory (=/var/lib/amusewiki= on Debian or
@@ -65,10 +65,90 @@ for this there are the four parameters (all of them must be present):
   =bold= :: The bold font path 
   =bolditalic= :: The bold italic font path 
 
-*** Custom files for chapter/section headings
+** Custom files for chapter/section headings
 
 In the bookbuilder and in the format definition, there is a checkbox:
 “Use sans fonts for section titles”. If you want to use a serif font
 for that as well, you can cheat, edit the =fontspec.json= file and
 change its =type= from =serif= to =sans=. Sans fonts are allowed as
 main font body.
+
+** Languages (version 2.534 2022-02-12)
+
+Especially when working with languages which don't use the Latin
+script, it becomes necessary to configure which fonts should be
+attached to a given languages. You can do so adding a key to each font
+family description in the =fontspec.json= file. The key is,
+unsurprisingly, called =languages= and it needs to be set to an array
+of language ISO codes.
+
+Example:
+
+{{{
+   {
+      "desc" : "Source Han Serif (Simplified Chinese)",
+      "languages" : [
+         "zh"
+      ],
+      "name" : "Source Han Serif SC",
+      "type" : "serif"
+   },
+   ... // more fonts here
+}}}
+
+Here we added a font definition for Chinese. We can have more of them,
+but this means that for Chinese we will always use a font defined for
+that language.
+
+If the font you explicitly chose to use has not the language
+definition for the language in use, but other font families have it,
+the first font family with the language set will be used (order of the
+definitions matters).
+
+*** Example for Japanese
+
+Install the Source Han font, available from [[https://packages.amusewiki.org/]]
+
+{{{
+apt install fonts-source-han-sans-ja fonts-source-han-serif-ja
+}}}
+
+Then add this stanza to =/var/lib/amusewiki/fontspec.json=
+
+{{{
+ [
+   {
+      "desc" : "Source Han Serif (Japanese)",
+      "languages" : [
+         "ja"
+      ],
+      "name" : "Source Han Serif",
+      "type" : "serif"
+   },
+   {
+      "desc" : "Source Han Sans (Japanese)",
+      "languages" : [
+         "ja"
+      ],
+      "name" : "Source Han Sans",
+      "type" : "sans"
+   },
+  // other fonts
+ ]
+}}}
+
+Beware trailing at the end or missing commas between the definitions.
+You can validate the JSON with, for example =jq=
+
+{{{
+jq < /var/lib/amusewiki/fontspec.json
+}}}
+
+For Japanese you may want to enable the option in the admin called:
+*Allow Unicode URIs for categories (author, topics). Recommended for
+non-latin scripts.*
+
+A similar setup should be used for sites mixing languages using
+different scripts. This way you can assign the languages of each
+fonts.
+

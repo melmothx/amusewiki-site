@@ -11,6 +11,16 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.534 2022-02-12
+
+ - Bump prerequisites: require amusewiki-texlive
+ - Migrate from polyglossia to babel via
+   Text::Amuse/Text::Amuse::Compile, greatly extending the supported
+   languages.
+ - Add option to use Unicode category names. This should be used when
+   the ASCII category names are not accurate (notably Japanese)
+ - Implement language setting for [[/library/custom-fonts][fonts]]
+
 *** 2.533 2021-12-24
 
  - Add proper links to =/console/git-fine-diff=
