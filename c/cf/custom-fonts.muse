@@ -137,7 +137,7 @@ Then add this stanza to =/var/lib/amusewiki/fontspec.json=
 }}}
 
 Beware trailing at the end or missing commas between the definitions.
-You can validate the JSON with, for example =jq=
+You can validate the JSON with, for example, =jq=
 
 {{{
 jq < /var/lib/amusewiki/fontspec.json
@@ -151,3 +151,8 @@ A similar setup should be used for sites mixing languages using
 different scripts. This way you can assign the languages of each
 fonts.
 
+Restart amusewiki:
+
+{{{
+amusewiki restart
+}}}
