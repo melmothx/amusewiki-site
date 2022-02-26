@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.535 2022-02-26
+
+ - Add paragraph indentation option to custom formats and bookbuilder
+ - Enable ceb and tl languages
+
 *** 2.534 2022-02-12
 
  - Bump prerequisites: require amusewiki-texlive
