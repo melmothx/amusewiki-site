@@ -11,6 +11,10 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.540 2022-03-05
+
+ - Add federation feature [EXPERIMENTAL]
+
 *** 2.535 2022-02-26
 
  - Add paragraph indentation option to custom formats and bookbuilder
