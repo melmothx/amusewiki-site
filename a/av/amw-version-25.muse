@@ -11,6 +11,13 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.545 2022-04-22
+
+ - Fix puzzling crashes on attachment list, federation page and
+   pending revisions.
+ - Implement login by email instead of username (transparent)
+ - Add option to enforce manual URI 
+
 *** 2.544 2022-03-29
 
  - Update tr and ja i18n.
