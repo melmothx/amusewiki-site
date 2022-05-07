@@ -11,6 +11,13 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.550 2022-05-07
+
+ - Correct text/categories redirection status code (make them permanent)
+ - Add URI preview on text creation  ([[https://github.com/melmothx/amusewiki/issues/392][GH#392]])
+ - Add URI rename function ([[https://github.com/melmothx/amusewiki/issues/392][GH#392]])
+
+
 *** 2.545 2022-04-22
 
  - Fix puzzling crashes on attachment list, federation page and
