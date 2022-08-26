@@ -9,7 +9,7 @@ platform.
 ** Getting started
 
 Amusewiki is 100% free software. You can download it at
-[[https://github.com/melmothx/amusewiki/releases][github]] (make sure to follow
+[[https://github.com/melmothx/amusewiki/tags][github]] (make sure to follow
 the [[/library/install][**installation instructions**]])
 or save time, energy and troubles and install it on Debian/Ubuntu with
 the (unofficial) packages provided at
