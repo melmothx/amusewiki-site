@@ -21,7 +21,7 @@ translation on a per-site basis.
 
  1. Install [[http://poedit.net/][Poedit]].
 
- 2. Go to [[https://github.com/melmothx/amusewiki/releases]] and download
+ 2. Go to [[https://github.com/melmothx/amusewiki/tags]] and download
     the **latest**. Unpack the archive and find the .po file with your
     language code in the =lib/AmuseWikiFarm/I18N= directory.
 
