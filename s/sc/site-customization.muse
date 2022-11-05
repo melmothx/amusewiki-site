@@ -21,7 +21,10 @@ located in =/var/lib/amusewiki/repo/SITE_ID/site_files= (where
 
  =favicon.ico= :: If present, this will be used as favicon.
 
- =local.css= :: Additional CSS rules.
+ =local.css= :: Additional CSS rules. Always loaded.
+
+ =local-alt.css= :: Same as above, but loaded only if the alternate
+                    theme is in use (so-called dark-mode).
 
  =local.js= :: Local JS file. Here you can do whatever you want
                without tampering with the code. Open an issue on
@@ -30,6 +33,8 @@ located in =/var/lib/amusewiki/repo/SITE_ID/site_files= (where
 
  =navlogo.png= :: If present, it will be placed on the navigation bar
                   as logo. Height is enforced to 50px.
+
+ =navlogo-alt.png= :: Same as above, but used when the alternate theme is in use.
 
  =widebanner.png= :: If present, it's used to place a banner below the
                      navbar (which is fixed). It should have a width
