@@ -75,7 +75,8 @@ header:
 #formats none
 }}}
 
-(as =none= is just a non-existing format).
+(as =none= is just a non-existing format). This will also hide the
+standard formats.
 
 *** Leveraging the custom formats to correct the final PDFs
 

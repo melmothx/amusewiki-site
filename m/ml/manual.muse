@@ -428,7 +428,8 @@ a mandatory argument, so "1" usually means a generic true value.
 
  - =#formats CODE=
 
-   Select the [[/library/templates-and-formats][custom formats]] for this text
+   Select the [[/library/templates-and-formats][custom formats]] for
+   this text.
 
 *** Correcting the hyphenation in the PDF output
 
