@@ -1,12 +1,12 @@
-#pubdate 2021-02-20
+#pubdate 2022-11-12
 #title The Text::Amuse markup manual
 #lang en
 #topics doc, howto
 #authors Marco Pessotto, Michael Olson, John Wiegley
 #subtitle The writer’s guide
-#date 2020
+#date 2022
 #teaser Everything you have to know about the Text::Amuse markup. Last
- updated for version 1.72 (released on February 6, 2021).
+ updated for version 1.81 (1.81 March 29, 2022).
 
 Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software
 Foundation, Inc.
