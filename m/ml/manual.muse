@@ -1681,6 +1681,61 @@ Emacs Muse compatibility in this regard, material in =<code>= tags and
 equivalent markup between equal signs is also verbatim, but with a
 monospace font.
 
+** Language support (version 1.80 2022-02-12)
+
+You can mark parts of a text as using another language with the 1.80
+<verbatim><[ISO]></[ISO]></verbatim> syntax, where ISO is the language
+code. The tag can be used as inline and block tag.
+
+See [[/library/custom-fonts][the font management documentation]] to
+assign a specific font to a language.
+
+E.g. (note that the monospace font in the PDF is without japanese
+characters):
+
+{{{
+#title Various languages
+#lang en
+
+Dante says <[it]>Lasciate ogne speranza, voi ch'intrate.</[it]>
+
+You can inline some random Japanese with a
+[[https://en.wikipedia.org/wiki/Ruby_character][ruby]]:
+<[ja]>松江騒擾事件 <ruby>先|ま</ruby></[ja]>
+
+And a whole random Japanese paragraph:
+
+<[ja]>
+先導者は<ruby>先|ま</ruby>づ確固たる自信である。次に力である。次
+に勇気である。<ruby>而|しか</ruby>して自身の生命に対する自身の責任であ
+る。先導者は如何なる場合にも自分の仕事に他人の<ruby>容喙|ようかい</ruby>
+を許さない。
+</[ja]>
+}}}
+
+(Please note the
+[[https://en.wikipedia.org/wiki/Ruby_character][ruby]] syntax in the
+japanese snippet).
+
+This yields:
+
+------
+
+Dante says <[it]>Lasciate ogne speranza, voi ch'intrate.</[it]>
+
+You can inline some random Japanese with a
+[[https://en.wikipedia.org/wiki/Ruby_character][ruby]]:
+<[ja]>松江騒擾事件 <ruby>先|ま</ruby></[ja]>
+
+And a whole random Japanese paragraph:
+
+<[ja]>
+先導者は<ruby>先|ま</ruby>づ確固たる自信である。次に力である。次
+に勇気である。<ruby>而|しか</ruby>して自身の生命に対する自身の責任であ
+る。先導者は如何なる場合にも自分の仕事に他人の<ruby>容喙|ようかい</ruby>
+を許さない。
+</[ja]>
+
 ** Differences between =Text::Amuse= and Emacs Muse
 
 Unfortunately, the Emacs Muse project is dead. However,
@@ -1752,6 +1807,11 @@ Lists require whitespace after list item marker.
 
  1.This is not an ordered list item.
 }}}
+
+*** Languages switches (=<[ISO]>=) and the ruby tag:
+
+They are =Text::Amuse= specific which were introduced on version 1.80
+(2022-02-12).
 
 * GNU Free Documentation License
 
