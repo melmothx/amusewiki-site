@@ -11,6 +11,12 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.562 2022-12-04
+
+ - I18N: ro (new)
+ - Add missing font preview ([[https://github.com/melmothx/amusewiki/issues/403][GH#403]])
+ - Support images' alt text via ajax call ([[https://github.com/melmothx/amusewiki/issues/421][GH#421]])
+
 *** 2.561 2022-11-05
 
  - I18N: cs (new), tr (updated)
