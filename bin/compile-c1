@@ -1,0 +1,30 @@
+#!/bin/sh
+
+cwd=`pwd`
+file=`dirname $1`/`basename $1 .muse`
+
+if [ ! -f fontspec.json ]; then
+    muse-create-font-file.pl fontspec.json
+fi
+
+muse-compile.pl --fontspec $cwd/fontspec.json \
+ --coverpage-only-if-toc --luatex --pdf --tex --extra bcor=0mm \
+ --extra beamercolortheme=dolphin \
+ --extra beamertheme=default \
+ --extra division=13 \
+ --extra fontsize=10 \
+ --extra format_id=c1 \
+ --extra logo=logo-amw.pdf \
+ --extra mainfont="TeX Gyre Pagella" \
+ --extra monofont="CMU Typewriter Text" \
+ --extra opening=any \
+ --extra papersize=a5 \
+ --extra parindent=15 \
+ --extra sansfont="CMU Sans Serif" \
+ --extra site=amusewiki.org \
+ --extra tex_emergencystretch=30pt \
+ --extra tex_tolerance=200 \
+ --extra twoside=1 \
+ $file.muse 
+
+ pdf-impose.pl --cover --schema 2up --signature 40-80 $file.pdf
