@@ -11,6 +11,13 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.563 2023-02-19
+
+ - Display an icon if the attachment thumbnail generation failed ([[https://github.com/melmothx/amusewiki/issues/422][GH#422]])
+ - Autoimport site_files/autoimport/{categories,legacy_links}.yml if found
+ - Add alternate Wordpress importer
+
+
 *** 2.562 2022-12-04
 
  - I18N: ro (new)
