@@ -11,6 +11,16 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+** 2.565 2023-03-20
+
+ - Save the images' =alt_text= on site serialization.
+
+** 2.564 2023-03-20
+
+ - Make the language selection explicit in the user preferences. So
+   far it was a side effect of changing the site locale via the
+   language selector.
+
 *** 2.563 2023-02-19
 
  - Display an icon if the attachment thumbnail generation failed ([[https://github.com/melmothx/amusewiki/issues/422][GH#422]])

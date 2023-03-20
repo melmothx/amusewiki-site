@@ -25,7 +25,7 @@ and publishing process, you can use the
 [[https://sandbox.amusewiki.org][sandbox]]
 
 If you need help, you’re welcome to drop to the
-[[https://amusewiki.org/help/irc][IRC channel]].
+[[https://web.libera.chat/#amusewiki][#amusewiki channel on Libera Chat (=irc.libera.chat=)]].
 
 ** Features
 
@@ -90,7 +90,7 @@ Packages for Jessie and Ubuntu 16.04 are available but archived.
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_2.563.tar.gz][latest version is 2.563]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_2.565.tar.gz][latest version is 2.565]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
