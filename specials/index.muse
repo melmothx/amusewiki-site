@@ -25,7 +25,7 @@ and publishing process, you can use the
 [[https://sandbox.amusewiki.org][sandbox]]
 
 If you need help, you’re welcome to drop to the
-[[https://web.libera.chat/#amusewiki][#amusewiki channel on Libera Chat (=irc.libera.chat=)]].
+[[https://web.libera.chat/#amusewiki][#amusewiki IRC channel on Libera Chat (=irc.libera.chat=)]].
 
 ** Features
 
