@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+** 2.566 2023-05-06
+
+ - I18N: tr (updated)
+ - Try to address the content jumping when the navbar becomes fixed
+
 ** 2.565 2023-03-20
 
  - Save the images' =alt_text= on site serialization.
