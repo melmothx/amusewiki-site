@@ -96,12 +96,18 @@ and complete the installation:
 **** Configure database
 
 #mysql
-Create a database for the application. E.g., for MySQL:
+Create a database for the application. E.g., for MySQL/MariaDB:[1]
+
+[1] Since May 2023, we suggest to use =utf8mb4= instead of =utf8=. If
+    you want to upgrade from utf8 to utf8mb4, please take a look at
+    =script/convert-mysql-to-utf8mb4.my.sql= in the root of the
+    distribution, which contains the instructions for the upgrade.
 
 {{{
-mysql> create database amusewiki DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
-mysql> grant all privileges on amusewiki.* to amusewiki@localhost identified by 'Pa55Word';
+MariaDB [(none)]> CREATE DATABASE amuse CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON amuse.* TO amusewiki@localhost IDENTIFIED BY 'Pa55Word';
 }}}
+
 
 #psql
 Or, for PostgreSQL:
