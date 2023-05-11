@@ -4,7 +4,7 @@
 #lang en
 #topics doc, howto
 #teaser Installation and post-installation configuration for various OS
-#notes This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+#notes This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit [[http://creativecommons.org/licenses/by-sa/4.0/]] or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 The recommended way to install Amusewiki is via
 [[https://packages.amusewiki.org][Debian repository]].
@@ -208,11 +208,11 @@ Sample configuration. You need =mod_proxy= and =mod_proxy_fcgi= loaded.
 
 {{{
 <VirtualHost *:80>
-	#ServerName www.example.com
-	ServerAdmin webmaster@localhost
-	DocumentRoot /usr/share/perl5/AmuseWikiFarm/root/
-	ErrorLog ${APACHE_LOG_DIR}/error.log
-	CustomLog ${APACHE_LOG_DIR}/access.log combined
+    #ServerName www.example.com
+    ServerAdmin webmaster@localhost
+    DocumentRoot /usr/share/perl5/AmuseWikiFarm/root/
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
 
     # serve static from root
     ProxyPass /static !
