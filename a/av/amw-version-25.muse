@@ -1,5 +1,5 @@
 #title Version 2.5
-#teaser  **Security fix for untrusted remote repository (2021-06-05)**. File inclusion in Muse documents, extended API, configurable web chat, theme switcher, custom pages under =/p/=, language-specific fonts
+#teaser  **Security fix for untrusted remote repository (2021-06-05)**. File inclusion in Muse documents, extended API, configurable web chat, theme switcher, custom pages under =/p/=, language-specific fonts, OAI-PMH implementation
 #cat releases
 
 ** Overview
@@ -10,6 +10,10 @@ detailed in [[/library/file-inclusion][its own page]].
 There are no upgrade or backcompatibility issues.
 
 ** Changes
+
+*** 2.570 2023-05-16
+
+ - Implement the OAI-PMH protocol at /oai-pmh
 
 *** 2.566 2023-05-06
 
