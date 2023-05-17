@@ -11,6 +11,10 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.572 2023-05-17
+
+ - Optimization for the OAI-PMH update run, which was too slow.
+
 *** 2.570 2023-05-16
 
  - Implement the OAI-PMH protocol at /oai-pmh
