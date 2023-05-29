@@ -11,6 +11,12 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.573 2023-05-29
+
+ - Implement attachment pruning
+ - i18n: cs (updated)
+ - minor corrections to AOI-PMH code
+
 *** 2.572 2023-05-17
 
  - Optimization for the OAI-PMH update run, which was too slow.
