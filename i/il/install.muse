@@ -60,7 +60,7 @@ In addition, the following software should be installed:
 
  - fontconfig (install it before installing TeX Live)
 
- - GraphicsMagick (for thumbnails) and ImageMagick (for preview generation)
+ - ghostscript (for preview generation)
 
  - a mime-info database: =shared-mime-info= on Debian
 
@@ -72,19 +72,39 @@ In addition, the following software should be installed:
 
  - commonly used utilities: =unzip=, =wget=, =git=, =rsync=
 
- - TeX Live full > 2012, either from system repo (recommended) or from
-   [[https://www.tug.org/texlive/]]
+ - widely used libraries: =libxml2-dev= =libexpat1-dev= =zlib1g-dev=
+   =libjpeg-dev= =libpng-dev= for =XML::LibXML= and =Imager=
+
+ - =cgit= if the distro provides it
+
+ - a webserver, =nginx= is the suggestion (but see below)
+
+ - TeX Live full either from system repo or installed with the provided script
+
+So:
+
+{{{
+adduser --disabled-password amusewiki
+apt install --no-install-recommends git carton ghostscript shared-mime-info openssl libssl-dev \
+    xapian-tools libxapian-dev unzip wget rsync build-essential cpanminus \
+    cgit libxml2-dev libexpat1-dev zlib1g-dev libjpeg-dev libpng-dev nginx fontconfig
+}}}
 
 Log in as the user you want to run the site.
 
-If you installed TeX Live from the installer, tweak the shell rc file
-to include the binaries in the =PATH=.
-
-Logout and login again.
-
-**** Install Amusewiki application
-
 Unpack the sources (or clone the repo) and change directory into them.
+
+**** Install TeX Live
+
+If you want to install TeX Live from the installer, run:
+
+{{{
+./script/install-texlive.sh
+}}}
+
+It will install the needed binaris and packages under =local/=.
+
+**** Run the Amusewiki installer
 
 Run installation script to check that you have installed prerequisites
 and complete the installation:
@@ -93,7 +113,7 @@ and complete the installation:
 ./script/install.sh
 }}}
 
-**** Configure database
+**** Create the database
 
 #mysql
 Create a database for the application. E.g., for MySQL/MariaDB:[1]
