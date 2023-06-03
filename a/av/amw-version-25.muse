@@ -11,6 +11,15 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.574 2023-06-02
+
+ - Upgraded jquery to latest
+ - Upgraded jquery-ui to latest
+ - Implement MARCXML output for AOI-PMH. The AOI-PMH feature is still
+   experimental
+ - Upgraded TeXlive! script
+ - Updated installation scripts for fonts and js
+
 *** 2.573 2023-05-29
 
  - Implement attachment pruning

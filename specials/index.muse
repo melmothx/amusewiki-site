@@ -9,7 +9,7 @@ platform.
 ** Getting started
 
 Amusewiki is 100% free software. You can download it at
-[[https://github.com/melmothx/amusewiki/tags][github]] (make sure to follow
+[[https://github.com/melmothx/amusewiki/tags][**GitHub**]] (make sure to follow
 the [[/library/install][**installation instructions**]])
 or save time, energy and troubles and install it on Debian/Ubuntu with
 the (unofficial) packages provided at
@@ -90,7 +90,7 @@ Packages for Jessie and Ubuntu 16.04 are available but archived.
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_2.573.tar.gz][latest version is 2.573]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_2.574.tar.gz][latest version is 2.574]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
