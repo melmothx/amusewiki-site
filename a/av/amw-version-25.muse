@@ -11,6 +11,10 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.575 2023-06-25
+
+ - OAI-PMH: add a "web" set and serve marc21 for GetRecord call as well
+
 *** 2.574 2023-06-02
 
  - Upgraded jquery to latest
