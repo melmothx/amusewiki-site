@@ -1,5 +1,5 @@
 #title Version 2.5
-#teaser  **Security fix for untrusted remote repository (2021-06-05)**. File inclusion in Muse documents, extended API, configurable web chat, theme switcher, custom pages under =/p/=, language-specific fonts, OAI-PMH implementation, RTL support
+#teaser  **Security fix for untrusted remote repository (2021-06-05)**. File inclusion in Muse documents, extended API, configurable web chat, theme switcher, custom pages under =/p/=, language-specific fonts, OAI-PMH implementation, RTL support, annotations and collections
 #cat releases
 
 ** Overview
@@ -10,6 +10,26 @@ detailed in [[/library/file-inclusion][its own page]].
 There are no upgrade or backcompatibility issues.
 
 ** Changes
+
+*** 2.579 2023-10-04
+
+ - i18n: tr (updated)
+
+ - Implement OAI-ORE aggregations in RDF file. This is somehow
+   experimental and unclear if it's actually useful and/or if it's
+   been correctly implemented, so it's EXPERIMENTAL.
+
+ - Implement text annotations. These values which you don't want to go
+   into the muse file, so they excluded from the git. Possible use
+   cases: large scan files used as working copies, physical book
+   location, comments. If marked as active and public, the annotations
+   (excluding the files) are exposed via OAI-PMH.
+
+*** 2.578 2023-08-31
+
+ - i18n: add initial support for uk
+ - oai-pmh: expose the categories
+
 
 *** 2.577 2023-07-24
 
