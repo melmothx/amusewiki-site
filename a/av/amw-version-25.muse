@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.580 2023-10-18
+
+ - i18n: tr (updated)
+ - Improve UI for federation: allow multiple urls by pasting
+
 *** 2.579 2023-10-04
 
  - i18n: tr (updated)
