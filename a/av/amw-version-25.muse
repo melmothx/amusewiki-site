@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.583 2024-01-01
+
+ - Expose the format definitions to the API
+ - Serve the .bare.html file if requested
+
 *** 2.582 2023-12-16
 
  - i18n: tr (updated)
