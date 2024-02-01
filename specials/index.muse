@@ -90,7 +90,7 @@ Packages for Jessie and Ubuntu 16.04 are available but archived.
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_2.590.tar.gz][latest version is 2.590]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_2.593.tar.gz][latest version is 2.593]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].

@@ -1,5 +1,5 @@
 #title Version 2.5
-#teaser  **Security fix for untrusted remote repository (2021-06-05)**. File inclusion in Muse documents, extended API, configurable web chat, theme switcher, custom pages under =/p/=, language-specific fonts, OAI-PMH implementation, RTL support, annotations and collections
+#teaser  **Security fix for untrusted remote repository (2021-06-05)**. File inclusion in Muse documents, extended API, configurable web chat, theme switcher, custom pages under =/p/=, language-specific fonts, OAI-PMH implementation, RTL support, annotations, collections, series and aggregations, bookcovers!
 #cat releases
 
 ** Overview
@@ -10,6 +10,23 @@ detailed in [[/library/file-inclusion][its own page]].
 There are no upgrade or backcompatibility issues.
 
 ** Changes
+
+*** 2.593 2024-02-01
+
+ - Keep the bookcover template tokens sorted
+ - Add descriptions to aggregations and series
+ - Add uri checker for collections
+ - Random fixes
+
+*** 2.592 2024-01-31
+
+ - Fix breakage in bookcovers when installed via .deb
+
+*** 2.591 2024-01-31
+
+ - New feature: bookcovers. This is the companion for the bookbuilder.
+   See /bookcovers as starting point.
+
 
 *** 2.590 2024-01-25
 
