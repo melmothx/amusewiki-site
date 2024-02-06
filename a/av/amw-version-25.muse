@@ -11,6 +11,12 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.594 2024-02-06
+
+ - Keep the collections items ordered as the user defined them
+ - Remove the order number input in the aggregation widgets (that
+   should be done with the drag&drop in the parent)
+
 *** 2.593 2024-02-01
 
  - Keep the bookcover template tokens sorted
