@@ -11,6 +11,10 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.596 2024-02-12
+
+ - Add basque (eu) i18n. Thanks to @a-mento
+
 *** 2.595 2024-02-10
 
  - Fix crash in OAI-PMH with Marc21 and hard-deleted entry.
