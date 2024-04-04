@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.597 2024-04-04
+
+ - Fix JS breakage on newtext because of select2 library not loaded.
+ - Updated eu localization. Thanks to @a-mento
+
 *** 2.596 2024-02-12
 
  - Add basque (eu) i18n. Thanks to @a-mento
