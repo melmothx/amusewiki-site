@@ -11,6 +11,11 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.598 2024-04-30
+
+ - Fix OAI-PMH aggregation handling, which was generating too much
+   bumping.
+
 *** 2.597 2024-04-04
 
  - Fix JS breakage on newtext because of select2 library not loaded.
