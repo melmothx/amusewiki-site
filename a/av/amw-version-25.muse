@@ -11,6 +11,10 @@ There are no upgrade or backcompatibility issues.
 
 ** Changes
 
+*** 2.599 2024-05-25
+
+ - Add hungarian (hu) i18n. Thanks to @zsolt-beringer
+
 *** 2.598 2024-04-30
 
  - Fix OAI-PMH aggregation handling, which was generating too much

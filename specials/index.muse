@@ -1,6 +1,6 @@
 #title News
 #lang en
-#teaser Amusewiki 2.598 released
+#teaser Amusewiki 2.599 released
 
 This is the homepage for [[/special/about][amusewiki]], a
 library-oriented wiki engine. Amusewiki is more than just a wiki
@@ -91,7 +91,7 @@ Packages for Jessie and Ubuntu 16.04 are available but archived.
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_2.598.tar.gz][latest version is 2.598]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_2.599.tar.gz][latest version is 2.599]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
