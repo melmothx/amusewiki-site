@@ -132,8 +132,8 @@ The grid presented here shows a page built with a division factor of
 are used for the margins. Increasing the division factor leads to
 narrower margins, because it will always use 3 parts for the margins,
 while the text block would grow. More details can be found in the
-documentation of the backend used, [[http://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguien.pdf][KOMA-Script]].
-
+documentation of the backend used,
+[[http://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide-en.pdf][KOMA-Script]].
 The menu offers division factors from 9 (wide margins) to 15 (narrow
 margins).
 
