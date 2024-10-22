@@ -1,0 +1,23 @@
+#title Version 2.6
+#teaser There are no upgrade or backcompatibility issues with the 2.5 series.
+
+** Overview
+
+There are no upgrade or backcompatibility issues with the 2.5 series.
+
+*** 2.602 2024-10-21
+
+ - Improve bookbuilder session loading
+ - Add a max requests to the FCGI process manager
+
+*** 2.601 2024-10-04
+
+ - Add new options for federated sites acting as a pure mirror (remove
+   local and vanished files from upstream)
+
+*** 2.600 2024-08-26
+
+ - Improve bookcover stock template
+ - When generating and EPUB in the bookbuild, also produce HTML
+ - i18n: tr (updated, thanks to @rojenzaman)
+
