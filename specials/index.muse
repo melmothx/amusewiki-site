@@ -1,6 +1,6 @@
 #title News
 #lang en
-#teaser Amusewiki 2.599 released
+#teaser Amusewiki 2.602 released
 
 This is the homepage for [[/special/about][amusewiki]], a
 library-oriented wiki engine. Amusewiki is more than just a wiki
