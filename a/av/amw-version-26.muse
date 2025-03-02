@@ -5,6 +5,18 @@
 
 There are no upgrade or backcompatibility issues with the 2.5 series.
 
+*** 2.604 2025-03-02
+
+ - Xapian search and indexing: make the search insensitive to
+   diacritics. You should reindex the sites with
+   =amusewiki-bootstrap-archive --xapian= after the upgrade.
+
+*** 2.603 2025-01-16
+
+ - Xapian indexing: give more relevance to titles and author
+ - Upgrade forkawesome to final version
+ - Improve translation UI
+
 *** 2.602 2024-10-21
 
  - Improve bookbuilder session loading
