@@ -5,6 +5,20 @@
 
 There are no upgrade or backcompatibility issues with the 2.5 series.
 
+*** 2.606 2025-06-24
+
+ - Bookcover: bugfix and support image deletion
+ - Bookcover: add preview
+ - Bookcover: remove confusing Update button
+ - Updated i18n: ca and mk
+ - Turn images with link as caption into hyperlink
+ - Mirror source: link the landing page instead of the muse file
+ - Editing: implement footnote analyzer
+
+*** 2.605 2025-03-11
+
+ - Add catalan i18n (ca)
+
 *** 2.604 2025-03-02
 
  - Xapian search and indexing: make the search insensitive to
