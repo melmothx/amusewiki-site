@@ -5,6 +5,25 @@
 
 There are no upgrade or backcompatibility issues with the 2.5 series.
 
+*** 2.610 2025-11-27
+
+ - Prevent crash and/or inconsistencies when updating site canonical
+   and vhosts. Thanks to @ant-222 for the report.
+
+*** 2.609 2025-11-12
+
+ - Prevent leaking of translation titles across instances [SECURITY]
+
+*** 2.608 2025-11-08
+
+ - Cleanup stale output files from tree (hard and soft deleted files)
+ - Fix OAI-PMH error with aggregations
+
+*** 2.607 2025-10-21
+
+ - OAI-PMH: expose series and aggregations
+ - Add /localized URL
+
 *** 2.606 2025-06-24
 
  - Bookcover: bugfix and support image deletion
