@@ -5,6 +5,11 @@
 
 There are no upgrade or backcompatibility issues with the 2.5 series.
 
+*** 2.611 2025-12-14
+
+ - Added Bengali i18n
+ - Fixed corner case job crash on mirror leftovers
+
 *** 2.610 2025-11-27
 
  - Prevent crash and/or inconsistencies when updating site canonical
