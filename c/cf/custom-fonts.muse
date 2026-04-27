@@ -2,6 +2,7 @@
 #lang en
 #teaser Fine tuning for fonts in the downloadable files and for languages
 #topics doc
+#pubdate 2022-02-12
 
 ** fontspec.json
 

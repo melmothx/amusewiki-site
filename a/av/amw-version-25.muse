@@ -1,6 +1,7 @@
 #title Version 2.5
 #teaser  **Security fix for untrusted remote repository (2021-06-05)**. File inclusion in Muse documents, extended API, configurable web chat, theme switcher, custom pages under =/p/=, language-specific fonts, OAI-PMH implementation, RTL support, annotations, collections, series and aggregations, bookcovers!
 #cat releases
+#pubdate 2024-05-25
 
 ** Overview
 
