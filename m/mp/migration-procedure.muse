@@ -1,53 +1,75 @@
 #title Migrations
 #cat howto
-#pubdate 2018-02-19
+#pubdate 2026-04-27
 #teaser How to migrate one or more sites from an instance to another.
 
-{{{
-amusewiki clone-site export --directory /tmp/export-sites-$(date -I)
-}}}
+You should migrate one site at time. In this guide we assume that you
+are using a Debian package, and we are going to migrate the
+documentation site, with ID =amw=.
 
-Copy the directory over and on the new instance run
+You can start with an =rsync= against the TeX assets, which is
+unlikely to change much over the migration chore. You will need to
+jump to the =amusewiki= user from time to time (such commands are
+prefixed by =$=, while root one with =#=). [1]
 
-{{{
-amusewiki clone-site import /tmp/export-sites-$(date -I)/*
-}}}
-
-Clone the git repositories in =/var/lib/amusewiki/repo/=
-
-Install the logos in the texmf tree, if you use them, and run (as user amusewiki)
+[1] The =amusewiki= binary is just a wrapper to make sure you're using
+    the correct user in the correct directory.
 
 {{{
-#amusewiki shell
-mkdir -p `kpsewhich -var-value TEXMFHOME`/tex/generic/amusewiki/data
-cp mylogo.pdf `kpsewhich -var-value TEXMFHOME`/tex/generic/amusewiki/data
-texhash `kpsewhich -var-value TEXMFHOME`
-kpsewhich mylogo.pdf
-}}}
-
-Finally, rebuild all the imported archives (if you have large sites,
-this will take a while, so execute it under screen or tmux).
-
-{{{
-amusewiki bootstap-archive
-}}}
-
-You probably want to adjust the global nginx configuration for the
-usual suspects, like gzipping javascript and max body size.
-
-If you used to serve the git repositories via =git-daemon=, install it
-and export the repo, e.g.
-
-{{{
-touch /var/lib/amusewiki/repo/amw/.git/git-daemon-export-ok
-cd /var/lib/git
-ln -s ../amusewiki/repo/amw/.git amw.git
+# amusewiki shell
+$ mkdir -p /var/lib/amusewiki/texmf/tex/generic/amusewiki/data/
 }}}
 
 
+{{{
+# rsync -avh \
+      oldbox:/var/lib/amusewiki/texmf/tex/generic/amusewiki/data/ \
+             /var/lib/amusewiki/texmf/tex/generic/amusewiki/data/
+# amusewiki shell
+$ texhash `kpsewhich -var-value TEXMFHOME`
+}}}
+
+You should also copy the SSL certificates over for the site you are migrating:
+
+{{{
+# rsync -avh root@oldbox:/var/lib/amusewiki/ssl/amusewiki.org/ /var/lib/amusewiki/ssl/amusewiki.org/
+}}}
+
+As root on the old box, produce the export file:
+
+{{{
+# amusewiki clone-site export --directory /tmp/export-sites-$(date -I) amw
+}}}
+
+Copy that over and import it.
+
+{{{
+# amusewiki clone-site import /tmp/export-sites-$(date -I)/amw.yaml
+}}}
+
+Now clone the Git repository in =/var/lib/amusewiki/repo/amw=,
+previously removing the tree if needed, so the best option is using
+=rsync= and will save you the regeneration of all the existing files.
+Using =git clone= is another legitimate option, if you want to start
+from scratch.
+
+{{{
+# rsync -avh --delete root@oldbox:/var/lib/amusewiki/repo/amw/ /var/lib/amusewiki/repo/amw/
+}}}
+
+Update the nginx configuration:
+
+{{{
+# amusewiki generate-nginx-conf
+}}}
+
+executing the commands it produces to update the nginx configuration.
 
 
+Finally, under =screen= or =tmux= (as it could take long) run:
 
+{{{
+# amusewiki bootstap-archive amw
+}}}
 
-
-
+This will reindex the site and generate the generated files if missing.
