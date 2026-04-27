@@ -3,6 +3,10 @@
 #pubdate 2026-04-27
 #teaser How to migrate one or more sites from an instance to another.
 
+Before you start, **make sure you have a clean publishing queue**.
+Changes which are sitting in the Pending revisions page will not
+carried over.
+
 You should migrate one site at time. In this guide we assume that you
 are using a Debian package, and we are going to migrate the
 documentation site, with ID =amw=.
@@ -32,7 +36,9 @@ $ texhash `kpsewhich -var-value TEXMFHOME`
 You should also copy the SSL certificates over for the site you are migrating:
 
 {{{
-# rsync -avh root@oldbox:/var/lib/amusewiki/ssl/amusewiki.org/ /var/lib/amusewiki/ssl/amusewiki.org/
+# rsync -avh \
+   root@oldbox:/var/lib/amusewiki/ssl/amusewiki.org/ \
+   /var/lib/amusewiki/ssl/amusewiki.org/
 }}}
 
 As root on the old box, produce the export file:
