@@ -1,9 +1,18 @@
 #title Version 2.6
-#teaser There are no upgrade or backcompatibility issues with the 2.5 series.
+#teaser There are no upgrade or backcompatibility issues with the 2.5 series. Please visit [[https://deb.amusewiki.org]] to access the latest updates for Debian/Ubuntu
 
 ** Overview
 
 There are no upgrade or backcompatibility issues with the 2.5 series.
+
+*** 2.613 2026-04-10
+
+ - Replaced CKeditor with Jodit
+
+*** 2.612 2026-04-08
+
+ - Handle mimetype aliases (on Trixie .avi is video/vnd.avi)
+ - Update Debian packaging
 
 *** 2.611 2025-12-14
 
