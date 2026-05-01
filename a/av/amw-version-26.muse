@@ -5,9 +5,13 @@
 
 There are no upgrade or backcompatibility issues with the 2.5 series.
 
+Please visit [[https://deb.amusewiki.org]] to access the latest
+updates for Debian/Ubuntu.
+
 *** 2.613 2026-04-10
 
  - Replaced CKeditor with Jodit
+ - Debian infrastructure moved to [[https://deb.amusewiki.org]]
 
 *** 2.612 2026-04-08
 

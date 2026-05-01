@@ -1,6 +1,7 @@
 #title News
 #lang en
-#teaser Amusewiki 2.610 released
+#teaser Upgraded Debian infrastructure. See [[https://deb.amusewiki.org]]
+#pubdate 2026-05-01
 
 This is the homepage for [[/special/about][amusewiki]], a
 library-oriented wiki engine. Amusewiki is more than just a wiki
@@ -52,6 +53,42 @@ Core features:
 
 ** News
 
+*** Debian packages migrated to [[https://deb.amusewiki.org]] (May 1st, 2026)
+
+Due to a combination of key expiration, server upgrades, machine age
+and change of provider, the debian infrastructure has been migrated to
+a new host, [[https://deb.amusewiki.org]].
+
+A Debian package is provided, with the new GPG key and the updated
+sources file:
+
+ - [[https://deb.amusewiki.org/amusewiki-archive-keyring-trixie_1.0.0_all.deb]] for Trixie
+ - [[https://deb.amusewiki.org/amusewiki-archive-keyring-bookworm_1.0.0_all.deb]] for Bookworm
+
+This **replaces** the old =/etc/apt/sources.list.d/amusewiki.list=
+which was created accordingly to the old instructions at
+[[https://packages.amusewiki.org/]]. You can remove it and install the
+archive keyring instead.
+
+The new GPG key is:
+
+{{{
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEadH5cxYJKwYBBAHaRw8BAQdACjm4Hsi2XZH/TKJ9xD/QhvqCL7rMRV80Gx56
+u5RbZC+0KkFtdXNld2lraSBBUFQgYXJjaGl2ZSA8aW5mb0BhbXVzZXdpa2kub3Jn
+PoiWBBMWCgA+FiEEKCw7ua9VxMhqJKhAdW1lsNiziHMFAmnR+XMCGwMFCQWjmoAF
+CwkIBwIGFQoJCAsCBBYCAwECHgECF4AACgkQdW1lsNiziHPFxAEA5kJ89utK2pE+
+GUWAxbjuk/RPIbQMea0jnH0mnmcMaWgA/18Adv/cbDel/H4Yh94r5fWH1vUBSLhQ
+V9s9VGOsancJuDgEadH5cxIKKwYBBAGXVQEFAQEHQJMo68LrAZVDDXF7v9EKV1Sz
+kQqSEu0t8DauJMo3j1lMAwEIB4h+BBgWCgAmFiEEKCw7ua9VxMhqJKhAdW1lsNiz
+iHMFAmnR+XMCGwwFCQWjmoAACgkQdW1lsNiziHPPLgEAz044QCQUSNtTzGm6dpwp
+DBYp8DTZeIm8k09AnB+URioA/j0PSXRNPahGz9o9SejziPfNkXKGvpAxRyXOQ2OT
+/E8I
+=fYub
+-----END PGP PUBLIC KEY BLOCK-----
+}}}
+
 *** Find us on Libera Chat! (May 21, 2021)
 
 The official Amusewiki channel has moved to Libera Chat! You are
@@ -91,7 +128,7 @@ Packages for Jessie and Ubuntu 16.04 are available but archived.
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_2.611.tar.gz][latest version is 2.611]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_2.613.tar.gz][latest version is 2.613]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
