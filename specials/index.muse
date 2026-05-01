@@ -53,7 +53,7 @@ Core features:
 
 ** News
 
-*** Debian packages migrated to [[https://deb.amusewiki.org]] (May 1st, 2026)
+*** Debian packages migrated to https://deb.amusewiki.org (May 1st, 2026)
 
 Due to a combination of key expiration, server upgrades, machine age
 and change of provider, the debian infrastructure has been migrated to
