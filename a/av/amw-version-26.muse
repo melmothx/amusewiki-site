@@ -1,4 +1,6 @@
 #title Version 2.6
+#cat release
+#pubdate 2026-05-01
 #teaser There are no upgrade or backcompatibility issues with the 2.5 series. Please visit [[https://deb.amusewiki.org]] to access the latest updates for Debian/Ubuntu
 
 ** Overview
