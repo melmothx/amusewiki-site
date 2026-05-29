@@ -1,0 +1,74 @@
+#title Amusewiki
+#author Marco Pessotto
+#DELETED WIP
+
+Amusewiki is now 12 years old and I consider it quite mature. It's
+starting to show its age though.
+
+** Considerations
+
+*** Things which were done right
+
+ - The markup is not famous as Markdown (the clear winner in the
+   lightweight markups race, chatbots speak that...) but I still think
+   it's sensible and nice to use.
+
+ - Muse repository layout. Probably it should have had a subdirectory
+   with actual texts, and another for some meta things, but it's not
+   terrible either.
+
+ - The Text::Amuse parser proved fine.
+
+ - Perl. Often deemed as dead, old, etc. it's everywhere and it's
+   stable and rock-solid. No regrets here.
+
+ - Debian packaging. That's the only way to keep up with security
+   updates. We still have too many packaged modules and fonts which
+   need to be maintained. The main culprit is Net::ACME2. Too many
+   modules for that, just to get a Let's Encrypt certificate.
+
+ - Xapian. Fast, reliable, got no problem really.
+
+*** Things which are not going to last
+
+ - Bootstrap frontend. At the time it was a no-brainer, now it's a
+   problem. Things like the grid system are terribly obsoleted by the
+   super nice CSS grid, which is built into any modern browser.
+   Upgrading to newer versions is *very* unrewarding.
+
+ - Bootstrap themes. A problem stacked on another... Too many options
+   are not good, especially if the manpower is limited.
+
+ - Jquery. Similar problem as bootstrap. No-brainer at the time, now
+   mostly useless. Feels like another age.
+
+*** DBIx::Class, aka DBIC
+
+It works, but it's not seeing any update, and most likely it's not
+going to have any. At the time it was the "jewel of the crown" of
+CPAN. It's not going away any time soon either, but the problem is
+that I'm not in love with ORMs any more. Part of the problem is that
+they want to be DB-agnostic, so it should work the same on SQLite,
+MySQL/MariaDB, PostgreSQL. So basically you're cutting yourself out of
+any DB-specific features (and I'm thinking about PostgreSQL,
+specifically), while having to cope with random problems because you
+want to support too many back-ends.
+
+Honestly I like to have pieces of clean SQL in the code, as it's very
+clear what is doing.
+
+*** Catalyst
+
+I loved it at the time, now I'd go Mojolicious (which is also packaged
+by Debian) like everybody else...
+
+*** LaTeX
+
+=/opt/amusewiki-texlive/2026= is 800Mb, despite the efforts to package
+a stripped down version. However, I have yet to find another solution,
+considering that we also want to do complex things. So for the moment
+we have to live with that. While I used to follow what was happening
+in the TeX land, I admit currently I'm totally in the dark though.
+
+
+
