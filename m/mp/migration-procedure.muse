@@ -80,8 +80,7 @@ Finally, under =screen= or =tmux= (as it could take long) run:
 
 This will reindex the site and generate the generated files if missing.
 
-Suggested migration script, to be execute with site code and canonical
-hostname as arguments:
+Suggested migration script, to be execute with site code as argument:
 
 {{{
 #!/bin/bash
@@ -89,7 +88,6 @@ hostname as arguments:
 set -e
 set -x
 code=$1
-name=$2
 today=`date -I`
 oldbox="root@oldbox"
 
@@ -97,11 +95,14 @@ if [ -z "$code" ]; then
     exit 2
 fi
 
+name=$(amusewiki set-site-variable --get canonical $code)
+
 if [ -z "$name" ]; then
     exit 2
 fi
 
-# copy the certificates, by canonical
+echo "Code: $code, Name: $name"
+
 rsync -avh $oldbox:/var/lib/amusewiki/ssl/$name/ \
       /var/lib/amusewiki/ssl/$name/
 
@@ -112,18 +113,18 @@ scp $oldbox:/tmp/export-sites-$today/$code.yaml \
 amusewiki clone-site import \
           /tmp/amusewiki-migration-$today/$code.yaml
 
-# rsync the repo
 rsync -avh --delete $oldbox:/var/lib/amusewiki/repo/$code/ /var/lib/amusewiki/repo/$code/
 
 # silence the notification. You may want to re-enable them later
+notify=$(amusewiki set-site-variable --get mail_notify $code)
 amusewiki set-site-variable --set mail_notify="" $code
 
-# nginx update
+
 amusewiki generate-nginx-conf | while read line; do
     eval $line || echo ""
 done
 
 amusewiki bootstrap-archive $code
+amusewiki set-site-variable --set mail_notify="$notify" $code
 amusewiki restart
-
 }}}
