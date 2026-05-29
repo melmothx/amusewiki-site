@@ -10,6 +10,13 @@ There are no upgrade or backcompatibility issues with the 2.5 series.
 Please visit [[https://deb.amusewiki.org]] to access the latest
 updates for Debian/Ubuntu.
 
+*** 2.614 2026-05-28 [SECURITY]
+
+ - Fix tests broken by recent Template release (html filter)
+ - Add --get option to amusewiki-set-site-variable (useful in scripts)
+ - Use constant time comparison to check the access token to avoid
+   timing attacks against it [SECURITY]
+
 *** 2.613 2026-04-10
 
  - Replaced CKeditor with Jodit

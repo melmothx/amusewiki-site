@@ -15,7 +15,7 @@ Amusewiki is 100% free software. You can download it at
 the [[/library/install][**installation instructions**]])
 or save time, energy and troubles and install it on Debian/Ubuntu with
 the (unofficial) packages provided at
-[[http://packages.amusewiki.org][packages.amusewiki.org]], which are regularly updated at each release.
+[[http://deb.amusewiki.org][deb.amusewiki.org]], which are regularly updated at each release.
 
 Amusewiki is based on the
 [[https://www.gnu.org/software/emacs-muse/][Emacs Muse]] markup,
@@ -121,14 +121,12 @@ An in-depth explanation of the bookbuilder is available [[/library/bookbuilder-t
 
 *** Debian and Ubuntu packages
 
-Debian packages are available at [[http://packages.amusewiki.org]]!
-This is the fastest and recommended way to install amusewiki with no
-pain at all. Bullseye, Buster, Stretch and Ubuntu >= 18.04 LTS are supported.
-Packages for Jessie and Ubuntu 16.04 are available but archived.
+Debian packages are available at [[http://deb.amusewiki.org]]!
+This is the fastest, painless and recommended way to install amusewiki.
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_2.613.tar.gz][latest version is 2.613]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_2.614.tar.gz][latest version is 2.614]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
