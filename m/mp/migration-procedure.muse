@@ -80,7 +80,8 @@ Finally, under =screen= or =tmux= (as it could take long) run:
 
 This will reindex the site and generate the generated files if missing.
 
-Suggested migration script, to be execute with site code as argument:
+Suggested migration script, to be execute with site code and the
+canonical name as arguments:
 
 {{{
 #!/bin/bash
@@ -95,7 +96,7 @@ if [ -z "$code" ]; then
     exit 2
 fi
 
-name=$(amusewiki set-site-variable --get canonical $code)
+name=$2
 
 if [ -z "$name" ]; then
     exit 2
@@ -125,6 +126,13 @@ amusewiki generate-nginx-conf | while read line; do
 done
 
 amusewiki bootstrap-archive $code
+
+# reimport if there are collections/nodes
+amusewiki clone-site import \
+          /tmp/amusewiki-migration-$today/$code.yaml
+
+
 amusewiki set-site-variable --set mail_notify="$notify" $code
 amusewiki restart
 }}}
+
