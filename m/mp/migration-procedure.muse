@@ -136,3 +136,4 @@ amusewiki set-site-variable --set mail_notify="$notify" $code
 amusewiki restart
 }}}
 
+If you need to move the book covers as well, you'll need to use the =amusewiki bookcover= utility (starting with version 2.615). See the =amusewiki bookcover --help= for details (it basically works the same way as the =clone-site= utility).
