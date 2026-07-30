@@ -29,7 +29,10 @@ installation of a recent [[http://tug.org/texlive/][TeX Live distribution]].
 
 *** Debian and Ubuntu
 
-The parser, the compiler and the preprocessor are packaged for Debian.
+The parser, the compiler and the preprocessor are packaged for Debian. [1]
+
+[1] [[https://deb.amusewiki.org/]]
+
 So you could do:
 
 {{{
