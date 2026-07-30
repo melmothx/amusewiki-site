@@ -33,12 +33,9 @@ The parser, the compiler and the preprocessor are packaged for Debian.
 So you could do:
 
 {{{
-# add the key
-wget -O - https://packages.amusewiki.org/amusewiki.gpg.key | apt-key add -
-# add a source list entry
-echo 'deb http://packages.amusewiki.org/debian jessie main' > /etc/apt/sources.list.d/amusewiki.list
-# install the tools
-apt-get install libtext-amuse-perl libtext-amuse-preprocessor-perl libtext-amuse-compile-perl
+# wget https://deb.amusewiki.org/amusewiki-archive-keyring-trixie_1.0.0_all.deb
+# dpkg -i amusewiki-archive-keyring-trixie_1.0.0_all.deb
+# apt install libtext-amuse-perl libtext-amuse-preprocessor-perl libtext-amuse-compile-perl
 }}}
 
 TeX Live will be pulled in as dependency.
@@ -97,7 +94,7 @@ for an in-depth explanation of the =--footnotes= switch.
 The preprocessor can also convert HTML pages to muse.
 
 {{{
-html-to-muse.pl https://packages.amusewiki.org/
+html-to-muse.pl https://deb.amusewiki.org/
 }}}
 
 See also [[https://pandoc.org/][Pandoc]] for the same functionality.
