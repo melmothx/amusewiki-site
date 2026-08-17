@@ -22,9 +22,7 @@ Amusewiki is based on the
 remaining mostly compatible with the original implementation. A
 detailed [[/library/manual][**markup manual**]] is provided.
 
-This site runs on amusewiki itself. If you want to try out the editing
-and publishing process, you can use the
-[[https://sandbox.amusewiki.org][sandbox]]
+This site runs on amusewiki itself.
 
 If you need help, you’re welcome to drop to the
 [[https://web.libera.chat/#amusewiki][#amusewiki IRC channel on Libera Chat (=irc.libera.chat=)]].

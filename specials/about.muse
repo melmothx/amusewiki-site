@@ -33,13 +33,6 @@ features.
  - Automatic db upgrades
  - [[http://packages.amusewiki.org][Packaged for debian]] with batteries included
 
-*** Missing features (so far)
-
- - no talks, comments, etc.
- - no refined access control (only basic)
-
-Every wiki has a sandbox, so [[http://sandbox.amusewiki.org][here it is]].
-
 The code is written in Perl and is freely available (under the same
 terms as Perl itself) on [[https://github.com/melmothx/amusewiki/releases][github]].
 
