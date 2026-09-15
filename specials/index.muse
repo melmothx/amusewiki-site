@@ -124,7 +124,7 @@ This is the fastest, painless and recommended way to install amusewiki.
 
 ** Download and bug reports
 
-The [[https://github.com/melmothx/amusewiki/archive/v_2.615.tar.gz][latest version is 2.615]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
+The [[https://github.com/melmothx/amusewiki/archive/v_2.617.tar.gz][latest version is 2.617]] and can be downloaded at [[https://github.com/melmothx/amusewiki][github]].
 
 You are welcome to report old and new bugs and feature requests on
 [[https://github.com/melmothx/amusewiki/issues][the github bugtracker]].
